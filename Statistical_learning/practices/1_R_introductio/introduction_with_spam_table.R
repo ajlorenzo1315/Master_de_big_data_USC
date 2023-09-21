@@ -140,3 +140,9 @@ table(email$spam)/length(email$spam)
  # sin que los numeros pasesn a ser caracteres se crean similar a la matriz
  # solo que si data.frame
  
+ 
+ # y
+ (email$num_cahr>1)&(email$num_cahr<5)
+ # o
+ (email$num_cahr>1)|(email$num_cahr<5)
+ 
