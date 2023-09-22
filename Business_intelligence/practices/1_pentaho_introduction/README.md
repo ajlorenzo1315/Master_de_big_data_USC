@@ -47,7 +47,7 @@ En la maquina virtual
 #### generamos intormetas link con intormentas
 
 <kbd>
-  <a href="../images/praticese_1_1.png" target="_blank"><img src="../images/praticese_1_1.png" width="1000" height="600">
+  <a href="../images/praticese_1_1.png" target="_blank"><img src="../images/praticese_1_1.png" width="1000" height="600"></a>
 </kbd>
     
 
@@ -55,7 +55,7 @@ En la maquina virtual
 
 
 <kbd>
-  <a href="../images/praticese_1_2.png" target="_blank"><img src="../images/praticese_1_1.png" width="1000" height="600">
+  <a href="../images/praticese_1_2.png" target="_blank"><img src="../images/praticese_1_1.png" width="1000" height="600"></a>
 </kbd>
 
 Luego le damos a visualizar o a finish (si le damos a finish deberia dar un error)
