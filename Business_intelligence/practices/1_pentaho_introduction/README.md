@@ -59,3 +59,28 @@ En la maquina virtual
 </kbd>
 
 Luego le damos a visualizar o a finish (si le damos a finish deberia dar un error)
+
+
+# Ejercicio
+
+Creamos una base de datos llamada IN
+
+luego ejemcutamos 
+
+  psql -U alumnogreibd -d bi -f /home/alumnogreibd/BDGE/datos/PeliculasSchema.sql
+
+luego las copiamos las tablas a nuestra base de datos
+
+psql -U alumnogreibd -d bi -c "\copy colecciones from /home/alumnogreibd/BDGE/datos/colecciones.csv csv"
+psql -U alumnogreibd -d bi -c "\copy generos from /home/alumnogreibd/BDGE/datos/generos.csv csv"
+psql -U alumnogreibd -d bi -c "\copy idiomas from /home/alumnogreibd/BDGE/datos/idiomas.csv csv"
+psql -U alumnogreibd -d bi -c "\copy paises from /home/alumnogreibd/BDGE/datos/paises.csv csv"
+psql -U alumnogreibd -d bi -c "\copy personas from /home/alumnogreibd/BDGE/datos/personas.csv csv"
+psql -U alumnogreibd -d bi -c "\copy productoras from /home/alumnogreibd/BDGE/datos/productoras.csv csv"
+psql -U alumnogreibd -d bi -c "\copy peliculas from /home/alumnogreibd/BDGE/datos/peliculas.csv csv"
+psql -U alumnogreibd -d bi -c "\copy pelicula_genero from /home/alumnogreibd/BDGE/datos/pelicula_genero.csv csv"
+psql -U alumnogreibd -d bi -c "\copy pelicula_idioma_hablado from /home/alumnogreibd/BDGE/datos/pelicula_idioma_hablado.csv csv"
+psql -U alumnogreibd -d bi -c "\copy pelicula_pais from /home/alumnogreibd/BDGE/datos/pelicula_pais.csv csv"
+psql -U alumnogreibd -d bi -c "\copy pelicula_personal from /home/alumnogreibd/BDGE/datos/pelicula_personal.csv csv"
+psql -U alumnogreibd -d bi -c "\copy pelicula_productora from /home/alumnogreibd/BDGE/datos/pelicula_productora.csv csv"
+psql -U alumnogreibd -d bi -c "\copy pelicula_reparto from /home/alumnogreibd/BDGE/datos/pelicula_reparto.csv csv"

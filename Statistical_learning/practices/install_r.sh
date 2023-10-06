@@ -10,15 +10,15 @@ wget -qO- https://cloud.r-project.org/bin/linux/ubuntu/marutter_pubkey.asc | sud
 sudo add-apt-repository "deb https://cloud.r-project.org/bin/linux/ubuntu $(lsb_release -cs)-cran40/"
 
 # install r
-sudo apt install --no-install-recommends r-base-dev
+sudo apt install --no-install-recommends r-base-dev -y
 
 # 5000+ CRAN Packages
 sudo add-apt-repository ppa:c2d4u.team/c2d4u4.0+
-sudo apt install --no-install-recommends r-cran-rstan
+sudo apt install --no-install-recommends r-cran-rstan -y -s
 
 # para abrir r-studio
-sudo apt-get install libpq5
-
+sudo apt-get install libpq5 libssl-dev libssl-dev  
+sudo apt --fix-broken install
 # install r-studio
 wget https://download1.rstudio.org/electron/jammy/amd64/rstudio-2023.06.2-561-amd64.deb
 sudo dpkg -i rstudio-2023.06.2-561-amd64.deb

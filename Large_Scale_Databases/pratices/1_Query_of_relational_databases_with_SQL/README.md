@@ -169,7 +169,7 @@ Este modelo esta basado en la teoria de conjunto y si lo ordenais ya no debes po
 
         and pp.pais ='ES'
 
-#### no dado en clase aun
+
 
 
 7. Para las películas de la colección "Star Wars Collection", obtener el mínimo, máximo y media del beneficio obtenido (ingresos - presupuesto y los coeficientes de correlación entre presupuesto e ingresos), entre la popularidad y el presupuesto e ingresos, y entre la fecha de emisión y el presupuesto, ingresos y popularidad. 
@@ -256,9 +256,10 @@ Este modelo esta basado en la teoria de conjunto y si lo ordenais ya no debes po
 
         order by p.titulo, pp.departamento 
 
+
 9. Para las diez productoras que más películas tengan, muestra el nombre de la productora, el número de películas, el número distinto de idiomas originales de las películas, a suma de presupuesto, la suma de ingresos, el beneficio (resta de ingresos - presupuesto) y la primera y última fecha de emisión.
 
-    Solución
+    Solución mal LA PLANTE MAL.
 
         select pro.nombre, count( pp.pelicula) as num_peliculas,  count( distinct pih.idioma ) as num_peliculas,
 
@@ -288,6 +289,33 @@ Este modelo esta basado en la teoria de conjunto y si lo ordenais ya no debes po
         
         limit 10
 
+    sol del profesor en clase 
+
+        select pr.nombre, count(*) as peliculas,
+
+            count(distinct p.idioma_original) as idiomas,
+
+            sum(p.presupuesto) as presupuesto,
+
+            sum(p.ingresos) as ingresos,
+
+            sum(p.ingresos-p.presupuesto) as beneficios,
+
+            min(p.fecha_emision) as pelicula,
+
+            max(p.fecha_emision) as ultima ,
+
+        from productora pr, pelicula p , pelicula_productora pp
+
+        where pr.id==pp.productora
+
+            and pp.pelicula = p.id
+
+        group by pr .id
+
+        order by peliculas desc
+
+        limit 10
 
 10. Obtener la lista de directores cuyas películas hayan generado más de 1500 millones de ingresos. Para cada director, obtener el número de películas que ha dirigido, el total de ingresos y presupuesto, y el beneficio total. Mostrar también el número de idiomas originales y la lista separada por comas de los códigos de los idiomas (usar string_agg). Ordena el resultado en orden descendente por beneficio.
 
@@ -320,6 +348,8 @@ Este modelo esta basado en la teoria de conjunto y si lo ordenais ya no debes po
         having sum(pel.ingresos) > 1500000000
 
         order by beneficio desc
+
+
 
 
 11. Para las películas producidas en España (ES), obtener las lista de actores/actrices que han participado en más de 15 películas distintas. Muestra el número de películas, la media de popularidad de las películas (con dos decimales) y ordena el resultado por este campo.
@@ -357,37 +387,64 @@ Este modelo esta basado en la teoria de conjunto y si lo ordenais ya no debes po
 
 12. Para las 10 películas con más ingresos, muestra su título y el número de personas distintas del reparto, y los nombres separados por comas (ordenados por orden), el número de personas distintas del personal, y el número de departamentos y trabajos distintos de su personal. Muestra también la lista de sus directores (ordenados alfabéticamente). 
 
-select reparto.titulo, reparto.num_reparto, reparto.reparto,
-       personal.num_personal, personal.departamentos, personal.trabajos, personal.directores
-from
-	(select pel.id as id, pel.titulo as titulo, pel.ingresos as ingresos,
-	       count(distinct pr.persona) as num_reparto,
-	       string_agg(per.nombre,' ,' order by pr.orden) as reparto
-	from peliculas pel, pelicula_reparto pr, personas per
-	where pel.id =pr.pelicula and pr.persona = per.id 
-	group by pel.id, pel.titulo) as reparto,
-	(select pel.id as id,
-	       count(distinct pp.persona) as num_personal,
-	       count(distinct pp.departamento) as departamentos,
-	       count(distinct pp.trabajo) as trabajos,
-	       string_agg(per.nombre, ' ,' order by per.nombre) filter (where pp.trabajo = 'Director') as directores
-	from peliculas pel, pelicula_personal pp, personas per
-	where pel.id=pp.pelicula  and pp.persona = per.id 
-	group by pel.id) as personal
-where reparto.id = personal.id
-order by reparto.ingresos desc 
-limit 10
+        select reparto.titulo, reparto.num_reparto, reparto.reparto,
+
+        personal.num_personal, personal.departamentos, personal.trabajos, personal.directores
+
+        from
+
+        (select pel.id as id, pel.titulo as titulo, pel.ingresos as ingresos,
+
+            count(distinct pr.persona) as num_reparto,
+
+            string_agg(per.nombre,' ,' order by pr.orden) as reparto
+
+        from peliculas pel, pelicula_reparto pr, personas per
+
+        where pel.id =pr.pelicula and pr.persona = per.id 
+
+        group by pel.id, pel.titulo) as reparto,
+
+        (select pel.id as id,
+
+            count(distinct pp.persona) as num_personal,
+
+            count(distinct pp.departamento) as departamentos,
+            
+            count(distinct pp.trabajo) as trabajos,
+
+            string_agg(per.nombre, ' ,' order by per.nombre) filter (where pp.trabajo = 
+            
+            'Director') as directores
+
+        from peliculas pel, pelicula_personal pp, personas per
+
+        where pel.id=pp.pelicula  and pp.persona = per.id 
+
+        group by pel.id) as personal
+
+        where reparto.id = personal.id
+
+        order by reparto.ingresos desc 
+
+        limit 10
 
 ### 1.7 Subconsultas en cláusulas SELECT y WHERE
 
 13. Obtener el titulo, fecha de emisión y sinopsis de la película más reciente con un beneficio superior a 1000 millones.
 
-select titulo, fecha_emision, sinopsis 
-from peliculas pel
-where (ingresos - presupuesto) > 1000000000
-  and fecha_emision = (select max(fecha_emision) 
-                       from peliculas pel1 
-                       where (ingresos - presupuesto) > 1000000000)
+    select titulo, fecha_emision, sinopsis
+
+    from peliculas pel
+
+    where (ingresos - presupuesto) > 1000000000
+
+    and fecha_emision = (select max(fecha_emision) 
+
+                        from peliculas pel1 
+
+                        where (ingresos - presupuesto) > 1000000000)
+                        
 
 14. Obtener el título original, presupuesto e ingresos de las 10 película producidas solo en España con más ingresos. Obtener también los directores y el reparto.
 

@@ -40,4 +40,30 @@ Standard output:
     sudo apt-get install libpq5
 
 
+### otro error posible
 
+
+    Leyendo lista de paquetes... Hecho
+    Creando árbol de dependencias... Hecho
+    Leyendo la información de estado... Hecho
+    r-cran-rstan ya está en su versión más reciente (2.21.8-1cran1.2204.0).
+    Tal vez quiera ejecutar «apt --fix-broken install» para corregirlo.
+    Los siguientes paquetes tienen dependencias incumplidas:
+    rstudio : Depende: libssl-dev pero no va a instalarse
+            Depende: libclang-dev pero no va a instalarse
+    virtualbox-7.0 : Depende: libqt5core5a (>= 5.15.1) pero no va a instalarse
+                    Depende: libqt5dbus5 (>= 5.14.1) pero no va a instalarse
+                    Depende: libqt5gui5 (>= 5.14.1) pero no va a instalarse o
+                            libqt5gui5-gles (>= 5.14.1) pero no va a instalarse
+                    Depende: libqt5help5 (>= 5.15.1) pero no va a instalarse
+                    Depende: libqt5opengl5 (>= 5.0.2) pero no va a instalarse
+                    Depende: libqt5printsupport5 (>= 5.0.2) pero no va a instalarse
+                    Depende: libqt5widgets5 (>= 5.15.1) pero no va a instalarse
+                    Depende: libqt5x11extras5 (>= 5.6.0) pero no va a instalarse
+                    Depende: libqt5xml5 (>= 5.0.2) pero no va a instalarse
+                    Recomienda: libsdl-ttf2.0-0 pero no va a instalarse
+    E: Dependencias incumplidas. Intente «apt --fix-broken install» sin paquetes (o especifique una solución).
+
+### SOL 
+
+    dpkg --fix-broken install

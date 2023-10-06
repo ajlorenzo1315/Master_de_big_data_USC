@@ -1,0 +1,2 @@
+notebook
+scrapy==2.9.0

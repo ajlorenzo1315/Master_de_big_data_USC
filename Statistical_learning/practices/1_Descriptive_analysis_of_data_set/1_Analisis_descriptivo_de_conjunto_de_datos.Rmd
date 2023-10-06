@@ -1,0 +1,295 @@
+---
+title: "1_Analisis_descriptivo_de_conjunto_de_datos"
+author: "Alicia Jiajun Lorenzo"
+date: "2023-10-01"
+output:
+  pdf_document: default
+  html_document: default
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## 1. Describe el conjunto de datos y qué objetivos pretendes conseguir tras realizar el análisis
+estadístico.
+
+1. Descargamos nuestro conjunto de datos para poder analizarlo. En este caso usamos un base de datos del INE [Datos](https://www.ine.es/jaxiT3/Tabla.htm?t=10911&L=0)
+
+El conjunto de datos contine  información del salario medio diferenciando por  género y  sectores de actividad económica. A continuación, se describe cada columna del conjunto de datos:
+
+- "Sectores.de.actividad.económica": Esta columna indica los diferentes sectores económicos o áreas de actividad, como industria, agricultura, servicios, etc. Cada fila representa un sector económico específico.
+
+- "Sexo.Brecha.de.género": Esta columna contien información sobre  género en cada sector. 
+
+- "Periodo": Esta columna indica el período de tiempo al que se refieren los datos,en años, 
+
+- "Total": Esta columna indica el salario medio anual por sectores de actividad económica y periodo. Unidades: €, %
+
+Objetivos del Estudio de Salario por Sector y Desigualdad:
+El estudio propuesto tiene como objetivo analizar la relación entre el salario y la desigualdad de género en los diferentes sectores de actividad económica. A continuación, se explica cómo se podría llevar a cabo este estudio:
+
+    Análisis de Salario por Sector: Se podría realizar un análisis de los salarios promedio o medianos en cada uno de los sectores económicos mencionados en la columna "Sectores.de.actividad.económica". Esto permitiría identificar sectores donde los salarios son más altos o más bajos.
+
+    Evaluación de la Desigualdad de Género en Salarios: Luego, se podría analizar la desigualdad de género en cada sector. Esto implica comparar los salarios de hombres y mujeres en cada sector y determinar si existen brechas salariales significativas.
+
+    Comparación de Sectores: Se podría comparar la desigualdad de género en los diferentes sectores para identificar aquellos donde la brecha de género es más pronunciada (a lo largo del tiempo) o que sectores tienen sueldos medios mas altos.
+
+```{r}
+# cambiamos el directorio de trabajo si es necesario
+ #setwd("~/Desktop/Master_de_big_data_USC/Statistical_learning/practices")
+
+# Obtener el directorio de trabajo actual
+dir_actual <- getwd()
+
+# Listar los archivos en el directorio actual
+archivos_en_directorio <- list.files(path = dir_actual)
+
+# Imprimir la lista de archivos
+print(archivos_en_directorio)
+
+#Construir la ruta al archivo CSV
+ruta_archivo <-  "estadisticas_trabajo.csv"
+
+# Cargar el archivo CSV separado por punto y coma
+datos <- read.csv2(file = ruta_archivo, sep = ";")
+
+```
+
+### Visualizaamos los datos 
+
+```{r}
+# Cargar el paquete knitr
+library(knitr)
+
+# Mostrar los datos en una tabla
+#(head(datos))
+
+
+```
+### 2. Trata de obtener un subconjunto de tus datos que cumplan una cierta condición (si no eres capaz, coge el conjunto entero). ¿Cuantos datos tienes? ¿Cuál es el número de variables que tienes?
+
+
+- Número de filas (datos): indica cuántos datos hay:
+
+  num_filas <- nrow(datos)
+
+
+- Número de columnas (variables):Indica cuántas variables hay:
+
+  num_columnas <- ncol(datos)
+```{r}
+# Crear una subtabla para el sector "Educación"
+subtabla_educacion <- datos[datos$Sectores.de.actividad.económica == "P Educación", c("Sexo.Brecha.de.género","Periodo","Total")]
+num_filas <- nrow(subtabla_educacion)
+cat("Numero de datos",num_filas)
+num_columnas <- ncol(subtabla_educacion)
+cat("\nNumero de variables",num_columnas)
+```
+
+
+```{r}
+# mostramos el modelo
+kable(head(subtabla_educacion))
+```
+### 3 ¿Cómo son las variables que estás estudiando? Cuantitativas (discretas o continuas), cualitativas (nominales u ordinales).
+
+- Sectores.de.actividad.económica: Representa los sectores de actividad económica . Los valores incluyen cadenas de caracteres como "P Educación", lo que indica que esta es una variable cualitativa nominal, ya que representa categorías discretas sin un orden específico.
+
+- Sexo.Brecha.de.género: Representa el género de las personas en el sector de actividad económica. Los valores incluyen cadenas de caracteres como ("Mujeres", "Hombre", "Cociente mujeres respecto a hombres "), lo que indica el género de las personas en este contexto. Al igual que en el ejemplo anterior, esta es una variable cualitativa nominal, ya que representa categorías discretas sin un orden específico.
+
+- Periodo: Representa el año en el que  se recopilaron los datos. Por lo que es una variable cualitativa ordinal en este contexto, ya que representan etiquetas de tiempo discreto.
+
+- Total: Representa  cantidad de salario anual medio relacionada con el sector de actividad económica, el género y el período. Dado que los valores son numéricos y pueden tener un rango continuo, esta es una variable cuantitativa continua. Si extraemos "Cociente mujeres respecto a hombres " ya que en este caso el valor es un porcentaje por lo que aunte se sigue considerando cuantitativa continua. pero la vamos a extraer para dejar dejar esta columna con la misma unidad de medida
+
+```{r}
+subtabla_educacion <- datos[datos$Sectores.de.actividad.económica == "P Educación", ]
+kable(head(subtabla_educacion))
+```
+
+### 4 Resume numéricamente tus datos. Puedes usar tablas de frecuencias y/o medidas características (posición, dispersión y forma). ¿Qué observas?
+```{r}
+# Filtrar las filas donde "Sexo.Brecha.de.género" no sea "Cociente mujeres respecto a hombres"
+datos <- read.csv2(file = ruta_archivo, sep = ";")
+```
+
+Pasamos los balores que estan str a numerico
+
+```{r}
+datos_filtrados <- datos[datos$Sexo.Brecha.de.género != "Cociente mujeres respecto a hombres", ]
+# Reemplazar los puntos por nada como separadores de miles
+datos_filtrados$Total <- gsub("\\.", "", datos_filtrados$Total)
+head(datos_filtrados$Total)
+# Reemplazar las comas por puntos como separadores decimales
+datos_filtrados$Total <- gsub(",", ".", datos_filtrados$Total)
+head(datos_filtrados$Total)
+# Convertir la columna "Total" en una columna de números
+datos_filtrados$Total <- as.numeric(datos_filtrados$Total)
+head(datos_filtrados$Total)
+
+```
+
+Resumen numerico
+
+```{r}
+# Verificar que la columna "Total" ahora sea numérica
+str(datos_filtrados$Total)
+# Filtrar solo las filas correspondientes al año 2020
+datos_2020 <- subset(datos_filtrados, Periodo == 2020)
+# Calcular el salario medio de las mujeres
+salario_mujeres_2020 <- datos_2020$Total[datos_2020$Sexo.Brecha.de.género == "Mujeres"]
+salario_medio_mujeres <- mean(salario_mujeres_2020)
+cat("Salaro_medio_de_la_mujer en 2020",salario_medio_mujeres)
+# Calcular el salario medio de los hombres
+
+salario_hombre_2020 <- datos_2020$Total[datos_2020$Sexo.Brecha.de.género == "Hombres"]
+salario_medio_hombres <- mean(salario_hombre_2020)
+cat("\nSalaro_medio_de_la_mujer en 2020",salario_medio_hombres)
+
+```
+
+Desviación Estándar:
+
+La desviación estándar mide la dispersión de los valores con respecto a la media. Un valor de desviación estándar mayor indica una mayor dispersión de los datos.
+
+En este caso se puede observar que en el caso de las mujeres  afecta mas el sector donde trabaje  ya que hay mas dispersión con respecto a la media
+
+
+```{r}
+# Calcular la desviación estándar del salario total
+desviacion_estandar_mujeres <- sd(salario_mujeres_2020)
+desviacion_estandar_mujeres
+desviacion_estandar_hombres <- sd(salario_hombre_2020)
+desviacion_estandar_hombres
+```
+
+Rango Intercuartílico (IQR):
+
+El IQR es la diferencia entre el tercer cuartil (Q3) y el primer cuartil (Q1) y mide la dispersión de los datos en el rango intermedio.
+
+
+
+```{r}
+print("Mujeres")
+Q1 <- quantile(salario_mujeres_2020, 0.25)
+Q3 <- quantile(salario_mujeres_2020, 0.75)
+IQR_salario <- Q3 - Q1
+Q1
+Q3
+IQR_salario
+print("Hombres")
+Q1 <- quantile(salario_hombre_2020, 0.25)
+Q3 <- quantile(salario_hombre_2020, 0.75)
+IQR_salario <- Q3 - Q1
+Q1
+Q3
+IQR_salario
+```
+Usar los datos que tenemos para tener otros datos y tener mas analisis
+```{r}
+subtabla_mujeres <- datos_filtrados[datos_filtrados$Sexo.Brecha.de.género == "Mujeres", c("Sectores.de.actividad.económica", "Total")]
+# Calcular cuántos sectores tienen un salario medio de mujeres por debajo de la media:
+media_mujeres<-mean(subtabla_mujeres$Total)
+sectores_por_debajo_de_media <- sum(subtabla_mujeres$Total < media_mujeres)
+print(sectores_por_debajo_de_media)
+
+
+subtabla_hombres <- datos_filtrados[datos_filtrados$Sexo.Brecha.de.género == "Hombres", c("Sectores.de.actividad.económica", "Total")]
+# Calcular cuántos sectores tienen un salario medio de mujeres por debajo de la media:
+media_hombres<-mean(subtabla_hombres$Total)
+sectores_por_debajo_de_media <- sum(subtabla_hombres$Total < media_hombres)
+print(sectores_por_debajo_de_media)
+
+```
+
+ad
+
+```{r}
+quantile(salario_mujeres_2020)
+quantile(salario_hombres_2020)
+hist(meanv)
+
+# si aunemeto n estare mas cerca del 2 pasamos de 20 a 200
+# creamos un vector vacio numerico
+meanv=numeric()
+# generamos un bucle que guarda la media de los datos genereados para generar mil medias
+for (i in 1:1000){
+  datos=rnorm(200, mean=2, sd=1)
+  meanv[i]=mean(datos)
+}
+# el teoriema del central del limite estas muestrales se van a comportar como una campana de gauss
+# tambien con cuanta dispersión 
+
+quantile(meanv)
+
+# si aunemeto n estare mas cerca del 2 pasamos de 20 a 20000
+# creamos un vector vacio numerico
+meanv=numeric()
+# generamos un bucle que guarda la media de los datos genereados para generar mil medias
+for (i in 1:1000){
+  datos=rnorm(20000, mean=2, sd=1)
+  meanv[i]=mean(datos)
+}
+# el teoriema del central del limite estas muestrales se van a comportar como una campana de gauss
+# tambien con cuanta dispersión 
+
+quantile(meanv)
+hist(meanv)
+
+
+# para generar intervalos de confianza es 
+tt=numeric()
+for (i in 1:1000){
+  datos=rnorm(20000, mean=2, sd=1)
+  ttt=t.test(datos)
+  # para saber si 2 esta dentro del intervalo de confiaza delos datos generados como sabemos que la medias 2 dos 
+  # vemos cuantas veces 2 esta dentro del intervalo de congianza
+  tt[i]=(ttt$conf.int[1]<2)&(2<ttt$conf.int[2])
+}
+table(tt)
+
+# Hipotesis
+
+# quiero saner si p>0.5
+# en nuestro caso 13 con cebolla de un total de 20
+# H0: p=0.5 o p<_0.5
+# H1: p>0.-5
+# hay que meter numero de exito y tamaño muestral
+prop.test(13,20)
+# quiero confirmar si h1 es cierto de decir si H1:p0.5 
+prop.test(13,20,alternative="greater")
+# solo si esta por debajo de mi erro
+# p- valor< alpha
+# alpha error que asimimos en la hipotesis en la que H0 sea cierta escogemos H1
+# p-value = 0.1318 >0.05 
+# En este caso no podemos admitir el error 
+# con datos del cis seisa 
+prop.test(3195,4538,alternative="greater")
+# en este caso  p-value < 2.2e-16 por lo cual podemos considerar que segun el cis 
+# puedo decir que la mayoria preferie con cebolla
+# alternative hypothesis: true p is not equal to 0.5 esto solo indica la hipotesis 
+# alternativa no si es verdadera ya que solo es verdadera dependiendo
+# del error que se este dispuesto a cometer
+prop.test(3195,4538)
+
+# que significa que p-valor < 0.05
+# suponcamos que
+# h0= mean =2
+# h1: mean distinto 2
+
+# para generar intervalos de confianza es 
+pvv=numeric()
+for (i in 1:1000){
+  datos=rnorm(200, mean=2, sd=1)
+  # contras te si la verdadera media es distinto de 2
+  ttt=t.test(datos,mu=2)
+  pvv[i]=ttt$p.value
+}
+
+summary(pvv)
+# quiere decir que 95% mean 2 y 5% mean es distinto de 2
+table(pvv<0.05)
+# lo unico que yo se es que le puedo dar una resticción lineal
+
+```
+

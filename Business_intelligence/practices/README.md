@@ -85,3 +85,22 @@ en la maquina virtual
     Contraseña: greibd2021
     
 ## 4 
+
+
+
+
+----------
+
+
+# Ponemos un todo al final
+idea tener todas las entregas en ese moemnto
+
+el trabajo es hacer un replica de este informe 
+
+uno de trabajos de seguimientos tiene que ver con este
+
+formar un grupo una recomendaciónes burcar dataset somos una productora contruir un conjunto de datos dtl xml 
+
+primera entregr tiene que ver esas peliculas , los individuales lo que vamos viendo en clase  
+lo que hicimos esto hay que hacer una creación de tablas e insertar  los datos trabajaremos y lo haremos aqui y luego tenemos el proyecto de asignatura  por las tablas  y unos datos cuando seas 
+ultimi agruparos en grupo y empezar a hacer y la entre de individuales tiene que se muy script muy exustivo la idea es ver como se hace mas  ala otra persona la idea hacerlo mas o menos bien , los trabajos pequeños el caso de uso nuevo y el caso de usos dimensionales nuevo s
