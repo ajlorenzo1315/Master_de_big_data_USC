@@ -27,7 +27,7 @@ fi
 # Verificar si la imagen del Datanode ya está construida
 if ! docker images | grep -q "$BUCKUP_IMAGE" || [ "$1" == "--force" ]; then
     # Si la imagen no está construida o se especifica --force, construirla
-    docker build -f ./docker/Backup_Node.Dockerfile -t "$DATANODE_IMAGE" .
+    docker build -f ./docker/Backup_Node.Dockerfile -t "$BUCKUP_IMAGE" .
 else
     echo "La imagen del Datanode ya está construida."
 fi
@@ -48,16 +48,21 @@ fi
 docker container run -d --name namenode --network=hadoop-cluster --hostname namenode --net-alias resourcemanager --cpus=1 --memory=3072m \
 --expose 8000-10000 -p 9870:9870 -p 8088:8088 \
 -v ./docker/docker_volumen:/docker \
-namenode-image /docker/inicio_ResourceManager.sh format start
+"$NAMENODE_IMAGE" /docker/inicio_ResourceManager.sh format start
 
 for i in {1..4}; do docker container run -d --name datanode$i --network=hadoop-cluster --hostname datanode$i \
 --cpus=1 --memory=3072m --expose 8000-10000 --expose 50000-50200 -v ./docker/docker_volumen:/docker  \
-datanode-image /docker/inicio_NodeManager.sh format start; done
+"$DATANODE_IMAGE"  /docker/inicio_NodeManager.sh format start; done
 
 
+docker container run -d --name backupnode --network=hadoop-cluster --hostname \
+backupnode --cpus=1 --memory=3072m --expose 50100 -p 50105:50105 buckup-image \
+-v ./docker/docker_volumen:/docker /docker/inicio_backup.sh
 
 
-#docker container run -ti --name backupnode --network=hadoop-cluster --hostname backupnode --cpus=1 --memory=3072m --expose 50100 -p 50105:50105 buckup-image /bin/bash
+#docker container run -d --name timelineserver --network=hadoop-cluster --hostname timelineserver \
+#--cpus=1 --memory=3072m --expose 10200 -p 8188:8188  -i tfpena/hadoop-base  /docker/inicio_timelineserver.sh
+#nano ${HADOOP_HOME}/etc/hadoop/yarn-site.xml
 
 
 # Detener y eliminar contenedores existentes

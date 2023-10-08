@@ -1,0 +1,11 @@
+docker container run -ti --name timelineserver --network=hadoop-cluster --hostname timelineserver --cpus=1 --memory=3072m --expose 10200 -p 8188:8188 tfpena/hadoop-base /bin/bash
+Unable to find image 'tfpena/hadoop-base:latest' locally
+latest: Pulling from tfpena/hadoop-base
+74ac377868f8: Already exists 
+9f6a80fd0433: Already exists 
+Digest: sha256:5f1326e2997df1a58d51f875769eb67349b5e48c34c7991e31ee48ebe5068c2c
+Status: Downloaded newer image for tfpena/hadoop-base:latest
+root@timelineserver:/# su - hdadmin
+hdadmin@timelineserver:~$ yarn --daemon start timelineserver
+WARNING: /opt/bd/hadoop/logs does not exist. Creating.
+hdadmin@timelineserver:~$ 

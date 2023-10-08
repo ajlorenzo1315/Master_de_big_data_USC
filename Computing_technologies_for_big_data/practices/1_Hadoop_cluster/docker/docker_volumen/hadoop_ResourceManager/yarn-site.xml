@@ -47,6 +47,7 @@
     <final>true</final>
   </property>
 
+  <!-- Tarea 1 apartado 2-->
   <!-- Configuración del hostname del servicio de línea de tiempo de YARN -->
   <property>
     <name>yarn.timeline-service.hostname</name> <!-- Nombre del parámetro -->

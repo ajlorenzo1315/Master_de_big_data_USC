@@ -14,8 +14,8 @@
 -->
 <configuration>
 
-  <!-- Site specific YARN configuration properties -->
-  <property>
+<!-- Site specific YARN configuration properties -->
+ <property>
     <!-- Nombre del equipo que ejecuta el demonio ResourceManager -->
     <name>yarn.resourcemanager.hostname</name>
     <value>resourcemanager</value>
@@ -46,27 +46,4 @@
     <value>2048</value>
     <final>true</final>
   </property>
-
-  <!-- Configuración del hostname del servicio de línea de tiempo de YARN -->
-  <property>
-    <name>yarn.timeline-service.hostname</name> <!-- Nombre del parámetro -->
-    <value>timelineserver</value> <!-- Valor del parámetro (en este caso, el nombre del servidor de línea de tiempo) -->
-    <final>true</final>
-  </property>
-
-  <!-- Habilitar el servicio de línea de tiempo de YARN -->
-  <property>
-    <name>yarn.timeline-service.enabled</name> <!-- Nombre del parámetro -->
-    <value>true</value> <!-- Valor del parámetro (habilitar el servicio) -->
-    <final>true</final>
-  </property>
-
-  <!-- Habilitar el publicador de métricas del sistema de YARN -->
-  <property>
-    <name>yarn.system-metrics-publisher.enabled</name> <!-- Nombre del parámetro -->
-    <value>true</value> <!-- Valor del parámetro (habilitar el publicador de métricas del sistema) -->
-    <final>true</final>
-  </property>
-
-
 </configuration>
