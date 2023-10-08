@@ -4,6 +4,10 @@
 NAMENODE_IMAGE="namenode-image"
 DATANODE_IMAGE="datanode-image"
 BUCKUP_IMAGE="buckup-image"
+
+docker stop  $(docker ps -aq)
+docker rm  $(docker ps -aq)
+
 # Verificar si la imagen del Namenode ya está construida
 if ! docker images | grep -q "$NAMENODE_IMAGE" || [ "$1" == "--force" ]; then
     # Si la imagen no está construida o se especifica --force, construirla
@@ -35,12 +39,11 @@ if ! docker network inspect hadoop-cluster &> /dev/null; then
     echo "La red 'hadoop-cluster' ha sido creada."
 else
     echo "La red 'hadoop-cluster' ya existe."
+    docker network  rm hadoop-cluster
+    #$(docker network list -aq)
+    docker network create hadoop-cluster
 fi
 
-
-docker stop  $(docker ps -aq)
-
-docker rm  $(docker ps -aq)
 
 docker container run -d --name namenode --network=hadoop-cluster --hostname namenode --net-alias resourcemanager --cpus=1 --memory=3072m \
 --expose 8000-10000 -p 9870:9870 -p 8088:8088 \
@@ -48,13 +51,13 @@ docker container run -d --name namenode --network=hadoop-cluster --hostname name
 namenode-image /docker/inicio_ResourceManager.sh format start
 
 for i in {1..4}; do docker container run -d --name datanode$i --network=hadoop-cluster --hostname datanode$i \
---cpus=1 --memory=3072m --expose 8000-10000 --expose 50000-50200 -v ./docker/docker_volumen:/docker  datanode-image /docker/inicio_NodeManager.sh format start; done
+--cpus=1 --memory=3072m --expose 8000-10000 --expose 50000-50200 -v ./docker/docker_volumen:/docker  \
+datanode-image /docker/inicio_NodeManager.sh format start; done
 
 
 
 
-#docker container run -ti --name backupnode --network=hadoop-cluster --hostname backupnode \
-#--cpus=1 --memory=3072m --expose 50100 -p 50105:50105 buckup-image /bin/bash
+#docker container run -ti --name backupnode --network=hadoop-cluster --hostname backupnode --cpus=1 --memory=3072m --expose 50100 -p 50105:50105 buckup-image /bin/bash
 
 
 # Detener y eliminar contenedores existentes

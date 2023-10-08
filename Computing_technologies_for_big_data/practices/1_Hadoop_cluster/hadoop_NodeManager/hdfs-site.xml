@@ -21,7 +21,7 @@
  <property>
     <!-- Lista (separada por comas) de directorios donde los DataNodes guardan los bloques HDFS -->
     <name>dfs.datanode.data.dir</name>
-    <value>file:///var/data/hdfs/datanode</value>
+    <value>file:///var/data/hadoop/hdfs/datanode</value>
     <final>true</final>
   </property>
 

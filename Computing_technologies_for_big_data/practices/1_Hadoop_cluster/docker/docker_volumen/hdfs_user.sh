@@ -22,7 +22,7 @@ su luser -c "tar xvf /docker/libros.tar -C /tmp"
 su luser -c "cd /tmp && $HADOOP_HOME/bin/hdfs dfs -put libros . && hdfs dfs -ls libros"
 
 
-hdfs dfs -chown hdadmin:hadoop -R /user/hdadmin
+#hdfs dfs -chown hdadmin:hadoop -R /user/hdadmin
 
 #tar xvzf wordcount.tgz
 

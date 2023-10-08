@@ -22,6 +22,7 @@
 <property>
   <name>dfs.namenode.backup.address</name>
   <value>backupnode:50100</value>
+  <final>true</final>
 </property>
 
   <!-- Dirección y puerto del interfaz web del NameNode -->
@@ -29,7 +30,7 @@
   acceder a la interfaz web del NameNode. -->
   <property>
     <name>dfs.namenode.backup.http-address</name>
-    <value>backupnode:50100</value>
+    <value>backupnode:50105</value>
     <final>true</final>
   </property>
 

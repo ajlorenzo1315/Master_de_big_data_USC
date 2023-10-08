@@ -1,0 +1,38 @@
+hdfs log  
+
+STARTUP_MSG:   build = https://github.com/apache/hadoop.git -r 1be78238728da9266a4f88195058f08fd012bf9c; compiled by 'ubuntu' on 2023-06-18T08:22Z
+STARTUP_MSG:   java = 1.8.0_382
+************************************************************/
+2023-10-08 12:32:30,927 INFO org.apache.hadoop.hdfs.server.datanode.DataNode: registered UNIX signal handlers for [TERM, HUP, INT]
+2023-10-08 12:32:31,338 INFO org.apache.hadoop.hdfs.server.datanode.checker.ThrottledAsyncChecker: Scheduling a check for [DISK]file:/var/data/hdfs/datanode
+2023-10-08 12:32:31,346 WARN org.apache.hadoop.hdfs.server.datanode.checker.StorageLocationChecker: Exception checking StorageLocation [DISK]file:/var/data/hdfs/datanode
+java.io.FileNotFoundException: File file:/var/data/hdfs/datanode does not exist
+	at org.apache.hadoop.fs.RawLocalFileSystem.deprecatedGetFileStatus(RawLocalFileSystem.java:915)
+	at org.apache.hadoop.fs.RawLocalFileSystem.getFileLinkStatusInternal(RawLocalFileSystem.java:1236)
+	at org.apache.hadoop.fs.RawLocalFileSystem.getFileStatus(RawLocalFileSystem.java:905)
+	at org.apache.hadoop.fs.FilterFileSystem.getFileStatus(FilterFileSystem.java:462)
+	at org.apache.hadoop.util.DiskChecker.mkdirsWithExistsAndPermissionCheck(DiskChecker.java:233)
+	at org.apache.hadoop.util.DiskChecker.checkDirInternal(DiskChecker.java:141)
+	at org.apache.hadoop.util.DiskChecker.checkDir(DiskChecker.java:116)
+	at org.apache.hadoop.hdfs.server.datanode.StorageLocation.check(StorageLocation.java:239)
+	at org.apache.hadoop.hdfs.server.datanode.StorageLocation.check(StorageLocation.java:52)
+	at org.apache.hadoop.hdfs.server.datanode.checker.ThrottledAsyncChecker$1.call(ThrottledAsyncChecker.java:142)
+	at org.apache.hadoop.thirdparty.com.google.common.util.concurrent.TrustedListenableFutureTask$TrustedFutureInterruptibleTask.runInterruptibly(TrustedListenableFutureTask.java:125)
+	at org.apache.hadoop.thirdparty.com.google.common.util.concurrent.InterruptibleTask.run(InterruptibleTask.java:69)
+	at org.apache.hadoop.thirdparty.com.google.common.util.concurrent.TrustedListenableFutureTask.run(TrustedListenableFutureTask.java:78)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:750)
+2023-10-08 12:32:31,347 ERROR org.apache.hadoop.hdfs.server.datanode.DataNode: Exception in secureMain
+org.apache.hadoop.util.DiskChecker$DiskErrorException: Too many failed volumes - current valid volumes: 0, volumes configured: 1, volumes failed: 1, volume failures tolerated: 0
+	at org.apache.hadoop.hdfs.server.datanode.checker.StorageLocationChecker.check(StorageLocationChecker.java:233)
+	at org.apache.hadoop.hdfs.server.datanode.DataNode.makeInstance(DataNode.java:3141)
+	at org.apache.hadoop.hdfs.server.datanode.DataNode.instantiateDataNode(DataNode.java:3054)
+	at org.apache.hadoop.hdfs.server.datanode.DataNode.createDataNode(DataNode.java:3098)
+	at org.apache.hadoop.hdfs.server.datanode.DataNode.secureMain(DataNode.java:3242)
+	at org.apache.hadoop.hdfs.server.datanode.DataNode.main(DataNode.java:3266)
+2023-10-08 12:32:31,348 INFO org.apache.hadoop.util.ExitUtil: Exiting with status 1: org.apache.hadoop.util.DiskChecker$DiskErrorException: Too many failed volumes - current valid volumes: 0, volumes configured: 1, volumes failed: 1, volume failures tolerated: 0
+2023-10-08 12:32:31,349 INFO org.apache.hadoop.hdfs.server.datanode.DataNode: SHUTDOWN_MSG: 
+/************************************************************
+SHUTDOWN_MSG: Shutting down DataNode at datanode1/172.19.0.3
+************************************************************/

@@ -1,0 +1,123 @@
+Tarea 1 Importante: var/data/hdfs/namenode/current/
+
+1.1.2 en backupnode
+	mkdir -p /var/data/backupnode/dfs/name
+	chown -R hdadmin:hadoop /var/data/backupnode/
+
+
+1.1.3 en backupnode
+	nano hadoop/etc/hadoop/core-site.xml
+<configuration>
+  <property>
+    <!-- Nombre del filesystem por defecto -->
+    <!-- Como queremos usar HDFS tenemos que indicarlo con hdfs:// y el servidor y puerto en el que corre el NameNod -->
+    <name>fs.defaultFS</name>
+    <value>hdfs://namenode:9000/</value>
+    <final>true</final>
+  </property>
+  <property>
+    <!-- Directorio para guardar las copias de seguridad -->
+    <name>hadoop.tmp.dir</name>
+    <value>/var/data/backupnode</value>
+    <final>true</final>
+  </property>
+</configuration>
+
+1.1.4 en backupnode
+	nano hadoop/etc/hadoop/hdfs-site.xml
+<configuration>
+     <property>
+         <!-- Dirección y puerto del nodo de backup -->
+         <name>dfs.namenode.backup.address</name>
+         <value>backupnode:50100</value>
+         <final>true</final>
+    </property>
+    <property>
+        <!-- Dirección y puerto del servicio web del nodo de backup -->
+        <name>dfs.namenode.backup.http-address</name>
+        <value>backupnode:50105</value>
+        <final>true</final>
+    </property>
+</configuration>
+
+1.1.5 en backupnode
+	hdfs namenode -backup
+
+1.1.6 Crear BackupNode a partir de imagen
+	docker container run -d --name backupnode --network=hadoop-cluster --hostname backupnode --cpus=1 --memory=3072m --expose 50100 -p 50105:50105 backupnode-image su hdadmin -c "JAVA_HOME=/usr/lib/jvm/java-8-openjdk-amd64 /opt/bd/hadoop/bin/hdfs namenode -backup"
+
+
+1.2.1
+	docker container exec -ti namenode /bin/bash
+	yarn --daemon stop resourcemanager
+
+1.2.2 en namenode
+	nano hadoop/etc/hadoop/yarn-site.xml
+<configuration>
+  <property>
+    <!-- Nombre del equipo que ejecuta el demonio ResourceManager -->
+    <name>yarn.resourcemanager.hostname</name>
+    <value>resourcemanager</value>
+    <final>true</final>
+  </property>
+
+  <property>
+    <!-- Número máximo de vcores que un ApplicationMaster puede pedir al RM (por defecto: 4) -->
+    <!-- Peticiones mayores lanzan una InvalidResourceRequestException -->
+    <name>yarn.scheduler.maximum-allocation-vcores</name>
+    <value>1</value>
+    <final>true</final>
+  </property>
+
+  <property>
+    <!-- Memoria minima (MB) que un ApplicationMaster puede solicitar al RM (por defecto: 1024) -->
+    <!-- La memoria asignada a un contenedor será múltiplo de esta cantidad -->
+    <name>yarn.scheduler.minimum-allocation-mb</name>
+    <value>128</value>
+    <final>true</final>
+  </property>
+
+  <property>
+    <!-- Memoria maxima (MB) que un ApplicationMaster puede solicitar al RM (por defecto: 8192 MB) -->
+    <!-- Peticiones mayores lanzan una InvalidResourceRequestException -->
+    <!-- Puedes aumentar o reducir este valor en funcion de la memoria de la que dispongas -->
+    <name>yarn.scheduler.maximum-allocation-mb</name>
+    <value>2048</value>
+    <final>true</final>
+  </property>
+
+  <property>
+    <!-- Nombre del equipo que ejecutará el demonio de línea de tiempo por defecto -->
+    <name>yarn.timeline-service.hostname</name>
+    <value>timelineserver</value>
+    <final>true</final>
+  </property>
+
+  <property>
+    <!-- Indica que si el servicio de linea de tiempo está activo o no -->
+    <name>yarn.timeline-service.enabled</name>
+    <value>true</value>
+    <final>true</final>
+  </property>
+  
+  <property>
+    <!-- Le indica al ResourceManager que publique las metricas de YARN en el timeline server -->
+    <name>yarn.system-metrics-publisher.enabled</name>
+    <value>true</value>
+    <final>true</final>
+  </property>
+</configuration>
+
+1.2.3 en namenode
+	yarn --daemon start resourcemanager
+
+1.2.3 En powershell
+	docker container run -ti --name timelineserver --network=hadoop-cluster --hostname timelineserver --cpus=1 --memory=3072m --expose 10200 -p 8188:8188 tfpena/hadoop-base /bin/bash
+
+1.2.4 en timelineserver
+	su - hdadmin
+	yarn --daemon start timelineserver
+
+1.2.5
+	export MAPRED_EXAMPLES=$HADOOP_HOME/share/hadoop/mapreduce
+	yarn jar $MAPRED_EXAMPLES/hadoop-mapreduce-examples-*.jar pi 16 1000
