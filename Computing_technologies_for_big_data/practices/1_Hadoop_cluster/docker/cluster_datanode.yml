@@ -1,0 +1,22 @@
+version: '3'
+
+services:
+  namenode:
+    image: namenode-image # Reemplaza con el nombre de tu imagen de Namenode
+    container_name: namenode
+    networks:
+      - hadoop-cluster
+    hostname: namenode
+    ports:
+      - "9870:9870"
+      - "8088:8088"
+    cpus: 1
+    mem_limit: 3072m
+    expose:
+      - "8000-10000"
+    entrypoint: /docker/inicio_ResourceManager.sh format start
+    volumes:
+      - ./docker_volumen:/docker
+
+networks:
+  hadoop-cluster:

@@ -1,0 +1,394 @@
+
+
+hdadmin@namenode:~$ hdfs dfsadmin -report
+Configured Capacity: 0 (0 B)
+Present Capacity: 0 (0 B)
+DFS Remaining: 0 (0 B)
+DFS Used: 0 (0 B)
+DFS Used%: 0.00%
+Replicated Blocks:
+	Under replicated blocks: 0
+	Blocks with corrupt replicas: 0
+	Missing blocks: 0
+	Missing blocks (with replication factor 1): 0
+	Low redundancy blocks with highest priority to recover: 0
+	Pending deletion blocks: 0
+Erasure Coded Block Groups: 
+	Low redundancy block groups: 0
+	Block groups with corrupt internal blocks: 0
+	Missing block groups: 0
+	Low redundancy blocks with highest priority to recover: 0
+	Pending deletion blocks: 0
+
+-------------------------------------------------
+
+
+
+ hdfs dfsadmin -report
+Configured Capacity: 1052344336384 (980.07 GB)
+Present Capacity: 643363160064 (599.18 GB)
+DFS Remaining: 643363061760 (599.18 GB)
+DFS Used: 98304 (96 KB)
+DFS Used%: 0.00%
+Replicated Blocks:
+	Under replicated blocks: 0
+	Blocks with corrupt replicas: 0
+	Missing blocks: 0
+	Missing blocks (with replication factor 1): 0
+	Low redundancy blocks with highest priority to recover: 0
+	Pending deletion blocks: 0
+Erasure Coded Block Groups: 
+	Low redundancy block groups: 0
+	Block groups with corrupt internal blocks: 0
+	Missing block groups: 0
+	Low redundancy blocks with highest priority to recover: 0
+	Pending deletion blocks: 0
+
+-------------------------------------------------
+Live datanodes (4):
+
+Name: 172.19.0.3:9866 (datanode1.hadoop-cluster)
+Hostname: datanode1
+Decommission Status : Normal
+Configured Capacity: 263086084096 (245.02 GB)
+DFS Used: 24576 (24 KB)
+Non DFS Used: 88806760448 (82.71 GB)
+DFS Remaining: 160840749056 (149.79 GB)
+DFS Used%: 0.00%
+DFS Remaining%: 61.14%
+Configured Cache Capacity: 0 (0 B)
+Cache Used: 0 (0 B)
+Cache Remaining: 0 (0 B)
+Cache Used%: 100.00%
+Cache Remaining%: 0.00%
+Xceivers: 0
+Last contact: Sat Oct 07 20:56:13 CEST 2023
+Last Block Report: Sat Oct 07 20:56:08 CEST 2023
+Num of Blocks: 0
+
+
+Name: 172.19.0.4:9866 (datanode2.hadoop-cluster)
+Hostname: datanode2
+Decommission Status : Normal
+Configured Capacity: 263086084096 (245.02 GB)
+DFS Used: 24576 (24 KB)
+Non DFS Used: 88806727680 (82.71 GB)
+DFS Remaining: 160840781824 (149.79 GB)
+DFS Used%: 0.00%
+DFS Remaining%: 61.14%
+Configured Cache Capacity: 0 (0 B)
+Cache Used: 0 (0 B)
+Cache Remaining: 0 (0 B)
+Cache Used%: 100.00%
+Cache Remaining%: 0.00%
+Xceivers: 0
+Last contact: Sat Oct 07 20:56:13 CEST 2023
+Last Block Report: Sat Oct 07 20:56:07 CEST 2023
+Num of Blocks: 0
+
+
+Name: 172.19.0.5:9866 (datanode3.hadoop-cluster)
+Hostname: datanode3
+Decommission Status : Normal
+Configured Capacity: 263086084096 (245.02 GB)
+DFS Used: 24576 (24 KB)
+Non DFS Used: 88806760448 (82.71 GB)
+DFS Remaining: 160840749056 (149.79 GB)
+DFS Used%: 0.00%
+DFS Remaining%: 61.14%
+Configured Cache Capacity: 0 (0 B)
+Cache Used: 0 (0 B)
+Cache Remaining: 0 (0 B)
+Cache Used%: 100.00%
+Cache Remaining%: 0.00%
+Xceivers: 0
+Last contact: Sat Oct 07 20:56:13 CEST 2023
+Last Block Report: Sat Oct 07 20:56:08 CEST 2023
+Num of Blocks: 0
+
+
+Name: 172.19.0.6:9866 (datanode4.hadoop-cluster)
+Hostname: datanode4
+Decommission Status : Normal
+Configured Capacity: 263086084096 (245.02 GB)
+DFS Used: 24576 (24 KB)
+Non DFS Used: 88806727680 (82.71 GB)
+DFS Remaining: 160840781824 (149.79 GB)
+DFS Used%: 0.00%
+DFS Remaining%: 61.14%
+Configured Cache Capacity: 0 (0 B)
+Cache Used: 0 (0 B)
+Cache Remaining: 0 (0 B)
+Cache Used%: 100.00%
+Cache Remaining%: 0.00%
+Xceivers: 0
+Last contact: Sat Oct 07 20:56:13 CEST 2023
+Last Block Report: Sat Oct 07 20:56:07 CEST 2023
+Num of Blocks: 0
+-----------------------------------------------
+yarn node -list
+2023-10-07 20:56:41,760 INFO client.DefaultNoHARMFailoverProxyProvider: Connecting to ResourceManager at resourcemanager/172.19.0.2:8032
+Total Nodes:4
+         Node-Id	     Node-State	Node-Http-Address	Number-of-Running-Containers
+ datanode4:39457	        RUNNING	   datanode4:8042	                           0
+ datanode1:42323	        RUNNING	   datanode1:8042	                           0
+ datanode3:40433	        RUNNING	   datanode3:8042	                           0
+ datanode2:33417	        RUNNING	   datanode2:8042	                           0
+
+
+---------------------------------------------------------------
+
+luser@namenode:/tmp$ hdfs dfs -ls libros
+Found 15 items
+-rw-r--r--   3 luser supergroup     441804 2023-10-07 21:04 libros/pg14329.txt.gz
+-rw-r--r--   3 luser supergroup     264123 2023-10-07 21:04 libros/pg1619.txt.gz
+-rw-r--r--   3 luser supergroup     455129 2023-10-07 21:04 libros/pg16625.txt.gz
+-rw-r--r--   3 luser supergroup     939502 2023-10-07 21:04 libros/pg17013.txt.gz
+-rw-r--r--   3 luser supergroup     737367 2023-10-07 21:04 libros/pg17073.txt.gz
+-rw-r--r--   3 luser supergroup     219304 2023-10-07 21:04 libros/pg18005.txt.gz
+-rw-r--r--   3 luser supergroup     813698 2023-10-07 21:04 libros/pg2000.txt.gz
+-rw-r--r--   3 luser supergroup     328494 2023-10-07 21:04 libros/pg24536.txt.gz
+-rw-r--r--   3 luser supergroup     504188 2023-10-07 21:04 libros/pg25640.txt.gz
+-rw-r--r--   3 luser supergroup      38194 2023-10-07 21:04 libros/pg25807.txt.gz
+-rw-r--r--   3 luser supergroup     103986 2023-10-07 21:04 libros/pg32315.txt.gz
+-rw-r--r--   3 luser supergroup     125693 2023-10-07 21:04 libros/pg5201.txt.gz
+-rw-r--r--   3 luser supergroup      82099 2023-10-07 21:04 libros/pg7109.txt.gz
+-rw-r--r--   3 luser supergroup      99685 2023-10-07 21:04 libros/pg8870.txt.gz
+-rw-r--r--   3 luser supergroup      85187 2023-10-07 21:04 libros/pg9980.txt.gz
+
+---------------------------------------------------------------------
+
+hdadmin@namenode:~$ yarn jar $MAPRED_EXAMPLES/hadoop-mapreduce-examples-*.jar pi 16 1000
+Number of Maps  = 16
+Samples per Map = 1000
+Wrote input for Map #0
+Wrote input for Map #1
+Wrote input for Map #2
+Wrote input for Map #3
+Wrote input for Map #4
+Wrote input for Map #5
+Wrote input for Map #6
+Wrote input for Map #7
+Wrote input for Map #8
+Wrote input for Map #9
+Wrote input for Map #10
+Wrote input for Map #11
+Wrote input for Map #12
+Wrote input for Map #13
+Wrote input for Map #14
+Wrote input for Map #15
+Starting Job
+2023-10-07 21:20:10,243 INFO client.DefaultNoHARMFailoverProxyProvider: Connecting to ResourceManager at resourcemanager/172.19.0.2:8032
+2023-10-07 21:20:10,530 INFO mapreduce.JobResourceUploader: Disabling Erasure Coding for path: /tmp/hadoop-yarn/staging/hdadmin/.staging/job_1696704970045_0001
+2023-10-07 21:20:10,735 INFO input.FileInputFormat: Total input files to process : 16
+2023-10-07 21:20:10,778 INFO mapreduce.JobSubmitter: number of splits:16
+2023-10-07 21:20:10,928 INFO mapreduce.JobSubmitter: Submitting tokens for job: job_1696704970045_0001
+2023-10-07 21:20:10,928 INFO mapreduce.JobSubmitter: Executing with tokens: []
+2023-10-07 21:20:11,136 INFO conf.Configuration: resource-types.xml not found
+2023-10-07 21:20:11,136 INFO resource.ResourceUtils: Unable to find 'resource-types.xml'.
+2023-10-07 21:20:11,573 INFO impl.YarnClientImpl: Submitted application application_1696704970045_0001
+2023-10-07 21:20:11,641 INFO mapreduce.Job: The url to track the job: http://resourcemanager:8088/proxy/application_1696704970045_0001/
+2023-10-07 21:20:11,641 INFO mapreduce.Job: Running job: job_1696704970045_0001
+2023-10-07 21:20:18,757 INFO mapreduce.Job: Job job_1696704970045_0001 running in uber mode : false
+2023-10-07 21:20:18,758 INFO mapreduce.Job:  map 0% reduce 0%
+2023-10-07 21:20:26,427 INFO mapreduce.Job:  map 6% reduce 0%
+2023-10-07 21:20:46,331 INFO mapreduce.Job:  map 6% reduce 2%
+2023-10-07 21:20:50,629 INFO mapreduce.Job:  map 25% reduce 2%
+2023-10-07 21:20:51,634 INFO mapreduce.Job:  map 44% reduce 2%
+2023-10-07 21:20:52,637 INFO mapreduce.Job:  map 50% reduce 15%
+2023-10-07 21:20:54,642 INFO mapreduce.Job:  map 56% reduce 15%
+2023-10-07 21:20:55,644 INFO mapreduce.Job:  map 88% reduce 15%
+2023-10-07 21:20:56,647 INFO mapreduce.Job:  map 100% reduce 15%
+2023-10-07 21:20:57,652 INFO mapreduce.Job:  map 100% reduce 100%
+2023-10-07 21:20:57,656 INFO mapreduce.Job: Job job_1696704970045_0001 completed successfully
+2023-10-07 21:20:57,730 INFO mapreduce.Job: Counters: 55
+	File System Counters
+		FILE: Number of bytes read=358
+		FILE: Number of bytes written=4699982
+		FILE: Number of read operations=0
+		FILE: Number of large read operations=0
+		FILE: Number of write operations=0
+		HDFS: Number of bytes read=4246
+		HDFS: Number of bytes written=215
+		HDFS: Number of read operations=69
+		HDFS: Number of large read operations=0
+		HDFS: Number of write operations=3
+		HDFS: Number of bytes read erasure-coded=0
+	Job Counters 
+		Launched map tasks=16
+		Launched reduce tasks=1
+		Data-local map tasks=13
+		Rack-local map tasks=3
+		Total time spent by all maps in occupied slots (ms)=4883700
+		Total time spent by all reduces in occupied slots (ms)=401115
+		Total time spent by all map tasks (ms)=488370
+		Total time spent by all reduce tasks (ms)=26741
+		Total vcore-milliseconds taken by all map tasks=488370
+		Total vcore-milliseconds taken by all reduce tasks=26741
+		Total megabyte-milliseconds taken by all map tasks=625113600
+		Total megabyte-milliseconds taken by all reduce tasks=51342720
+	Map-Reduce Framework
+		Map input records=16
+		Map output records=32
+		Map output bytes=288
+		Map output materialized bytes=448
+		Input split bytes=2358
+		Combine input records=0
+		Combine output records=0
+		Reduce input groups=2
+		Reduce shuffle bytes=448
+		Reduce input records=32
+		Reduce output records=0
+		Spilled Records=64
+		Shuffled Maps =16
+		Failed Shuffles=0
+		Merged Map outputs=16
+		GC time elapsed (ms)=12594
+		CPU time spent (ms)=7100
+		Physical memory (bytes) snapshot=3735486464
+		Virtual memory (bytes) snapshot=46489976832
+		Total committed heap usage (bytes)=2506686464
+		Peak Map Physical memory (bytes)=227823616
+		Peak Map Virtual memory (bytes)=2706087936
+		Peak Reduce Physical memory (bytes)=123756544
+		Peak Reduce Virtual memory (bytes)=3247120384
+	Shuffle Errors
+		BAD_ID=0
+		CONNECTION=0
+		IO_ERROR=0
+		WRONG_LENGTH=0
+		WRONG_MAP=0
+		WRONG_REDUCE=0
+	File Input Format Counters 
+		Bytes Read=1888
+	File Output Format Counters 
+		Bytes Written=97
+Job Finished in 47.537 seconds
+Estimated value of Pi is 3.14250000000000000000
+---------------------------------------------------------------------------------------------------
+luser@namenode:~/wordcount$ mvn package
+[INFO] Scanning for projects...
+[INFO] 
+[INFO] -----------------------< cursohadoop:wordcount >------------------------
+[INFO] Building wordcount 0.0.1-SNAPSHOT
+[INFO] --------------------------------[ jar ]---------------------------------
+Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/plugins/maven-resources-plugin/2.6/maven-resources-plugin-2.6.pom
+Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/plugins/maven-resources-plugin/2.6/maven-resources-plugin-2.6.pom (8.1 kB at 11 kB/s)
+Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/plugins/maven-plugins/23/maven-plugins-23.pom
+Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/plugins/maven-plugins/23/maven-plugins-23.pom (9.2 kB at 79 kB/s)
+Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/maven-parent/22/maven-parent-22.pom
+Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/maven-parent/22/maven-parent-22.pom (30 kB at 292 kB/s)
+Downloading from central: https://repo.maven.apache.org/maven2/org/apache/apache/11/apache-11.pom
+Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/apache/11/apache-11.pom (15 kB at 285 kB/s)
+Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/plugins/maven-resources-plugin/2.6/maven-resources-plugin-2.6.jar
+Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/plugins/maven-resources-plugin/2.6/maven-resources-plugin-2.6.jar (30 kB at 215 kB/s)
+Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/plugins/maven-compiler-plugin/3.3/maven-compiler-plugin-3.3.pom
+Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/plugins/maven-compiler-plugin/3.3/maven-compiler-plugin-3.3.pom (11 kB at 127 kB/s)
+Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/plugins/maven-plugins/27/maven-plugins-27.pom
+Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/plugins/maven-plugins/27/maven-plugins-27.pom (11 kB at 115 kB/s)
+.
+.
+.
+.
+.
+.
+[INFO] Building jar: /home/luser/wordcount/target/wordcount-0.0.1-SNAPSHOT.jar
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  28.184 s
+[INFO] Finished at: 2023-10-07T21:30:45+02:00
+[INFO] ------------------------------------------------------------------------
+
+-----------------------------------------------------------------------------------------------------------------------------
+
+luser@namenode:~/wordcount$ yarn jar target/wordcount*.jar libros wordcount-out
+2023-10-07 21:30:52,050 INFO client.DefaultNoHARMFailoverProxyProvider: Connecting to ResourceManager at resourcemanager/172.19.0.2:8032
+2023-10-07 21:30:52,427 INFO mapreduce.JobResourceUploader: Disabling Erasure Coding for path: /tmp/hadoop-yarn/staging/luser/.staging/job_1696704970045_0002
+2023-10-07 21:30:52,758 INFO input.FileInputFormat: Total input files to process : 15
+2023-10-07 21:30:52,842 INFO mapreduce.JobSubmitter: number of splits:15
+2023-10-07 21:30:52,956 INFO mapreduce.JobSubmitter: Submitting tokens for job: job_1696704970045_0002
+2023-10-07 21:30:52,956 INFO mapreduce.JobSubmitter: Executing with tokens: []
+2023-10-07 21:30:53,158 INFO conf.Configuration: resource-types.xml not found
+2023-10-07 21:30:53,158 INFO resource.ResourceUtils: Unable to find 'resource-types.xml'.
+2023-10-07 21:30:53,246 INFO impl.YarnClientImpl: Submitted application application_1696704970045_0002
+2023-10-07 21:30:53,267 INFO mapreduce.Job: The url to track the job: http://resourcemanager:8088/proxy/application_1696704970045_0002/
+2023-10-07 21:30:53,267 INFO mapreduce.Job: Running job: job_1696704970045_0002
+2023-10-07 21:30:59,351 INFO mapreduce.Job: Job job_1696704970045_0002 running in uber mode : false
+2023-10-07 21:30:59,352 INFO mapreduce.Job:  map 0% reduce 0%
+2023-10-07 21:31:35,432 INFO mapreduce.Job:  map 7% reduce 0%
+2023-10-07 21:31:36,828 INFO mapreduce.Job:  map 13% reduce 0%
+2023-10-07 21:31:37,832 INFO mapreduce.Job:  map 20% reduce 0%
+2023-10-07 21:31:39,127 INFO mapreduce.Job:  map 33% reduce 0%
+2023-10-07 21:31:40,130 INFO mapreduce.Job:  map 60% reduce 0%
+2023-10-07 21:31:41,134 INFO mapreduce.Job:  map 67% reduce 0%
+2023-10-07 21:31:42,136 INFO mapreduce.Job:  map 73% reduce 0%
+2023-10-07 21:31:43,139 INFO mapreduce.Job:  map 89% reduce 0%
+2023-10-07 21:31:44,142 INFO mapreduce.Job:  map 91% reduce 0%
+2023-10-07 21:31:45,145 INFO mapreduce.Job:  map 100% reduce 0%
+2023-10-07 21:31:46,149 INFO mapreduce.Job:  map 100% reduce 67%
+2023-10-07 21:31:47,153 INFO mapreduce.Job:  map 100% reduce 100%
+2023-10-07 21:31:47,157 INFO mapreduce.Job: Job job_1696704970045_0002 completed successfully
+2023-10-07 21:31:47,226 INFO mapreduce.Job: Counters: 56
+	File System Counters
+		FILE: Number of bytes read=3362946
+		FILE: Number of bytes written=11695514
+		FILE: Number of read operations=0
+		FILE: Number of large read operations=0
+		FILE: Number of write operations=0
+		HDFS: Number of bytes read=5240217
+		HDFS: Number of bytes written=1091293
+		HDFS: Number of read operations=60
+		HDFS: Number of large read operations=0
+		HDFS: Number of write operations=6
+		HDFS: Number of bytes read erasure-coded=0
+	Job Counters 
+		Killed map tasks=1
+		Launched map tasks=16
+		Launched reduce tasks=3
+		Data-local map tasks=15
+		Rack-local map tasks=1
+		Total time spent by all maps in occupied slots (ms)=5779620
+		Total time spent by all reduces in occupied slots (ms)=314925
+		Total time spent by all map tasks (ms)=577962
+		Total time spent by all reduce tasks (ms)=20995
+		Total vcore-milliseconds taken by all map tasks=577962
+		Total vcore-milliseconds taken by all reduce tasks=20995
+		Total megabyte-milliseconds taken by all map tasks=739791360
+		Total megabyte-milliseconds taken by all reduce tasks=40310400
+	Map-Reduce Framework
+		Map input records=255724
+		Map output records=2184629
+		Map output bytes=21025476
+		Map output materialized bytes=3363198
+		Input split bytes=1764
+		Combine input records=2184629
+		Combine output records=225527
+		Reduce input groups=93694
+		Reduce shuffle bytes=3363198
+		Reduce input records=225527
+		Reduce output records=93694
+		Spilled Records=451054
+		Shuffled Maps =45
+		Failed Shuffles=0
+		Merged Map outputs=45
+		GC time elapsed (ms)=13743
+		CPU time spent (ms)=23600
+		Physical memory (bytes) snapshot=3864977408
+		Virtual memory (bytes) snapshot=50271047680
+		Total committed heap usage (bytes)=2450583552
+		Peak Map Physical memory (bytes)=241369088
+		Peak Map Virtual memory (bytes)=2706571264
+		Peak Reduce Physical memory (bytes)=130576384
+		Peak Reduce Virtual memory (bytes)=3247104000
+	Shuffle Errors
+		BAD_ID=0
+		CONNECTION=0
+		IO_ERROR=0
+		WRONG_LENGTH=0
+		WRONG_MAP=0
+		WRONG_REDUCE=0
+	File Input Format Counters 
+		Bytes Read=5238453
+	File Output Format Counters 
+		Bytes Written=1091293

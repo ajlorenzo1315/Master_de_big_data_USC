@@ -19,5 +19,3 @@ Basically, he installed the following version of twisted, which fixed his issue.
 pip install Twisted==22.10.0
 ```
 Until the issue is fixed and a new version is released, I suggest using the previous version.
-
-

@@ -1,0 +1,170 @@
+---
+title: "1 Análisis descriptivo de conjunto de_datos"
+author: "Alicia Jiajun Lorenzo, Abraham Trashorras"
+date: "2023-10-07"
+output: pdf_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+
+
+```{r}
+ruta_archivo <-  "./datos_empresas_1.csv"
+datos <- read.csv2(file = ruta_archivo, sep = ";")
+#datos
+colnames(datos)
+colnames(datos) <- c("Total.Nacional","Comunidad.Autonoma","Provincias","Forma.juridica","Medida","Periodo", "Valor")
+colnames(datos)
+
+```
+
+
+```{r}
+
+datos
+```
+
+## Including Plots
+
+You can also embed plots, for example:
+
+```{r}
+# Instala y carga el paquete dplyr si aún no está instalado
+
+library(dplyr)
+# Filtra los datos para quedarte con Andalucía y años a partir de 2020
+# Filtra los datos para quedarte con Andalucía y años a partir de 2020
+#datos_galicia <- datos %>%
+#  filter( Comunidad.Autonoma == "12 Galicia" & Periodo >= 2009)%>%
+#  select(-Total.Nacional)
+datos_galicia <- datos %>%
+  select(-Total.Nacional)
+
+# Reemplazar el punto con un carácter Total  y lo convertimos a numerico
+datos_galicia <- datos_galicia %>%
+  mutate(Valor = as.numeric(gsub("\\.", "", Valor)))
+
+library(tidyr)
+# pivotamos los valores de las Medidas para tenerlos todos en la misma tabla
+datos_galicia <- pivot_wider(datos_galicia, 
+                      id_cols = c("Comunidad.Autonoma",'Provincias', "Periodo","Forma.juridica"), 
+                      names_from = "Medida", 
+                      values_from = "Valor")
+
+colnames(datos_galicia) <- c( "Comunidad.Autonoma", "Provincia" , "Periodo", "Forma.juridica" ,"Numero.Sociedades", "capital.suscrito"   ,  "capital.desembolsado")
+datos_galicia
+
+#datos_galicia<- datos_galicia %>%
+#  group_by(Provincias) %>%
+#  # hacemos la diferencia entre el año y el año anterior como se 
+#  mutate(Diferencia.Numero.Sociedades = Numero.Sociedades - lead(Numero.Sociedades) )
+
+# Descomponer las listas y calcular la diferencia
+# Descomponer las listas
+#datos_descompuestos <- datos_galicia %>%
+#  unnest(everything())
+
+# Calcular las diferencias
+datos_galicia <- datos_galicia %>%
+  group_by(Comunidad.Autonoma,Provincia,Forma.juridica) %>%
+  mutate(
+    Diferencia.NS = Numero.Sociedades - lead(Numero.Sociedades),
+    Diferencia.CS = capital.suscrito - lead(capital.suscrito),
+    Diferencia.CD = capital.desembolsado - lead(capital.desembolsado)
+  )%>%
+  mutate( Diferencia.NS = ifelse(is.na( Diferencia.NS), 0,  Diferencia.NS))%>%
+  mutate( Diferencia.CS = ifelse(is.na( Diferencia.CS), 0,  Diferencia.CS))%>%
+  mutate( Diferencia.CD = ifelse(is.na( Diferencia.CD), 0,  Diferencia.CD))%>%
+  select(Comunidad.Autonoma,Provincia,Forma.juridica,Periodo, Numero.Sociedades, Diferencia.NS, capital.suscrito , Diferencia.CS , capital.desembolsado,Diferencia.CD )
+
+datos_galicia
+```
+
+# INFERENCIA ESTADISTICA
+
+Sobre la variación de numero de empresas exixtentes
+
+```{r}
+datos_galicia_filtrados<- datos_galicia %>%
+  filter(Comunidad.Autonoma == "12 Galicia"& Forma.juridica == "Total" & Periodo >= 2002 & Periodo < 2006)
+datos_galicia_filtrados<- datos_galicia %>%
+  filter(Comunidad.Autonoma != "12 " & Provincia!="" & Forma.juridica == "Total" & Periodo >= 2009)
+
+#datos_galicia_filtrados
+
+datos_galicia_filtrados_2<- datos_galicia %>%
+  filter(Comunidad.Autonoma == "12 Galicia"&  !is.na(Provincia) & Forma.juridica == "Total" & Periodo < 2009)
+```
+
+
+```{r}
+datos_galicia_filtrados<- datos_galicia %>%
+  filter(Periodo != 2020 &  Periodo != 2021)
+#datos_galicia_filtrados$Provincia
+datos_galicia_filtrados
+
+```
+
+
+```{r}
+datos_galicia_filtrados<- datos_galicia %>%
+  filter(Comunidad.Autonoma == "12 Galicia" & Provincia=="" & Forma.juridica == "Total" & Periodo >= 2009)
+
+Diferencia_Numero_Sociedades<- datos_galicia_filtrados$Numero.Sociedades
+
+datos_galicia_filtrados_2020<- datos_galicia %>%
+  filter(Comunidad.Autonoma == "12 Galicia" & Provincia=="" & Forma.juridica == "Total" & Periodo == 2020)
+Diferencia_Numero_Sociedades_2020<- datos_galicia_filtrados$Numero.Sociedades
+
+tt=t.test(Diferencia_Numero_Sociedades,conf.level = 0.95)
+intervalo_confianza <-tt$conf.int
+tt
+Diferencia_Numero_Sociedades_2020
+# Crear un nuevo vector de comprobación
+comprobacion <- ifelse(Diferencia_Numero_Sociedades_2020 > intervalo_confianza[1] & Diferencia_Numero_Sociedades_2020 < intervalo_confianza[2], 1, 0)
+tt=t.test(comprobacion,conf.level = 0.95)
+tt
+table(comprobacion)
+```
+
+
+```{r}
+v <- c(10,9,10,9)
+t.test(v,conf.level = 0.95)
+
+```
+
+
+```{r}
+Diferencia_Numero_Sociedades_2 <- datos_galicia_filtrados_2$Diferencia.NS
+tt=t.test(Diferencia_Numero_Sociedades,mu=417.25,alternative = "two.sided")
+tt$p.value
+Diferencia_Numero_Sociedades
+```
+
+Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.
+
+```{r}
+table(Diferencia_Numero_Sociedades)
+```
+```{r}
+mean(Diferencia_Numero_Sociedades)
+mean(Diferencia_Numero_Sociedades_2)
+tt=t.test(Diferencia_Numero_Sociedades,Diferencia_Numero_Sociedades_2,conf.level = 0.95)
+tt
+```
+```{r}
+Diferencia_Numero_Sociedades_2
+```
+```{r}
+
+```
+
+
+```{r}
+Diferencia_Numero_Sociedades
+```
+

@@ -12,7 +12,7 @@ ruta_archivo <-  "./1_Descriptive_analysis_of_data_set/estadistica_empleos.csv"
 
 # Cargar el archivo CSV separado por punto y coma
 datos <- read.csv2(file = ruta_archivo, sep = ";")
-
+datos
 # list.files()# Ver las primeras filas de los datos
 head(datos)
 colnames(datos)

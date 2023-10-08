@@ -25,3 +25,20 @@ La elección entre Beautiful Soup y Scrapy depende de tus necesidades y del tipo
 
 En resumen, si solo necesitas extraer datos de unas pocas páginas web simples, Beautiful Soup podría ser suficiente y más fácil de implementar. Sin embargo, si estás abordando un proyecto más grande que involucra la extracción de datos de múltiples páginas web o sitios web completos, Scrapy sería una elección más apropiada debido a su capacidad para automatizar el proceso y su escalabilidad.
 
+
+NOTA
+
+import proxycrawl
+
+proxycrawl.__version__
+
+
+    ================================================================================
+    DEPRECATION WARNING - 'proxycrawl'
+    ================================================================================
+
+    'proxycrawl' is deprecated and will not be maintained. Please switch to 'crawlbase'.
+
+    More details and migration guide: https://github.com/crawlbase-source/crawlbase-python
+    ================================================================================
+    

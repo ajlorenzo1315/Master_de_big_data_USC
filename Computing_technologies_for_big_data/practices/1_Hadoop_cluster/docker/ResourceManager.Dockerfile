@@ -32,14 +32,9 @@ COPY  ../hadoop_ResourceManager/yarn-site.xml $HADOOP_CONF_DIR/yarn-site.xml
 
 # copiamos el elscro de imio 
 
-COPY ../docker/inicio_ResourceManager.sh ${BASE_DIR}/inicio.sh
-
 # establecemos los permisos de 
 RUN  chown -R hdadmin:hadoop ${BASE_DIR}
 RUN  chown -R hdadmin:hadoop ${DATA_DIR}
-
-# Exponemos los puertos para yarm y hdfs
-EXPOSE 8020 9820 9871 8088 9870
 
 # definomos los valores de entorno
 ENV JAVA_HOME /usr/lib/jvm/java-8-openjdk-amd64/
@@ -48,9 +43,7 @@ ENV HADOOP_HOME ${BASE_DIR}/hadoop
 ENV HADOOP_CONF_DIR ${HADOOP_HOME}/etc/hadoop
 ENV PATH ${PATH}:${HADOOP_HOME}/bin/:${HADOOP_HOME}/sbin
 
-
 # ponemos el workdir
-
 # nano $HADOOP_CONF_DIR/core-site.xml
 # docker container run -ti --name namenode --network=hadoop-cluster --hostname namenode --expose 8000-10000 --expose 50000-50200 -i namenode-image  /bin/bash
-CMD ["$BASE_DIR/inicio.sh format start"]
+# CMD ["$BASE_DIR/inicio.sh format start"]

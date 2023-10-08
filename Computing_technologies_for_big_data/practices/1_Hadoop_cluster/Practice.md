@@ -545,6 +545,7 @@ Vamos ya a iniciar nuestro cluster, formado por 1 NameNode/ResourceManager y 4 D
 
     y una vez dentro de contenedor, como usuario hdadmin prueba que todo va bien ejecutando:
 
+    hdadmin@namenode:~$ hdfs dfsadmin -report
     $ hdfs dfsadmin -report
     $ yarn node -list
 

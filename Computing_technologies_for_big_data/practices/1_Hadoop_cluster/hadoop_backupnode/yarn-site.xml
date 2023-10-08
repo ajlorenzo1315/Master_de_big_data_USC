@@ -1,0 +1,49 @@
+<?xml version="1.0"?>
+<!--
+  Licensed under the Apache License, Version 2.0 (the "License");
+  you may not use this file except in compliance with the License.
+  You may obtain a copy of the License at
+
+    http://www.apache.org/licenses/LICENSE-2.0
+
+  Unless required by applicable law or agreed to in writing, software
+  distributed under the License is distributed on an "AS IS" BASIS,
+  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  See the License for the specific language governing permissions and
+  limitations under the License. See accompanying LICENSE file.
+-->
+<configuration>
+
+<!-- Site specific YARN configuration properties -->
+ <property>
+    <!-- Nombre del equipo que ejecuta el demonio ResourceManager -->
+    <name>yarn.resourcemanager.hostname</name>
+    <value>resourcemanager</value>
+    <final>true</final>
+  </property>
+
+  <property>
+    <!-- Número máximo de vcores que un ApplicationMaster puede pedir al RM (por defecto: 4) -->
+    <!-- Peticiones mayores lanzan una InvalidResourceRequestException -->
+    <name>yarn.scheduler.maximum-allocation-vcores</name>
+    <value>1</value>
+    <final>true</final>
+  </property>
+
+  <property>
+    <!-- Memoria minima (MB) que un ApplicationMaster puede solicitar al RM (por defecto: 1024) -->
+    <!-- La memoria asignada a un contenedor será múltiplo de esta cantidad -->
+    <name>yarn.scheduler.minimum-allocation-mb</name>
+    <value>128</value>
+    <final>true</final>
+  </property>
+
+  <property>
+    <!-- Memoria maxima (MB) que un ApplicationMaster puede solicitar al RM (por defecto: 8192 MB) -->
+    <!-- Peticiones mayores lanzan una InvalidResourceRequestException -->
+    <!-- Puedes aumentar o reducir este valor en funcion de la memoria de la que dispongas -->
+    <name>yarn.scheduler.maximum-allocation-mb</name>
+    <value>2048</value>
+    <final>true</final>
+  </property>
+</configuration>

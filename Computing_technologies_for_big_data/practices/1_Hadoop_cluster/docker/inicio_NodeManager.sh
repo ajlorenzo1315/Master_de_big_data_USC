@@ -10,8 +10,11 @@ for arg in "$@"; do
       ;;
     start)
       # Iniciar el NameNode y el ResourceManager
+      echo "hdfs --daemon start datanode"
       su hdadmin -c "$HADOOP_HOME/bin/hdfs --daemon start datanode"
+      echo "hdfs --daemon start nodemanager"
       su hdadmin -c "$HADOOP_HOME/bin/yarn --daemon start nodemanager"
+      cat $HADOOP_HOME/logs/hadoop-hdadmin-namenode-namenode.log
       ;;
     *)
       # Argumento no reconocido, mostrar un mensaje de error
