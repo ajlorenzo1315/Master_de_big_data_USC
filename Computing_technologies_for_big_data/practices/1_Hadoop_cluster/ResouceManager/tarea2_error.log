@@ -1,0 +1,26 @@
+yarn node -list
+2023-10-08 19:13:27,770 INFO service.AbstractService: Service org.apache.hadoop.yarn.client.api.impl.YarnClientImpl failed in state INITED
+java.lang.IllegalArgumentException: java.net.UnknownHostException: timelineserver
+	at org.apache.hadoop.security.SecurityUtil.buildTokenService(SecurityUtil.java:475)
+	at org.apache.hadoop.yarn.util.timeline.TimelineUtils.buildTimelineTokenService(TimelineUtils.java:165)
+	at org.apache.hadoop.yarn.client.api.impl.YarnClientImpl.serviceInit(YarnClientImpl.java:200)
+	at org.apache.hadoop.service.AbstractService.init(AbstractService.java:164)
+	at org.apache.hadoop.yarn.client.cli.YarnCLI.createAndStartYarnClient(YarnCLI.java:54)
+	at org.apache.hadoop.yarn.client.cli.NodeCLI.run(NodeCLI.java:110)
+	at org.apache.hadoop.util.ToolRunner.run(ToolRunner.java:82)
+	at org.apache.hadoop.util.ToolRunner.run(ToolRunner.java:97)
+	at org.apache.hadoop.yarn.client.cli.NodeCLI.main(NodeCLI.java:62)
+Caused by: java.net.UnknownHostException: timelineserver
+	... 9 more
+Exception in thread "main" java.lang.IllegalArgumentException: java.net.UnknownHostException: timelineserver
+	at org.apache.hadoop.security.SecurityUtil.buildTokenService(SecurityUtil.java:475)
+	at org.apache.hadoop.yarn.util.timeline.TimelineUtils.buildTimelineTokenService(TimelineUtils.java:165)
+	at org.apache.hadoop.yarn.client.api.impl.YarnClientImpl.serviceInit(YarnClientImpl.java:200)
+	at org.apache.hadoop.service.AbstractService.init(AbstractService.java:164)
+	at org.apache.hadoop.yarn.client.cli.YarnCLI.createAndStartYarnClient(YarnCLI.java:54)
+	at org.apache.hadoop.yarn.client.cli.NodeCLI.run(NodeCLI.java:110)
+	at org.apache.hadoop.util.ToolRunner.run(ToolRunner.java:82)
+	at org.apache.hadoop.util.ToolRunner.run(ToolRunner.java:97)
+	at org.apache.hadoop.yarn.client.cli.NodeCLI.main(NodeCLI.java:62)
+Caused by: java.net.UnknownHostException: timelineserver
+	... 9 more

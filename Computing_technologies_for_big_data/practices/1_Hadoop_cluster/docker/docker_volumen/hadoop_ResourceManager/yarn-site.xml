@@ -69,5 +69,16 @@
     <final>true</final>
   </property>
 
+  <!-- Tarea 2 -->
+
+  <property>
+  <name>yarn.resourcemanager.nodes.include-path</name>
+  <value>/opt/bd/hadoop/etc/hadoop/yarn.include</value>
+  </property>
+
+  <property>
+    <name>yarn.resourcemanager.nodes.exclude-path</name>
+    <value>/opt/bd/hadoop/etc/hadoop/yarn.exclude</value>
+  </property>
 
 </configuration>

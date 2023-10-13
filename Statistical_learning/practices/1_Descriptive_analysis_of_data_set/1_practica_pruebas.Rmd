@@ -85,7 +85,122 @@ datos_galicia
 
 # INFERENCIA ESTADISTICA
 
-Sobre la variación de numero de empresas exixtentes
+Sobre la variación de numero de empresas exixtentes  entre 2009 y 2022 sin tener encuenta la el año del covid por ser un dato anomalo para ello comprobaremos cuanto dista el numero de sociedades teniendo encuenta 2020 y sin tenerlo encuenta de tal manera que sabremos si este dato afecta realmente a las metricas
+
+```{r}
+datos_galicia_filtrados<- datos_galicia %>%
+  filter(Comunidad.Autonoma == "12 Galicia" & Provincia=="" & Forma.juridica == "Total" & Periodo >= 2009 & Periodo != 2020)
+datos_galicia_filtrados
+datos_galicia_filtrados_2020<- datos_galicia %>%
+  filter(Comunidad.Autonoma == "12 Galicia" & Provincia=="" & Forma.juridica == "Total" & Periodo >= 2009)
+datos_galicia_filtrados_2020
+```
+
+El resultado sugiere que no hay evidencia suficiente para afirmar que la diferencia entre las medias de estas dos muestras sea diferente de cero, y se proporciona un intervalo de confianza del 95% para la diferencia entre las medias.
+
+
+
+```{r}
+Numero_Sociedades<- datos_galicia_filtrados$Numero.Sociedades
+Numero_Sociedades_sen_2020<- datos_galicia_filtrados_2020$Numero.Sociedades
+tt=t.test(Numero_Sociedades,Numero_Sociedades_sen_2020,conf.level = 0.95)
+tt
+```
+
+```{r}
+# Calcular la media y la desviación estándar
+media <- mean(Numero_Sociedades_2020)
+desviacion_estandar <- sd(Numero_Sociedades_2020)
+
+# Imprimir la media y la desviación estándar
+print(paste("Media:", media))
+print(paste("Desviación Estándar:", desviacion_estandar))
+
+# Calcular intervalo de confianza del 95% para la media
+intervalo_confianza <- t.test(Numero_Sociedades_2020, conf.level = 0.95)$conf.int
+
+# Imprimir el intervalo de confianza
+print(paste("Intervalo de Confianza del 95%:", intervalo_confianza[1], "-", intervalo_confianza[2]))
+
+```
+```{r}
+# Datos de muestra (reemplaza con tus propios datos)
+muestra <- Numero_Sociedades_2020
+
+# Tamaño de la muestra
+n <- length(muestra)
+
+# Nivel de confianza (por ejemplo, 95%)
+confianza <- 0.95
+
+# Estimación puntual de la media poblacional (X̄)
+media_muestra <- mean(muestra)
+
+# Estimación de la desviación estándar de la población (s)
+desviacion_muestra <- sd(muestra)
+
+# Calcular el error estándar de la media (SE)
+se <- desviacion_muestra / sqrt(n)
+
+# Calcular el valor crítico de la distribución t para el nivel de confianza
+valor_critico <- qt((1 - confianza) / 2, df = n - 1)
+
+# Calcular el margen de error
+margen_error <- valor_critico * se
+
+# Calcular el intervalo de confianza
+intervalo_confianza <- c(media_muestra - margen_error, media_muestra + margen_error)
+
+# Imprimir resultados
+cat("Estimación puntual de la media poblacional (X̄):", media_muestra, "\n")
+cat("Intervalo de confianza del", confianza * 100, "%:", intervalo_confianza[1], "-", intervalo_confianza[2], "\n")
+
+```
+
+
+
+```{r}
+# Calcular estadísticas resumidas del número de sociedades por año
+summary_por_anio <- aggregate(Numero.Sociedades ~ Periodo, data = datos_galicia_filtrados, FUN = summary)
+summary_por_anio
+```
+```{r}
+# Crear un gráfico de líneas para visualizar la tendencia
+plot(datos_galicia_filtrados$Periodo, datos_galicia_filtrados$Numero.Sociedades, type = "l", xlab = "Año", ylab = "Número de Sociedades", main = "Tendencia del Número de Sociedades a lo largo del tiempo")
+
+```
+```{r}
+correlation <- cor(datos_galicia_filtrados$Numero.Sociedades, datos_galicia_filtrados$capital.suscrito)
+correlation
+```
+
+
+```{r}
+# Calcular la correlación entre el número de sociedades y el capital suscrito
+correlation <- cor(datos_galicia_filtrados$capital.desembolsado, datos_galicia_filtrados$capital.suscrito)
+correlation
+```
+
+obtenemos el numero de empresas 
+
+```{r}
+
+Diferencia_Numero_Sociedades<- datos_galicia_filtrados$Numero.Sociedades
+Diferencia_Numero_Sociedades
+tt=t.test(Diferencia_Numero_Sociedades,conf.level = 0.95)
+tt
+Diferencia_Numero_Sociedades
+
+Diferencia_Numero_Sociedades_diferencia<- Diferencia_Numero_Sociedades - mean(Diferencia_Numero_Sociedades)
+tt=t.test(Diferencia_Numero_Sociedades_diferencia,conf.level = 0.95)
+tt
+Diferencia_Numero_Sociedades_diferencia
+```
+
+```{r}
+t.test(Diferencia_Numero_Sociedades, mu = mean(Diferencia_Numero_Sociedades))
+```
+
 
 ```{r}
 datos_galicia_filtrados<- datos_galicia %>%

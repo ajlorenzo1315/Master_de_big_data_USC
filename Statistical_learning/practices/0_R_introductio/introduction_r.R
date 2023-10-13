@@ -94,7 +94,7 @@ prop.test(3195,4538)
 
 # que significa que p-valor < 0.05
 # suponcamos que
-# h0= mean =2
+# h0= mean = 2
 # h1: mean distinto 2
 
 # para generar intervalos de confianza es 
@@ -105,7 +105,7 @@ for (i in 1:1000){
   ttt=t.test(datos,mu=2)
   pvv[i]=ttt$p.value
 }
-
+ttt
 summary(pvv)
 # quiere decir que 95% mean 2 y 5% mean es distinto de 2
 table(pvv<0.05)

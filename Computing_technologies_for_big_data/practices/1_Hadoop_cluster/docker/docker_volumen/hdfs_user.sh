@@ -12,14 +12,14 @@ su hdadmin -c "$HADOOP_HOME/bin/hdfs dfs -chmod -R 1777 /tmp"
 
 echo "Iniciando hsdf load..."
 #su - luser
-su hdadmin -c "echo 'export JAVA_HOME=/usr/lib/jvm/java-8-openjdk-amd64' >> ~/.bashrc"
-su hdadmin -c "echo 'export HADOOP_HOME=/opt/bd/hadoop' >> ~/.bashrc"
-su hdadmin -c "echo 'export PATH=$PATH:$HADOOP_HOME/bin' >> ~/.bashrc"
-su hdadmin -c ". ~/.bashrc"
+su luser -c "echo 'export JAVA_HOME=/usr/lib/jvm/java-8-openjdk-amd64' >> ~/.bashrc"
+su luser -c "echo 'export HADOOP_HOME=/opt/bd/hadoop' >> ~/.bashrc"
+su luser -c "echo 'export PATH=$PATH:$HADOOP_HOME/bin' >> ~/.bashrc"
+su luser -c ". ~/.bashrc"
 
-su hdadmin -c "tar xvf /docker/libros.tar -C /tmp"
+su luser -c "tar xvf /docker/libros.tar -C /tmp"
 
-su hdadmin -c "cd /tmp && $HADOOP_HOME/bin/hdfs dfs -put libros . && $HADOOP_HOME/bin/hdfs dfs -ls libros"
+su luser -c "cd /tmp && $HADOOP_HOME/bin/hdfs dfs -put libros . && $HADOOP_HOME/bin/hdfs dfs -ls libros"
 
 
 #hdfs dfs -chown hdadmin:hadoop -R /user/hdadmin

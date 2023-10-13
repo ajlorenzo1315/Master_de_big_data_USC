@@ -15,11 +15,11 @@ RUN mkdir -p /var/data/hdfs/namenode && \
 # Cambiar al usuario hdadmin
 USER hdadmin
 # COPY --chown=<user>:<group> <hostPath> <containerPath>
-COPY  hadoop_ResourceManager/core-site.xml $HADOOP_HOME/etc/hadoop/core-site.xml
+COPY  ./hadoop_ResourceManager/core-site.xml $HADOOP_HOME/etc/hadoop/core-site.xml
 # RUN cat $HADOOP_HOME/etc/hadoop/core-site.xml
-COPY  hadoop_ResourceManager/hdfs-site.xml $HADOOP_HOME/etc/hadoop/hdfs-site.xml
-COPY  hadoop_ResourceManager/mapred-site.xml $HADOOP_HOME/etc/hadoop/mapred-site.xml
-COPY  hadoop_ResourceManager/yarn-site.xml $HADOOP_HOME/etc/hadoop/yarn-site.xml
+COPY  ./hadoop_ResourceManager/hdfs-site.xml $HADOOP_HOME/etc/hadoop/hdfs-site.xml
+COPY  ./hadoop_ResourceManager/mapred-site.xml $HADOOP_HOME/etc/hadoop/mapred-site.xml
+COPY  ./hadoop_ResourceManager/yarn-site.xml $HADOOP_HOME/etc/hadoop/yarn-site.xml
 
 RUN  chown -R hdadmin:hadoop /var/data/hdfs/namenode $HADOOP_HOME
 # Vuelve al usuario original (por defecto, suele ser root)

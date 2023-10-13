@@ -7,7 +7,8 @@ for arg in "$@"; do
     format)
       # Formatear el NameNode
       su hdadmin -c "$HADOOP_HOME/bin/hdfs datanode -format"
-     
+      ;;
+    start)
       # Iniciar el NameNode y el ResourceManager
       su hdadmin -c "$HADOOP_HOME/bin/hdfs --daemon start datanode"
       su hdadmin -c "$HADOOP_HOME/bin/yarn --daemon start nodemanager"

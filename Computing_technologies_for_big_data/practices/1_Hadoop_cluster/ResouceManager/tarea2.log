@@ -1,0 +1,721 @@
+$HADOOP_HOME/logs
+
+cat $HADOOP_HOME/logs/hadoop-hdadmin-namenode-namenode.log
+cat $HADOOP_HOME/logs/hadoop-hdadmin-resourcemanager-namenode.log 
+
+
+
+
+************************************************************/
+2023-10-08 18:10:30,760 INFO org.apache.hadoop.yarn.server.resourcemanager.ResourceManager: STARTUP_MSG: 
+/************************************************************
+STARTUP_MSG: Starting ResourceManager
+STARTUP_MSG:   host = namenode/172.21.0.2
+STARTUP_MSG:   args = []
+STARTUP_MSG:   version = 3.3.6
+STARTUP_MSG:   classpath = /opt/bd/hadoop/etc/hadoop:/opt/bd/hadoop/share/hadoop/common/lib/curator-framework-5.2.0.jar:/opt/bd/hadoop/share/hadoop/common/lib/kerb-common-1.0.1.jar:/opt/bd/hadoop/share/hadoop/common/lib/jetty-webapp-9.4.51.v20230217.jar:/opt/bd/hadoop/share/hadoop/common/lib/listenablefuture-9999.0-empty-to-avoid-conflict-with-guava.jar:/opt/bd/hadoop/share/hadoop/common/lib/kerby-pkix-1.0.1.jar:/opt/bd/hadoop/share/hadoop/common/lib/httpclient-4.5.13.jar:/opt/bd/hadoop/share/hadoop/common/lib/netty-transport-native-epoll-4.1.89.Final-linux-x86_64.jar:/opt/bd/hadoop/share/hadoop/common/lib/animal-sniffer-annotations-1.17.jar:/opt/bd/hadoop/share/hadoop/common/lib/zookeeper-jute-3.6.3.jar:/opt/bd/hadoop/share/hadoop/common/lib/netty-transport-native-epoll-4.1.89.Final-linux-aarch_64.jar:/opt/bd/hadoop/share/hadoop/common/lib/netty-transport-classes-epoll-4.1.89.Final.jar:/opt/bd/hadoop/share/hadoop/common/lib/kerb-client-1.0.1.jar:/opt/bd/hadoop/share/hadoop/common/lib/slf4j-reload4j-1.7.36.jar:/opt/bd/hadoop/share/hadoop/common/lib/netty-transport-sctp-4.1.89.Final.jar:/opt/bd/hadoop/share/hadoop/common/lib/jsr311-api-1.1.1.jar:/opt/bd/hadoop/share/hadoop/common/lib/netty-codec-mqtt-4.1.89.Final.jar:/opt/bd/hadoop/share/hadoop/common/lib/netty-buffer-4.1.89.Final.jar:/opt/bd/hadoop/share/hadoop/common/lib/checker-qual-2.5.2.jar:/opt/bd/hadoop/share/hadoop/common/lib/jetty-http-9.4.51.v20230217.jar:/opt/bd/hadoop/share/hadoop/common/lib/jakarta.activation-api-1.2.1.jar:/opt/bd/hadoop/share/hadoop/common/lib/jackson-core-asl-1.9.13.jar:/opt/bd/hadoop/share/hadoop/common/lib/netty-transport-native-kqueue-4.1.89.Final-osx-aarch_64.jar:/opt/bd/hadoop/share/hadoop/common/lib/jersey-server-1.19.4.jar:/opt/bd/hadoop/share/hadoop/common/lib/netty-codec-socks-4.1.89.Final.jar:/opt/bd/hadoop/share/hadoop/common/lib/kerb-server-1.0.1.jar:/opt/bd/hadoop/share/hadoop/common/lib/kerb-crypto-1.0.1.jar:/opt/bd/hadoop/share/hadoop/common/lib/jaxb-impl-2.2.3-1.jar:/opt/bd/hadoop/share/hadoop/common/lib/netty-codec-memcache-4.1.89.Final.jar:/opt/bd/hadoop/share/hadoop/common/lib/token-provider-1.0.1.jar:/opt/bd/hadoop/share/hadoop/common/lib/hadoop-shaded-protobuf_3_7-1.1.1.jar:/opt/bd/hadoop/share/hadoop/common/lib/zookeeper-3.6.3.jar:/opt/bd/hadoop/share/hadoop/common/lib/jackson-core-2.12.7.jar:/opt/bd/hadoop/share/hadoop/common/lib/j2objc-annotations-1.1.jar:/opt/bd/hadoop/share/hadoop/common/lib/commons-lang3-3.12.0.jar:/opt/bd/hadoop/share/hadoop/common/lib/nimbus-jose-jwt-9.8.1.jar:/opt/bd/hadoop/share/hadoop/common/lib/kerb-admin-1.0.1.jar:/opt/bd/hadoop/share/hadoop/common/lib/netty-all-4.1.89.Final.jar:/opt/bd/hadoop/share/hadoop/common/lib/netty-handler-4.1.89.Final.jar:/opt/bd/hadoop/share/hadoop/common/lib/commons-beanutils-1.9.4.jar:/opt/bd/hadoop/share/hadoop/common/lib/commons-text-1.10.0.jar:/opt/bd/hadoop/share/hadoop/common/lib/re2j-1.1.jar:/opt/bd/hadoop/share/hadoop/common/lib/snappy-java-1.1.8.2.jar:/opt/bd/hadoop/share/hadoop/common/lib/jackson-databind-2.12.7.1.jar:/opt/bd/hadoop/share/hadoop/common/lib/javax.servlet-api-3.1.0.jar:/opt/bd/hadoop/share/hadoop/common/lib/netty-handler-proxy-4.1.89.Final.jar:/opt/bd/hadoop/share/hadoop/common/lib/metrics-core-3.2.4.jar:/opt/bd/hadoop/share/hadoop/common/lib/httpcore-4.4.13.jar:/opt/bd/hadoop/share/hadoop/common/lib/kerby-config-1.0.1.jar:/opt/bd/hadoop/share/hadoop/common/lib/kerby-xdr-1.0.1.jar:/opt/bd/hadoop/share/hadoop/common/lib/dnsjava-2.1.7.jar:/opt/bd/hadoop/share/hadoop/common/lib/curator-client-5.2.0.jar:/opt/bd/hadoop/share/hadoop/common/lib/hadoop-annotations-3.3.6.jar:/opt/bd/hadoop/share/hadoop/common/lib/netty-transport-rxtx-4.1.89.Final.jar:/opt/bd/hadoop/share/hadoop/common/lib/netty-codec-dns-4.1.89.Final.jar:/opt/bd/hadoop/share/hadoop/common/lib/netty-transport-classes-kqueue-4.1.89.Final.jar:/opt/bd/hadoop/share/hadoop/common/lib/netty-resolver-dns-native-macos-4.1.89.Final-osx-x86_64.jar:/opt/bd/hadoop/share/hadoop/common/lib/commons-collections-3.2.2.jar:/opt/bd/hadoop/share/hadoop/common/lib/woodstox-core-5.4.0.jar:/opt/bd/hadoop/share/hadoop/common/lib/avro-1.7.7.jar:/opt/bd/hadoop/share/hadoop/common/lib/jersey-servlet-1.19.4.jar:/opt/bd/hadoop/share/hadoop/common/lib/jcip-annotations-1.0-1.jar:/opt/bd/hadoop/share/hadoop/common/lib/netty-common-4.1.89.Final.jar:/opt/bd/hadoop/share/hadoop/common/lib/guava-27.0-jre.jar:/opt/bd/hadoop/share/hadoop/common/lib/kerb-identity-1.0.1.jar:/opt/bd/hadoop/share/hadoop/common/lib/netty-transport-native-kqueue-4.1.89.Final-osx-x86_64.jar:/opt/bd/hadoop/share/hadoop/common/lib/jetty-server-9.4.51.v20230217.jar:/opt/bd/hadoop/share/hadoop/common/lib/kerb-core-1.0.1.jar:/opt/bd/hadoop/share/hadoop/common/lib/netty-codec-smtp-4.1.89.Final.jar:/opt/bd/hadoop/share/hadoop/common/lib/jersey-core-1.19.4.jar:/opt/bd/hadoop/share/hadoop/common/lib/jetty-security-9.4.51.v20230217.jar:/opt/bd/hadoop/share/hadoop/common/lib/slf4j-api-1.7.36.jar:/opt/bd/hadoop/share/hadoop/common/lib/jetty-io-9.4.51.v20230217.jar:/opt/bd/hadoop/share/hadoop/common/lib/curator-recipes-5.2.0.jar:/opt/bd/hadoop/share/hadoop/common/lib/audience-annotations-0.5.0.jar:/opt/bd/hadoop/share/hadoop/common/lib/gson-2.9.0.jar:/opt/bd/hadoop/share/hadoop/common/lib/jetty-util-ajax-9.4.51.v20230217.jar:/opt/bd/hadoop/share/hadoop/common/lib/jsr305-3.0.2.jar:/opt/bd/hadoop/share/hadoop/common/lib/netty-codec-redis-4.1.89.Final.jar:/opt/bd/hadoop/share/hadoop/common/lib/netty-resolver-4.1.89.Final.jar:/opt/bd/hadoop/share/hadoop/common/lib/hadoop-shaded-guava-1.1.1.jar:/opt/bd/hadoop/share/hadoop/common/lib/netty-transport-udt-4.1.89.Final.jar:/opt/bd/hadoop/share/hadoop/common/lib/jsp-api-2.1.jar:/opt/bd/hadoop/share/hadoop/common/lib/jsch-0.1.55.jar:/opt/bd/hadoop/share/hadoop/common/lib/netty-codec-http-4.1.89.Final.jar:/opt/bd/hadoop/share/hadoop/common/lib/commons-configuration2-2.8.0.jar:/opt/bd/hadoop/share/hadoop/common/lib/stax2-api-4.2.1.jar:/opt/bd/hadoop/share/hadoop/common/lib/jetty-util-9.4.51.v20230217.jar:/opt/bd/hadoop/share/hadoop/common/lib/jackson-mapper-asl-1.9.13.jar:/opt/bd/hadoop/share/hadoop/common/lib/paranamer-2.3.jar:/opt/bd/hadoop/share/hadoop/common/lib/kerby-asn1-1.0.1.jar:/opt/bd/hadoop/share/hadoop/common/lib/commons-math3-3.1.1.jar:/opt/bd/hadoop/share/hadoop/common/lib/commons-io-2.8.0.jar:/opt/bd/hadoop/share/hadoop/common/lib/jaxb-api-2.2.11.jar:/opt/bd/hadoop/share/hadoop/common/lib/commons-net-3.9.0.jar:/opt/bd/hadoop/share/hadoop/common/lib/netty-transport-native-unix-common-4.1.89.Final.jar:/opt/bd/hadoop/share/hadoop/common/lib/commons-compress-1.21.jar:/opt/bd/hadoop/share/hadoop/common/lib/jetty-servlet-9.4.51.v20230217.jar:/opt/bd/hadoop/share/hadoop/common/lib/jetty-xml-9.4.51.v20230217.jar:/opt/bd/hadoop/share/hadoop/common/lib/jersey-json-1.20.jar:/opt/bd/hadoop/share/hadoop/common/lib/netty-handler-ssl-ocsp-4.1.89.Final.jar:/opt/bd/hadoop/share/hadoop/common/lib/kerb-util-1.0.1.jar:/opt/bd/hadoop/share/hadoop/common/lib/kerby-util-1.0.1.jar:/opt/bd/hadoop/share/hadoop/common/lib/kerb-simplekdc-1.0.1.jar:/opt/bd/hadoop/share/hadoop/common/lib/jackson-annotations-2.12.7.jar:/opt/bd/hadoop/share/hadoop/common/lib/jul-to-slf4j-1.7.36.jar:/opt/bd/hadoop/share/hadoop/common/lib/hadoop-auth-3.3.6.jar:/opt/bd/hadoop/share/hadoop/common/lib/commons-daemon-1.0.13.jar:/opt/bd/hadoop/share/hadoop/common/lib/commons-cli-1.2.jar:/opt/bd/hadoop/share/hadoop/common/lib/reload4j-1.2.22.jar:/opt/bd/hadoop/share/hadoop/common/lib/failureaccess-1.0.jar:/opt/bd/hadoop/share/hadoop/common/lib/netty-codec-xml-4.1.89.Final.jar:/opt/bd/hadoop/share/hadoop/common/lib/jettison-1.5.4.jar:/opt/bd/hadoop/share/hadoop/common/lib/netty-transport-4.1.89.Final.jar:/opt/bd/hadoop/share/hadoop/common/lib/netty-codec-haproxy-4.1.89.Final.jar:/opt/bd/hadoop/share/hadoop/common/lib/commons-codec-1.15.jar:/opt/bd/hadoop/share/hadoop/common/lib/netty-codec-stomp-4.1.89.Final.jar:/opt/bd/hadoop/share/hadoop/common/lib/protobuf-java-2.5.0.jar:/opt/bd/hadoop/share/hadoop/common/lib/netty-resolver-dns-4.1.89.Final.jar:/opt/bd/hadoop/share/hadoop/common/lib/netty-codec-4.1.89.Final.jar:/opt/bd/hadoop/share/hadoop/common/lib/netty-codec-http2-4.1.89.Final.jar:/opt/bd/hadoop/share/hadoop/common/lib/commons-logging-1.1.3.jar:/opt/bd/hadoop/share/hadoop/common/lib/netty-resolver-dns-classes-macos-4.1.89.Final.jar:/opt/bd/hadoop/share/hadoop/common/lib/netty-resolver-dns-native-macos-4.1.89.Final-osx-aarch_64.jar:/opt/bd/hadoop/share/hadoop/common/hadoop-registry-3.3.6.jar:/opt/bd/hadoop/share/hadoop/common/hadoop-common-3.3.6-tests.jar:/opt/bd/hadoop/share/hadoop/common/hadoop-common-3.3.6.jar:/opt/bd/hadoop/share/hadoop/common/hadoop-nfs-3.3.6.jar:/opt/bd/hadoop/share/hadoop/common/hadoop-kms-3.3.6.jar:/opt/bd/hadoop/share/hadoop/hdfs:/opt/bd/hadoop/share/hadoop/hdfs/lib/curator-framework-5.2.0.jar:/opt/bd/hadoop/share/hadoop/hdfs/lib/kerb-common-1.0.1.jar:/opt/bd/hadoop/share/hadoop/hdfs/lib/jetty-webapp-9.4.51.v20230217.jar:/opt/bd/hadoop/share/hadoop/hdfs/lib/listenablefuture-9999.0-empty-to-avoid-conflict-with-guava.jar:/opt/bd/hadoop/share/hadoop/hdfs/lib/kerby-pkix-1.0.1.jar:/opt/bd/hadoop/share/hadoop/hdfs/lib/httpclient-4.5.13.jar:/opt/bd/hadoop/share/hadoop/hdfs/lib/netty-transport-native-epoll-4.1.89.Final-linux-x86_64.jar:/opt/bd/hadoop/share/hadoop/hdfs/lib/animal-sniffer-annotations-1.17.jar:/opt/bd/hadoop/share/hadoop/hdfs/lib/zookeeper-jute-3.6.3.jar:/opt/bd/hadoop/share/hadoop/hdfs/lib/netty-transport-native-epoll-4.1.89.Final-linux-aarch_64.jar:/opt/bd/hadoop/share/hadoop/hdfs/lib/netty-transport-classes-epoll-4.1.89.Final.jar:/opt/bd/hadoop/share/hadoop/hdfs/lib/HikariCP-java7-2.4.12.jar:/opt/bd/hadoop/share/hadoop/hdfs/lib/kerb-client-1.0.1.jar:/opt/bd/hadoop/share/hadoop/hdfs/lib/netty-transport-sctp-4.1.89.Final.jar:/opt/bd/hadoop/share/hadoop/hdfs/lib/jsr311-api-1.1.1.jar:/opt/bd/hadoop/share/hadoop/hdfs/lib/netty-codec-mqtt-4.1.89.Final.jar:/opt/bd/hadoop/share/hadoop/hdfs/lib/netty-buffer-4.1.89.Final.jar:/opt/bd/hadoop/share/hadoop/hdfs/lib/checker-qual-2.5.2.jar:/opt/bd/hadoop/share/hadoop/hdfs/lib/jetty-http-9.4.51.v20230217.jar:/opt/bd/hadoop/share/hadoop/hdfs/lib/jakarta.activation-api-1.2.1.jar:/opt/bd/hadoop/share/hadoop/hdfs/lib/jackson-core-asl-1.9.13.jar:/opt/bd/hadoop/share/hadoop/hdfs/lib/kotlin-stdlib-common-1.4.10.jar:/opt/bd/hadoop/share/hadoop/hdfs/lib/netty-transport-native-kqueue-4.1.89.Final-osx-aarch_64.jar:/opt/bd/hadoop/share/hadoop/hdfs/lib/jersey-server-1.19.4.jar:/opt/bd/hadoop/share/hadoop/hdfs/lib/netty-codec-socks-4.1.89.Final.jar:/opt/bd/hadoop/share/hadoop/hdfs/lib/kerb-server-1.0.1.jar:/opt/bd/hadoop/share/hadoop/hdfs/lib/kerb-crypto-1.0.1.jar:/opt/bd/hadoop/share/hadoop/hdfs/lib/jaxb-impl-2.2.3-1.jar:/opt/bd/hadoop/share/hadoop/hdfs/lib/netty-codec-memcache-4.1.89.Final.jar:/opt/bd/hadoop/share/hadoop/hdfs/lib/token-provider-1.0.1.jar:/opt/bd/hadoop/share/hadoop/hdfs/lib/hadoop-shaded-protobuf_3_7-1.1.1.jar:/opt/bd/hadoop/share/hadoop/hdfs/lib/zookeeper-3.6.3.jar:/opt/bd/hadoop/share/hadoop/hdfs/lib/jackson-core-2.12.7.jar:/opt/bd/hadoop/share/hadoop/hdfs/lib/j2objc-annotations-1.1.jar:/opt/bd/hadoop/share/hadoop/hdfs/lib/commons-lang3-3.12.0.jar:/opt/bd/hadoop/share/hadoop/hdfs/lib/nimbus-jose-jwt-9.8.1.jar:/opt/bd/hadoop/share/hadoop/hdfs/lib/kerb-admin-1.0.1.jar:/opt/bd/hadoop/share/hadoop/hdfs/lib/netty-all-4.1.89.Final.jar:/opt/bd/hadoop/share/hadoop/hdfs/lib/netty-handler-4.1.89.Final.jar:/opt/bd/hadoop/share/hadoop/hdfs/lib/okhttp-4.9.3.jar:/opt/bd/hadoop/share/hadoop/hdfs/lib/commons-beanutils-1.9.4.jar:/opt/bd/hadoop/share/hadoop/hdfs/lib/commons-text-1.10.0.jar:/opt/bd/hadoop/share/hadoop/hdfs/lib/okio-2.8.0.jar:/opt/bd/hadoop/share/hadoop/hdfs/lib/re2j-1.1.jar:/opt/bd/hadoop/share/hadoop/hdfs/lib/snappy-java-1.1.8.2.jar:/opt/bd/hadoop/share/hadoop/hdfs/lib/jackson-databind-2.12.7.1.jar:/opt/bd/hadoop/share/hadoop/hdfs/lib/javax.servlet-api-3.1.0.jar:/opt/bd/hadoop/share/hadoop/hdfs/lib/netty-handler-proxy-4.1.89.Final.jar:/opt/bd/hadoop/share/hadoop/hdfs/lib/metrics-core-3.2.4.jar:/opt/bd/hadoop/share/hadoop/hdfs/lib/httpcore-4.4.13.jar:/opt/bd/hadoop/share/hadoop/hdfs/lib/kerby-config-1.0.1.jar:/opt/bd/hadoop/share/hadoop/hdfs/lib/kerby-xdr-1.0.1.jar:/opt/bd/hadoop/share/hadoop/hdfs/lib/json-simple-1.1.1.jar:/opt/bd/hadoop/share/hadoop/hdfs/lib/dnsjava-2.1.7.jar:/opt/bd/hadoop/share/hadoop/hdfs/lib/curator-client-5.2.0.jar:/opt/bd/hadoop/share/hadoop/hdfs/lib/hadoop-annotations-3.3.6.jar:/opt/bd/hadoop/share/hadoop/hdfs/lib/netty-transport-rxtx-4.1.89.Final.jar:/opt/bd/hadoop/share/hadoop/hdfs/lib/netty-codec-dns-4.1.89.Final.jar:/opt/bd/hadoop/share/hadoop/hdfs/lib/netty-transport-classes-kqueue-4.1.89.Final.jar:/opt/bd/hadoop/share/hadoop/hdfs/lib/netty-resolver-dns-native-macos-4.1.89.Final-osx-x86_64.jar:/opt/bd/hadoop/share/hadoop/hdfs/lib/commons-collections-3.2.2.jar:/opt/bd/hadoop/share/hadoop/hdfs/lib/woodstox-core-5.4.0.jar:/opt/bd/hadoop/share/hadoop/hdfs/lib/avro-1.7.7.jar:/opt/bd/hadoop/share/hadoop/hdfs/lib/jersey-servlet-1.19.4.jar:/opt/bd/hadoop/share/hadoop/hdfs/lib/netty-3.10.6.Final.jar:/opt/bd/hadoop/share/hadoop/hdfs/lib/jcip-annotations-1.0-1.jar:/opt/bd/hadoop/share/hadoop/hdfs/lib/netty-common-4.1.89.Final.jar:/opt/bd/hadoop/share/hadoop/hdfs/lib/guava-27.0-jre.jar:/opt/bd/hadoop/share/hadoop/hdfs/lib/kerb-identity-1.0.1.jar:/opt/bd/hadoop/share/hadoop/hdfs/lib/netty-transport-native-kqueue-4.1.89.Final-osx-x86_64.jar:/opt/bd/hadoop/share/hadoop/hdfs/lib/jetty-server-9.4.51.v20230217.jar:/opt/bd/hadoop/share/hadoop/hdfs/lib/kerb-core-1.0.1.jar:/opt/bd/hadoop/share/hadoop/hdfs/lib/netty-codec-smtp-4.1.89.Final.jar:/opt/bd/hadoop/share/hadoop/hdfs/lib/jersey-core-1.19.4.jar:/opt/bd/hadoop/share/hadoop/hdfs/lib/jetty-security-9.4.51.v20230217.jar:/opt/bd/hadoop/share/hadoop/hdfs/lib/jetty-io-9.4.51.v20230217.jar:/opt/bd/hadoop/share/hadoop/hdfs/lib/curator-recipes-5.2.0.jar:/opt/bd/hadoop/share/hadoop/hdfs/lib/audience-annotations-0.5.0.jar:/opt/bd/hadoop/share/hadoop/hdfs/lib/gson-2.9.0.jar:/opt/bd/hadoop/share/hadoop/hdfs/lib/jetty-util-ajax-9.4.51.v20230217.jar:/opt/bd/hadoop/share/hadoop/hdfs/lib/jsr305-3.0.2.jar:/opt/bd/hadoop/share/hadoop/hdfs/lib/netty-codec-redis-4.1.89.Final.jar:/opt/bd/hadoop/share/hadoop/hdfs/lib/netty-resolver-4.1.89.Final.jar:/opt/bd/hadoop/share/hadoop/hdfs/lib/hadoop-shaded-guava-1.1.1.jar:/opt/bd/hadoop/share/hadoop/hdfs/lib/netty-transport-udt-4.1.89.Final.jar:/opt/bd/hadoop/share/hadoop/hdfs/lib/jsch-0.1.55.jar:/opt/bd/hadoop/share/hadoop/hdfs/lib/netty-codec-http-4.1.89.Final.jar:/opt/bd/hadoop/share/hadoop/hdfs/lib/commons-configuration2-2.8.0.jar:/opt/bd/hadoop/share/hadoop/hdfs/lib/stax2-api-4.2.1.jar:/opt/bd/hadoop/share/hadoop/hdfs/lib/jetty-util-9.4.51.v20230217.jar:/opt/bd/hadoop/share/hadoop/hdfs/lib/jackson-mapper-asl-1.9.13.jar:/opt/bd/hadoop/share/hadoop/hdfs/lib/paranamer-2.3.jar:/opt/bd/hadoop/share/hadoop/hdfs/lib/kerby-asn1-1.0.1.jar:/opt/bd/hadoop/share/hadoop/hdfs/lib/commons-math3-3.1.1.jar:/opt/bd/hadoop/share/hadoop/hdfs/lib/commons-io-2.8.0.jar:/opt/bd/hadoop/share/hadoop/hdfs/lib/jaxb-api-2.2.11.jar:/opt/bd/hadoop/share/hadoop/hdfs/lib/commons-net-3.9.0.jar:/opt/bd/hadoop/share/hadoop/hdfs/lib/netty-transport-native-unix-common-4.1.89.Final.jar:/opt/bd/hadoop/share/hadoop/hdfs/lib/commons-compress-1.21.jar:/opt/bd/hadoop/share/hadoop/hdfs/lib/jetty-servlet-9.4.51.v20230217.jar:/opt/bd/hadoop/share/hadoop/hdfs/lib/jetty-xml-9.4.51.v20230217.jar:/opt/bd/hadoop/share/hadoop/hdfs/lib/jersey-json-1.20.jar:/opt/bd/hadoop/share/hadoop/hdfs/lib/leveldbjni-all-1.8.jar:/opt/bd/hadoop/share/hadoop/hdfs/lib/netty-handler-ssl-ocsp-4.1.89.Final.jar:/opt/bd/hadoop/share/hadoop/hdfs/lib/kerb-util-1.0.1.jar:/opt/bd/hadoop/share/hadoop/hdfs/lib/kerby-util-1.0.1.jar:/opt/bd/hadoop/share/hadoop/hdfs/lib/kerb-simplekdc-1.0.1.jar:/opt/bd/hadoop/share/hadoop/hdfs/lib/jackson-annotations-2.12.7.jar:/opt/bd/hadoop/share/hadoop/hdfs/lib/hadoop-auth-3.3.6.jar:/opt/bd/hadoop/share/hadoop/hdfs/lib/commons-daemon-1.0.13.jar:/opt/bd/hadoop/share/hadoop/hdfs/lib/commons-cli-1.2.jar:/opt/bd/hadoop/share/hadoop/hdfs/lib/reload4j-1.2.22.jar:/opt/bd/hadoop/share/hadoop/hdfs/lib/failureaccess-1.0.jar:/opt/bd/hadoop/share/hadoop/hdfs/lib/netty-codec-xml-4.1.89.Final.jar:/opt/bd/hadoop/share/hadoop/hdfs/lib/kotlin-stdlib-1.4.10.jar:/opt/bd/hadoop/share/hadoop/hdfs/lib/jettison-1.5.4.jar:/opt/bd/hadoop/share/hadoop/hdfs/lib/netty-transport-4.1.89.Final.jar:/opt/bd/hadoop/share/hadoop/hdfs/lib/netty-codec-haproxy-4.1.89.Final.jar:/opt/bd/hadoop/share/hadoop/hdfs/lib/commons-codec-1.15.jar:/opt/bd/hadoop/share/hadoop/hdfs/lib/netty-codec-stomp-4.1.89.Final.jar:/opt/bd/hadoop/share/hadoop/hdfs/lib/protobuf-java-2.5.0.jar:/opt/bd/hadoop/share/hadoop/hdfs/lib/netty-resolver-dns-4.1.89.Final.jar:/opt/bd/hadoop/share/hadoop/hdfs/lib/netty-codec-4.1.89.Final.jar:/opt/bd/hadoop/share/hadoop/hdfs/lib/netty-codec-http2-4.1.89.Final.jar:/opt/bd/hadoop/share/hadoop/hdfs/lib/commons-logging-1.1.3.jar:/opt/bd/hadoop/share/hadoop/hdfs/lib/netty-resolver-dns-classes-macos-4.1.89.Final.jar:/opt/bd/hadoop/share/hadoop/hdfs/lib/netty-resolver-dns-native-macos-4.1.89.Final-osx-aarch_64.jar:/opt/bd/hadoop/share/hadoop/hdfs/hadoop-hdfs-rbf-3.3.6.jar:/opt/bd/hadoop/share/hadoop/hdfs/hadoop-hdfs-nfs-3.3.6.jar:/opt/bd/hadoop/share/hadoop/hdfs/hadoop-hdfs-rbf-3.3.6-tests.jar:/opt/bd/hadoop/share/hadoop/hdfs/hadoop-hdfs-client-3.3.6-tests.jar:/opt/bd/hadoop/share/hadoop/hdfs/hadoop-hdfs-httpfs-3.3.6.jar:/opt/bd/hadoop/share/hadoop/hdfs/hadoop-hdfs-client-3.3.6.jar:/opt/bd/hadoop/share/hadoop/hdfs/hadoop-hdfs-native-client-3.3.6-tests.jar:/opt/bd/hadoop/share/hadoop/hdfs/hadoop-hdfs-3.3.6-tests.jar:/opt/bd/hadoop/share/hadoop/hdfs/hadoop-hdfs-3.3.6.jar:/opt/bd/hadoop/share/hadoop/hdfs/hadoop-hdfs-native-client-3.3.6.jar:/opt/bd/hadoop/share/hadoop/mapreduce/hadoop-mapreduce-client-shuffle-3.3.6.jar:/opt/bd/hadoop/share/hadoop/mapreduce/hadoop-mapreduce-client-jobclient-3.3.6.jar:/opt/bd/hadoop/share/hadoop/mapreduce/hadoop-mapreduce-client-hs-plugins-3.3.6.jar:/opt/bd/hadoop/share/hadoop/mapreduce/hadoop-mapreduce-client-hs-3.3.6.jar:/opt/bd/hadoop/share/hadoop/mapreduce/hadoop-mapreduce-client-jobclient-3.3.6-tests.jar:/opt/bd/hadoop/share/hadoop/mapreduce/hadoop-mapreduce-client-app-3.3.6.jar:/opt/bd/hadoop/share/hadoop/mapreduce/hadoop-mapreduce-client-common-3.3.6.jar:/opt/bd/hadoop/share/hadoop/mapreduce/hadoop-mapreduce-client-nativetask-3.3.6.jar:/opt/bd/hadoop/share/hadoop/mapreduce/hadoop-mapreduce-client-uploader-3.3.6.jar:/opt/bd/hadoop/share/hadoop/mapreduce/hadoop-mapreduce-client-core-3.3.6.jar:/opt/bd/hadoop/share/hadoop/mapreduce/hadoop-mapreduce-examples-3.3.6.jar:/opt/bd/hadoop/share/hadoop/yarn:/opt/bd/hadoop/share/hadoop/yarn/lib/jetty-plus-9.4.51.v20230217.jar:/opt/bd/hadoop/share/hadoop/yarn/lib/websocket-common-9.4.51.v20230217.jar:/opt/bd/hadoop/share/hadoop/yarn/lib/snakeyaml-2.0.jar:/opt/bd/hadoop/share/hadoop/yarn/lib/websocket-client-9.4.51.v20230217.jar:/opt/bd/hadoop/share/hadoop/yarn/lib/jackson-jaxrs-json-provider-2.12.7.jar:/opt/bd/hadoop/share/hadoop/yarn/lib/guice-4.0.jar:/opt/bd/hadoop/share/hadoop/yarn/lib/bcprov-jdk15on-1.68.jar:/opt/bd/hadoop/share/hadoop/yarn/lib/json-io-2.5.1.jar:/opt/bd/hadoop/share/hadoop/yarn/lib/jackson-jaxrs-base-2.12.7.jar:/opt/bd/hadoop/share/hadoop/yarn/lib/javax-websocket-server-impl-9.4.51.v20230217.jar:/opt/bd/hadoop/share/hadoop/yarn/lib/asm-tree-9.4.jar:/opt/bd/hadoop/share/hadoop/yarn/lib/jline-3.9.0.jar:/opt/bd/hadoop/share/hadoop/yarn/lib/javax.websocket-api-1.0.jar:/opt/bd/hadoop/share/hadoop/yarn/lib/jna-5.2.0.jar:/opt/bd/hadoop/share/hadoop/yarn/lib/javax-websocket-client-impl-9.4.51.v20230217.jar:/opt/bd/hadoop/share/hadoop/yarn/lib/jetty-jndi-9.4.51.v20230217.jar:/opt/bd/hadoop/share/hadoop/yarn/lib/jetty-client-9.4.51.v20230217.jar:/opt/bd/hadoop/share/hadoop/yarn/lib/geronimo-jcache_1.0_spec-1.0-alpha-1.jar:/opt/bd/hadoop/share/hadoop/yarn/lib/swagger-annotations-1.5.4.jar:/opt/bd/hadoop/share/hadoop/yarn/lib/ehcache-3.3.1.jar:/opt/bd/hadoop/share/hadoop/yarn/lib/java-util-1.9.0.jar:/opt/bd/hadoop/share/hadoop/yarn/lib/jakarta.xml.bind-api-2.3.2.jar:/opt/bd/hadoop/share/hadoop/yarn/lib/websocket-api-9.4.51.v20230217.jar:/opt/bd/hadoop/share/hadoop/yarn/lib/fst-2.50.jar:/opt/bd/hadoop/share/hadoop/yarn/lib/mssql-jdbc-6.2.1.jre7.jar:/opt/bd/hadoop/share/hadoop/yarn/lib/jersey-guice-1.19.4.jar:/opt/bd/hadoop/share/hadoop/yarn/lib/javax.websocket-client-api-1.0.jar:/opt/bd/hadoop/share/hadoop/yarn/lib/guice-servlet-4.0.jar:/opt/bd/hadoop/share/hadoop/yarn/lib/jersey-client-1.19.4.jar:/opt/bd/hadoop/share/hadoop/yarn/lib/javax.inject-1.jar:/opt/bd/hadoop/share/hadoop/yarn/lib/aopalliance-1.0.jar:/opt/bd/hadoop/share/hadoop/yarn/lib/jackson-module-jaxb-annotations-2.12.7.jar:/opt/bd/hadoop/share/hadoop/yarn/lib/asm-commons-9.4.jar:/opt/bd/hadoop/share/hadoop/yarn/lib/bcpkix-jdk15on-1.68.jar:/opt/bd/hadoop/share/hadoop/yarn/lib/websocket-servlet-9.4.51.v20230217.jar:/opt/bd/hadoop/share/hadoop/yarn/lib/websocket-server-9.4.51.v20230217.jar:/opt/bd/hadoop/share/hadoop/yarn/lib/jetty-annotations-9.4.51.v20230217.jar:/opt/bd/hadoop/share/hadoop/yarn/lib/objenesis-2.6.jar:/opt/bd/hadoop/share/hadoop/yarn/hadoop-yarn-api-3.3.6.jar:/opt/bd/hadoop/share/hadoop/yarn/hadoop-yarn-services-api-3.3.6.jar:/opt/bd/hadoop/share/hadoop/yarn/hadoop-yarn-client-3.3.6.jar:/opt/bd/hadoop/share/hadoop/yarn/hadoop-yarn-server-resourcemanager-3.3.6.jar:/opt/bd/hadoop/share/hadoop/yarn/hadoop-yarn-services-core-3.3.6.jar:/opt/bd/hadoop/share/hadoop/yarn/hadoop-yarn-server-applicationhistoryservice-3.3.6.jar:/opt/bd/hadoop/share/hadoop/yarn/hadoop-yarn-server-common-3.3.6.jar:/opt/bd/hadoop/share/hadoop/yarn/hadoop-yarn-applications-unmanaged-am-launcher-3.3.6.jar:/opt/bd/hadoop/share/hadoop/yarn/hadoop-yarn-applications-distributedshell-3.3.6.jar:/opt/bd/hadoop/share/hadoop/yarn/hadoop-yarn-applications-mawo-core-3.3.6.jar:/opt/bd/hadoop/share/hadoop/yarn/hadoop-yarn-registry-3.3.6.jar:/opt/bd/hadoop/share/hadoop/yarn/hadoop-yarn-server-web-proxy-3.3.6.jar:/opt/bd/hadoop/share/hadoop/yarn/hadoop-yarn-server-tests-3.3.6.jar:/opt/bd/hadoop/share/hadoop/yarn/hadoop-yarn-common-3.3.6.jar:/opt/bd/hadoop/share/hadoop/yarn/hadoop-yarn-server-nodemanager-3.3.6.jar:/opt/bd/hadoop/share/hadoop/yarn/hadoop-yarn-server-sharedcachemanager-3.3.6.jar:/opt/bd/hadoop/share/hadoop/yarn/hadoop-yarn-server-timeline-pluginstorage-3.3.6.jar:/opt/bd/hadoop/share/hadoop/yarn/hadoop-yarn-server-router-3.3.6.jar:/opt/bd/hadoop/share/hadoop/yarn/timelineservice/hadoop-yarn-server-timelineservice-hbase-client-3.3.6.jar:/opt/bd/hadoop/share/hadoop/yarn/timelineservice/hadoop-yarn-server-timelineservice-hbase-coprocessor-3.3.6.jar:/opt/bd/hadoop/share/hadoop/yarn/timelineservice/hadoop-yarn-server-timelineservice-3.3.6.jar:/opt/bd/hadoop/share/hadoop/yarn/timelineservice/hadoop-yarn-server-timelineservice-documentstore-3.3.6.jar:/opt/bd/hadoop/share/hadoop/yarn/timelineservice/hadoop-yarn-server-timelineservice-hbase-common-3.3.6.jar:/opt/bd/hadoop/share/hadoop/yarn/timelineservice/lib/azure-cosmosdb-direct-2.4.5.jar:/opt/bd/hadoop/share/hadoop/yarn/timelineservice/lib/htrace-core-3.1.0-incubating.jar:/opt/bd/hadoop/share/hadoop/yarn/timelineservice/lib/commons-csv-1.9.0.jar:/opt/bd/hadoop/share/hadoop/yarn/timelineservice/lib/hbase-client-1.4.8.jar:/opt/bd/hadoop/share/hadoop/yarn/timelineservice/lib/azure-cosmosdb-2.4.5.jar:/opt/bd/hadoop/share/hadoop/yarn/timelineservice/lib/hbase-protocol-1.4.8.jar:/opt/bd/hadoop/share/hadoop/yarn/timelineservice/lib/hbase-common-1.4.8.jar:/opt/bd/hadoop/share/hadoop/yarn/timelineservice/lib/jcodings-1.0.13.jar:/opt/bd/hadoop/share/hadoop/yarn/timelineservice/lib/hbase-annotations-1.4.8.jar:/opt/bd/hadoop/share/hadoop/yarn/timelineservice/lib/joni-2.1.2.jar:/opt/bd/hadoop/share/hadoop/yarn/timelineservice/lib/rxjava-extras-0.8.0.17.jar:/opt/bd/hadoop/share/hadoop/yarn/timelineservice/lib/commons-collections4-4.2.jar:/opt/bd/hadoop/share/hadoop/yarn/timelineservice/lib/java-uuid-generator-3.1.4.jar:/opt/bd/hadoop/share/hadoop/yarn/timelineservice/lib/rxnetty-0.4.20.jar:/opt/bd/hadoop/share/hadoop/yarn/timelineservice/lib/metrics-core-2.2.0.jar:/opt/bd/hadoop/share/hadoop/yarn/timelineservice/lib/rxjava-string-1.1.1.jar:/opt/bd/hadoop/share/hadoop/yarn/timelineservice/lib/azure-cosmosdb-commons-2.4.5.jar:/opt/bd/hadoop/share/hadoop/yarn/timelineservice/lib/azure-cosmosdb-gateway-2.4.5.jar:/opt/bd/hadoop/share/hadoop/yarn/timelineservice/lib/commons-digester-1.8.1.jar:/opt/bd/hadoop/share/hadoop/yarn/timelineservice/lib/commons-lang-2.6.jar:/opt/bd/hadoop/share/hadoop/yarn/timelineservice/lib/rxjava-1.3.8.jar:/opt/bd/hadoop/share/hadoop/yarn/timelineservice/lib/commons-validator-1.6.jar
+STARTUP_MSG:   build = https://github.com/apache/hadoop.git -r 1be78238728da9266a4f88195058f08fd012bf9c; compiled by 'ubuntu' on 2023-06-18T08:22Z
+STARTUP_MSG:   java = 1.8.0_382
+************************************************************/
+2023-10-08 18:10:30,768 INFO org.apache.hadoop.yarn.server.resourcemanager.ResourceManager: registered UNIX signal handlers for [TERM, HUP, INT]
+2023-10-08 18:10:31,173 INFO org.apache.hadoop.yarn.server.resourcemanager.RMNMInfo: Registered RMInfo MBean
+2023-10-08 18:10:31,230 INFO org.apache.hadoop.conf.Configuration: found resource core-site.xml at file:/opt/bd/hadoop-3.3.6/etc/hadoop/core-site.xml
+2023-10-08 18:10:31,255 INFO org.apache.hadoop.conf.Configuration: resource-types.xml not found
+2023-10-08 18:10:31,255 INFO org.apache.hadoop.yarn.util.resource.ResourceUtils: Unable to find 'resource-types.xml'.
+2023-10-08 18:10:31,328 INFO org.apache.hadoop.conf.Configuration: found resource yarn-site.xml at file:/opt/bd/hadoop-3.3.6/etc/hadoop/yarn-site.xml
+2023-10-08 18:10:31,331 INFO org.apache.hadoop.yarn.metrics.GenericEventTypeMetrics: Registering GenericEventTypeMetrics
+2023-10-08 18:10:31,332 INFO org.apache.hadoop.yarn.event.AsyncDispatcher: Registering class org.apache.hadoop.yarn.server.resourcemanager.RMFatalEventType for class org.apache.hadoop.yarn.server.resourcemanager.ResourceManager$RMFatalEventDispatcher
+2023-10-08 18:10:31,351 INFO org.apache.hadoop.yarn.server.resourcemanager.security.NMTokenSecretManagerInRM: NMTokenKeyRollingInterval: 86400000ms and NMTokenKeyActivationDelay: 900000ms
+2023-10-08 18:10:31,353 INFO org.apache.hadoop.yarn.server.resourcemanager.security.RMContainerTokenSecretManager: ContainerTokenKeyRollingInterval: 86400000ms and ContainerTokenKeyActivationDelay: 900000ms
+2023-10-08 18:10:31,356 INFO org.apache.hadoop.yarn.server.resourcemanager.security.AMRMTokenSecretManager: AMRMTokenKeyRollingInterval: 86400000ms and AMRMTokenKeyActivationDelay: 900000 ms
+2023-10-08 18:10:31,433 INFO org.apache.hadoop.yarn.event.AsyncDispatcher: Registering class org.apache.hadoop.yarn.server.resourcemanager.recovery.RMStateStoreEventType for class org.apache.hadoop.yarn.server.resourcemanager.recovery.RMStateStore$ForwardingEventHandler
+2023-10-08 18:10:31,434 INFO org.apache.hadoop.yarn.event.AsyncDispatcher: Registering class org.apache.hadoop.yarn.server.resourcemanager.NodesListManagerEventType for class org.apache.hadoop.yarn.server.resourcemanager.NodesListManager
+2023-10-08 18:10:31,435 INFO org.apache.hadoop.yarn.server.resourcemanager.ResourceManager: Using Scheduler: org.apache.hadoop.yarn.server.resourcemanager.scheduler.capacity.CapacityScheduler
+2023-10-08 18:10:31,461 INFO org.apache.hadoop.yarn.event.AsyncDispatcher: Registering class org.apache.hadoop.yarn.server.resourcemanager.scheduler.event.SchedulerEventType for class org.apache.hadoop.yarn.server.resourcemanager.ResourceManager$SchedulerEventDispatcher
+2023-10-08 18:10:31,461 INFO org.apache.hadoop.yarn.event.AsyncDispatcher: Registering class org.apache.hadoop.yarn.server.resourcemanager.rmapp.RMAppEventType for class org.apache.hadoop.yarn.server.resourcemanager.ResourceManager$ApplicationEventDispatcher
+2023-10-08 18:10:31,462 INFO org.apache.hadoop.yarn.event.AsyncDispatcher: Registering class org.apache.hadoop.yarn.server.resourcemanager.rmapp.attempt.RMAppAttemptEventType for class org.apache.hadoop.yarn.server.resourcemanager.ResourceManager$ApplicationAttemptEventDispatcher
+2023-10-08 18:10:31,462 INFO org.apache.hadoop.yarn.event.AsyncDispatcher: Registering class org.apache.hadoop.yarn.server.resourcemanager.rmnode.RMNodeEventType for class org.apache.hadoop.yarn.server.resourcemanager.ResourceManager$NodeEventDispatcher
+2023-10-08 18:10:31,538 INFO org.apache.hadoop.metrics2.impl.MetricsConfig: Loaded properties from hadoop-metrics2.properties
+2023-10-08 18:10:31,545 INFO org.apache.hadoop.metrics2.impl.MetricsSystemImpl: Scheduled Metric snapshot period at 10 second(s).
+2023-10-08 18:10:31,545 INFO org.apache.hadoop.metrics2.impl.MetricsSystemImpl: ResourceManager metrics system started
+2023-10-08 18:10:31,559 INFO org.apache.hadoop.yarn.security.YarnAuthorizationProvider: org.apache.hadoop.yarn.security.ConfiguredYarnAuthorizer is instantiated.
+2023-10-08 18:10:31,561 INFO org.apache.hadoop.yarn.event.AsyncDispatcher: Registering class org.apache.hadoop.yarn.server.resourcemanager.RMAppManagerEventType for class org.apache.hadoop.yarn.server.resourcemanager.RMAppManager
+2023-10-08 18:10:31,567 INFO org.apache.hadoop.yarn.event.AsyncDispatcher: Registering class org.apache.hadoop.yarn.server.resourcemanager.amlauncher.AMLauncherEventType for class org.apache.hadoop.yarn.server.resourcemanager.amlauncher.ApplicationMasterLauncher
+2023-10-08 18:10:32,083 INFO org.apache.hadoop.yarn.server.resourcemanager.RMNMInfo: Registered RMNMInfo MBean
+2023-10-08 18:10:32,083 INFO org.apache.hadoop.yarn.server.resourcemanager.rmapp.monitor.RMAppLifetimeMonitor: Application lifelime monitor interval set to 3000 ms.
+2023-10-08 18:10:32,086 INFO org.apache.hadoop.yarn.server.resourcemanager.scheduler.placement.MultiNodeSortingManager: Initializing NodeSortingService=MultiNodeSortingManager
+2023-10-08 18:10:32,127 INFO org.apache.hadoop.util.HostsFileReader: Refreshing hosts (include/exclude) list
+2023-10-08 18:10:32,128 INFO org.apache.hadoop.util.HostsFileReader: Adding a node "datanode1" to the list of included hosts from /opt/bd/hadoop/etc/hadoop/yarn.include
+2023-10-08 18:10:32,128 INFO org.apache.hadoop.util.HostsFileReader: Adding a node "datanode2" to the list of included hosts from /opt/bd/hadoop/etc/hadoop/yarn.include
+2023-10-08 18:10:32,128 INFO org.apache.hadoop.util.HostsFileReader: Adding a node "datanode3" to the list of included hosts from /opt/bd/hadoop/etc/hadoop/yarn.include
+2023-10-08 18:10:32,128 INFO org.apache.hadoop.util.HostsFileReader: Adding a node "datanode4" to the list of included hosts from /opt/bd/hadoop/etc/hadoop/yarn.include
+2023-10-08 18:10:32,131 INFO org.apache.hadoop.conf.Configuration: found resource capacity-scheduler.xml at file:/opt/bd/hadoop-3.3.6/etc/hadoop/capacity-scheduler.xml
+2023-10-08 18:10:32,135 INFO org.apache.hadoop.yarn.server.resourcemanager.scheduler.AbstractYarnScheduler: Minimum allocation = <memory:128, vCores:1>
+2023-10-08 18:10:32,135 INFO org.apache.hadoop.yarn.server.resourcemanager.scheduler.AbstractYarnScheduler: Maximum allocation = <memory:2048, vCores:1>
+2023-10-08 18:10:32,172 INFO org.apache.hadoop.yarn.server.resourcemanager.scheduler.capacity.ParentQueue: root, capacity=1.0, absoluteCapacity=1.0, maxCapacity=1.0, absoluteMaxCapacity=1.0, state=RUNNING, acls=SUBMIT_APP:*ADMINISTER_QUEUE:*, labels=*,
+, reservationsContinueLooking=true, orderingPolicy=utilization, priority=0
+2023-10-08 18:10:32,172 INFO org.apache.hadoop.yarn.server.resourcemanager.scheduler.capacity.ParentQueue: Initialized parent-queue root name=root, fullname=root
+2023-10-08 18:10:32,182 INFO org.apache.hadoop.yarn.server.resourcemanager.scheduler.capacity.LeafQueue: Initializing root.default
+capacity = 1.0 [= (float) configuredCapacity / 100 ]
+absoluteCapacity = 1.0 [= parentAbsoluteCapacity * capacity ]
+maxCapacity = 1.0 [= configuredMaxCapacity ]
+absoluteMaxCapacity = 1.0 [= 1.0 maximumCapacity undefined, (parentAbsoluteMaxCapacity * maximumCapacity) / 100 otherwise ]
+effectiveMinResource=<memory:0, vCores:0>
+ , effectiveMaxResource=<memory:0, vCores:0>
+userLimit = 100 [= configuredUserLimit ]
+userLimitFactor = 1.0 [= configuredUserLimitFactor ]
+maxApplications = 10000 [= configuredMaximumSystemApplicationsPerQueue or (int)(configuredMaximumSystemApplications * absoluteCapacity)]
+maxApplicationsPerUser = 10000 [= (int)(maxApplications * (userLimit / 100.0f) * userLimitFactor) ]
+maxParallelApps = 2147483647
+usedCapacity = 0.0 [= usedResourcesMemory / (clusterResourceMemory * absoluteCapacity)]
+absoluteUsedCapacity = 0.0 [= usedResourcesMemory / clusterResourceMemory]
+maxAMResourcePerQueuePercent = 0.1 [= configuredMaximumAMResourcePercent ]
+minimumAllocationFactor = 0.9375 [= (float)(maximumAllocationMemory - minimumAllocationMemory) / maximumAllocationMemory ]
+maximumAllocation = <memory:2048, vCores:1> [= configuredMaxAllocation ]
+numContainers = 0 [= currentNumContainers ]
+state = RUNNING [= configuredState ]
+acls = SUBMIT_APP:*ADMINISTER_QUEUE:* [= configuredAcls ]
+nodeLocalityDelay = 40
+rackLocalityAdditionalDelay = -1
+labels=*,
+reservationsContinueLooking = true
+preemptionDisabled = true
+defaultAppPriorityPerQueue = 0
+priority = 0
+maxLifetime = -1 seconds
+defaultLifetime = -1 seconds
+2023-10-08 18:10:32,182 INFO org.apache.hadoop.yarn.server.resourcemanager.scheduler.capacity.CapacitySchedulerQueueManager: Initialized queue: root.default
+2023-10-08 18:10:32,182 INFO org.apache.hadoop.yarn.server.resourcemanager.scheduler.capacity.CapacitySchedulerQueueManager: Initialized queue: root
+2023-10-08 18:10:32,184 INFO org.apache.hadoop.yarn.server.resourcemanager.scheduler.capacity.CapacitySchedulerQueueManager: Initialized root queue root: numChildQueue= 1, capacity=1.0, absoluteCapacity=1.0, usedResources=<memory:0, vCores:0>usedCapacity=0.0, numApps=0, numContainers=0
+2023-10-08 18:10:32,184 INFO org.apache.hadoop.yarn.server.resourcemanager.placement.UserGroupMappingPlacementRule: Initialized queue mappings, override: false
+2023-10-08 18:10:32,184 INFO org.apache.hadoop.yarn.server.resourcemanager.scheduler.capacity.WorkflowPriorityMappingsManager: Initialized workflow priority mappings, override: false
+2023-10-08 18:10:32,184 INFO org.apache.hadoop.yarn.server.resourcemanager.scheduler.placement.MultiNodeSortingManager: MultiNode scheduling is 'false', and configured policies are 
+2023-10-08 18:10:32,185 INFO org.apache.hadoop.yarn.server.resourcemanager.scheduler.capacity.CapacityScheduler: Initialized CapacityScheduler with calculator=class org.apache.hadoop.yarn.util.resource.DefaultResourceCalculator, minimumAllocation=<<memory:128, vCores:1>>, maximumAllocation=<<memory:2048, vCores:1>>, asynchronousScheduling=false, asyncScheduleInterval=5ms,multiNodePlacementEnabled=false, assignMultipleEnabled=true, maxAssignPerHeartbeat=100, offswitchPerHeartbeatLimit=1
+2023-10-08 18:10:32,186 INFO org.apache.hadoop.conf.Configuration: dynamic-resources.xml not found
+2023-10-08 18:10:32,188 INFO org.apache.hadoop.yarn.server.resourcemanager.AMSProcessingChain: Initializing AMS Processing chain. Root Processor=[org.apache.hadoop.yarn.server.resourcemanager.DefaultAMSProcessor].
+2023-10-08 18:10:32,188 INFO org.apache.hadoop.yarn.server.resourcemanager.ApplicationMasterService: disabled placement handler will be used, all scheduling requests will be rejected.
+2023-10-08 18:10:32,188 INFO org.apache.hadoop.yarn.server.resourcemanager.AMSProcessingChain: Adding [org.apache.hadoop.yarn.server.resourcemanager.scheduler.constraint.processor.DisabledPlacementProcessor] tp top of AMS Processing chain. 
+2023-10-08 18:10:32,193 INFO org.apache.hadoop.yarn.server.resourcemanager.metrics.TimelineServiceV1Publisher: Timeline service v1 batch publishing disabled
+2023-10-08 18:10:32,368 INFO org.apache.hadoop.yarn.client.api.impl.TimelineClientImpl: Timeline service address: timelineserver:8188
+2023-10-08 18:10:32,649 INFO org.apache.hadoop.yarn.event.AsyncDispatcher: Registering class org.apache.hadoop.yarn.server.resourcemanager.metrics.AbstractSystemMetricsPublisher$SystemMetricsEventType for class org.apache.hadoop.yarn.server.resourcemanager.metrics.TimelineServiceV1Publisher$TimelineV1EventHandler
+2023-10-08 18:10:32,649 INFO org.apache.hadoop.yarn.event.AsyncDispatcher: Registering class org.apache.hadoop.yarn.server.resourcemanager.metrics.AbstractSystemMetricsPublisher$SystemMetricsEventType for class org.apache.hadoop.yarn.server.resourcemanager.metrics.TimelineServiceV1Publisher$TimelineV1EventHandler
+2023-10-08 18:10:32,649 INFO org.apache.hadoop.yarn.event.AsyncDispatcher: Registering class org.apache.hadoop.yarn.server.resourcemanager.metrics.AbstractSystemMetricsPublisher$SystemMetricsEventType for class org.apache.hadoop.yarn.server.resourcemanager.metrics.TimelineServiceV1Publisher$TimelineV1EventHandler
+2023-10-08 18:10:32,649 INFO org.apache.hadoop.yarn.event.AsyncDispatcher: Registering class org.apache.hadoop.yarn.server.resourcemanager.metrics.AbstractSystemMetricsPublisher$SystemMetricsEventType for class org.apache.hadoop.yarn.server.resourcemanager.metrics.TimelineServiceV1Publisher$TimelineV1EventHandler
+2023-10-08 18:10:32,649 INFO org.apache.hadoop.yarn.event.AsyncDispatcher: Registering class org.apache.hadoop.yarn.server.resourcemanager.metrics.AbstractSystemMetricsPublisher$SystemMetricsEventType for class org.apache.hadoop.yarn.server.resourcemanager.metrics.TimelineServiceV1Publisher$TimelineV1EventHandler
+2023-10-08 18:10:32,649 INFO org.apache.hadoop.yarn.event.AsyncDispatcher: Registering class org.apache.hadoop.yarn.server.resourcemanager.metrics.AbstractSystemMetricsPublisher$SystemMetricsEventType for class org.apache.hadoop.yarn.server.resourcemanager.metrics.TimelineServiceV1Publisher$TimelineV1EventHandler
+2023-10-08 18:10:32,649 INFO org.apache.hadoop.yarn.event.AsyncDispatcher: Registering class org.apache.hadoop.yarn.server.resourcemanager.metrics.AbstractSystemMetricsPublisher$SystemMetricsEventType for class org.apache.hadoop.yarn.server.resourcemanager.metrics.TimelineServiceV1Publisher$TimelineV1EventHandler
+2023-10-08 18:10:32,649 INFO org.apache.hadoop.yarn.event.AsyncDispatcher: Registering class org.apache.hadoop.yarn.server.resourcemanager.metrics.AbstractSystemMetricsPublisher$SystemMetricsEventType for class org.apache.hadoop.yarn.server.resourcemanager.metrics.TimelineServiceV1Publisher$TimelineV1EventHandler
+2023-10-08 18:10:32,649 INFO org.apache.hadoop.yarn.event.AsyncDispatcher: Registering class org.apache.hadoop.yarn.server.resourcemanager.metrics.AbstractSystemMetricsPublisher$SystemMetricsEventType for class org.apache.hadoop.yarn.server.resourcemanager.metrics.TimelineServiceV1Publisher$TimelineV1EventHandler
+2023-10-08 18:10:32,649 INFO org.apache.hadoop.yarn.event.AsyncDispatcher: Registering class org.apache.hadoop.yarn.server.resourcemanager.metrics.AbstractSystemMetricsPublisher$SystemMetricsEventType for class org.apache.hadoop.yarn.server.resourcemanager.metrics.TimelineServiceV1Publisher$TimelineV1EventHandler
+2023-10-08 18:10:32,670 INFO org.eclipse.jetty.util.log: Logging initialized @2379ms to org.eclipse.jetty.util.log.Slf4jLog
+2023-10-08 18:10:32,766 WARN org.apache.hadoop.security.authentication.server.AuthenticationFilter: Unable to initialize FileSignerSecretProvider, falling back to use random secrets. Reason: Could not read signature secret file: /opt/bd/hadoop-http-auth-signature-secret
+2023-10-08 18:10:32,768 INFO org.apache.hadoop.http.HttpRequestLog: Http request log for http.requests.resourcemanager is not defined
+2023-10-08 18:10:32,828 INFO org.apache.hadoop.http.HttpServer2: Added global filter 'safety' (class=org.apache.hadoop.http.HttpServer2$QuotingInputFilter)
+2023-10-08 18:10:32,830 INFO org.apache.hadoop.http.HttpServer2: Added filter RMAuthenticationFilter (class=org.apache.hadoop.yarn.server.security.http.RMAuthenticationFilter) to context cluster
+2023-10-08 18:10:32,830 INFO org.apache.hadoop.http.HttpServer2: Added filter RMAuthenticationFilter (class=org.apache.hadoop.yarn.server.security.http.RMAuthenticationFilter) to context logs
+2023-10-08 18:10:32,831 INFO org.apache.hadoop.http.HttpServer2: Added filter RMAuthenticationFilter (class=org.apache.hadoop.yarn.server.security.http.RMAuthenticationFilter) to context static
+2023-10-08 18:10:32,831 INFO org.apache.hadoop.http.HttpServer2: Added filter static_user_filter (class=org.apache.hadoop.http.lib.StaticUserWebFilter$StaticUserFilter) to context cluster
+2023-10-08 18:10:32,831 INFO org.apache.hadoop.http.HttpServer2: Added filter static_user_filter (class=org.apache.hadoop.http.lib.StaticUserWebFilter$StaticUserFilter) to context logs
+2023-10-08 18:10:32,831 INFO org.apache.hadoop.http.HttpServer2: Added filter static_user_filter (class=org.apache.hadoop.http.lib.StaticUserWebFilter$StaticUserFilter) to context static
+2023-10-08 18:10:33,262 INFO org.apache.hadoop.yarn.webapp.WebApps: Registered webapp guice modules
+2023-10-08 18:10:33,266 INFO org.apache.hadoop.http.HttpServer2: Jetty bound to port 8088
+2023-10-08 18:10:33,266 INFO org.eclipse.jetty.server.Server: jetty-9.4.51.v20230217; built: 2023-02-17T08:19:37.309Z; git: b45c405e4544384de066f814ed42ae3dceacdd49; jvm 1.8.0_382-8u382-ga-1~22.04.1-b05
+2023-10-08 18:10:33,336 INFO org.eclipse.jetty.server.session: DefaultSessionIdManager workerName=node0
+2023-10-08 18:10:33,336 INFO org.eclipse.jetty.server.session: No SessionScavenger set, using defaults
+2023-10-08 18:10:33,337 INFO org.eclipse.jetty.server.session: node0 Scavenging every 600000ms
+2023-10-08 18:10:33,344 WARN org.apache.hadoop.security.authentication.server.AuthenticationFilter: Unable to initialize FileSignerSecretProvider, falling back to use random secrets. Reason: Could not read signature secret file: /opt/bd/hadoop-http-auth-signature-secret
+2023-10-08 18:10:33,349 INFO org.apache.hadoop.security.token.delegation.AbstractDelegationTokenSecretManager: Updating the current master key for generating delegation tokens
+2023-10-08 18:10:33,350 INFO org.apache.hadoop.security.token.delegation.AbstractDelegationTokenSecretManager: Starting expired delegation token remover thread, tokenRemoverScanInterval=60 min(s)
+2023-10-08 18:10:33,350 INFO org.apache.hadoop.security.token.delegation.AbstractDelegationTokenSecretManager: Updating the current master key for generating delegation tokens
+2023-10-08 18:10:33,351 INFO org.eclipse.jetty.server.handler.ContextHandler: Started o.e.j.s.ServletContextHandler@28a2a3e7{logs,/logs,file:///opt/bd/hadoop/logs/,AVAILABLE}
+2023-10-08 18:10:33,351 INFO org.eclipse.jetty.server.handler.ContextHandler: Started o.e.j.s.ServletContextHandler@33a2499c{static,/static,jar:file:/opt/bd/hadoop-3.3.6/share/hadoop/yarn/hadoop-yarn-common-3.3.6.jar!/webapps/static,AVAILABLE}
+2023-10-08 18:10:34,342 INFO org.eclipse.jetty.server.handler.ContextHandler: Started o.e.j.w.WebAppContext@6f044c58{cluster,/,file:///tmp/jetty-resourcemanager-8088-hadoop-yarn-common-3_3_6_jar-_-any-9071703192020435117/webapp/,AVAILABLE}{jar:file:/opt/bd/hadoop-3.3.6/share/hadoop/yarn/hadoop-yarn-common-3.3.6.jar!/webapps/cluster}
+2023-10-08 18:10:34,347 INFO org.eclipse.jetty.server.AbstractConnector: Started ServerConnector@64b31700{HTTP/1.1, (http/1.1)}{resourcemanager:8088}
+2023-10-08 18:10:34,347 INFO org.eclipse.jetty.server.Server: Started @4057ms
+2023-10-08 18:10:34,347 INFO org.apache.hadoop.yarn.webapp.WebApps: Web app cluster started at 8088
+2023-10-08 18:10:34,442 INFO org.apache.hadoop.ipc.CallQueueManager: Using callQueue: class java.util.concurrent.LinkedBlockingQueue, queueCapacity: 100, scheduler: class org.apache.hadoop.ipc.DefaultRpcScheduler, ipcBackoff: false.
+2023-10-08 18:10:34,452 INFO org.apache.hadoop.ipc.Server: Listener at resourcemanager:8033
+2023-10-08 18:10:34,452 INFO org.apache.hadoop.ipc.Server: Starting Socket Reader #1 for port 8033
+2023-10-08 18:10:34,554 INFO org.apache.hadoop.yarn.factories.impl.pb.RpcServerFactoryPBImpl: Adding protocol org.apache.hadoop.yarn.server.api.ResourceManagerAdministrationProtocolPB to the server
+2023-10-08 18:10:34,555 INFO org.apache.hadoop.ipc.Server: IPC Server Responder: starting
+2023-10-08 18:10:34,555 INFO org.apache.hadoop.ipc.Server: IPC Server listener on 8033: starting
+2023-10-08 18:10:34,558 INFO org.apache.hadoop.yarn.server.resourcemanager.ResourceManager: Transitioning to active state
+2023-10-08 18:10:34,639 INFO org.apache.hadoop.yarn.server.resourcemanager.recovery.RMStateStore: Updating AMRMToken
+2023-10-08 18:10:34,639 INFO org.apache.hadoop.yarn.server.resourcemanager.security.RMContainerTokenSecretManager: Rolling master-key for container-tokens
+2023-10-08 18:10:34,639 INFO org.apache.hadoop.yarn.server.resourcemanager.security.NMTokenSecretManagerInRM: Rolling master-key for nm-tokens
+2023-10-08 18:10:34,639 INFO org.apache.hadoop.security.token.delegation.AbstractDelegationTokenSecretManager: Updating the current master key for generating delegation tokens
+2023-10-08 18:10:34,639 INFO org.apache.hadoop.yarn.server.resourcemanager.security.RMDelegationTokenSecretManager: storing master key with keyID 1
+2023-10-08 18:10:34,640 INFO org.apache.hadoop.yarn.server.resourcemanager.recovery.RMStateStore: Storing RMDTMasterKey.
+2023-10-08 18:10:34,640 INFO org.apache.hadoop.security.token.delegation.AbstractDelegationTokenSecretManager: Starting expired delegation token remover thread, tokenRemoverScanInterval=60 min(s)
+2023-10-08 18:10:34,640 INFO org.apache.hadoop.security.token.delegation.AbstractDelegationTokenSecretManager: Updating the current master key for generating delegation tokens
+2023-10-08 18:10:34,640 INFO org.apache.hadoop.yarn.server.resourcemanager.security.RMDelegationTokenSecretManager: storing master key with keyID 2
+2023-10-08 18:10:34,640 INFO org.apache.hadoop.yarn.server.resourcemanager.recovery.RMStateStore: Storing RMDTMasterKey.
+2023-10-08 18:10:34,641 INFO org.apache.hadoop.yarn.event.AsyncDispatcher: Registering class org.apache.hadoop.yarn.nodelabels.event.NodeLabelsStoreEventType for class org.apache.hadoop.yarn.nodelabels.CommonNodeLabelsManager$ForwardingEventHandler
+2023-10-08 18:10:35,033 INFO org.apache.hadoop.yarn.nodelabels.store.AbstractFSNodeStore: Created store directory :file:/tmp/hadoop-yarn-hdadmin/node-attribute
+2023-10-08 18:10:35,142 INFO org.apache.hadoop.yarn.nodelabels.store.AbstractFSNodeStore: Finished write mirror at:file:/tmp/hadoop-yarn-hdadmin/node-attribute/nodeattribute.mirror
+2023-10-08 18:10:35,142 INFO org.apache.hadoop.yarn.nodelabels.store.AbstractFSNodeStore: Finished create editlog file at:file:/tmp/hadoop-yarn-hdadmin/node-attribute/nodeattribute.editlog
+2023-10-08 18:10:35,150 INFO org.apache.hadoop.yarn.event.AsyncDispatcher: Registering class org.apache.hadoop.yarn.server.resourcemanager.nodelabels.NodeAttributesStoreEventType for class org.apache.hadoop.yarn.server.resourcemanager.nodelabels.NodeAttributesManagerImpl$ForwardingEventHandler
+2023-10-08 18:10:35,151 INFO org.apache.hadoop.yarn.server.resourcemanager.scheduler.placement.MultiNodeSortingManager: Starting NodeSortingService=MultiNodeSortingManager
+2023-10-08 18:10:35,158 INFO org.apache.hadoop.ipc.CallQueueManager: Using callQueue: class java.util.concurrent.LinkedBlockingQueue, queueCapacity: 5000, scheduler: class org.apache.hadoop.ipc.DefaultRpcScheduler, ipcBackoff: false.
+2023-10-08 18:10:35,158 INFO org.apache.hadoop.ipc.Server: Listener at resourcemanager:8031
+2023-10-08 18:10:35,158 INFO org.apache.hadoop.ipc.Server: Starting Socket Reader #1 for port 8031
+2023-10-08 18:10:35,160 INFO org.apache.hadoop.yarn.factories.impl.pb.RpcServerFactoryPBImpl: Adding protocol org.apache.hadoop.yarn.server.api.ResourceTrackerPB to the server
+2023-10-08 18:10:35,160 INFO org.apache.hadoop.ipc.Server: IPC Server Responder: starting
+2023-10-08 18:10:35,161 INFO org.apache.hadoop.ipc.Server: IPC Server listener on 8031: starting
+2023-10-08 18:10:35,228 INFO org.apache.hadoop.util.JvmPauseMonitor: Starting JVM pause monitor
+2023-10-08 18:10:35,235 INFO org.apache.hadoop.ipc.CallQueueManager: Using callQueue: class java.util.concurrent.LinkedBlockingQueue, queueCapacity: 5000, scheduler: class org.apache.hadoop.ipc.DefaultRpcScheduler, ipcBackoff: false.
+2023-10-08 18:10:35,238 INFO org.apache.hadoop.ipc.Server: Listener at resourcemanager:8030
+2023-10-08 18:10:35,238 INFO org.apache.hadoop.ipc.Server: Starting Socket Reader #1 for port 8030
+2023-10-08 18:10:35,242 INFO org.apache.hadoop.yarn.factories.impl.pb.RpcServerFactoryPBImpl: Adding protocol org.apache.hadoop.yarn.api.ApplicationMasterProtocolPB to the server
+2023-10-08 18:10:35,242 INFO org.apache.hadoop.ipc.Server: IPC Server Responder: starting
+2023-10-08 18:10:35,242 INFO org.apache.hadoop.ipc.Server: IPC Server listener on 8030: starting
+2023-10-08 18:10:35,289 INFO org.apache.hadoop.ipc.CallQueueManager: Using callQueue: class java.util.concurrent.LinkedBlockingQueue, queueCapacity: 5000, scheduler: class org.apache.hadoop.ipc.DefaultRpcScheduler, ipcBackoff: false.
+2023-10-08 18:10:35,289 INFO org.apache.hadoop.ipc.Server: Listener at resourcemanager:8032
+2023-10-08 18:10:35,290 INFO org.apache.hadoop.ipc.Server: Starting Socket Reader #1 for port 8032
+2023-10-08 18:10:35,291 INFO org.apache.hadoop.yarn.factories.impl.pb.RpcServerFactoryPBImpl: Adding protocol org.apache.hadoop.yarn.api.ApplicationClientProtocolPB to the server
+2023-10-08 18:10:35,292 INFO org.apache.hadoop.ipc.Server: IPC Server Responder: starting
+2023-10-08 18:10:35,292 INFO org.apache.hadoop.ipc.Server: IPC Server listener on 8032: starting
+2023-10-08 18:10:35,663 INFO org.apache.hadoop.yarn.server.webproxy.ProxyCA: Created Certificate for OU=YARN-210478d0-5e27-47d5-8353-88f06c73abab
+2023-10-08 18:10:35,751 INFO org.apache.hadoop.yarn.server.resourcemanager.recovery.RMStateStore: Storing CA Certificate and Private Key
+2023-10-08 18:10:35,751 INFO org.apache.hadoop.yarn.server.resourcemanager.ResourceManager: Transitioned to active state
+2023-10-08 18:11:04,131 INFO org.apache.hadoop.yarn.server.resourcemanager.ResourceTrackerService: Node not found resyncing datanode3:41847
+2023-10-08 18:11:04,231 INFO org.apache.hadoop.yarn.server.resourcemanager.ResourceTrackerService: NodeManager from node datanode3(cmPort: 41847 httpPort: 8042) registered with capability: <memory:11067, vCores:8>, assigned nodeId datanode3:41847
+2023-10-08 18:11:04,233 INFO org.apache.hadoop.yarn.server.resourcemanager.rmnode.RMNodeImpl: datanode3:41847 Node Transitioned from NEW to RUNNING
+2023-10-08 18:11:04,250 INFO org.apache.hadoop.yarn.server.resourcemanager.scheduler.capacity.CapacityScheduler: Added node datanode3:41847 clusterResource: <memory:11067, vCores:8>
+2023-10-08 18:11:04,406 INFO org.apache.hadoop.yarn.server.resourcemanager.ResourceTrackerService: Node not found resyncing datanode4:45563
+2023-10-08 18:11:04,407 INFO org.apache.hadoop.yarn.server.resourcemanager.ResourceTrackerService: NodeManager from node datanode4(cmPort: 45563 httpPort: 8042) registered with capability: <memory:11067, vCores:8>, assigned nodeId datanode4:45563
+2023-10-08 18:11:04,407 INFO org.apache.hadoop.yarn.server.resourcemanager.rmnode.RMNodeImpl: datanode4:45563 Node Transitioned from NEW to RUNNING
+2023-10-08 18:11:04,409 INFO org.apache.hadoop.yarn.server.resourcemanager.scheduler.capacity.CapacityScheduler: Added node datanode4:45563 clusterResource: <memory:22134, vCores:16>
+2023-10-08 18:11:04,497 INFO org.apache.hadoop.yarn.server.resourcemanager.ResourceTrackerService: Node not found resyncing datanode2:43965
+2023-10-08 18:11:04,499 INFO org.apache.hadoop.yarn.server.resourcemanager.ResourceTrackerService: NodeManager from node datanode2(cmPort: 43965 httpPort: 8042) registered with capability: <memory:11067, vCores:8>, assigned nodeId datanode2:43965
+2023-10-08 18:11:04,499 INFO org.apache.hadoop.yarn.server.resourcemanager.rmnode.RMNodeImpl: datanode2:43965 Node Transitioned from NEW to RUNNING
+2023-10-08 18:11:04,501 INFO org.apache.hadoop.yarn.server.resourcemanager.scheduler.capacity.CapacityScheduler: Added node datanode2:43965 clusterResource: <memory:33201, vCores:24>
+2023-10-08 18:11:04,542 INFO org.apache.hadoop.yarn.server.resourcemanager.ResourceTrackerService: Node not found resyncing datanode1:43575
+2023-10-08 18:11:04,543 INFO org.apache.hadoop.yarn.server.resourcemanager.ResourceTrackerService: NodeManager from node datanode1(cmPort: 43575 httpPort: 8042) registered with capability: <memory:11067, vCores:8>, assigned nodeId datanode1:43575
+2023-10-08 18:11:04,543 INFO org.apache.hadoop.yarn.server.resourcemanager.rmnode.RMNodeImpl: datanode1:43575 Node Transitioned from NEW to RUNNING
+2023-10-08 18:11:04,545 INFO org.apache.hadoop.yarn.server.resourcemanager.scheduler.capacity.CapacityScheduler: Added node datanode1:43575 clusterResource: <memory:44268, vCores:32>
+
+--------------------------------------------------
+
+hdfs dfsadmin -report
+Configured Capacity: 1052344336384 (980.07 GB)
+Present Capacity: 590507073536 (549.95 GB)
+DFS Remaining: 590481784832 (549.93 GB)
+DFS Used: 25288704 (24.12 MB)
+DFS Used%: 0.00%
+Replicated Blocks:
+	Under replicated blocks: 0
+	Blocks with corrupt replicas: 0
+	Missing blocks: 0
+	Missing blocks (with replication factor 1): 0
+	Low redundancy blocks with highest priority to recover: 0
+	Pending deletion blocks: 0
+Erasure Coded Block Groups: 
+	Low redundancy block groups: 0
+	Block groups with corrupt internal blocks: 0
+	Missing block groups: 0
+	Low redundancy blocks with highest priority to recover: 0
+	Pending deletion blocks: 0
+
+-------------------------------------------------
+Live datanodes (4):
+
+Name: 172.21.0.3:9866 (datanode1.hadoop-cluster)
+Hostname: datanode1
+Decommission Status : Normal
+Configured Capacity: 263086084096 (245.02 GB)
+DFS Used: 5722112 (5.46 MB)
+Non DFS Used: 102021365760 (95.01 GB)
+DFS Remaining: 147620446208 (137.48 GB)
+DFS Used%: 0.00%
+DFS Remaining%: 56.11%
+Configured Cache Capacity: 0 (0 B)
+Cache Used: 0 (0 B)
+Cache Remaining: 0 (0 B)
+Cache Used%: 100.00%
+Cache Remaining%: 0.00%
+Xceivers: 0
+Last contact: Sun Oct 08 18:21:46 CEST 2023
+Last Block Report: Sun Oct 08 18:10:28 CEST 2023
+Num of Blocks: 24
+
+
+Name: 172.21.0.4:9866 (datanode2.hadoop-cluster)
+Hostname: datanode2
+Decommission Status : Normal
+Configured Capacity: 263086084096 (245.02 GB)
+DFS Used: 6004736 (5.73 MB)
+Non DFS Used: 102021083136 (95.01 GB)
+DFS Remaining: 147620446208 (137.48 GB)
+DFS Used%: 0.00%
+DFS Remaining%: 56.11%
+Configured Cache Capacity: 0 (0 B)
+Cache Used: 0 (0 B)
+Cache Remaining: 0 (0 B)
+Cache Used%: 100.00%
+Cache Remaining%: 0.00%
+Xceivers: 0
+Last contact: Sun Oct 08 18:21:46 CEST 2023
+Last Block Report: Sun Oct 08 18:10:28 CEST 2023
+Num of Blocks: 28
+
+
+Name: 172.21.0.5:9866 (datanode3.hadoop-cluster)
+Hostname: datanode3
+Decommission Status : Normal
+Configured Capacity: 263086084096 (245.02 GB)
+DFS Used: 7389184 (7.05 MB)
+Non DFS Used: 102019698688 (95.01 GB)
+DFS Remaining: 147620446208 (137.48 GB)
+DFS Used%: 0.00%
+DFS Remaining%: 56.11%
+Configured Cache Capacity: 0 (0 B)
+Cache Used: 0 (0 B)
+Cache Remaining: 0 (0 B)
+Cache Used%: 100.00%
+Cache Remaining%: 0.00%
+Xceivers: 0
+Last contact: Sun Oct 08 18:21:46 CEST 2023
+Last Block Report: Sun Oct 08 18:10:28 CEST 2023
+Num of Blocks: 33
+
+
+Name: 172.21.0.6:9866 (datanode4.hadoop-cluster)
+Hostname: datanode4
+Decommission Status : Normal
+Configured Capacity: 263086084096 (245.02 GB)
+DFS Used: 6172672 (5.89 MB)
+Non DFS Used: 102020915200 (95.01 GB)
+DFS Remaining: 147620446208 (137.48 GB)
+DFS Used%: 0.00%
+DFS Remaining%: 56.11%
+Configured Cache Capacity: 0 (0 B)
+Cache Used: 0 (0 B)
+Cache Remaining: 0 (0 B)
+Cache Used%: 100.00%
+Cache Remaining%: 0.00%
+Xceivers: 0
+Last contact: Sun Oct 08 18:21:46 CEST 2023
+Last Block Report: Sun Oct 08 18:10:28 CEST 2023
+Num of Blocks: 32
+
+
+#############################
+
+
+hdfs dfsadmin -report 
+Safe mode is ON
+Configured Capacity: 789258252288 (735.05 GB)
+Present Capacity: 442871926784 (412.46 GB)
+DFS Remaining: 442852810752 (412.44 GB)
+DFS Used: 19116032 (18.23 MB)
+DFS Used%: 0.00%
+Replicated Blocks:
+	Under replicated blocks: 32
+	Blocks with corrupt replicas: 0
+	Missing blocks: 0
+	Missing blocks (with replication factor 1): 0
+	Low redundancy blocks with highest priority to recover: 0
+	Pending deletion blocks: 0
+Erasure Coded Block Groups: 
+	Low redundancy block groups: 0
+	Block groups with corrupt internal blocks: 0
+	Missing block groups: 0
+	Low redundancy blocks with highest priority to recover: 0
+	Pending deletion blocks: 0
+
+-------------------------------------------------
+Live datanodes (3):
+
+Name: 172.21.0.3:9866 (datanode1.hadoop-cluster)
+Hostname: datanode1
+Decommission Status : Normal
+Configured Capacity: 263086084096 (245.02 GB)
+DFS Used: 5722112 (5.46 MB)
+Non DFS Used: 102024208384 (95.02 GB)
+DFS Remaining: 147617603584 (137.48 GB)
+DFS Used%: 0.00%
+DFS Remaining%: 56.11%
+Configured Cache Capacity: 0 (0 B)
+Cache Used: 0 (0 B)
+Cache Remaining: 0 (0 B)
+Cache Used%: 100.00%
+Cache Remaining%: 0.00%
+Xceivers: 0
+Last contact: Sun Oct 08 18:32:35 CEST 2023
+Last Block Report: Sun Oct 08 18:32:14 CEST 2023
+Num of Blocks: 24
+
+
+Name: 172.21.0.4:9866 (datanode2.hadoop-cluster)
+Hostname: datanode2
+Decommission Status : Normal
+Configured Capacity: 263086084096 (245.02 GB)
+DFS Used: 6004736 (5.73 MB)
+Non DFS Used: 102023925760 (95.02 GB)
+DFS Remaining: 147617603584 (137.48 GB)
+DFS Used%: 0.00%
+DFS Remaining%: 56.11%
+Configured Cache Capacity: 0 (0 B)
+Cache Used: 0 (0 B)
+Cache Remaining: 0 (0 B)
+Cache Used%: 100.00%
+Cache Remaining%: 0.00%
+Xceivers: 0
+Last contact: Sun Oct 08 18:32:35 CEST 2023
+Last Block Report: Sun Oct 08 18:32:14 CEST 2023
+Num of Blocks: 28
+
+
+Name: 172.21.0.5:9866 (datanode3.hadoop-cluster)
+Hostname: datanode3
+Decommission Status : Normal
+Configured Capacity: 263086084096 (245.02 GB)
+DFS Used: 7389184 (7.05 MB)
+Non DFS Used: 102022541312 (95.02 GB)
+DFS Remaining: 147617603584 (137.48 GB)
+DFS Used%: 0.00%
+DFS Remaining%: 56.11%
+Configured Cache Capacity: 0 (0 B)
+Cache Used: 0 (0 B)
+Cache Remaining: 0 (0 B)
+Cache Used%: 100.00%
+Cache Remaining%: 0.00%
+Xceivers: 0
+Last contact: Sun Oct 08 18:32:36 CEST 2023
+Last Block Report: Sun Oct 08 18:32:15 CEST 2023
+Num of Blocks: 33
+
+-------------------------------------------------
+
+befor add 6 and 5
+
+-----------------------------------------
+
+ dfsadmin -report 
+-bash: dfsadmin: command not found
+hdadmin@namenode:~$ hdfs dfsadmin -report
+Configured Capacity: 1315430420480 (1.20 TB)
+Present Capacity: 738025951232 (687.34 GB)
+DFS Remaining: 738000625664 (687.32 GB)
+DFS Used: 25325568 (24.15 MB)
+DFS Used%: 0.00%
+Replicated Blocks:
+	Under replicated blocks: 0
+	Blocks with corrupt replicas: 0
+	Missing blocks: 0
+	Missing blocks (with replication factor 1): 0
+	Low redundancy blocks with highest priority to recover: 0
+	Pending deletion blocks: 0
+Erasure Coded Block Groups: 
+	Low redundancy block groups: 0
+	Block groups with corrupt internal blocks: 0
+	Missing block groups: 0
+	Low redundancy blocks with highest priority to recover: 0
+	Pending deletion blocks: 0
+
+-------------------------------------------------
+Live datanodes (5):
+
+Name: 172.21.0.10:9866 (datanode6.hadoop-cluster)
+Hostname: datanode6
+Decommission Status : Normal
+Configured Capacity: 263086084096 (245.02 GB)
+DFS Used: 36864 (36 KB)
+Non DFS Used: 102047391744 (95.04 GB)
+DFS Remaining: 147600105472 (137.46 GB)
+DFS Used%: 0.00%
+DFS Remaining%: 56.10%
+Configured Cache Capacity: 0 (0 B)
+Cache Used: 0 (0 B)
+Cache Remaining: 0 (0 B)
+Cache Used%: 100.00%
+Cache Remaining%: 0.00%
+Xceivers: 0
+Last contact: Sun Oct 08 19:04:06 CEST 2023
+Last Block Report: Sun Oct 08 18:47:15 CEST 2023
+Num of Blocks: 0
+
+
+Name: 172.21.0.3:9866 (datanode1.hadoop-cluster)
+Hostname: datanode1
+Decommission Status : Normal
+Configured Capacity: 263086084096 (245.02 GB)
+DFS Used: 8417280 (8.03 MB)
+Non DFS Used: 102038978560 (95.03 GB)
+DFS Remaining: 147600138240 (137.46 GB)
+DFS Used%: 0.00%
+DFS Remaining%: 56.10%
+Configured Cache Capacity: 0 (0 B)
+Cache Used: 0 (0 B)
+Cache Remaining: 0 (0 B)
+Cache Used%: 100.00%
+Cache Remaining%: 0.00%
+Xceivers: 0
+Last contact: Sun Oct 08 19:04:05 CEST 2023
+Last Block Report: Sun Oct 08 18:32:14 CEST 2023
+Num of Blocks: 39
+
+
+Name: 172.21.0.4:9866 (datanode2.hadoop-cluster)
+Hostname: datanode2
+Decommission Status : Normal
+Configured Capacity: 263086084096 (245.02 GB)
+DFS Used: 8417280 (8.03 MB)
+Non DFS Used: 102038978560 (95.03 GB)
+DFS Remaining: 147600138240 (137.46 GB)
+DFS Used%: 0.00%
+DFS Remaining%: 56.10%
+Configured Cache Capacity: 0 (0 B)
+Cache Used: 0 (0 B)
+Cache Remaining: 0 (0 B)
+Cache Used%: 100.00%
+Cache Remaining%: 0.00%
+Xceivers: 0
+Last contact: Sun Oct 08 19:04:05 CEST 2023
+Last Block Report: Sun Oct 08 18:32:14 CEST 2023
+Num of Blocks: 39
+
+
+Name: 172.21.0.5:9866 (datanode3.hadoop-cluster)
+Hostname: datanode3
+Decommission Status : Normal
+Configured Capacity: 263086084096 (245.02 GB)
+DFS Used: 8417280 (8.03 MB)
+Non DFS Used: 102039011328 (95.03 GB)
+DFS Remaining: 147600105472 (137.46 GB)
+DFS Used%: 0.00%
+DFS Remaining%: 56.10%
+Configured Cache Capacity: 0 (0 B)
+Cache Used: 0 (0 B)
+Cache Remaining: 0 (0 B)
+Cache Used%: 100.00%
+Cache Remaining%: 0.00%
+Xceivers: 0
+Last contact: Sun Oct 08 19:04:06 CEST 2023
+Last Block Report: Sun Oct 08 18:32:15 CEST 2023
+Num of Blocks: 39
+
+
+Name: 172.21.0.9:9866 (datanode5.hadoop-cluster)
+Hostname: datanode5
+Decommission Status : Normal
+Configured Capacity: 263086084096 (245.02 GB)
+DFS Used: 36864 (36 KB)
+Non DFS Used: 102047358976 (95.04 GB)
+DFS Remaining: 147600138240 (137.46 GB)
+DFS Used%: 0.00%
+DFS Remaining%: 56.10%
+Configured Cache Capacity: 0 (0 B)
+Cache Used: 0 (0 B)
+Cache Remaining: 0 (0 B)
+Cache Used%: 100.00%
+Cache Remaining%: 0.00%
+Xceivers: 0
+Last contact: Sun Oct 08 19:04:06 CEST 2023
+Last Block Report: Sun Oct 08 18:47:15 CEST 2023
+Num of Blocks: 0
+
+
+Dead datanodes (1):
+
+Name: 172.21.0.6:9866 (datanode4.hadoop-cluster)
+Hostname: datanode4
+Decommission Status : Decommissioned
+Configured Capacity: 0 (0 B)
+DFS Used: 0 (0 B)
+Non DFS Used: 0 (0 B)
+DFS Remaining: 0 (0 B)
+DFS Used%: 100.00%
+DFS Remaining%: 0.00%
+Configured Cache Capacity: 0 (0 B)
+Cache Used: 0 (0 B)
+Cache Remaining: 0 (0 B)
+Cache Used%: 100.00%
+Cache Remaining%: 0.00%
+Xceivers: 0
+Last contact: Thu Jan 01 01:00:00 CET 1970
+Last Block Report: Never
+Num of Blocks: 0
+
+
+hdadmin@namenode:~$ 
+
+---------------------------------
+
+hdadmin@namenode:~$ hdfs balancer -threshold 1
+2023-10-08 19:07:01,063 INFO balancer.Balancer: Using a threshold of 1.0
+2023-10-08 19:07:01,063 INFO balancer.Balancer: namenodes  = [hdfs://namenode:9000]
+2023-10-08 19:07:01,064 INFO balancer.Balancer: parameters = Balancer.BalancerParameters [BalancingPolicy.Node, threshold = 1.0, max idle iteration = 5, #excluded nodes = 0, #included nodes = 0, #source nodes = 0, #blockpools = 0, run during upgrade = false]
+2023-10-08 19:07:01,064 INFO balancer.Balancer: included nodes = []
+2023-10-08 19:07:01,064 INFO balancer.Balancer: excluded nodes = []
+2023-10-08 19:07:01,064 INFO balancer.Balancer: source nodes = []
+Time Stamp               Iteration#  Bytes Already Moved  Bytes Left To Move  Bytes Being Moved  NameNode
+2023-10-08 19:07:01,066 INFO balancer.NameNodeConnector: getBlocks calls for hdfs://namenode:9000 will be rate-limited to 20 per second
+2023-10-08 19:07:01,976 INFO balancer.Balancer: dfs.namenode.get-blocks.max-qps = 20 (default=20)
+2023-10-08 19:07:01,976 INFO balancer.Balancer: dfs.balancer.movedWinWidth = 5400000 (default=5400000)
+2023-10-08 19:07:01,976 INFO balancer.Balancer: dfs.balancer.moverThreads = 1000 (default=1000)
+2023-10-08 19:07:01,976 INFO balancer.Balancer: dfs.balancer.dispatcherThreads = 200 (default=200)
+2023-10-08 19:07:01,976 INFO balancer.Balancer: dfs.balancer.getBlocks.size = 2147483648 (default=2147483648)
+2023-10-08 19:07:01,976 INFO balancer.Balancer: dfs.balancer.getBlocks.min-block-size = 10485760 (default=10485760)
+2023-10-08 19:07:01,976 INFO balancer.Balancer: dfs.datanode.balance.max.concurrent.moves = 100 (default=100)
+2023-10-08 19:07:01,976 INFO balancer.Balancer: dfs.datanode.balance.bandwidthPerSec = 104857600 (default=104857600)
+2023-10-08 19:07:01,980 INFO balancer.Balancer: dfs.balancer.max-size-to-move = 10737418240 (default=10737418240)
+2023-10-08 19:07:01,980 INFO balancer.Balancer: dfs.blocksize = 67108864 (default=134217728)
+2023-10-08 19:07:01,986 INFO net.NetworkTopology: Adding a new node: /default-rack/172.21.0.9:9866
+2023-10-08 19:07:01,986 INFO net.NetworkTopology: Adding a new node: /default-rack/172.21.0.5:9866
+2023-10-08 19:07:01,986 INFO net.NetworkTopology: Adding a new node: /default-rack/172.21.0.4:9866
+2023-10-08 19:07:01,986 INFO net.NetworkTopology: Adding a new node: /default-rack/172.21.0.10:9866
+2023-10-08 19:07:01,986 INFO net.NetworkTopology: Adding a new node: /default-rack/172.21.0.3:9866
+2023-10-08 19:07:01,988 INFO balancer.Balancer: 0 over-utilized: []
+2023-10-08 19:07:01,988 INFO balancer.Balancer: 0 underutilized: []
+08-oct-2023 19:07:01              0                  0 B                 0 B                0 B                  0  hdfs://namenode:9000
+The cluster is balanced. Exiting...
+08-oct-2023 19:07:02     Balancing took 1.178 seconds
+hdadmin@namenode:~$ hdfs dfsadmin -report
+Configured Capacity: 1315430420480 (1.20 TB)
+Present Capacity: 738021732409 (687.34 GB)
+DFS Remaining: 737996406784 (687.31 GB)
+DFS Used: 25325625 (24.15 MB)
+DFS Used%: 0.00%
+Replicated Blocks:
+	Under replicated blocks: 0
+	Blocks with corrupt replicas: 0
+	Missing blocks: 0
+	Missing blocks (with replication factor 1): 0
+	Low redundancy blocks with highest priority to recover: 0
+	Pending deletion blocks: 1
+Erasure Coded Block Groups: 
+	Low redundancy block groups: 0
+	Block groups with corrupt internal blocks: 0
+	Missing block groups: 0
+	Low redundancy blocks with highest priority to recover: 0
+	Pending deletion blocks: 0
+
+-------------------------------------------------
+Live datanodes (5):
+
+Name: 172.21.0.10:9866 (datanode6.hadoop-cluster)
+Hostname: datanode6
+Decommission Status : Normal
+Configured Capacity: 263086084096 (245.02 GB)
+DFS Used: 36883 (36.02 KB)
+Non DFS Used: 102048219117 (95.04 GB)
+DFS Remaining: 147599278080 (137.46 GB)
+DFS Used%: 0.00%
+DFS Remaining%: 56.10%
+Configured Cache Capacity: 0 (0 B)
+Cache Used: 0 (0 B)
+Cache Remaining: 0 (0 B)
+Cache Used%: 100.00%
+Cache Remaining%: 0.00%
+Xceivers: 0
+Last contact: Sun Oct 08 19:07:03 CEST 2023
+Last Block Report: Sun Oct 08 18:47:15 CEST 2023
+Num of Blocks: 0
+
+
+Name: 172.21.0.3:9866 (datanode1.hadoop-cluster)
+Hostname: datanode1
+Decommission Status : Normal
+Configured Capacity: 263086084096 (245.02 GB)
+DFS Used: 8417299 (8.03 MB)
+Non DFS Used: 102039830509 (95.03 GB)
+DFS Remaining: 147599286272 (137.46 GB)
+DFS Used%: 0.00%
+DFS Remaining%: 56.10%
+Configured Cache Capacity: 0 (0 B)
+Cache Used: 0 (0 B)
+Cache Remaining: 0 (0 B)
+Cache Used%: 100.00%
+Cache Remaining%: 0.00%
+Xceivers: 0
+Last contact: Sun Oct 08 19:07:02 CEST 2023
+Last Block Report: Sun Oct 08 18:32:14 CEST 2023
+Num of Blocks: 39
+
+
+Name: 172.21.0.4:9866 (datanode2.hadoop-cluster)
+Hostname: datanode2
+Decommission Status : Normal
+Configured Capacity: 263086084096 (245.02 GB)
+DFS Used: 8417280 (8.03 MB)
+Non DFS Used: 102039830528 (95.03 GB)
+DFS Remaining: 147599286272 (137.46 GB)
+DFS Used%: 0.00%
+DFS Remaining%: 56.10%
+Configured Cache Capacity: 0 (0 B)
+Cache Used: 0 (0 B)
+Cache Remaining: 0 (0 B)
+Cache Used%: 100.00%
+Cache Remaining%: 0.00%
+Xceivers: 0
+Last contact: Sun Oct 08 19:07:02 CEST 2023
+Last Block Report: Sun Oct 08 18:32:14 CEST 2023
+Num of Blocks: 39
+
+
+Name: 172.21.0.5:9866 (datanode3.hadoop-cluster)
+Hostname: datanode3
+Decommission Status : Normal
+Configured Capacity: 263086084096 (245.02 GB)
+DFS Used: 8417280 (8.03 MB)
+Non DFS Used: 102039838720 (95.03 GB)
+DFS Remaining: 147599278080 (137.46 GB)
+DFS Used%: 0.00%
+DFS Remaining%: 56.10%
+Configured Cache Capacity: 0 (0 B)
+Cache Used: 0 (0 B)
+Cache Remaining: 0 (0 B)
+Cache Used%: 100.00%
+Cache Remaining%: 0.00%
+Xceivers: 0
+Last contact: Sun Oct 08 19:07:03 CEST 2023
+Last Block Report: Sun Oct 08 18:32:15 CEST 2023
+Num of Blocks: 39
+
+
+Name: 172.21.0.9:9866 (datanode5.hadoop-cluster)
+Hostname: datanode5
+Decommission Status : Normal
+Configured Capacity: 263086084096 (245.02 GB)
+DFS Used: 36883 (36.02 KB)
+Non DFS Used: 102048219117 (95.04 GB)
+DFS Remaining: 147599278080 (137.46 GB)
+DFS Used%: 0.00%
+DFS Remaining%: 56.10%
+Configured Cache Capacity: 0 (0 B)
+Cache Used: 0 (0 B)
+Cache Remaining: 0 (0 B)
+Cache Used%: 100.00%
+Cache Remaining%: 0.00%
+Xceivers: 0
+Last contact: Sun Oct 08 19:07:03 CEST 2023
+Last Block Report: Sun Oct 08 18:47:15 CEST 2023
+Num of Blocks: 0
+
+
+Dead datanodes (1):
+
+Name: 172.21.0.6:9866 (datanode4.hadoop-cluster)
+Hostname: datanode4
+Decommission Status : Decommissioned
+Configured Capacity: 0 (0 B)
+DFS Used: 0 (0 B)
+Non DFS Used: 0 (0 B)
+DFS Remaining: 0 (0 B)
+DFS Used%: 100.00%
+DFS Remaining%: 0.00%
+Configured Cache Capacity: 0 (0 B)
+Cache Used: 0 (0 B)
+Cache Remaining: 0 (0 B)
+Cache Used%: 100.00%
+Cache Remaining%: 0.00%
+Xceivers: 0
+Last contact: Thu Jan 01 01:00:00 CET 1970
+Last Block Report: Never
+Num of Blocks: 0
+
+
+hdadmin@namenode:~$ 
+

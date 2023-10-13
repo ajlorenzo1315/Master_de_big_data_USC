@@ -12,3 +12,5 @@ hdfs namenode -format
 hdfs --daemon start namenode
 
 
+
+/docker/change_config.sh /docker/hadoop_ResourceManager/ $HADOOP_HOME/etc/hadoop/

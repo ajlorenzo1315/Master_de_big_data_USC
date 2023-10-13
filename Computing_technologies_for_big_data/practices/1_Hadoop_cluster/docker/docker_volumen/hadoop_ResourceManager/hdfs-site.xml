@@ -45,6 +45,16 @@
     <final>true</final>
   </property>
 
+  <!--TAREA 2-->
   
+  <property>
+  <name>dfs.hosts</name>
+  <value>/opt/bd/hadoop/etc/hadoop/dfs.include</value>
+  </property>
+  <property>
+    <name>dfs.hosts.exclude</name>
+    <value>/opt/bd/hadoop/etc/hadoop/dfs.exclude</value>
+  </property>
+
 </configuration>
 

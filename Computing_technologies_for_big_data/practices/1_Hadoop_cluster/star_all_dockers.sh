@@ -31,4 +31,9 @@ docker container run -ti --name backupnode --network=hadoop-cluster --hostname b
 docker container run -it --name namenode --network=hadoop-cluster --hostname namenode --net-alias resourcemanager --cpus=1 --memory=3072m \
 --expose 8000-10000 -p 9870:9870 -p 8088:8088 \
 -v ./docker/docker_volumen:/docker \
--i namenode-image  /bin/bash
+-i namenode-image  /bin/bash su hdadmin -c "$HADOOP_HOME/bin/hdfs namenode -backup"SS
+
+
+docker container run -d --name backupnode --network=hadoop-cluster --hostname \
+backupnode --cpus=1 --memory=3072m --expose 50100 -p 50105:50105 -i buckup-image \
+-v ./docker/docker_volumen:/docker  su hdadmin -c "$HADOOP_HOME/bin/yarn --daemon start timelineserver"

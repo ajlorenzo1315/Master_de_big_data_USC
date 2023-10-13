@@ -1,0 +1,23 @@
+hdadmin@namenode:~$ hdfs dfsadmin -printTopology
+Rack: /default-rack
+   172.21.0.10:9866 (datanode6.hadoop-cluster) In Service
+   172.21.0.6:9866 (datanode4.hadoop-cluster) Decommissioned
+   172.21.0.3:9866 (datanode1.hadoop-cluster) In Service
+   172.21.0.4:9866 (datanode2.hadoop-cluster) In Service
+   172.21.0.5:9866 (datanode3.hadoop-cluster) In Service
+   172.21.0.9:9866 (datanode5.hadoop-cluster) In Service
+
+
+hdadmin@namenode:~$ hdfs dfsadmin -printTopology 
+Rack: /rack1
+   172.21.0.3:9866 (datanode1.hadoop-cluster) In Service
+   172.21.0.4:9866 (datanode2.hadoop-cluster) In Service
+
+Rack: /rack2
+   172.21.0.5:9866 (datanode3.hadoop-cluster) In Service
+
+Rack: /rack3
+   172.21.0.10:9866 (datanode6.hadoop-cluster) In Service
+   172.21.0.9:9866 (datanode5.hadoop-cluster) In Service
+
+

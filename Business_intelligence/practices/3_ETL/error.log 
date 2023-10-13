@@ -1,0 +1,20 @@
+
+(SWT:1850): Gtk-CRITICAL **: 19:08:11.421: gtk_box_gadget_distribute: assertion 'size >= 0' failed in GtkScrollbar
+
+(SWT:1850): Gtk-CRITICAL **: 19:08:11.421: gtk_box_gadget_distribute: assertion 'size >= 0' failed in GtkScrollbar
+
+(SWT:1850): Gtk-CRITICAL **: 19:17:56.451: gtk_box_gadget_distribute: assertion 'size >= 0' failed in GtkScrollbar
+
+(SWT:1850): Gtk-CRITICAL **: 19:17:56.452: gtk_box_gadget_distribute: assertion 'size >= 0' failed in GtkScrollbar
+2023/10/11 19:18:32 - Spoon - Save as...
+2023/10/11 19:18:47 - Spoon - Save file as...
+2023/10/11 19:18:51 - Spoon - Spoon
+SWT webkit: There was an error executing something synchronously with the extension.
+SWT webkit: The error message is: GDBus.Error:org.freedesktop.DBus.Error.NameHasNoOwner: Name "org.eclipse.swt.webkitgtk_extension1990" does not exist
+SWT webkit: failure registering BrowserFunction close
+SWT webkit: There was an error executing something synchronously with the extension.
+SWT webkit: The error message is: GDBus.Error:org.freedesktop.DBus.Error.NameHasNoOwner: Name "org.eclipse.swt.webkitgtk_extension1990" does not exist
+SWT webkit: failure registering BrowserFunction select
+SWT webkit: There was an error executing something synchronously with the extension.
+SWT webkit: The error message is: GDBus.Error:org.freedesktop.DBus.Error.NameHasNoOwner: Name "org.eclipse.swt.webkitgtk_extension1990" does not exist
+SWT webkit: failure registering BrowserFunction help

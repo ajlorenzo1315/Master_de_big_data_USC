@@ -33,6 +33,13 @@
     <final>true</final>
   </property>
 
+  <property>
+    <!-- Directorio para almacenamiento informacion sobre la topologia-->
+    <name>net.topology.script.file.name</name>
+    <value>/opt/bd/hadoop/etc/hadoop/topology.script</value>
+    <final>true</final>
+  </property>
+
 </configuration>
 
 

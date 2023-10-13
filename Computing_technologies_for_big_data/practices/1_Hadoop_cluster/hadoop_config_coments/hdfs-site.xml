@@ -16,42 +16,44 @@
 
 <!-- Put site-specific property overrides in this file. -->
 
+
 <configuration>
 
+<property>
   <!-- Factor de replicación de los bloques -->
   <!-- Establece cuántas copias de cada bloque de datos 
   se deben mantener en el clúster. -->
-  <property>
-    <name>dfs.replication</name>
-    <value>3</value>
-    <final>true</final>
-  </property>
+  <name>dfs.replication</name>
+  <value>3</value>
+  <final>true</final>
+</property>
 
+<property>
   <!-- Tamaño del bloque (por defecto 128MB) -->
   <!-- Define el tamaño de los bloques en HDFS en megabytes (MB). -->
-  <property>
-    <name>dfs.blocksize</name>
-    <value>64MB</value>
-    <final>true</final>
-  </property>
+  <name>dfs.blocksize</name>
+  <value>64MB</value>
+  <final>true</final>
+</property>
 
+<property>
   <!-- Lista (separada por comas) de directorios donde el NameNode guarda los metadatos. -->
   <!-- Indica las ubicaciones en el sistema de archivos donde se almacenan 
   los metadatos de HDFS. -->
-  <property>
-    <name>dfs.namenode.name.dir</name>
-    <value>file:///var/data/hdfs/backup</value>
-    <final>true</final>
-  </property>
+  <name>dfs.namenode.name.dir</name>
+  <value>file:///var/data/hdfs/namenode</value>
+  <final>true</final>
+</property>
 
+<property>
   <!-- Dirección y puerto del interfaz web del NameNode -->
   <!-- Especifica la dirección y el puerto donde se puede 
   acceder a la interfaz web del NameNode. -->
-  <property>
-    <name>dfs.namenode.backup.http-address</name>
-    <value>backupnode:50100</value>
-    <final>true</final>
-  </property>
+  <name>dfs.namenode.http-address</name>
+  <value>namenode:9870</value>
+  <final>true</final>
+</property>
+
 
 </configuration>
 

@@ -24,7 +24,6 @@ for arg in "$@"; do
 done
 
 #echo "lanzamos hdfs_user "
-#/docker/hdfs_user.sh
 #bash /docker/MapReduce.sh
 #bash /docker/WordCount.sh
 # Lazo para mantener activo el contenedor

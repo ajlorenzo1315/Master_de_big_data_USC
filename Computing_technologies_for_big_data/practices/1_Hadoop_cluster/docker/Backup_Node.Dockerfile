@@ -25,10 +25,10 @@ RUN mkdir ${HADOOP_HOME}/logs
 
 
 # Copia los ficheros de configuracion
-COPY  ../hadoop_backupnode/core-site.xml $HADOOP_CONF_DIR/core-site.xml
-COPY  ../hadoop_backupnode/hdfs-site.xml $HADOOP_CONF_DIR/hdfs-site.xml
-COPY  ../hadoop_backupnode/mapred-site.xml $HADOOP_CONF_DIR/mapred-site.xml
-COPY  ../hadoop_backupnode/yarn-site.xml $HADOOP_CONF_DIR/yarn-site.xml
+COPY  ./hadoop_backupnode/core-site.xml $HADOOP_CONF_DIR/core-site.xml
+COPY  ./hadoop_backupnode/hdfs-site.xml $HADOOP_CONF_DIR/hdfs-site.xml
+COPY  ./hadoop_backupnode/mapred-site.xml $HADOOP_CONF_DIR/mapred-site.xml
+COPY  ./hadoop_backupnode/yarn-site.xml $HADOOP_CONF_DIR/yarn-site.xml
 
 # copiamos el elscro de imio 
 

@@ -89,7 +89,7 @@ dat=rnorm(200, mean=2, sd=1)
 tt=t.test(dat,conf.level = 0.95)
 # We are 95% sure that the true parameter is within the following limits:
 tt$conf.int
-
+tt
 # We are going to see that result
 
 # We are going to generate 10000 samples of size n=200 from a normal distribution and compute its confidence interval for the population mean in a loop
