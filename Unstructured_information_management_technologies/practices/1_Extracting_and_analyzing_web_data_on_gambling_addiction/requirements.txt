@@ -2,3 +2,6 @@ notebook
 Twisted==22.10.0
 scrapy==2.9.0
 crawlbase==1.0.0
+# libreria de sklern para el apartado 3
+
+

@@ -42,3 +42,15 @@ proxycrawl.__version__
     More details and migration guide: https://github.com/crawlbase-source/crawlbase-python
     ================================================================================
     
+
+
+fin 
+
+
+jupyter nbconvert  1_practice.ipynb --to python
+
+
+
+debido al tamaño excesivo de los notebook 
+
+se van a comprimir los de tamaño mas grande

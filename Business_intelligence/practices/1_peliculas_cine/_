@@ -1,0 +1,7 @@
+productor_name = []
+        productor_id= []
+        for director in pelicula.findall(".//productor"):
+            productor_id.append(director.get('id'))
+            productor_name.append(director.get('nombre'))
+        productor_name=','.join(productor_name)
+        productor_id='-'.join(productor_id)

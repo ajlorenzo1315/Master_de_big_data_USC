@@ -1,0 +1,80 @@
+Traceback (most recent call last):
+  File "load_file.py", line 260, in <module>
+    load_file(
+  File "load_file.py", line 221, in load_file
+    print_xml(root,cursor=cursor,meses_del_ano=meses_del_ano)
+  File "load_file.py", line 87, in print_xml
+    insert_data_into_tiempo(cursor, emision,meses_del_ano)
+  File "load_file.py", line 13, in insert_data_into_tiempo
+    cursor.execute("INSERT INTO tiempo (ano, mes, mes_texto) VALUES (%s, %s, %s) ON CONFLICT (ano, mes) DO NOTHING",
+psycopg2.errors.InvalidColumnReference: no hay restricción única o de exclusión que coincida con la especificación ON CONFLICT
+
+SOLUCIO
+USAR
+cursor.execute("INSERT INTO tiempo (ano, mes, mes_texto) VALUES (%s, %s, %s)", (ano, mes, mes_texto))
+EN VEZ
+
+cursor.execute("INSERT INTO tiempo (ano, mes, mes_texto) VALUES (%s, %s, %s) ON CONFLICT (ano, mes) DO NOTHING",
+                   (ano, mes, mes_texto))
+
+----------------------------------------------------------------------------------------------------------------------------
+
+Traceback (most recent call last):
+  File "load_file.py", line 259, in <module>
+    load_file(
+  File "load_file.py", line 220, in load_file
+    print_xml(root,cursor=cursor,meses_del_ano=meses_del_ano)
+  File "load_file.py", line 89, in print_xml
+    insert_data_into_productora(cursor, productoras_id, productoras_name)
+  File "load_file.py", line 24, in insert_data_into_productora
+    cursor.execute("INSERT INTO productora (text_id, nombre) VALUES (%s, %s)",
+psycopg2.errors.InvalidTextRepresentation: la sintaxis de entrada no es válida para tipo integer: «306-22213»
+LINE 1: INSERT INTO productora (text_id, nombre) VALUES ('306-22213'...
+
+SOLUCION
+
+ALTER TABLE productora ALTER COLUMN text_id TYPE VARCHAR(1000);
+
+---------------------------------------------------------------------------------------------------------------------------------------
+
+alumnogreibd@greibd:~/IN/practicas/practica_1$ python3 load_file.py 
+CREAMOS LAS TABLAS
+Traceback (most recent call last):
+  File "load_file.py", line 340, in <module>
+    load_file(
+  File "load_file.py", line 301, in load_file
+    print_xml(root,cursor=cursor,meses_del_ano=meses_del_ano)
+  File "load_file.py", line 93, in print_xml
+    tiempo_id = insert_data_into_tiempo(cursor,ano,mes,mes_texto)
+  File "load_file.py", line 16, in insert_data_into_tiempo
+    return cursor.fetchone()[0]
+psycopg2.ProgrammingError: no results to fetch
+
+------------------------------------------------------------------------------------------------------------------------------------------
+
+CREAMOS LAS TABLAS
+Traceback (most recent call last):
+  File "load_file.py", line 261, in <module>
+    load_file(
+  File "load_file.py", line 222, in load_file
+    print_xml(root,cursor=cursor,meses_del_ano=meses_del_ano)
+  File "load_file.py", line 109, in print_xml
+    insert_data_into_finanzas(cursor,tiempo_id, director_id, productor_id, productora_id, presupuesto, ingresos)
+  File "load_file.py", line 42, in insert_data_into_finanzas
+    cursor.execute("INSERT INTO finanzas (tiempo, director, productor, productora, coste, ingresos) VALUES (%s, %s, %s, %s, %s, %s)",
+psycopg2.errors.NumericValueOutOfRange: el valor «2787965087» está fuera de rango para el tipo integer
+LINE 1: ...ngresos) VALUES (629, 629, 629, 629, '237000000', '278796508...
+
+----------------------------------------------------------------------------------------------------------------------------------------
+
+Traceback (most recent call last):
+  File "load_file.py", line 308, in <module>
+    load_file(
+  File "load_file.py", line 281, in load_file
+    load_file_tables(root,reader,cursor,meses_del_ano)
+  File "load_file.py", line 146, in load_file_tables
+    insert_data_into_satisfaccion_usuarios(cursor, tiempo_votacion, directores_id, productor_id, productora_id, total_votos, nivel_satisfaccion)
+  File "load_file.py", line 46, in insert_data_into_satisfaccion_usuarios
+    cursor.execute("INSERT INTO satisfaccion_usuarios (tiempo_votacion, director, productor, productora, votos, satisfaccion) VALUES (%s, %s, %s, %s, %s, %s)",
+psycopg2.errors.ForeignKeyViolation: inserción o actualización en la tabla «satisfaccion_usuarios» viola la llave foránea «tiempo_votacion_satisfaccion_usuarios_fk»
+DETAIL:  La llave (tiempo_votacion)=(2014) no está presente en la tabla «tiempo».

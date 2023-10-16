@@ -1,5 +1,29 @@
 ### 2.- Datos Agregados en SQL
 
+**NOTA**
+Después de crear una nueva base de datos en PostgreSQL llamada "bdge" ejecutar el siguiente comando para crear todas las tablas.
+Esta tabla esta en el github en [PeliculasSchema.sql](../material/PeliculasSchema.sql) en la maquina virtual esta en /home/alumnogreibd/BDGE/datos/
+Lo que va ejecutar el cliente psql es el usuario alumnogreibd en bdge y ejecuta todo el comando de home/alumnogreibd/BDGE/datos/PeliculasSchema.sql en la base de datos (para ello hay que crear la base de datos) para crear todas las tablas.
+```bash
+    psql -U alumnogreibd -d bdge -f /home/alumnogreibd/BDGE/datos/PeliculasSchema.sql
+```
+Las sentencias DML de inserción de datos de cada una de las tablas se encuentra en archivos .sql en la misma carpeta ./BDGE/datos. Ejecutar los siguientes comandos para importar todos los datos.
+```bash
+    psql -U alumnogreibd -d bdge -c "\copy colecciones from /home/alumnogreibd/BDGE/datos/colecciones.csv csv"
+    psql -U alumnogreibd -d bdge -c "\copy generos from /home/alumnogreibd/BDGE/datos/generos.csv csv"
+    psql -U alumnogreibd -d bdge -c "\copy idiomas from /home/alumnogreibd/BDGE/datos/idiomas.csv csv"
+    psql -U alumnogreibd -d bdge -c "\copy paises from /home/alumnogreibd/BDGE/datos/paises.csv csv"
+    psql -U alumnogreibd -d bdge -c "\copy personas from /home/alumnogreibd/BDGE/datos/personas.csv csv"
+    psql -U alumnogreibd -d bdge -c "\copy productoras from /home/alumnogreibd/BDGE/datos/productoras.csv csv"
+    psql -U alumnogreibd -d bdge -c "\copy peliculas from /home/alumnogreibd/BDGE/datos/peliculas.csv csv"
+    psql -U alumnogreibd -d bdge -c "\copy pelicula_genero from /home/alumnogreibd/BDGE/datos/pelicula_genero.csv csv"
+    psql -U alumnogreibd -d bdge -c "\copy pelicula_idioma_hablado from /home/alumnogreibd/BDGE/datos/pelicula_idioma_hablado.csv csv"
+    psql -U alumnogreibd -d bdge -c "\copy pelicula_pais from /home/alumnogreibd/BDGE/datos/pelicula_pais.csv csv"
+    psql -U alumnogreibd -d bdge -c "\copy pelicula_personal from /home/alumnogreibd/BDGE/datos/pelicula_personal.csv csv"
+    psql -U alumnogreibd -d bdge -c "\copy pelicula_productora from /home/alumnogreibd/BDGE/datos/pelicula_productora.csv csv"
+    psql -U alumnogreibd -d bdge -c "\copy pelicula_reparto from /home/alumnogreibd/BDGE/datos/pelicula_reparto.csv csv"
+```
+
 En esta práctica veremos como gestionar datos agregados con el lenguaje SQL utilizando tres representaciones distintas, primero usando las estructuras proporcionadas por el modelo objeto-relacional y después usando representaciones jerárquicas en XML y JSON.
 2.1- Bases de datos objeto-relacionales (tipos compuestos y arrays)
 
@@ -12,14 +36,17 @@ https://www.postgresql.org/docs/13/rowtypes.html
 
 El sistema de tipos de postgreSQL tiene constructores de tipo ROW, para tipos compuestos, y ARRAY para colecciones. Un campo del resultado de una consulta puede tener un tipo de dato ROW, es decir, un tipo de dato que contiene varias columnas anidadas. Un campo de tipo ARRAY, puede tener también como tipo de dato de cada uno de sus elementos un tipo ROW. Sin embargo, al contrario de lo que ocurren en el estándar de SQL, no se pueden crear directamente estructuras de tabla que tengan columnas de estos tipos ROW si no se crea previamente el tipo con una instrucción CREATE TYPE. En el siguiente trozo de código podemos ver la sintaxis para la creación de literales de tipo ROW.
 
-    select 45 as id, (24, 'Hola') as elemento_compuesto
+```sql
+select 45 as id, (24, 'Hola') as elemento_compuesto
+```
+    
 
 Nota en este caso no se hace falta el fron  ya que en postgreSQL  si ejecutamos genera una unica fila simeple genera tabla en la segunda coluna 
 hay el constructor row de es uan fila que sta dentro de un elemento , cada campo no tiene nombre este tipo de dato fila ya lo tenia el SQL pero sin campo se podia en algunas selec para usar el selec in y se pude construir los parentesis construyen , y se pude devolver.
 
 
 La siguiente consulta genera una tabla con un tipo de dato ROW sin nombre, pero al intentar crear la tabla que almacene ese resultado el sistema genera un error.
-
+```sql
 select pels.id, pels.titulo, 
     case 
       when pels.coleccion is null then null -- si la colencion es nulo ahí lo quetenos una tablas en el campo colención tiene una fila dentro
@@ -29,6 +56,7 @@ select pels.id, pels.titulo,
 from public.peliculas pels left join public.colecciones c  on  pels.coleccion =c.id 
 order by pels.presupuesto desc
 limit 10;
+
 -- cuando se intenta crear una tabla con ese resultado , si se ejecuta eso se debira tener un error 
 -- nos dice que la columna colección tiene seudo tipo  el record el aray .. no podemos crear una
 -- con cualquier nuemro de campos por que SQL es fuertemente tipado no puede almacenar registrosa 
@@ -43,7 +71,15 @@ from public.peliculas pels left join public.colecciones c  on  pels.coleccion =c
 order by pels.presupuesto desc
 limit 10
 
+```
+ERROR
+```sql
+SQL Error [42P16]: ERROR: la columna «coleccion» tiene pseudotipo record
+Error position:
+```
+
 Para poder crear nuestra tabla de películas, creamos primero todos los tipos de dato compuestos necesarios.
+```sql
 -- posmos crear nuestro tipos antes lo cual al igual que c++ le estamos dando categoria 
 -- Para ver los tipos en el public se pude ver tipos de datos se va poder crear una tabla en la
 -- que es alguno de estos tipo se crean los demas 
@@ -69,8 +105,6 @@ CREATE type pais as (
 	nombre text
 );
 
-	
-
 CREATE type productora as (
 	id int4,
 	nombre text
@@ -91,6 +125,7 @@ CREATE type miembro_personal as (
 	departamento text,
 	trabajo text
 );
+```
 
 -- Ahora hay que hacerle un cast el tipo de dato de las tablas para que tenga  conocimiento el valor dentro que tipo es 
 -- no hemos incluido en el mienbro de reparto no hemos incluido un orden pero ahora no lo hemos hecho dado que 

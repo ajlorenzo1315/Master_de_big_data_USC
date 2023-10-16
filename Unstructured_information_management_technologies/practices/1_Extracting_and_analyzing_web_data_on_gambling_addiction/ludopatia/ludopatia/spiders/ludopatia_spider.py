@@ -71,16 +71,17 @@ class LudopatiaSpider(scrapy.Spider):
             autor = autores[ind]
             fecha = mensaje.xpath('.//td[@class="smText"]/text()').get()
             texto = mensaje.xpath('.//text()').getall()
-
+            editado = mensaje.xpath('.//span[@class="smText"]/text()').get()
             # Filtrar y limpiar el texto de partes no deseadas
             texto_limpio = [t.strip() for t in texto if t.strip()]
             texto_final = " ".join(texto_limpio)
 
             if autor and fecha and texto_final:
-                yield {
-                    'autor': autor,
-                    'fecha': fecha.strip(),
-                    'texto': texto_final,
-                    'titulo_foro': titulo_foro,
-                    'asunto_tema': asunto_tema,
-                }
+                   yield{
+                        'autor': autor,
+                        'fecha': fecha.strip(),
+                        'Editado': editado,
+                        'texto': texto_final,
+                        'titulo_foro': titulo_foro,
+                        'asunto_tema': asunto_tema,}
+                            

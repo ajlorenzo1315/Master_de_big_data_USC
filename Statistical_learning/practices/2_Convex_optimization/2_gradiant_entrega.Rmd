@@ -1,0 +1,104 @@
+---
+title: "Método de descenso de gradiente en regresión"
+author: "Alicia Jiajun Lorenzo, Abraham Trashorras "
+date: "2023-10-16"
+output: pdf_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+1. Simular una muestra de tamaño n = 100 de valores de (xi, yi), i ∈ {1, . . . , n}.
+a) Para ello, se pueden generar 100 observaciones xi de la uniforme (runif).
+
+```{r}
+n <- 100
+xi <- runif(n)  # Genera 100 observaciones xi de la uniforme
+
+```
+
+b) Los errores del modelo, i se pueden generar de la distribución normal de media 0 y va-
+rianza σ2. Por ejemplo, si cogemos σ2 = 1, esto se puede hacer con (rnorm(100,0,1)).
+
+```{r}
+sigma <- 1      # Variabilidad de los errores
+ei <- rnorm(n, 0, sigma)  # Genera errores de la distribución normal
+```
+
+c) Los valores de yi se calcularían como yi = β0 + β1xi + i.
+```{r}
+beta0<-5 # supongamos que betha0=5
+beta1<-3 # suponngamos que beta1=3
+yi <- beta0 + beta1 * xi + ei  # Calcula los valores de yi
+```
+
+2. Escoger la función a minimizar. En este caso, la suma de los residuos al cuadrado:
+
+  J(β0, β1) =∑(yi − β0 − β1xi)².
+
+```{r cars}
+
+suma_residuos_cuadrado <- function(beta0, beta1) {
+  sum((yi - beta0 - beta1 * xi)^2)
+}
+
+```
+
+3. Obtener las derivadas parciales de la función a minimizar. A partir de estas, aplicad el algoritmo de método de descenso gradiente (véase los apuntes del Tema de Optimización convexa). 
+
+En la Sección 2.1 de la práctica de Modelos de regresión lineal con R se dan los pasos a se-
+guir para el caso del modelo de regresión lineal simple
+
+
+```{r pressure, echo=FALSE}
+
+library(ggplot2)
+library(gganimate)
+# Aplicar el descenso de gradiente
+learning_rate <- 0.01
+num_iterations <- 1000
+beta0 <- 0
+beta1 <- 0
+
+
+# Crear un dataframe para almacenar los resultados de cada iteración
+results <- data.frame(iteration = numeric(0), beta0 = numeric(0), beta1 = numeric(0), J = numeric(0))
+
+# Realizar el descenso de gradiente y almacenar los resultados
+for (iteration in 1:num_iterations) {
+  dJ_beta0 <- -2 * sum(yi - beta0 - beta1 * xi)
+  dJ_beta1 <- -2 * sum((yi - beta0 - beta1 * xi) * xi)
+  beta0 <- beta0 - learning_rate * dJ_beta0
+  beta1 <- beta1 - learning_rate * dJ_beta1
+  J_value <- suma_residuos_cuadrado(beta0, beta1)
+  results <- rbind(results, data.frame(iteration = iteration, beta0 = beta0, beta1 = beta1, J = J_value))
+}
+```
+
+Crea una animación utilizando ggplot2 y gganimate. Puedes utilizar un gráfico de dispersión para visualizar la convergencia del descenso de gradiente en cada iteración.
+
+```{r}
+p <- ggplot(results, aes(x = beta0, y = beta1)) +
+  geom_point(aes(color = J), size = 2) +
+  scale_color_gradient(low = "blue", high = "red") +
+  labs(x = expression(beta[0]), y = expression(beta[1]), title = "Descenso del Gradiente") +
+  transition_states(iteration, transition_length = 2, state_length = 1) +
+  enter_fade() +
+  exit_fade()
+
+# Guardar la animación en un archivo
+anim_save("descenso_gradiente.gif", p)
+```
+
+4. Como en este caso, tenemos disponible la solución óptima a este problema en la función lm. Podemos repetir (en un bucle) varias veces los pasos anteriores y hacer una comparativa con los estimadores ( ˆβ0 y ˆβ1) que devuelve dicha función. Por ejemplo, podría ser de interés comparar el valor de la función minimizada, J( ˆβ0, ˆβ1), con nuestros estimadores y con los obtenidos con la función lm.
+
+```{r}
+# Ajustar un modelo de regresión lineal con lm
+lm_model <- lm(yi ~ xi)
+lm_beta0 <- coef(lm_model)[1]
+lm_beta1 <- coef(lm_model)[2]
+lm_beta0
+lm_beta1
+```
+

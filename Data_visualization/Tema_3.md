@@ -65,5 +65,7 @@ grafico minero
 net income (loss) pone perdidas son perdidas  
 
 el primero esta en perdidas el primero empieza en 4 millones por lo cual no saldria el dibujito
-trasladar una idea equivocada
+trasladar una idea equivocada no muy intuitivas
+
+para el proximo lunes un grafico donde se va a ver una manipulación para trasladar una imagen que puede ser interesado a una reunion cada uno de nosostros cada uno va a salir  y la va explicar  advierto pagina web con lo mas cercanas a nosostro  o a colectivos distorsión de la eralidad probablementte interesado
 
