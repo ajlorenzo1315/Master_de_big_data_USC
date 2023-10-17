@@ -3,6 +3,8 @@ export JAVA_HOME=/usr/lib/jvm/java-8-openjdk-amd64
 export HADOOP_HOME=/opt/bd/hadoop
 echo "Iniciando manager..."
 
+su hdadmin -c "/docker/change_config.sh /docker/include_node $HADOOP_HOME/etc/hadoop"
+su hdadmin -c "/docker/change_config.sh /docker/hadoop_NodeManager $HADOOP_HOME/etc/hadoop"
 for arg in "$@"; do
   case "$arg" in
     format)

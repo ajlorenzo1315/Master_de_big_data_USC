@@ -27,3 +27,4 @@ su luser -c "cd /tmp && $HADOOP_HOME/bin/hdfs dfs -put libros . && $HADOOP_HOME/
 #tar xvzf wordcount.tgz
 
 #tar xvzf /docker/wordcount.tgz -C /home/luser
+./docker/2_practice/fichero.sh

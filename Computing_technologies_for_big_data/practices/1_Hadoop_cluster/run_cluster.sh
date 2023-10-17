@@ -55,7 +55,7 @@ else
 fi
 
 
-docker container run -d --name namenode --network=hadoop-cluster --hostname namenode --net-alias resourcemanager --cpus=1 --memory=3072m \
+docker container run  -d --name namenode --network=hadoop-cluster --hostname namenode --net-alias resourcemanager --cpus=1 --memory=3072m \
 --expose 8000-10000 -p 9870:9870 -p 8088:8088 \
 -v ./docker/docker_volumen:/docker \
 "$NAMENODE_IMAGE" /docker/inicio_ResourceManager.sh format start

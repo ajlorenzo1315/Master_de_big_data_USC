@@ -1,0 +1,475 @@
+hdfs fsck /user/luser/fichero_grande -files -blocks -locations
+Connecting to namenode via http://namenode:9870/fsck?ugi=luser&files=1&blocks=1&locations=1&path=%2Fuser%2Fluser%2Ffichero_grande
+FSCK started by luser (auth:SIMPLE) from /172.23.0.2 for path /user/luser/fichero_grande at Mon Oct 16 19:14:54 CEST 2023
+
+/user/luser/fichero_grande 367001600 bytes, replicated: replication=3, 6 block(s):  OK
+0. BP-1785851482-172.23.0.2-1697476152291:blk_1073741840_1016 len=67108864 Live_repl=3  [DatanodeInfoWithStorage[172.23.0.8:9866,DS-b49de670-4cfd-49a9-a170-20c332e93e88,DISK], DatanodeInfoWithStorage[172.23.0.3:9866,DS-0365f90f-9698-4bb6-bac5-2f9c9595781a,DISK], DatanodeInfoWithStorage[172.23.0.4:9866,DS-668425b6-4b34-45de-b2c5-cee0e6ba4b30,DISK]]
+1. BP-1785851482-172.23.0.2-1697476152291:blk_1073741841_1017 len=67108864 Live_repl=3  [DatanodeInfoWithStorage[172.23.0.8:9866,DS-b49de670-4cfd-49a9-a170-20c332e93e88,DISK], DatanodeInfoWithStorage[172.23.0.4:9866,DS-668425b6-4b34-45de-b2c5-cee0e6ba4b30,DISK], DatanodeInfoWithStorage[172.23.0.5:9866,DS-1f7470c1-0d95-4b0b-abe8-88beb844736a,DISK]]
+2. BP-1785851482-172.23.0.2-1697476152291:blk_1073741842_1018 len=67108864 Live_repl=3  [DatanodeInfoWithStorage[172.23.0.4:9866,DS-668425b6-4b34-45de-b2c5-cee0e6ba4b30,DISK], DatanodeInfoWithStorage[172.23.0.7:9866,DS-1e2752da-d036-47f7-ae19-df3ebe537fe8,DISK], DatanodeInfoWithStorage[172.23.0.8:9866,DS-b49de670-4cfd-49a9-a170-20c332e93e88,DISK]]
+3. BP-1785851482-172.23.0.2-1697476152291:blk_1073741843_1019 len=67108864 Live_repl=3  [DatanodeInfoWithStorage[172.23.0.8:9866,DS-b49de670-4cfd-49a9-a170-20c332e93e88,DISK], DatanodeInfoWithStorage[172.23.0.7:9866,DS-1e2752da-d036-47f7-ae19-df3ebe537fe8,DISK], DatanodeInfoWithStorage[172.23.0.3:9866,DS-0365f90f-9698-4bb6-bac5-2f9c9595781a,DISK]]
+4. BP-1785851482-172.23.0.2-1697476152291:blk_1073741844_1020 len=67108864 Live_repl=3  [DatanodeInfoWithStorage[172.23.0.5:9866,DS-1f7470c1-0d95-4b0b-abe8-88beb844736a,DISK], DatanodeInfoWithStorage[172.23.0.7:9866,DS-1e2752da-d036-47f7-ae19-df3ebe537fe8,DISK], DatanodeInfoWithStorage[172.23.0.4:9866,DS-668425b6-4b34-45de-b2c5-cee0e6ba4b30,DISK]]
+5. BP-1785851482-172.23.0.2-1697476152291:blk_1073741845_1021 len=31457280 Live_repl=3  [DatanodeInfoWithStorage[172.23.0.7:9866,DS-1e2752da-d036-47f7-ae19-df3ebe537fe8,DISK], DatanodeInfoWithStorage[172.23.0.5:9866,DS-1f7470c1-0d95-4b0b-abe8-88beb844736a,DISK], DatanodeInfoWithStorage[172.23.0.8:9866,DS-b49de670-4cfd-49a9-a170-20c332e93e88,DISK]]
+
+
+Status: HEALTHY
+ Number of data-nodes:	5
+ Number of racks:		1
+ Total dirs:			0
+ Total symlinks:		0
+
+Replicated Blocks:
+ Total size:	367001600 B
+ Total files:	1
+ Total blocks (validated):	6 (avg. block size 61166933 B)
+ Minimally replicated blocks:	6 (100.0 %)
+ Over-replicated blocks:	0 (0.0 %)
+ Under-replicated blocks:	0 (0.0 %)
+ Mis-replicated blocks:		0 (0.0 %)
+ Default replication factor:	3
+ Average block replication:	3.0
+ Missing blocks:		0
+ Corrupt blocks:		0
+ Missing replicas:		0 (0.0 %)
+ Blocks queued for replication:	0
+
+Erasure Coded Block Groups:
+ Total size:	0 B
+ Total files:	0
+ Total block groups (validated):	0
+ Minimally erasure-coded block groups:	0
+ Over-erasure-coded block groups:	0
+ Under-erasure-coded block groups:	0
+ Unsatisfactory placement block groups:	0
+ Average block group size:	0.0
+ Missing block groups:		0
+ Corrupt block groups:		0
+ Missing internal blocks:	0
+ Blocks queued for replication:	0
+FSCK ended at Mon Oct 16 19:14:55 CEST 2023 in 40 milliseconds
+
+
+The filesystem under path '/user/luser/fichero_grande' is HEALTHY
+
+-------------------------------------------------------
+---------------------------------------------------
+
+hdadmin@namenode:~$ hdfs dfs -copyFromLocal fichero_grande /user/hdadmin/directorio_cuota/
+copyFromLocal: The DiskSpace quota of /user/hdadmin/directorio_cuota is exceeded: quota = 4 B = 4 B but diskspace consumed = 201326592 B = 192 MB
+
+-------------------------------------------------------
+
+hdadmin@namenode:~$ hdfs dfs -mkdir /user/hdadmin/directorio_cuota
+hdadmin@namenode:~$ hdfs dfsadmin -setQuota 4 /user/hdadmin/directorio_cuota
+hdadmin@namenode:~$ hdfs dfs -copyFromLocal fichero_grande /user/hdadmin/directorio_cuota/
+hdadmin@namenode:~$ hdfs dfs -copyFromLocal fichero_grande /user/hdadmin/directorio_cuota/
+copyFromLocal: `/user/hdadmin/directorio_cuota/fichero_grande': File exists
+hdadmin@namenode:~$ hdfs dfs -copyFromLocal fichero_grande /user/hdadmin/directorio_cuota/1
+hdadmin@namenode:~$ hdfs dfs -copyFromLocal fichero_grande /user/hdadmin/directorio_cuota/2
+hdadmin@namenode:~$ hdfs dfs -copyFromLocal fichero_grande /user/hdadmin/directorio_cuota/3
+copyFromLocal: The NameSpace quota (directories and files) of directory /user/hdadmin/directorio_cuota is exceeded: quota=4 file count=5
+hdadmin@namenode:~$ hdfs dfs -rm -r /user/hdadmin/directorio_cuota/1
+Deleted /user/hdadmin/directorio_cuota/1
+hdadmin@namenode:~$ hdfs dfs -copyFromLocal fichero_grande /user/hdadmin/directorio_cuota/1
+hdadmin@namenode:~$ 
+
+---------------------------------------------------------------
+hdadmin@namenode:~$ hdfs fsck /
+Connecting to namenode via http://namenode:9870/fsck?ugi=hdadmin&path=%2F
+FSCK started by hdadmin (auth:SIMPLE) from /172.18.0.2 for path / at Mon Oct 16 23:06:43 CEST 2023
+
+
+Status: HEALTHY
+ Number of data-nodes:	5
+ Number of racks:		1
+ Total dirs:			9
+ Total symlinks:		0
+
+Replicated Blocks:
+ Total size:	1473244853 B
+ Total files:	19
+ Total blocks (validated):	39 (avg. block size 37775509 B)
+ Minimally replicated blocks:	39 (100.0 %)
+ Over-replicated blocks:	0 (0.0 %)
+ Under-replicated blocks:	0 (0.0 %)
+ Mis-replicated blocks:		0 (0.0 %)
+ Default replication factor:	3
+ Average block replication:	3.0
+ Missing blocks:		0
+ Corrupt blocks:		0
+ Missing replicas:		0 (0.0 %)
+ Blocks queued for replication:	0
+
+Erasure Coded Block Groups:
+ Total size:	0 B
+ Total files:	0
+ Total block groups (validated):	0
+ Minimally erasure-coded block groups:	0
+ Over-erasure-coded block groups:	0
+ Under-erasure-coded block groups:	0
+ Unsatisfactory placement block groups:	0
+ Average block group size:	0.0
+ Missing block groups:		0
+ Corrupt block groups:		0
+ Missing internal blocks:	0
+ Blocks queued for replication:	0
+FSCK ended at Mon Oct 16 23:06:43 CEST 2023 in 6 milliseconds
+
+
+The filesystem under path '/' is HEALTHY
+
+
+----------------------------------------------------------------
+
+
+hdfs dfsadmin -report
+Configured Capacity: 1315430420480 (1.20 TB)
+Present Capacity: 653292945485 (608.43 GB)
+DFS Remaining: 648837844992 (604.28 GB)
+DFS Used: 4455100493 (4.15 GB)
+DFS Used%: 0.68%
+Replicated Blocks:
+	Under replicated blocks: 0
+	Blocks with corrupt replicas: 0
+	Missing blocks: 0
+	Missing blocks (with replication factor 1): 0
+	Low redundancy blocks with highest priority to recover: 0
+	Pending deletion blocks: 0
+Erasure Coded Block Groups: 
+	Low redundancy block groups: 0
+	Block groups with corrupt internal blocks: 0
+	Missing block groups: 0
+	Low redundancy blocks with highest priority to recover: 0
+	Pending deletion blocks: 0
+
+-------------------------------------------------
+Live datanodes (5):
+
+Name: 172.18.0.3:9866 (172.18.0.3)
+Hostname: datanode1
+Decommission Status : Normal
+Configured Capacity: 263086084096 (245.02 GB)
+DFS Used: 1079037973 (1.00 GB)
+Non DFS Used: 118800781291 (110.64 GB)
+DFS Remaining: 129767714816 (120.86 GB)
+DFS Used%: 0.41%
+DFS Remaining%: 49.33%
+Configured Cache Capacity: 0 (0 B)
+Cache Used: 0 (0 B)
+Cache Remaining: 0 (0 B)
+Cache Used%: 100.00%
+Cache Remaining%: 0.00%
+Xceivers: 0
+Last contact: Mon Oct 16 23:09:04 CEST 2023
+Last Block Report: Mon Oct 16 22:39:52 CEST 2023
+Num of Blocks: 31
+
+
+Name: 172.18.0.4:9866 (datanode2.hadoop-cluster)
+Hostname: datanode2
+Decommission Status : Normal
+Configured Capacity: 263086084096 (245.02 GB)
+DFS Used: 945385472 (901.59 MB)
+Non DFS Used: 118934798336 (110.77 GB)
+DFS Remaining: 129767350272 (120.86 GB)
+DFS Used%: 0.36%
+DFS Remaining%: 49.33%
+Configured Cache Capacity: 0 (0 B)
+Cache Used: 0 (0 B)
+Cache Remaining: 0 (0 B)
+Cache Used%: 100.00%
+Cache Remaining%: 0.00%
+Xceivers: 0
+Last contact: Mon Oct 16 23:09:34 CEST 2023
+Last Block Report: Mon Oct 16 23:00:58 CEST 2023
+Num of Blocks: 23
+
+
+Name: 172.18.0.5:9866 (172.18.0.5)
+Hostname: datanode3
+Decommission Status : Normal
+Configured Capacity: 263086084096 (245.02 GB)
+DFS Used: 908939264 (866.83 MB)
+Non DFS Used: 118970880000 (110.80 GB)
+DFS Remaining: 129767714816 (120.86 GB)
+DFS Used%: 0.35%
+DFS Remaining%: 49.33%
+Configured Cache Capacity: 0 (0 B)
+Cache Used: 0 (0 B)
+Cache Remaining: 0 (0 B)
+Cache Used%: 100.00%
+Cache Remaining%: 0.00%
+Xceivers: 0
+Last contact: Mon Oct 16 23:09:07 CEST 2023
+Last Block Report: Mon Oct 16 23:07:19 CEST 2023
+Num of Blocks: 24
+
+
+Name: 172.18.0.7:9866 (172.18.0.7)
+Hostname: datanode5
+Decommission Status : Normal
+Configured Capacity: 263086084096 (245.02 GB)
+DFS Used: 843083776 (804.03 MB)
+Non DFS Used: 119036735488 (110.86 GB)
+DFS Remaining: 129767714816 (120.86 GB)
+DFS Used%: 0.32%
+DFS Remaining%: 49.33%
+Configured Cache Capacity: 0 (0 B)
+Cache Used: 0 (0 B)
+Cache Remaining: 0 (0 B)
+Cache Used%: 100.00%
+Cache Remaining%: 0.00%
+Xceivers: 0
+Last contact: Mon Oct 16 23:09:07 CEST 2023
+Last Block Report: Mon Oct 16 22:39:52 CEST 2023
+Num of Blocks: 23
+
+
+Name: 172.18.0.8:9866 (datanode6.hadoop-cluster)
+Hostname: datanode6
+Decommission Status : Normal
+Configured Capacity: 263086084096 (245.02 GB)
+DFS Used: 678654008 (647.21 MB)
+Non DFS Used: 119201529800 (111.02 GB)
+DFS Remaining: 129767350272 (120.86 GB)
+DFS Used%: 0.26%
+DFS Remaining%: 49.33%
+Configured Cache Capacity: 0 (0 B)
+Cache Used: 0 (0 B)
+Cache Remaining: 0 (0 B)
+Cache Used%: 100.00%
+Cache Remaining%: 0.00%
+Xceivers: 0
+Last contact: Mon Oct 16 23:09:34 CEST 2023
+Last Block Report: Mon Oct 16 22:39:52 CEST 2023
+Num of Blocks: 16
+
+
+hdadmin@namenode:~$ 
+
+
+-----------------------------------
+
+TRAS MATAR DATA NODE
+
+hdadmin@namenode:~$ hdfs fsck / -files -blocks -locations
+Connecting to namenode via http://namenode:9870/fsck?ugi=hdadmin&files=1&blocks=1&locations=1&path=%2F
+FSCK started by hdadmin (auth:SIMPLE) from /172.18.0.2 for path / at Mon Oct 16 23:30:26 CEST 2023
+
+/ <dir>
+/tmp <dir>
+/tmp/hadoop-yarn <dir>
+/tmp/hadoop-yarn/staging <dir>
+/user <dir>
+/user/hdadmin <dir>
+/user/hdadmin/directorio_cuota <dir>
+/user/hdadmin/directorio_cuota/1 367001600 bytes, replicated: replication=3, 6 block(s):  Under replicated BP-156704854-172.18.0.2-1697488782032:blk_1073741872_1048. Target Replicas is 3 but found 2 live replica(s), 0 decommissioned replica(s), 0 decommissioning replica(s).
+ Under replicated BP-156704854-172.18.0.2-1697488782032:blk_1073741873_1049. Target Replicas is 3 but found 2 live replica(s), 0 decommissioned replica(s), 0 decommissioning replica(s).
+ Under replicated BP-156704854-172.18.0.2-1697488782032:blk_1073741874_1050. Target Replicas is 3 but found 2 live replica(s), 0 decommissioned replica(s), 0 decommissioning replica(s).
+ Under replicated BP-156704854-172.18.0.2-1697488782032:blk_1073741875_1051. Target Replicas is 3 but found 2 live replica(s), 0 decommissioned replica(s), 0 decommissioning replica(s).
+ Under replicated BP-156704854-172.18.0.2-1697488782032:blk_1073741876_1052. Target Replicas is 3 but found 2 live replica(s), 0 decommissioned replica(s), 0 decommissioning replica(s).
+ MISSING 1 blocks of total size 31457280 B
+0. BP-156704854-172.18.0.2-1697488782032:blk_1073741872_1048 len=67108864 Live_repl=2  [DatanodeInfoWithStorage[172.18.0.8:9866,DS-c0ddbe52-2697-46fa-88d4-2ba26ef3debe,DISK], DatanodeInfoWithStorage[172.18.0.4:9866,DS-132701d0-0327-4c6f-9fde-6b2775ed0814,DISK]]
+1. BP-156704854-172.18.0.2-1697488782032:blk_1073741873_1049 len=67108864 Live_repl=2  [DatanodeInfoWithStorage[172.18.0.8:9866,DS-c0ddbe52-2697-46fa-88d4-2ba26ef3debe,DISK], DatanodeInfoWithStorage[172.18.0.4:9866,DS-132701d0-0327-4c6f-9fde-6b2775ed0814,DISK]]
+2. BP-156704854-172.18.0.2-1697488782032:blk_1073741874_1050 len=67108864 Live_repl=2  [DatanodeInfoWithStorage[172.18.0.8:9866,DS-c0ddbe52-2697-46fa-88d4-2ba26ef3debe,DISK], DatanodeInfoWithStorage[172.18.0.4:9866,DS-132701d0-0327-4c6f-9fde-6b2775ed0814,DISK]]
+3. BP-156704854-172.18.0.2-1697488782032:blk_1073741875_1051 len=67108864 Live_repl=2  [DatanodeInfoWithStorage[172.18.0.8:9866,DS-c0ddbe52-2697-46fa-88d4-2ba26ef3debe,DISK], DatanodeInfoWithStorage[172.18.0.4:9866,DS-132701d0-0327-4c6f-9fde-6b2775ed0814,DISK]]
+4. BP-156704854-172.18.0.2-1697488782032:blk_1073741876_1052 len=67108864 Live_repl=2  [DatanodeInfoWithStorage[172.18.0.4:9866,DS-132701d0-0327-4c6f-9fde-6b2775ed0814,DISK], DatanodeInfoWithStorage[172.18.0.8:9866,DS-c0ddbe52-2697-46fa-88d4-2ba26ef3debe,DISK]]
+5. BP-156704854-172.18.0.2-1697488782032:blk_1073741877_1053 len=31457280 MISSING!
+
+/user/hdadmin/directorio_cuota/2 367001600 bytes, replicated: replication=3, 6 block(s):  Under replicated BP-156704854-172.18.0.2-1697488782032:blk_1073741866_1042. Target Replicas is 3 but found 2 live replica(s), 0 decommissioned replica(s), 0 decommissioning replica(s).
+ Under replicated BP-156704854-172.18.0.2-1697488782032:blk_1073741867_1043. Target Replicas is 3 but found 2 live replica(s), 0 decommissioned replica(s), 0 decommissioning replica(s).
+ Under replicated BP-156704854-172.18.0.2-1697488782032:blk_1073741868_1044. Target Replicas is 3 but found 2 live replica(s), 0 decommissioned replica(s), 0 decommissioning replica(s).
+ Under replicated BP-156704854-172.18.0.2-1697488782032:blk_1073741869_1045. Target Replicas is 3 but found 2 live replica(s), 0 decommissioned replica(s), 0 decommissioning replica(s).
+ Under replicated BP-156704854-172.18.0.2-1697488782032:blk_1073741870_1046. Target Replicas is 3 but found 2 live replica(s), 0 decommissioned replica(s), 0 decommissioning replica(s).
+ Under replicated BP-156704854-172.18.0.2-1697488782032:blk_1073741871_1047. Target Replicas is 3 but found 2 live replica(s), 0 decommissioned replica(s), 0 decommissioning replica(s).
+0. BP-156704854-172.18.0.2-1697488782032:blk_1073741866_1042 len=67108864 Live_repl=2  [DatanodeInfoWithStorage[172.18.0.8:9866,DS-c0ddbe52-2697-46fa-88d4-2ba26ef3debe,DISK], DatanodeInfoWithStorage[172.18.0.4:9866,DS-132701d0-0327-4c6f-9fde-6b2775ed0814,DISK]]
+1. BP-156704854-172.18.0.2-1697488782032:blk_1073741867_1043 len=67108864 Live_repl=2  [DatanodeInfoWithStorage[172.18.0.4:9866,DS-132701d0-0327-4c6f-9fde-6b2775ed0814,DISK], DatanodeInfoWithStorage[172.18.0.8:9866,DS-c0ddbe52-2697-46fa-88d4-2ba26ef3debe,DISK]]
+2. BP-156704854-172.18.0.2-1697488782032:blk_1073741868_1044 len=67108864 Live_repl=2  [DatanodeInfoWithStorage[172.18.0.8:9866,DS-c0ddbe52-2697-46fa-88d4-2ba26ef3debe,DISK], DatanodeInfoWithStorage[172.18.0.4:9866,DS-132701d0-0327-4c6f-9fde-6b2775ed0814,DISK]]
+3. BP-156704854-172.18.0.2-1697488782032:blk_1073741869_1045 len=67108864 Live_repl=2  [DatanodeInfoWithStorage[172.18.0.4:9866,DS-132701d0-0327-4c6f-9fde-6b2775ed0814,DISK], DatanodeInfoWithStorage[172.18.0.8:9866,DS-c0ddbe52-2697-46fa-88d4-2ba26ef3debe,DISK]]
+4. BP-156704854-172.18.0.2-1697488782032:blk_1073741870_1046 len=67108864 Live_repl=2  [DatanodeInfoWithStorage[172.18.0.4:9866,DS-132701d0-0327-4c6f-9fde-6b2775ed0814,DISK], DatanodeInfoWithStorage[172.18.0.8:9866,DS-c0ddbe52-2697-46fa-88d4-2ba26ef3debe,DISK]]
+5. BP-156704854-172.18.0.2-1697488782032:blk_1073741871_1047 len=31457280 Live_repl=2  [DatanodeInfoWithStorage[172.18.0.4:9866,DS-132701d0-0327-4c6f-9fde-6b2775ed0814,DISK], DatanodeInfoWithStorage[172.18.0.8:9866,DS-c0ddbe52-2697-46fa-88d4-2ba26ef3debe,DISK]]
+
+/user/hdadmin/directorio_cuota/fichero_grande 367001600 bytes, replicated: replication=3, 6 block(s):  Under replicated BP-156704854-172.18.0.2-1697488782032:blk_1073741854_1030. Target Replicas is 3 but found 2 live replica(s), 0 decommissioned replica(s), 0 decommissioning replica(s).
+ Under replicated BP-156704854-172.18.0.2-1697488782032:blk_1073741856_1032. Target Replicas is 3 but found 2 live replica(s), 0 decommissioned replica(s), 0 decommissioning replica(s).
+ Under replicated BP-156704854-172.18.0.2-1697488782032:blk_1073741857_1033. Target Replicas is 3 but found 2 live replica(s), 0 decommissioned replica(s), 0 decommissioning replica(s).
+ Under replicated BP-156704854-172.18.0.2-1697488782032:blk_1073741858_1034. Target Replicas is 3 but found 2 live replica(s), 0 decommissioned replica(s), 0 decommissioning replica(s).
+ Under replicated BP-156704854-172.18.0.2-1697488782032:blk_1073741859_1035. Target Replicas is 3 but found 2 live replica(s), 0 decommissioned replica(s), 0 decommissioning replica(s).
+ MISSING 1 blocks of total size 67108864 B
+0. BP-156704854-172.18.0.2-1697488782032:blk_1073741854_1030 len=67108864 Live_repl=2  [DatanodeInfoWithStorage[172.18.0.4:9866,DS-132701d0-0327-4c6f-9fde-6b2775ed0814,DISK], DatanodeInfoWithStorage[172.18.0.8:9866,DS-c0ddbe52-2697-46fa-88d4-2ba26ef3debe,DISK]]
+1. BP-156704854-172.18.0.2-1697488782032:blk_1073741855_1031 len=67108864 MISSING!
+2. BP-156704854-172.18.0.2-1697488782032:blk_1073741856_1032 len=67108864 Live_repl=2  [DatanodeInfoWithStorage[172.18.0.4:9866,DS-132701d0-0327-4c6f-9fde-6b2775ed0814,DISK], DatanodeInfoWithStorage[172.18.0.8:9866,DS-c0ddbe52-2697-46fa-88d4-2ba26ef3debe,DISK]]
+3. BP-156704854-172.18.0.2-1697488782032:blk_1073741857_1033 len=67108864 Live_repl=2  [DatanodeInfoWithStorage[172.18.0.4:9866,DS-132701d0-0327-4c6f-9fde-6b2775ed0814,DISK], DatanodeInfoWithStorage[172.18.0.8:9866,DS-c0ddbe52-2697-46fa-88d4-2ba26ef3debe,DISK]]
+4. BP-156704854-172.18.0.2-1697488782032:blk_1073741858_1034 len=67108864 Live_repl=2  [DatanodeInfoWithStorage[172.18.0.4:9866,DS-132701d0-0327-4c6f-9fde-6b2775ed0814,DISK], DatanodeInfoWithStorage[172.18.0.8:9866,DS-c0ddbe52-2697-46fa-88d4-2ba26ef3debe,DISK]]
+5. BP-156704854-172.18.0.2-1697488782032:blk_1073741859_1035 len=31457280 Live_repl=2  [DatanodeInfoWithStorage[172.18.0.4:9866,DS-132701d0-0327-4c6f-9fde-6b2775ed0814,DISK], DatanodeInfoWithStorage[172.18.0.8:9866,DS-c0ddbe52-2697-46fa-88d4-2ba26ef3debe,DISK]]
+
+/user/luser <dir>
+/user/luser/fichero_grande 367001600 bytes, replicated: replication=3, 6 block(s):  Under replicated BP-156704854-172.18.0.2-1697488782032:blk_1073741840_1016. Target Replicas is 3 but found 2 live replica(s), 0 decommissioned replica(s), 0 decommissioning replica(s).
+ Under replicated BP-156704854-172.18.0.2-1697488782032:blk_1073741841_1017. Target Replicas is 3 but found 2 live replica(s), 0 decommissioned replica(s), 0 decommissioning replica(s).
+ Under replicated BP-156704854-172.18.0.2-1697488782032:blk_1073741842_1018. Target Replicas is 3 but found 2 live replica(s), 0 decommissioned replica(s), 0 decommissioning replica(s).
+ Under replicated BP-156704854-172.18.0.2-1697488782032:blk_1073741843_1019. Target Replicas is 3 but found 2 live replica(s), 0 decommissioned replica(s), 0 decommissioning replica(s).
+ Under replicated BP-156704854-172.18.0.2-1697488782032:blk_1073741844_1020. Target Replicas is 3 but found 2 live replica(s), 0 decommissioned replica(s), 0 decommissioning replica(s).
+ MISSING 1 blocks of total size 31457280 B
+0. BP-156704854-172.18.0.2-1697488782032:blk_1073741840_1016 len=67108864 Live_repl=2  [DatanodeInfoWithStorage[172.18.0.4:9866,DS-132701d0-0327-4c6f-9fde-6b2775ed0814,DISK], DatanodeInfoWithStorage[172.18.0.8:9866,DS-c0ddbe52-2697-46fa-88d4-2ba26ef3debe,DISK]]
+1. BP-156704854-172.18.0.2-1697488782032:blk_1073741841_1017 len=67108864 Live_repl=2  [DatanodeInfoWithStorage[172.18.0.8:9866,DS-c0ddbe52-2697-46fa-88d4-2ba26ef3debe,DISK], DatanodeInfoWithStorage[172.18.0.4:9866,DS-132701d0-0327-4c6f-9fde-6b2775ed0814,DISK]]
+2. BP-156704854-172.18.0.2-1697488782032:blk_1073741842_1018 len=67108864 Live_repl=2  [DatanodeInfoWithStorage[172.18.0.4:9866,DS-132701d0-0327-4c6f-9fde-6b2775ed0814,DISK], DatanodeInfoWithStorage[172.18.0.8:9866,DS-c0ddbe52-2697-46fa-88d4-2ba26ef3debe,DISK]]
+3. BP-156704854-172.18.0.2-1697488782032:blk_1073741843_1019 len=67108864 Live_repl=2  [DatanodeInfoWithStorage[172.18.0.4:9866,DS-132701d0-0327-4c6f-9fde-6b2775ed0814,DISK], DatanodeInfoWithStorage[172.18.0.8:9866,DS-c0ddbe52-2697-46fa-88d4-2ba26ef3debe,DISK]]
+4. BP-156704854-172.18.0.2-1697488782032:blk_1073741844_1020 len=67108864 Live_repl=2  [DatanodeInfoWithStorage[172.18.0.4:9866,DS-132701d0-0327-4c6f-9fde-6b2775ed0814,DISK], DatanodeInfoWithStorage[172.18.0.8:9866,DS-c0ddbe52-2697-46fa-88d4-2ba26ef3debe,DISK]]
+5. BP-156704854-172.18.0.2-1697488782032:blk_1073741845_1021 len=31457280 MISSING!
+
+/user/luser/libros <dir>
+/user/luser/libros/pg14329.txt.gz 441804 bytes, replicated: replication=3, 1 block(s):  Under replicated BP-156704854-172.18.0.2-1697488782032:blk_1073741833_1009. Target Replicas is 3 but found 2 live replica(s), 0 decommissioned replica(s), 0 decommissioning replica(s).
+0. BP-156704854-172.18.0.2-1697488782032:blk_1073741833_1009 len=441804 Live_repl=2  [DatanodeInfoWithStorage[172.18.0.4:9866,DS-132701d0-0327-4c6f-9fde-6b2775ed0814,DISK], DatanodeInfoWithStorage[172.18.0.8:9866,DS-c0ddbe52-2697-46fa-88d4-2ba26ef3debe,DISK]]
+
+/user/luser/libros/pg1619.txt.gz 264123 bytes, replicated: replication=3, 1 block(s):  Under replicated BP-156704854-172.18.0.2-1697488782032:blk_1073741837_1013. Target Replicas is 3 but found 2 live replica(s), 0 decommissioned replica(s), 0 decommissioning replica(s).
+0. BP-156704854-172.18.0.2-1697488782032:blk_1073741837_1013 len=264123 Live_repl=2  [DatanodeInfoWithStorage[172.18.0.8:9866,DS-c0ddbe52-2697-46fa-88d4-2ba26ef3debe,DISK], DatanodeInfoWithStorage[172.18.0.4:9866,DS-132701d0-0327-4c6f-9fde-6b2775ed0814,DISK]]
+
+/user/luser/libros/pg16625.txt.gz 455129 bytes, replicated: replication=3, 1 block(s):  MISSING 1 blocks of total size 455129 B
+0. BP-156704854-172.18.0.2-1697488782032:blk_1073741834_1010 len=455129 MISSING!
+
+/user/luser/libros/pg17013.txt.gz 939502 bytes, replicated: replication=3, 1 block(s):  Under replicated BP-156704854-172.18.0.2-1697488782032:blk_1073741829_1005. Target Replicas is 3 but found 2 live replica(s), 0 decommissioned replica(s), 0 decommissioning replica(s).
+0. BP-156704854-172.18.0.2-1697488782032:blk_1073741829_1005 len=939502 Live_repl=2  [DatanodeInfoWithStorage[172.18.0.8:9866,DS-c0ddbe52-2697-46fa-88d4-2ba26ef3debe,DISK], DatanodeInfoWithStorage[172.18.0.4:9866,DS-132701d0-0327-4c6f-9fde-6b2775ed0814,DISK]]
+
+/user/luser/libros/pg17073.txt.gz 737367 bytes, replicated: replication=3, 1 block(s):  Under replicated BP-156704854-172.18.0.2-1697488782032:blk_1073741826_1002. Target Replicas is 3 but found 2 live replica(s), 0 decommissioned replica(s), 0 decommissioning replica(s).
+0. BP-156704854-172.18.0.2-1697488782032:blk_1073741826_1002 len=737367 Live_repl=2  [DatanodeInfoWithStorage[172.18.0.4:9866,DS-132701d0-0327-4c6f-9fde-6b2775ed0814,DISK], DatanodeInfoWithStorage[172.18.0.8:9866,DS-c0ddbe52-2697-46fa-88d4-2ba26ef3debe,DISK]]
+
+/user/luser/libros/pg18005.txt.gz 219304 bytes, replicated: replication=3, 1 block(s):  Under replicated BP-156704854-172.18.0.2-1697488782032:blk_1073741839_1015. Target Replicas is 3 but found 2 live replica(s), 0 decommissioned replica(s), 0 decommissioning replica(s).
+0. BP-156704854-172.18.0.2-1697488782032:blk_1073741839_1015 len=219304 Live_repl=2  [DatanodeInfoWithStorage[172.18.0.4:9866,DS-132701d0-0327-4c6f-9fde-6b2775ed0814,DISK], DatanodeInfoWithStorage[172.18.0.8:9866,DS-c0ddbe52-2697-46fa-88d4-2ba26ef3debe,DISK]]
+
+/user/luser/libros/pg2000.txt.gz 813698 bytes, replicated: replication=3, 1 block(s):  Under replicated BP-156704854-172.18.0.2-1697488782032:blk_1073741836_1012. Target Replicas is 3 but found 2 live replica(s), 0 decommissioned replica(s), 0 decommissioning replica(s).
+0. BP-156704854-172.18.0.2-1697488782032:blk_1073741836_1012 len=813698 Live_repl=2  [DatanodeInfoWithStorage[172.18.0.8:9866,DS-c0ddbe52-2697-46fa-88d4-2ba26ef3debe,DISK], DatanodeInfoWithStorage[172.18.0.4:9866,DS-132701d0-0327-4c6f-9fde-6b2775ed0814,DISK]]
+
+/user/luser/libros/pg24536.txt.gz 328494 bytes, replicated: replication=3, 1 block(s):  Under replicated BP-156704854-172.18.0.2-1697488782032:blk_1073741828_1004. Target Replicas is 3 but found 2 live replica(s), 0 decommissioned replica(s), 0 decommissioning replica(s).
+0. BP-156704854-172.18.0.2-1697488782032:blk_1073741828_1004 len=328494 Live_repl=2  [DatanodeInfoWithStorage[172.18.0.4:9866,DS-132701d0-0327-4c6f-9fde-6b2775ed0814,DISK], DatanodeInfoWithStorage[172.18.0.8:9866,DS-c0ddbe52-2697-46fa-88d4-2ba26ef3debe,DISK]]
+
+/user/luser/libros/pg25640.txt.gz 504188 bytes, replicated: replication=3, 1 block(s):  Under replicated BP-156704854-172.18.0.2-1697488782032:blk_1073741831_1007. Target Replicas is 3 but found 2 live replica(s), 0 decommissioned replica(s), 0 decommissioning replica(s).
+0. BP-156704854-172.18.0.2-1697488782032:blk_1073741831_1007 len=504188 Live_repl=2  [DatanodeInfoWithStorage[172.18.0.4:9866,DS-132701d0-0327-4c6f-9fde-6b2775ed0814,DISK], DatanodeInfoWithStorage[172.18.0.8:9866,DS-c0ddbe52-2697-46fa-88d4-2ba26ef3debe,DISK]]
+
+/user/luser/libros/pg25807.txt.gz 38194 bytes, replicated: replication=3, 1 block(s):  Under replicated BP-156704854-172.18.0.2-1697488782032:blk_1073741835_1011. Target Replicas is 3 but found 2 live replica(s), 0 decommissioned replica(s), 0 decommissioning replica(s).
+0. BP-156704854-172.18.0.2-1697488782032:blk_1073741835_1011 len=38194 Live_repl=2  [DatanodeInfoWithStorage[172.18.0.8:9866,DS-c0ddbe52-2697-46fa-88d4-2ba26ef3debe,DISK], DatanodeInfoWithStorage[172.18.0.4:9866,DS-132701d0-0327-4c6f-9fde-6b2775ed0814,DISK]]
+
+/user/luser/libros/pg32315.txt.gz 103986 bytes, replicated: replication=3, 1 block(s):  Under replicated BP-156704854-172.18.0.2-1697488782032:blk_1073741838_1014. Target Replicas is 3 but found 2 live replica(s), 0 decommissioned replica(s), 0 decommissioning replica(s).
+0. BP-156704854-172.18.0.2-1697488782032:blk_1073741838_1014 len=103986 Live_repl=2  [DatanodeInfoWithStorage[172.18.0.4:9866,DS-132701d0-0327-4c6f-9fde-6b2775ed0814,DISK], DatanodeInfoWithStorage[172.18.0.8:9866,DS-c0ddbe52-2697-46fa-88d4-2ba26ef3debe,DISK]]
+
+/user/luser/libros/pg5201.txt.gz 125693 bytes, replicated: replication=3, 1 block(s):  Under replicated BP-156704854-172.18.0.2-1697488782032:blk_1073741825_1001. Target Replicas is 3 but found 2 live replica(s), 0 decommissioned replica(s), 0 decommissioning replica(s).
+0. BP-156704854-172.18.0.2-1697488782032:blk_1073741825_1001 len=125693 Live_repl=2  [DatanodeInfoWithStorage[172.18.0.4:9866,DS-132701d0-0327-4c6f-9fde-6b2775ed0814,DISK], DatanodeInfoWithStorage[172.18.0.8:9866,DS-c0ddbe52-2697-46fa-88d4-2ba26ef3debe,DISK]]
+
+/user/luser/libros/pg7109.txt.gz 82099 bytes, replicated: replication=3, 1 block(s):  Under replicated BP-156704854-172.18.0.2-1697488782032:blk_1073741832_1008. Target Replicas is 3 but found 2 live replica(s), 0 decommissioned replica(s), 0 decommissioning replica(s).
+0. BP-156704854-172.18.0.2-1697488782032:blk_1073741832_1008 len=82099 Live_repl=2  [DatanodeInfoWithStorage[172.18.0.8:9866,DS-c0ddbe52-2697-46fa-88d4-2ba26ef3debe,DISK], DatanodeInfoWithStorage[172.18.0.4:9866,DS-132701d0-0327-4c6f-9fde-6b2775ed0814,DISK]]
+
+/user/luser/libros/pg8870.txt.gz 99685 bytes, replicated: replication=3, 1 block(s):  MISSING 1 blocks of total size 99685 B
+0. BP-156704854-172.18.0.2-1697488782032:blk_1073741827_1003 len=99685 MISSING!
+
+/user/luser/libros/pg9980.txt.gz 85187 bytes, replicated: replication=3, 1 block(s):  Under replicated BP-156704854-172.18.0.2-1697488782032:blk_1073741830_1006. Target Replicas is 3 but found 2 live replica(s), 0 decommissioned replica(s), 0 decommissioning replica(s).
+0. BP-156704854-172.18.0.2-1697488782032:blk_1073741830_1006 len=85187 Live_repl=2  [DatanodeInfoWithStorage[172.18.0.8:9866,DS-c0ddbe52-2697-46fa-88d4-2ba26ef3debe,DISK], DatanodeInfoWithStorage[172.18.0.4:9866,DS-132701d0-0327-4c6f-9fde-6b2775ed0814,DISK]]
+
+
+Status: CORRUPT
+ Number of data-nodes:	2
+ Number of racks:		1
+ Total dirs:			9
+ Total symlinks:		0
+
+Replicated Blocks:
+ Total size:	1473244853 B
+ Total files:	19
+ Total blocks (validated):	39 (avg. block size 37775509 B)
+  ********************************
+  UNDER MIN REPL'D BLOCKS:	5 (12.820513 %)
+  MINIMAL BLOCK REPLICATION:	1
+  CORRUPT FILES:	5
+  MISSING BLOCKS:	5
+  MISSING SIZE:		130578238 B
+  ********************************
+ Minimally replicated blocks:	34 (87.17949 %)
+ Over-replicated blocks:	0 (0.0 %)
+ Under-replicated blocks:	34 (87.17949 %)
+ Mis-replicated blocks:		0 (0.0 %)
+ Default replication factor:	3
+ Average block replication:	1.7435898
+ Missing blocks:		5
+ Corrupt blocks:		0
+ Missing replicas:		34 (29.05983 %)
+ Blocks queued for replication:	0
+
+Erasure Coded Block Groups:
+ Total size:	0 B
+ Total files:	0
+ Total block groups (validated):	0
+ Minimally erasure-coded block groups:	0
+ Over-erasure-coded block groups:	0
+ Under-erasure-coded block groups:	0
+ Unsatisfactory placement block groups:	0
+ Average block group size:	0.0
+ Missing block groups:		0
+ Corrupt block groups:		0
+ Missing internal blocks:	0
+ Blocks queued for replication:	0
+FSCK ended at Mon Oct 16 23:30:26 CEST 2023 in 4 milliseconds
+
+
+The filesystem under path '/' is CORRUPT
+
+---------------------------------------------
+
+hdfs fsck /user/hdadmin/directorio_cuota/fichero_grande -files -blocks -locations
+Connecting to namenode via http://namenode:9870/fsck?ugi=hdadmin&files=1&blocks=1&locations=1&path=%2Fuser%2Fhdadmin%2Fdirectorio_cuota%2Ffichero_grande
+FSCK started by hdadmin (auth:SIMPLE) from /172.18.0.2 for path /user/hdadmin/directorio_cuota/fichero_grande at Mon Oct 16 23:32:41 CEST 2023
+
+/user/hdadmin/directorio_cuota/fichero_grande 367001600 bytes, replicated: replication=3, 6 block(s):  Under replicated BP-156704854-172.18.0.2-1697488782032:blk_1073741854_1030. Target Replicas is 3 but found 2 live replica(s), 0 decommissioned replica(s), 0 decommissioning replica(s).
+ Under replicated BP-156704854-172.18.0.2-1697488782032:blk_1073741856_1032. Target Replicas is 3 but found 2 live replica(s), 0 decommissioned replica(s), 0 decommissioning replica(s).
+ Under replicated BP-156704854-172.18.0.2-1697488782032:blk_1073741857_1033. Target Replicas is 3 but found 2 live replica(s), 0 decommissioned replica(s), 0 decommissioning replica(s).
+ Under replicated BP-156704854-172.18.0.2-1697488782032:blk_1073741858_1034. Target Replicas is 3 but found 2 live replica(s), 0 decommissioned replica(s), 0 decommissioning replica(s).
+ Under replicated BP-156704854-172.18.0.2-1697488782032:blk_1073741859_1035. Target Replicas is 3 but found 2 live replica(s), 0 decommissioned replica(s), 0 decommissioning replica(s).
+ MISSING 1 blocks of total size 67108864 B
+0. BP-156704854-172.18.0.2-1697488782032:blk_1073741854_1030 len=67108864 Live_repl=2  [DatanodeInfoWithStorage[172.18.0.4:9866,DS-132701d0-0327-4c6f-9fde-6b2775ed0814,DISK], DatanodeInfoWithStorage[172.18.0.8:9866,DS-c0ddbe52-2697-46fa-88d4-2ba26ef3debe,DISK]]
+1. BP-156704854-172.18.0.2-1697488782032:blk_1073741855_1031 len=67108864 MISSING!
+2. BP-156704854-172.18.0.2-1697488782032:blk_1073741856_1032 len=67108864 Live_repl=2  [DatanodeInfoWithStorage[172.18.0.4:9866,DS-132701d0-0327-4c6f-9fde-6b2775ed0814,DISK], DatanodeInfoWithStorage[172.18.0.8:9866,DS-c0ddbe52-2697-46fa-88d4-2ba26ef3debe,DISK]]
+3. BP-156704854-172.18.0.2-1697488782032:blk_1073741857_1033 len=67108864 Live_repl=2  [DatanodeInfoWithStorage[172.18.0.4:9866,DS-132701d0-0327-4c6f-9fde-6b2775ed0814,DISK], DatanodeInfoWithStorage[172.18.0.8:9866,DS-c0ddbe52-2697-46fa-88d4-2ba26ef3debe,DISK]]
+4. BP-156704854-172.18.0.2-1697488782032:blk_1073741858_1034 len=67108864 Live_repl=2  [DatanodeInfoWithStorage[172.18.0.4:9866,DS-132701d0-0327-4c6f-9fde-6b2775ed0814,DISK], DatanodeInfoWithStorage[172.18.0.8:9866,DS-c0ddbe52-2697-46fa-88d4-2ba26ef3debe,DISK]]
+5. BP-156704854-172.18.0.2-1697488782032:blk_1073741859_1035 len=31457280 Live_repl=2  [DatanodeInfoWithStorage[172.18.0.4:9866,DS-132701d0-0327-4c6f-9fde-6b2775ed0814,DISK], DatanodeInfoWithStorage[172.18.0.8:9866,DS-c0ddbe52-2697-46fa-88d4-2ba26ef3debe,DISK]]
+
+
+Status: CORRUPT
+ Number of data-nodes:	2
+ Number of racks:		1
+ Total dirs:			0
+ Total symlinks:		0
+
+Replicated Blocks:
+ Total size:	367001600 B
+ Total files:	1
+ Total blocks (validated):	6 (avg. block size 61166933 B)
+  ********************************
+  UNDER MIN REPL'D BLOCKS:	1 (16.666666 %)
+  MINIMAL BLOCK REPLICATION:	1
+  CORRUPT FILES:	1
+  MISSING BLOCKS:	1
+  MISSING SIZE:		67108864 B
+  ********************************
+ Minimally replicated blocks:	5 (83.333336 %)
+ Over-replicated blocks:	0 (0.0 %)
+ Under-replicated blocks:	5 (83.333336 %)
+ Mis-replicated blocks:		0 (0.0 %)
+ Default replication factor:	3
+ Average block replication:	1.6666666
+ Missing blocks:		1
+ Corrupt blocks:		0
+ Missing replicas:		5 (27.777779 %)
+ Blocks queued for replication:	0
+
+Erasure Coded Block Groups:
+ Total size:	0 B
+ Total files:	0
+ Total block groups (validated):	0
+ Minimally erasure-coded block groups:	0
+ Over-erasure-coded block groups:	0
+ Under-erasure-coded block groups:	0
+ Unsatisfactory placement block groups:	0
+ Average block group size:	0.0
+ Missing block groups:		0
+ Corrupt block groups:		0
+ Missing internal blocks:	0
+ Blocks queued for replication:	0
+FSCK ended at Mon Oct 16 23:32:41 CEST 2023 in 1 milliseconds
+
+
+The filesystem under path '/user/hdadmin/directorio_cuota/fichero_grande' is CORRUPT
