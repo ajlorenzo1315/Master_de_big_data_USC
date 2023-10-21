@@ -56,6 +56,6 @@ comprobar en la base de datos hdfs
 
 
 <kbd>
-<a href="../images/load_hdfs.png" target="_blank"><img src="../images/load_hdfs.png" width="800" height="400"></a>
+<a href="./images/load_hdfs.png" target="_blank"><img src="./images/load_hdfs.png" width="600" height="300"></a>
 </kbd>
     

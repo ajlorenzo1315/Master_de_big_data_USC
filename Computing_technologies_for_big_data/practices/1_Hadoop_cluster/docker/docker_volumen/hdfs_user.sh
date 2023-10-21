@@ -1,6 +1,12 @@
-#/bin/bash
+#!/bin/bash
+
+echo "Topologia"
+
+su hdadmin -c "$HADOOP_HOME/bin/hdfs dfsadmin -printTopology"
+
 
 echo "Iniciando hsdf load..."
+
 su hdadmin -c "$HADOOP_HOME/bin/hdfs dfs -mkdir -p /user/hdadmin"
 su hdadmin -c "$HADOOP_HOME/bin/hdfs dfs -mkdir -p /user/luser"
 su hdadmin -c "$HADOOP_HOME/bin/hdfs dfs -chown luser /user/luser"

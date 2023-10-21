@@ -1,5 +1,3 @@
-#/bin/bash
-
 #!/bin/bash
 
 # Verificar que se proporcionen dos argumentos

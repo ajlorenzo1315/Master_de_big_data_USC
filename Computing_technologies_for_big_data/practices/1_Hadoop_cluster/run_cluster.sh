@@ -69,7 +69,7 @@ docker container run -d --name backupnode --network=hadoop-cluster --hostname \
 backupnode --cpus=1 --memory=3072m --expose 50100 -p 50105:50105  \
 "$BUCKUP_IMAGE" su hdadmin -c "JAVA_HOME=/usr/lib/jvm/java-8-openjdk-amd64 /opt/bd/hadoop/bin/hdfs namenode -backup"
 
-
+docker exec namenode /docker/hdfs_user.sh
 #docker container run -d --name timelineserver --network=hadoop-cluster --hostname \
 #timelineserver --cpus=1 --memory=3072m --expose 10200 -p 8188:8188 \
 #"$TIME_IMAGE"  su hdadmin -c "JAVA_HOME=/usr/lib/jvm/java-8-openjdk-amd64 /opt/bd/hadoop/bin/yarn --daemon start timelineserver"

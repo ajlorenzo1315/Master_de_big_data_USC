@@ -13,7 +13,7 @@ Más información sobre este servicio en [link](https://hadoop.apache.org/docs/s
  
 
 <kbd>
-  <a href="./images/metadatos_namenode.png" target="_blank"><img src="./images/metadatos_namenode.png" width="800" height="400"></a>
+  <a href="../images/metadatos_namenode.png" target="_blank"><img src="../images/metadatos_namenode.png" width="800" height="400"></a>
 </kbd>
     
 
@@ -187,7 +187,7 @@ Para añadir el servidor de backup, tenéis que seguir los siguientes pasos (con
 6. Analiza el directorio de backup para ver lo que se ha creado. Compáralo con el directorio con los metadatos del NameNode
 
     <kbd>
-    <a href="./images/metadatos_buckup.png" target="_blank"><img src="./images/metadatos_buckup.png" width="800" height="400"></a>
+    <a href="../images/metadatos_buckup.png" target="_blank"><img src="../images/metadatos_buckup.png" width="800" height="400"></a>
     </kbd>
     
 
@@ -197,11 +197,11 @@ Para añadir el servidor de backup, tenéis que seguir los siguientes pasos (con
     - Captura de pantalla en la que se vean los mensajes que genera el servicio de backup, destacando aquellos en los que se vea como se hace el checkpoint
     
     <kbd>
-    <a href="./images/backup_nose.png" target="_blank"><img src="./images/backup_nose.png" width="800" height="400"></a>
+    <a href="../images/backup_nose.png" target="_blank"><img src="../images/backup_nose.png" width="800" height="400"></a>
     </kbd>
     
     <kbd>
-    <a href="./images/backup_terminal.png" target="_blank"><img src="./images/backup_terminal.png" width="800" height="400"></a>
+    <a href="../images/backup_terminal.png" target="_blank"><img src="../images/backup_terminal.png" width="800" height="400"></a>
     </kbd>
 
 **Nota:** Una vez obtenidos los datos para la memoria, puedes parar el servicio de backup. Si quieres poder reiniciarlo de forma facil, sal del Docker, guárdalo como una imagen e inícialo haciendo:
@@ -220,19 +220,19 @@ Y para comprobar que se está ejecutando correctamente el servicio de backup, ha
 
 **Metadatos del NODENAME**
 
-<a href="./images/metadoatos_namenode_depues_backup_2.png" target="_blank"><img src="./images/metadoatos_namenode_depues_backup_2.png" width="800" height="400"></a>
+<a href="../images/metadoatos_namenode_depues_backup_2.png" target="_blank"><img src="../images/metadoatos_namenode_depues_backup_2.png" width="800" height="400"></a>
 </kbd>
 
 **Metadatos del BUCKUP**
 
 <kbd>
-<a href="./images/metadatos_buckup.png" target="_blank"><img src="./images/metadatos_buckup.png" width="800" height="400"></a>
+<a href="../images/metadatos_buckup.png" target="_blank"><img src="../images/metadatos_buckup.png" width="800" height="400"></a>
 </kbd>
 
 - Captura de pantalla del interfaz web del nodo de backup
 
 <kbd>
-<a href="./images/backup_web_2.png" target="_blank"><img src="./images/backup_web_2.png" width="800" height="400"></a>
+<a href="../images/backup_web_2.png" target="_blank"><img src="../images/backup_web_2.png" width="800" height="400"></a>
 </kbd>
 
 
@@ -374,7 +374,7 @@ Para añadir el TimeLineServer, tenéis que seguir los siguientes pasos (con el 
     - Captura de pantalla del interfaz web del TimeLineServer en la que se vea que se ha recogido la información de la ejecución de una o más tareas
 
         <kbd>
-        <a href="./images/StartTime_web_2.png" target="_blank"><img src="./images/StartTime_web_2.png" width="800" height="400"></a>
+        <a href="../images/StartTime_web_2.png" target="_blank"><img src="../images/StartTime_web_2.png" width="800" height="400"></a>
         </kbd>
 
 
@@ -454,11 +454,11 @@ Para añadir el TimeLineServer, tenéis que seguir los siguientes pasos (con el 
 - YARN
 
     <kbd>
-    <a href="./images/yarn_include_datanode.png" target="_blank"><img src="./images/yarn_include_datanode.png" width="800" height="400"></a>
+    <a href="../images/yarn_include_datanode.png" target="_blank"><img src="../images/yarn_include_datanode.png" width="800" height="400"></a>
     </kbd>
 
     <kbd>
-    <a href="./images/node4_descomisionado.png" target="_blank"><img src="./images/node4_descomisionado.png" width="800" height="400"></a>
+    <a href="../images/node4_descomisionado.png" target="_blank"><img src="../images/node4_descomisionado.png" width="800" height="400"></a>
     </kbd>
 
 
@@ -473,7 +473,7 @@ Para añadir el TimeLineServer, tenéis que seguir los siguientes pasos (con el 
     ```
     
     <kbd>
-    <a href="./images/node_4_descomisinado_web_yarn.png" target="_blank"><img src="./images/node_4_descomisinado_web_yarn.png" width="800" height="400"></a>
+    <a href="../images/node_4_descomisinado_web_yarn.png" target="_blank"><img src="../images/node_4_descomisinado_web_yarn.png" width="800" height="400"></a>
     </kbd>
 
 
@@ -481,11 +481,11 @@ Para añadir el TimeLineServer, tenéis que seguir los siguientes pasos (con el 
 - HDFS **Nota hdfs dfsadmin -reporten este tambien se ven 5 y 6 que son del siguiente ejercicio pero se pude ver como se no se incluye el data node 4**
 
     <kbd>
-    <a href="./images/hdf_node.png" target="_blank"><img src="./images/hdf_node.png" width="800" height="400"></a>
+    <a href="../images/hdf_node.png" target="_blank"><img src="../images/hdf_node.png" width="800" height="400"></a>
     </kbd>
 
     <kbd>
-    <a href="./images/add_node_web_hdfs.png" target="_blank"><img src="./images/add_node_web_hdfs.png" width="800" height="400"></a>
+    <a href="../images/add_node_web_hdfs.png" target="_blank"><img src="../images/add_node_web_hdfs.png" width="800" height="400"></a>
     </kbd>
 
 
@@ -512,7 +512,7 @@ Para añadir el TimeLineServer, tenéis que seguir los siguientes pasos (con el 
         ```
 
     <kbd>
-    <a href="./images/hdf_node.png" target="_blank"><img src="./images/hdf_node.png" width="800" height="400"></a>
+    <a href="../images/hdf_node.png" target="_blank"><img src="../images/hdf_node.png" width="800" height="400"></a>
     </kbd>
 
 
@@ -525,7 +525,7 @@ Comprueba ahora cuánto espacio, en bytes y en bloques, tienen ocupados los dos 
 #### Antes del rebalanceo
 
 <kbd>
-<a href="./images/rebalanceo.png" target="_blank"><img src="./images/rebalanceo.png" width="800" height="400"></a>
+<a href="../images/rebalanceo.png" target="_blank"><img src="../images/rebalanceo.png" width="800" height="400"></a>
 </kbd>
 
 #### Despues del rebalanceo
@@ -645,11 +645,11 @@ Num of Blocks: 39
     En este caso no se capruto el yanr -list a la hora de incluir el  el nodo 5 y 6 por lo que no se pude mostrar pero si capturo la visualización web
 
     <kbd>
-    <a href="./images/yanr_incude_5_6.png" target="_blank"><img src="./images/yanr_incude_5_6.png" width="800" height="400"></a>
+    <a href="../images/yanr_incude_5_6.png" target="_blank"><img src="../images/yanr_incude_5_6.png" width="800" height="400"></a>
     </kbd>
     
     <kbd>
-    <a href="./images/add_node_web_yarn.png" target="_blank"><img src="./images/add_node_web_yarn.png" width="800" height="400"></a>
+    <a href="../images/add_node_web_yarn.png" target="_blank"><img src="../images/add_node_web_yarn.png" width="800" height="400"></a>
     </kbd>
 
 
@@ -657,12 +657,12 @@ Num of Blocks: 39
 - HDFS 
 
     <kbd>
-    <a href="./images/hdf_node.png" target="_blank"><img src="./images/hdf_node.png" width="800" height="400"></a>
+    <a href="../images/hdf_node.png" target="_blank"><img src="../images/hdf_node.png" width="800" height="400"></a>
     </kbd>
 
 
     <kbd>
-    <a href="./images/add_node_web_hdfs.png" target="_blank"><img src="./images/add_node_web_hdfs.png" width="800" height="400"></a>
+    <a href="../images/add_node_web_hdfs.png" target="_blank"><img src="../images/add_node_web_hdfs.png" width="800" height="400"></a>
     </kbd>
 
 

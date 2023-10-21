@@ -144,6 +144,7 @@ from public.peliculas pels left join public.colecciones c on pels.coleccion = c.
 
 ## CONSULTAS
 
+1.- Obtener todas las películas de las colecciones que contenga la palabra "Wars". Muestra el título de la película y el nombre de la colección. Ordena el resultado por el nombre de la colección
 select titulo, (coleccion).nombre as coleccion
 from peliculasarray
 where (coleccion).nombre like '%Wars%'

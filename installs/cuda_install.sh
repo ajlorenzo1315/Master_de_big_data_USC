@@ -10,4 +10,4 @@ sudo cp /var/cuda-repo-ubuntu2204-12-2-local/cuda-*-keyring.gpg /usr/share/keyri
 sudo apt-get update
 sudo apt-get -y install cuda
 
-wget https://developer.nvidia.com/downloads/compute/cudnn/secure/8.9.5/local_installers/12.x/cudnn-local-repo-ubuntu2204-8.9.5.29_1.0-1_amd64.deb/
+wget https://developer.nvidia.com/downloads/compute/cudnn/secure/8.9.5/local_installers/12.x/cudnn-local-repo-ubuntu2204-8.9.5.29_1.0-1_amd64.deb

@@ -1,5 +1,4 @@
-#/bin/bash
-
+#!/bin/bash
 
 
 #Cópialo en el NameNode

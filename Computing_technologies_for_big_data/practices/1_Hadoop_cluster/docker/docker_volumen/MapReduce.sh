@@ -1,5 +1,4 @@
-#/bin/bash
-
+#!/bin/bash
 #su - hadadmin
 
 su hdadmin -c "echo 'export MAPRED_EXAMPLES=$HADOOP_HOME/share/hadoop/mapreduce' >> ~/.bashrc && . ~/.bashrc"

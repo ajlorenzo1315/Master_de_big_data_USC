@@ -169,6 +169,8 @@ select array[array[45,31,45], array[46,13,89]] -- bien
 
 
 Con la siguiente instrucción DDL creamos la tabla necesaria para almacenar nuestras películas.
+
+```sql
 -- se crea una tabla de pelicuals la colección es de tipo coclencio  abajo estan los generos
 -- con un  array de tipo generos por lo cual estoy colocando una tabla dentro de una celda
 -- de una tabla 
@@ -181,7 +183,7 @@ Con la siguiente instrucción DDL creamos la tabla necesaria para almacenar nues
 -- crear un nuevo esquema que se llame agregados arriba se elige agregados 
 -- y dentro de este se crean los tipos 
 -- dentro de agregados hay que ver la tabla y los tipos de datos si eee se sigue 
-CREATE TABLE peliculas (
+CREATE TABLE peliculasarray (
 	id int4 NOT NULL,
 	titulo text,
 	coleccion coleccion,
@@ -203,7 +205,7 @@ CREATE TABLE peliculas (
 	productoras productora ARRAY,
 	CONSTRAINT peliculas_pkey PRIMARY KEY (id)
 );
-
+```
 Vamos ahora a construir las filas de esta nueva tabla, a partir de las tablas de nuestro modelo relacional.
 -- se va a insertar los datos es una expresion bastante larga tiene una inserción de peliculas con coleciones y nada mas 
 cada pelicula su colección y no se que 

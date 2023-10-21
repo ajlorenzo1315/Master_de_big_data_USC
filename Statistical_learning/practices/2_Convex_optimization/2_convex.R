@@ -164,3 +164,81 @@ for (iteration in 1:max_iterations) {
   #if (sum(dir^2)<tol){break}
 }
 tk
+###########################################
+
+
+
+# Función a modelar
+f <- function(x, beta0, beta1) {
+  return(beta0 + beta1 * x)
+}
+# RSE (Residual Standard Error)
+rse <- function(reales, prediccion) {
+  n <- length(reales)
+  rss <- sum((prediccion - reales)^2)
+  rse <- sqrt((rss / (n - 2)))
+  return(rse)
+}
+# Función de coste
+coste <- function(x, y, beta0, beta1) {
+  prediccion <- f(x, beta0, beta1)
+  rse <- rse(y, prediccion)
+  return(rse)
+}
+
+# Función del descenso de gradiente
+desc_grad <- function(x, y, t, threshold, max_iter) {
+    # Inicializamos los coeficientes a 0
+    beta0 <- 0
+    beta1 <- 0
+    converged = FALSE
+    iterations = 0
+    while (converged == FALSE) {
+      # Obtenemos la prediccion
+      prediccion <- f(x, beta0, beta1)
+      # Calculamos el gradiente de f(x)
+      grad_beta0 = sum(y - prediccion)
+      grad_beta1 = sum(x * (y - prediccion))
+      # Actualizamos los valores de los parámetros beta0 y beta1
+      beta0 <- beta0 + t * grad_beta0
+      beta1 <- beta1 + t * grad_beta1
+      # Calculamos el rse cometido con la función de coste
+      coste <- coste(x, y, beta0, beta1)
+      # Obtenemos el criterio de parada
+      stopping_criterion = grad_beta0^2 + grad_beta1^2
+      # Comprobamos si se cumple el criterio de parada
+      if (stopping_criterion <= threshold) {
+        converged = T
+        print(paste("Optimal beta0: ",beta0))
+        print(paste("Optimal beta1: ",beta1))
+        print(paste("RSE: ", coste))
+        print(paste("Converged in", iterations, "iterations"))
+      }
+      # Comprobamos si se han ejecutado el número máximo de iteraciones
+      iterations = iterations + 1
+      if (iterations > max_iter) {
+        converged = TRUE
+        print(paste("Optimal beta0: ",beta0))
+        print(paste("Optimal beta1: ",beta1))
+        print(paste("RSE: ", coste))
+        print(paste("Not Converged"))
+      }
+  }
+return(list(beta0, beta1, coste))
+}
+            
+
+# Calculamos y
+n <- 100
+# x_i: n puntos aleatorios en el itervalo [min,max]
+x <- runif(n, min = 0, max = 5)
+# Parámetro beta0 del modelo
+beta0 <- 2
+# Parámetro beta1 del modelo
+beta1 <- 5
+# Error (con desviación típica sd=1)
+epsilon <- rnorm(n, sd = 1)
+# Calculamos y
+y <- beta0 + beta1 * x + epsilon
+
+result <- desc_grad(x, y, t = 0.001, threshold = 0.0001, max_iter = 1000)

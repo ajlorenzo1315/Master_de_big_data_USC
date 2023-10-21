@@ -4,6 +4,9 @@
 **/datos
 /GreiBD/
 **GreiBD/
+**greiBDServerBase/
+**greiBDServerBase2/
 /ofertaTFMs
 **.deb
 **.run
+**/not_git

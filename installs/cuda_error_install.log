@@ -1,4 +1,15 @@
-  ERROR: You appear to be running an X server; please exit X before            
+ERROR: You appear to be running an X server; please exit X before            
          installing.  For further details, please see the section INSTALLING   
          THE NVIDIA DRIVER in the README available on the Linux driver         
          download page at www.nvidia.com.
+#####SOLUCIO
+
+1. Presione Ctrl+Alt+F1 e inicie sesión con sus credenciales.
+2. Detenga su sesión actual del servidor X escribiendo sudo service lightdm stop o sudo lightdm stop.
+3. Ingrese al nivel de ejecución 3 escribiendo sudo init 3.
+4. Instale su archivo *.run.
+    - Cambie al directorio donde ha descargado el archivo escribiendo, por ejemplo, cd Descargas. Si está en otro directorio, vaya allí. Compruebe si ve el archivo cuando escriba ls NVIDIA*.
+    - Haga que el archivo sea ejecutable con chmod +x ./su-archivo-nvidia.run.
+    - Ejecute el archivo con sudo ./su-archivo-nvidia.run.
+**Nota** Es posible que se le solicite reiniciar cuando termine la instalación. Si no es así, ejecute sudo service lightdm start o sudo start lightdm para volver a iniciar su servidor X.
+Vale la pena mencionar que, al instalar de esta manera, deberá repetir los pasos después de cada actualización del kernel.

@@ -9,28 +9,58 @@ output: pdf_document
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
-1. Simular una muestra de tamaño n = 100 de valores de (xi, yi), i ∈ {1, . . . , n}.
-a) Para ello, se pueden generar 100 observaciones xi de la uniforme (runif).
+0. Importamos las libreias necesarias
 
 ```{r}
-n <- 100
-xi <- runif(n)  # Genera 100 observaciones xi de la uniforme
 
 ```
 
-b) Los errores del modelo, i se pueden generar de la distribución normal de media 0 y va-
+1. Simular una muestra de tamaño n = 100 de valores de (xi, yi), i ∈ {1, . . . , n}.
+a) Para ello, se  generan 100 observaciones xi de la uniforme (runif).
+
+```{r}
+n <- 100
+xi <- runif(n)  # Genera 100 observaciones xi de la uniforme 
+
+```
+
+b) Los errores del modelo, i se  generan de la distribución normal de media 0 y va-
 rianza σ2. Por ejemplo, si cogemos σ2 = 1, esto se puede hacer con (rnorm(100,0,1)).
 
 ```{r}
 sigma <- 1      # Variabilidad de los errores
-ei <- rnorm(n, 0, sigma)  # Genera errores de la distribución normal
+epsilon <- rnorm(n, 0, sigma)  # Genera errores de la distribución normal
 ```
 
 c) Los valores de yi se calcularían como yi = β0 + β1xi + i.
 ```{r}
-beta0<-5 # supongamos que betha0=5
-beta1<-3 # suponngamos que beta1=3
-yi <- beta0 + beta1 * xi + ei  # Calcula los valores de yi
+beta0<-5 # supongamos que betha0=5 para el modelo
+beta1<-3 # suponngamos que beta1=3 pare el modelo
+yi <- beta0 + beta1 * xi + epsilon  # Calculamos los valores del  y
+```
+**NOTA** Comprobamos el comportamiento para distintas  variabilidades de los errores y betas
+
+```{r}
+# Crear un vector para almacenar las gráficas
+stds <- c(0.25, 0.5, 0.75, 1)
+
+for (i in 1:length(stds)) {
+  # Definimos sd
+  # sd <- stds[i]  # Comentado para usar directamente stds[i]
+  # Error (con desviación típica sd)
+  epsilon <- rnorm(n = n, sd = stds[i])
+  # Calculamos y
+  yi <- beta0 + beta1 * xi + epsilon
+  # Ploteamos y lo almacenamos en la lista
+  plot(xi, yi, main = paste('Diagrama de dispersión para: nº datos = ', n, '; sd = ', stds[i]))
+}
+
+
+```
+
+**Nota** Mostramos la dispersión de los valores de nuestros datos simulados 
+```{r}
+plot(xi, yi, main = paste('Diagrama de dispersión para: ','nº datos =', n, '; sd = 1'))
 ```
 
 2. Escoger la función a minimizar. En este caso, la suma de los residuos al cuadrado:
@@ -78,7 +108,7 @@ for (iteration in 1:num_iterations) {
 
 Crea una animación utilizando ggplot2 y gganimate. Puedes utilizar un gráfico de dispersión para visualizar la convergencia del descenso de gradiente en cada iteración.
 
-```{r}
+
 p <- ggplot(results, aes(x = beta0, y = beta1)) +
   geom_point(aes(color = J), size = 2) +
   scale_color_gradient(low = "blue", high = "red") +
@@ -89,16 +119,16 @@ p <- ggplot(results, aes(x = beta0, y = beta1)) +
 
 # Guardar la animación en un archivo
 anim_save("descenso_gradiente.gif", p)
-```
+
 
 4. Como en este caso, tenemos disponible la solución óptima a este problema en la función lm. Podemos repetir (en un bucle) varias veces los pasos anteriores y hacer una comparativa con los estimadores ( ˆβ0 y ˆβ1) que devuelve dicha función. Por ejemplo, podría ser de interés comparar el valor de la función minimizada, J( ˆβ0, ˆβ1), con nuestros estimadores y con los obtenidos con la función lm.
 
-```{r}
+
 # Ajustar un modelo de regresión lineal con lm
 lm_model <- lm(yi ~ xi)
 lm_beta0 <- coef(lm_model)[1]
 lm_beta1 <- coef(lm_model)[2]
 lm_beta0
 lm_beta1
-```
+
 
