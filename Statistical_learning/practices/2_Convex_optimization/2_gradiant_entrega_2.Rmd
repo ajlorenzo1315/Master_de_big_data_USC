@@ -36,6 +36,7 @@ yi <- beta0 + beta1 * xi + epsilon  # Calculamos los valores del  y
 
 ```{r}
 # Crear un vector para almacenar las gráficas
+
 stds <- c(0.25, 0.5, 0.75, 1,2,3)
 n <- 100  # Número de datos
 beta0 <- 5
@@ -87,7 +88,8 @@ f <- function(x, beta0, beta1) {
 return(beta0 + beta1 * x)
 }
 
-# Definir la función de costo J(beta0, beta1) suma de residuis al cuadrado 
+# Definir la función de costo J(beta0, beta1) 
+#suma de residuis al cuadrado 
 grad_costo <- function(y,x,beta0, beta1) {
   # Obtenemos la el error de valor y la prediccion
   error <- y - f(x,beta0,beta1)

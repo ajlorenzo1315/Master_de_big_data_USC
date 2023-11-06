@@ -53,3 +53,5 @@ create index on etl.pelicula_productora(pelicula);
 
 ENTREGA INDIVIDUAL 3: Completa el trabajo añadiendo las transformaciones necesarias según lo descrito en el documento del proyecto. Entrega los archivos generados para el trabajo y las transformaciones a través del campus virtual.
 Última modificación: luns, 9 de outubro de 2023, 21:03
+
+${carpeta_in}	pelicuals-[0-9][0-9][0-9][0-9]-[0-9][0-9]\.xml	

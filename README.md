@@ -120,3 +120,4 @@ Identity added: /home/alourido/.ssh/id_ed25519 (ajlorenzo.1315@gmail.com)
 $ cat ~/.ssh/id_ed25519.pub
 
 ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIJT4n/7aiMazahN8LXlYPg/ns6dTzeJNbzJy7yN6L4Ur ajlorenzo.1315@gmail.com
+

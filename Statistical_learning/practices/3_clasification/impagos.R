@@ -7,5 +7,7 @@ attach(Default)
 # redecodifico la variable para intercambiar yes no por 1 o 0
 default01=rep(0,length(default))
 
+# Y categorica (Sí No) <- casificaión
+#x continun(balance)
 default01[defaukt=="Yes"]=1
 plot(balance,default01)

@@ -10,3 +10,4 @@ añadimos un nuevo cubo que llamaremos
 
 Cubo: satisfaccion
 
+creamos las dimensiones en base al esquema 
