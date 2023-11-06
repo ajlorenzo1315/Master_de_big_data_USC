@@ -1,0 +1,116 @@
+<Schema name="Cine peliculas_2" description="probar como funciona el problema de cien">
+  <Cube name="satisfacion" visible="true" cache="false" enabled="true">
+    <Table name="satisfaccion_usuarios" schema="public">
+    </Table>
+    <Dimension type="StandardDimension" visible="true" foreignKey="director" highCardinality="false" name="director">
+      <Hierarchy name="Jerarquiadirector" visible="true" hasAll="true" primaryKey="id">
+        <Table name="director" schema="public">
+        </Table>
+        <Level name="nombre" visible="true" table="director" column="nombre" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+        </Level>
+        <Level name="text_id" visible="true" table="director" column="text_id" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+        </Level>
+      </Hierarchy>
+    </Dimension>
+    <Dimension type="StandardDimension" visible="true" foreignKey="productor" highCardinality="false" name="productor">
+      <Hierarchy name="productor" visible="true" hasAll="true" primaryKey="id">
+        <Table name="productor" schema="public">
+        </Table>
+        <Level name="nombre" visible="true" table="productor" column="nombre" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+        </Level>
+        <Level name="text_id" visible="true" table="productor" column="text_id" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+        </Level>
+      </Hierarchy>
+    </Dimension>
+    <Dimension type="StandardDimension" visible="true" foreignKey="productora" highCardinality="false" name="productora">
+      <Hierarchy name="productora" visible="true" hasAll="true" primaryKey="id">
+        <Table name="productora" schema="public">
+        </Table>
+        <Level name="nombre" visible="true" table="productora" column="nombre" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+        </Level>
+        <Level name="text_id" visible="true" table="productora" column="text_id" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+        </Level>
+      </Hierarchy>
+    </Dimension>
+    <Dimension type="TimeDimension" visible="true" foreignKey="tiempo_emision" highCardinality="false" name="tiempo_emision">
+      <Hierarchy name="ano" visible="true" hasAll="true" primaryKey="id">
+        <Table name="tiempo" schema="public">
+        </Table>
+        <Level name="ano" visible="true" table="tiempo" column="ano" type="Integer" internalType="int" uniqueMembers="false" levelType="TimeYears" hideMemberIf="Never">
+        </Level>
+        <Level name="mes" visible="true" table="tiempo" column="mes" type="Integer" internalType="int" uniqueMembers="false" levelType="TimeMonths" hideMemberIf="Never">
+        </Level>
+        <Level name="mes_text" visible="true" table="tiempo" column="mes_texto" type="String" uniqueMembers="false" levelType="TimeMonths" hideMemberIf="Never">
+        </Level>
+      </Hierarchy>
+    </Dimension>
+    <Dimension type="TimeDimension" visible="true" foreignKey="tiempo_votacion" name="timepo_votacion">
+      <Hierarchy name="ano" visible="true" hasAll="true" primaryKey="id">
+        <Table name="tiempo" schema="public" alias="">
+        </Table>
+        <Level name="ano" visible="true" table="tiempo" column="ano" type="Integer" internalType="int" uniqueMembers="false" levelType="TimeYears" hideMemberIf="Never">
+        </Level>
+        <Level name="mes" visible="false" table="tiempo" column="mes" type="Integer" internalType="int" uniqueMembers="false" levelType="TimeMonths" hideMemberIf="Never">
+        </Level>
+        <Level name="mes_text" visible="true" table="tiempo" column="mes_texto" type="String" internalType="String" uniqueMembers="false" levelType="TimeMonths" hideMemberIf="Never">
+        </Level>
+      </Hierarchy>
+    </Dimension>
+    <Measure name="numero votos" column="votos" datatype="Numeric" aggregator="sum" visible="true">
+    </Measure>
+    <Measure name="satisfacion" column="satisfaccion" datatype="Numeric" aggregator="avg" visible="true">
+    </Measure>
+  </Cube>
+  <Cube name="finanzas" visible="true" cache="false" enabled="true">
+    <Table name="finanzas" schema="public">
+    </Table>
+    <Dimension type="StandardDimension" visible="true" foreignKey="director" highCardinality="false" name="director">
+      <Hierarchy name="Jerarquiadirector" visible="true" hasAll="true" primaryKey="id">
+        <Table name="director" schema="public">
+        </Table>
+        <Level name="nombre" visible="true" table="director" column="nombre" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+        </Level>
+        <Level name="text_id" visible="true" table="director" column="text_id" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+        </Level>
+      </Hierarchy>
+    </Dimension>
+    <Dimension type="StandardDimension" visible="true" foreignKey="productor" highCardinality="false" name="productor">
+      <Hierarchy name="productor" visible="true" hasAll="true" primaryKey="id">
+        <Table name="productor" schema="public">
+        </Table>
+        <Level name="nombre" visible="true" table="productor" column="nombre" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+        </Level>
+        <Level name="text_id" visible="true" table="productor" column="text_id" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+        </Level>
+      </Hierarchy>
+    </Dimension>
+    <Dimension type="StandardDimension" visible="true" foreignKey="productora" highCardinality="false" name="productora">
+      <Hierarchy name="productora" visible="true" hasAll="true" primaryKey="id">
+        <Table name="productora" schema="public">
+        </Table>
+        <Level name="nombre" visible="true" table="productora" column="nombre" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+        </Level>
+        <Level name="text_id" visible="true" table="productora" column="text_id" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+        </Level>
+      </Hierarchy>
+    </Dimension>
+    <Dimension type="TimeDimension" visible="true" foreignKey="tiempo" highCardinality="false" name="tiempo">
+      <Hierarchy name="ano" visible="true" hasAll="true" primaryKey="id">
+        <Table name="tiempo" schema="public">
+        </Table>
+        <Level name="ano" visible="true" table="tiempo" column="ano" type="Integer" internalType="int" uniqueMembers="false" levelType="TimeYears" hideMemberIf="Never">
+        </Level>
+        <Level name="mes" visible="true" table="tiempo" column="mes" type="Integer" internalType="int" uniqueMembers="false" levelType="TimeMonths" hideMemberIf="Never">
+        </Level>
+        <Level name="mes_text" visible="true" table="tiempo" column="mes_texto" type="String" uniqueMembers="false" levelType="TimeMonths" hideMemberIf="Never">
+        </Level>
+      </Hierarchy>
+    </Dimension>
+    <Measure name="coste" column="coste" datatype="Numeric" aggregator="sum" visible="true">
+    </Measure>
+    <Measure name="ingresos" column="ingresos" datatype="Numeric" aggregator="sum" visible="true">
+    </Measure>
+    <CalculatedMember name="beneficios" formatString="" caption="beneficios" formula="[Measures].ingresos-[Measures].coste" dimension="Measures" visible="true">
+    </CalculatedMember>
+  </Cube>
+</Schema>
