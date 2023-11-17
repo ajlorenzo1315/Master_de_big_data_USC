@@ -1,0 +1,70 @@
+mvn package
+[INFO] Scanning for projects...
+[INFO]                                                                         
+[INFO] ------------------------------------------------------------------------
+[INFO] Building citingpatents 0.0.1-SNAPSHOT
+[INFO] ------------------------------------------------------------------------
+Downloading: http://repository.jboss.org/nexus/content/groups/public/net/minidev/json-smart/maven-metadata.xml
+Downloading: https://repo.maven.apache.org/maven2/net/minidev/json-smart/maven-metadata.xml
+Downloading: https://repository.apache.org/content/repositories/snapshots/net/minidev/json-smart/maven-metadata.xml
+Downloading: https://s3-us-west-2.amazonaws.com/dynamodb-local/release/net/minidev/json-smart/maven-metadata.xml
+Downloaded: https://repo.maven.apache.org/maven2/net/minidev/json-smart/maven-metadata.xml (2 KB at 4.4 KB/sec)
+[INFO]   
+[INFO] --- maven-resources-plugin:2.6:resources (default-resources) @ citingpatents ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] skip non existing resourceDirectory /home/usc/cursos/curso111/01-citingpatents_combiner/src/main/resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.1:compile (default-compile) @ citingpatents ---
+[INFO] Changes detected - recompiling the module!
+[INFO] Compiling 3 source files to /home/usc/cursos/curso111/01-citingpatents_combiner/target/classes
+[INFO] -------------------------------------------------------------
+[ERROR] COMPILATION ERROR : 
+[INFO] -------------------------------------------------------------
+[ERROR] /home/usc/cursos/curso111/01-citingpatents_combiner/src/main/java/cursohadoop/citingpatents/CPDriver.java:[135,20] cannot find symbol
+  symbol:   method setCombiner(java.lang.Class<cursohadoop.citingpatents.CPMapper>)
+  location: variable job of type org.apache.hadoop.mapreduce.Job
+[INFO] 1 error
+[INFO] -------------------------------------------------------------
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD FAILURE
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time: 7.574 s
+[INFO] Finished at: 2023-11-09T16:28:05+01:00
+[INFO] Final Memory: 27M/213M
+[INFO] ------------------------------------------------------------------------
+[ERROR] Failed to execute goal org.apache.maven.plugins:maven-compiler-plugin:3.1:compile (default-compile) on project citingpatents: Compilation failure
+[ERROR] /home/usc/cursos/curso111/01-citingpatents_combiner/src/main/java/cursohadoop/citingpatents/CPDriver.java:[135,20] cannot find symbol
+[ERROR] symbol:   method setCombiner(java.lang.Class<cursohadoop.citingpatents.CPMapper>)
+[ERROR] location: variable job of type org.apache.hadoop.mapreduce.Job
+[ERROR] -> [Help 1]
+[ERROR] 
+[ERROR] To see the full stack trace of the errors, re-run Maven with the -e switch.
+[ERROR] Re-run Maven using the -X switch to enable full debug logging.
+[ERROR] 
+[ERROR] For more information about the errors and possible solutions, please read the following articles:
+[ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/MojoFailureException
+----------------------------------------
+
+
+23/11/09 16:42:28 INFO mapreduce.Job: Task Id : attempt_1678696618277_7042_m_000001_1, Status : FAILED
+Error: java.io.IOException: wrong value class: class org.apache.hadoop.io.Text is not class org.apache.hadoop.io.IntWritable
+	at org.apache.hadoop.mapred.IFile$Writer.append(IFile.java:194)
+	at org.apache.hadoop.mapred.Task$CombineOutputCollector.collect(Task.java:1493)
+	at org.apache.hadoop.mapred.Task$NewCombinerRunner$OutputConverter.write(Task.java:1810)
+	at org.apache.hadoop.mapreduce.task.TaskInputOutputContextImpl.write(TaskInputOutputContextImpl.java:89)
+	at org.apache.hadoop.mapreduce.lib.reduce.WrappedReducer$Context.write(WrappedReducer.java:105)
+	at cursohadoop.citingpatents.CPReducer.reduce(CPReducer.java:41)
+	at cursohadoop.citingpatents.CPReducer.reduce(CPReducer.java:18)
+	at org.apache.hadoop.mapreduce.Reducer.run(Reducer.java:171)
+	at org.apache.hadoop.mapred.Task$NewCombinerRunner.combine(Task.java:1831)
+	at org.apache.hadoop.mapred.MapTask$MapOutputBuffer.sortAndSpill(MapTask.java:1661)
+	at org.apache.hadoop.mapred.MapTask$MapOutputBuffer.flush(MapTask.java:1505)
+	at org.apache.hadoop.mapred.MapTask$NewOutputCollector.close(MapTask.java:735)
+	at org.apache.hadoop.mapred.MapTask.runNewMapper(MapTask.java:805)
+	at org.apache.hadoop.mapred.MapTask.run(MapTask.java:347)
+	at org.apache.hadoop.mapred.YarnChild$2.run(YarnChild.java:174)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at javax.security.auth.Subject.doAs(Subject.java:422)
+	at org.apache.hadoop.security.UserGroupInformation.doAs(UserGroupInformation.java:1731)
+	at org.apache.hadoop.mapred.YarnChild.main(YarnChild.java:168)
+

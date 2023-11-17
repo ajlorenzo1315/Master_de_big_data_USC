@@ -6,6 +6,9 @@ import org.apache.hadoop.io.IntWritable;
 import org.apache.hadoop.io.LongWritable;
 import org.apache.hadoop.io.Text;
 import org.apache.hadoop.mapreduce.Mapper;
+
+//me 
+import org.apache.commons.lang.StringUtils;
 /**
  * PBCMapper -> devuelve el pais de cada patente (etiquetado)
  * 
@@ -33,27 +36,26 @@ public class PBCMapper extends Mapper<LongWritable, Text, IntWritable, TaggedTex
 
 			// Tomamos el número de patente (campo 0) como IntWritable (para que nos los ordene numéricamente)
 			// TODO: Completa
-			final IntWritable patente = new IntWritable(Integer.parseInt(...));
+			final IntWritable patente = new IntWritable(Integer.parseInt(fields[0].toString()));
 		
 			// Cogemos el campo del país (campo 4), eliminando las comillas
 			// TODO: Completa
-			final String country = ....replace(...);
+			final String country = fields[4].replace("\"","");
 
 			// Cogemos el campo del año de concesión (campo 1)
 			// TODO: Completa
-			final String year = ...;
+			final String year = fields[1];
 			
 			// Unimos el país y el año (con una coma y sin espacios en blanco)
 			// TODO: Completa
-			final String countryYear = ...;
+			final String countryYear = StringUtils.join(new String[]{country,year}, ",");
 
 			// Le ponemos la etiqueta "country" al pais, creando una variable TaggedText
 			// TODO: Completa 
-			countryTagged.set(....);
-			
+			countryTagged.set(new Text("country"), new Text(countryYear));
 			// Escribimos la patente y el país etiquetado
 			// TODO: Completa
-			context.write(...);
+			context.write(patente,countryTagged);
 			
 		} catch (NumberFormatException e) {
 			System.err.println("Error procesando patente en PBCMapper "+fields[0]);

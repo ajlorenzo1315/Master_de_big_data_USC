@@ -36,7 +36,9 @@ package cursohadoop.citingpatents;
  *  	mapper -> CPMapper
  *              Para cada línea,convierte los números de patente a enteros (para ordenar numéricamente)
  * 				e invierte las columnas (patente citada, patente que cita)
- * 				
+ * 		
+ * 		Combiner -> CPReducer
+ * 						
  *      reducer -> CPReducer
  *    	 	Para cada línea, ordena las patentes que citan y las une en un string
  *      
@@ -116,20 +118,16 @@ public class CPDriver extends Configured implements Tool {
 
 		// TODO: Especifica el tipo de la clave y el valor de salida del mapper
 		// No es necesario si los tipos son iguales a los tipos de la salida 
-		// Especifica el tipo de la clave y el valor de salida del mapper
 		job.setMapOutputKeyClass(IntWritable.class);
 		job.setMapOutputValueClass(IntWritable.class);
 
 		// TODO: Especifica el tipo de la clave y el valor de salida final 
-		// Especifica el tipo de la clave y el valor de salida final
 		job.setOutputKeyClass(IntWritable.class);
 		job.setOutputValueClass(Text.class);
 
 		// TODO: Especifica el número de reducers
-		// Especifica el número de reducers
 		job.setNumReduceTasks(2);
 
-		// Especifica el mapper y el reducer
 		// Especifica el mapper y el reducer
 		job.setMapperClass(CPMapper.class);
 		job.setReducerClass(CPReducer.class);

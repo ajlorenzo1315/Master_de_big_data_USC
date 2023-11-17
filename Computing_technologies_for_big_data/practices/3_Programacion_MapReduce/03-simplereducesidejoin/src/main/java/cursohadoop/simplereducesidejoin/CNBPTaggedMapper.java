@@ -6,6 +6,7 @@ import org.apache.hadoop.io.IntWritable;
 import org.apache.hadoop.io.Text;
 import org.apache.hadoop.mapreduce.Mapper;
 
+
 public class CNBPTaggedMapper extends Mapper<IntWritable, IntWritable, IntWritable, TaggedText> {
 	/**
 	 * map - para cada línea de la salida de 02-citationnumberbypatent_chained, 
@@ -23,20 +24,21 @@ public class CNBPTaggedMapper extends Mapper<IntWritable, IntWritable, IntWritab
 		try {
 			// La clave es el número de la patente
 			// TODO: Completa
-			IntWritable npatente = ...;
+			IntWritable npatente = key;
 			
 			// El valor es el número de citas
 			// TODO: Completa
-			int ncites = ...;
+			int ncites = value.get();
 		
 			// Etiquetamos el número de citas con el texto "cite" para hacer el join
 			// pasando el número de citas a String
 			// TODO: Completa
-			nCitesTagged.set(...);
+			nCitesTagged.set(new Text("cite"),new Text(String.valueOf(ncites)));
 			
 			// Escribimos en el contexto el número de patente y el número de citas etiquetado
 			// TODO: Completa
-			context.write(...);
+			//context.write(new IntWritable(cited), new IntWritable(citing));
+			context.write(npatente,nCitesTagged);
 		} catch (NumberFormatException e) {
 			System.err.println("Error procesando patente en CNBPTaggedMapper "+key.toString());
 			context.setStatus("Error procesando patente en CNBPTaggedMapper "+key.toString());

@@ -20,4 +20,23 @@
         Crea un Combiner (modifica los códigos si es necesario). La salida con el Combiner debe se ser igual que antes. Recuerda que el Combiner debe ser opcional (el código debe funcionar igual se se usa el Combiner o si no se usa).
 
 
-    
+
+**Nota**:
+
+El mapper invierte y convierte las patentes a enteros, y el reducer ordena y concatena las patentes citantes.
+
+Sin embargo, hay un detalle a considerar respecto al uso del Combiner en el trabajo de Hadoop. En la clase CPReducer, estás realizando una operación de ordenación antes de concatenar las patentes. Si bien un Combiner puede ser útil para reducir el tráfico de red, se debe tener en cuenta que la salida de un Combiner no está garantizada que sea enviada en orden a los reducers.
+
+Cuando utilizas un Combiner, este actúa como un mini-reducer en la fase de map. Es importante recordar que la función del Combiner debe ser conmutativa y asociativa, ya que no hay garantía de que se ejecute sobre todos los datos de una clave en particular, ni sobre los datos en un orden específico.
+
+Dado que el Reducer depende del orden de los datos para la operación de concatenación, el uso de un Combiner que realiza exactamente la misma operación que el Reducer podría no ser adecuado en este caso, a menos que estés dispuesto a aceptar la posibilidad de tener las patentes citantes no completamente ordenadas en la salida final.
+
+Si decides utilizar un Combiner, tienes dos opciones:
+
+- Aceptar que las patentes citantes podrían no estar completamente ordenadas en la salida final.
+- Realizar una concatenación simple en el Combiner sin ordenar y dejar la ordenación para el Reducer.
+
+Para el segundo caso, tu Combiner simplemente concatenaría las patentes citantes, dejando la tarea de ordenación para el Reducer. Esto aún podría ser útil para reducir el volumen de datos transmitidos, pero mantendría la precisión del orden en el Reducer.
+
+
+va pasar cada patente el combiner patente citada cada mapert puede tratar varias veces con la mismoa patente cada reduce spacio y una lista ya haga la redución un mismo mammept puede manerjar la mismoa patente pasa todo junto reduce , no reordenados , en el combiner no strig con que datos se trabaja  el combiener puede existir o la salida de combiner va a ser una patente y una lista y la de combiener 

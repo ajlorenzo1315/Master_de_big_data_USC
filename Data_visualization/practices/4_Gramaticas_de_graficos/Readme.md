@@ -68,4 +68,3 @@ Inicia Jupyter Notebook en el entorno de Conda:
 
 jupyter notebook
 ```
-Esto abrirá una página en tu navegador web con el panel de control de Jupyter Notebook en el entorno de Conda. Desde el panel de control, puedes crear un nuevo cuaderno y seleccionar el kernel de R para escribir y ejecutar código R.

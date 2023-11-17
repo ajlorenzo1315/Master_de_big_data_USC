@@ -1,0 +1,302 @@
+21:57
+
+ 
+
+Disponemos de una muestra den = 200
+observaciones de una variable respuesta
+cuantitativa Y y una variable predictora X
+‘Supongamos que en realidad la relacién entre X e
+Y es polinémica de orden 3 (es decir, un polinomio
+de orden 3 ajusta perfectamente a la nube de
+puntos). Explica como se comporta en términos de
+sesgo y varianza un ajuste lineal.
+
+Dado que la nube de puntos no se ajusta a una
+regresién lineal el comportamiento del sesgo y la
+varianza.
+
+‘Tenemos un modelo muy rigido con solo un ajuste
+lineal, por lo tanto la varianza resultante seré muy
+pequefia como resultado de tener una linea recta
+
+para explicar esa nube de puntos.
+
+ 
+
+Por este mismo motivo tendremos un sesgo muy
+grande, ya que estamos intentando aproximar un
+Polinomio de grado 3 con un polinomio de grado 1,
+estamos usando un modelo demasiado simple
+para el problema.
+
+Por lo tanto el error estara dominado por el sesgo.
+
+Finalizar revision
+
+Analisis de Componentes Principales conR
+
+Bevusces
+21:57
+
+ 
+
+Con el siguiente script de R (hay que hacer
+
+matriz = model.matrix(mpg~., train) (,-1]
+y_lasso = train['mpg']
+
+y_lasso = unlist(y_lasso)
+
+y_lasso <- as.numeric(y lasso)
+
+ 
+ 
+
+lasso <- glmet(matriz, y_lasso,alpha = 1, 1
+coef(1asso)
+
+Vemos que los tinicos coeficientes que no tiene
+valor = 0 son:
+
+(Intercept) 29.
+
+ 
+
+weight
+Esto significa que la nica variable que las
+
+Mientras que la variable horsepower si tiende a 0
+con esta configuracién al tener menor
+significancia.
+
+4
+
+Se van haciendo 0 segtin cuanto explican de la
+variable a predecir, a més significado explicado
+més lento tienden a 0, por ese motivo Weight es la
+Ultima en tender a 0.
+
+pregunta 4
+Completa
+Punta come 6,00
+
+Ff Marcar a pregunta *
+
+Bevusces
+21:56
+
+ 
+
+Como vemos existen dos unicos coeficientes «
+Pero como vemos la variable horespower tiene
+Signif. codes: 0 ‘wre’ 0.001 ‘xx’ 0.01 ‘*”
+Vemos que una estrella significa que dependi
+2
+
+Muestra de train:
+
+y_train <- train['mpg']
+
+y_predicha <- predict (object=resultado, date
+sum((y_train ~ y_predicha)*2)/300
+
+Resultado:
+8.76459
+Muestra de test:
+
+y_test = test('mpg']
+y_predicha <- predict (object=resultado, date
+sum((y_test ~ y_predicha)*2)/92
+
+Resultado : 233.9155
+
+Como vemos tenemos un error relativamente bajo
+en la muestra de train, pero un error enorme en la
+muestra de test. Debido a que estamos usando
+una serie de variables que no son
+estadisticamente significativas y que hacen que no
+se realice una estimacién mejor.
+
+-
+
+Con el siguiente script de R (hay que hace
+
+Bevusces
+21:56
+
+ 
+
+-
+
+Se ha realizado el siguiente script en r:
+
+library (ISLR)
+
+coches <- Auto
+
+train <- Auto[1:300,]
+test <- Auto[301:392,]
+
+resultado <- Im(mpg ~
+cylinders+displacement+horsepower+weight,data
+= train)
+
+summary (resultado)
+
+Como resultado de la ultima linea obtenemos los
+coeficientes para las distintas variables:
+Coefficients:
+Estimate Std. Error t value Pr
+
+(Intercept) 39.934241 1.193316 33.465
+cylinders -0.166091 0.326780 -0.508
+displacement -0.002809 0.006940 -0.405
+horsepower -0.023264 0.009816 -2.370
+weight 0.004760 0.000546 -8.719
+
+Como vemos existen dos Unicos coeficientes ¢
+Pero como vemos la variable horespower tiene
+Signif. codes: 0 ‘wre’ 0.001 ‘xx’ 0.01 ‘*”
+Vemos que una estrella significa que dependi
+P
+
+a
+
+Muestra de train:
+
+Bevusces
+21:56
+
+ 
+
+Pregunta 2
+Completa
+Punta como 5,00
+
+F Marcar a pregunta
+
+‘Supongamos que ajustamos un modelo de
+regresi6n lineal mediante el procedimiento de
+estimacion Ridge, para un valor determinado de A.
+Explica cémo afecta a nivel de varianza en la
+estimacién de los coeficientes, el valor de A.
+
+ 
+
+En el caso de la estimacién de Ridge el termino A
+se multiplica la suma de los coeficientes al
+cuadrado. Teniendo en cuenta que lo que
+‘queremos es minimizar la funcién un valor alto
+
+de d significa que el valor de ese sumatorio tiene
+que ser menor, para asi minimizar el global de la
+funcién, por lo tanto un valor alto de A supone que
+mas coeficientes tenderdn a 0 y por lo tanto el
+modelo serd cada vez menos flexible. Esto supone
+que la varianza seré menor ya que el modelo es
+més rigido.
+
+ 
+
+En el caso contrario, con A con un valor pequefio,
+los valores de los coeficientes de este término no
+nen porque tender a 0 y por lo tanto existiré
+ms flexibilidad (més variables con coeficientes
+significativos) y por lo tanto aumentard la varianza.
+
+ 
+
+Pregunta 3 *
+
+Bevusces
+21:56
+
+ 
+
+El conjunto de datos Auto, incluido en la libreria
+ISLR contiene informacién correspondiente a
+‘consumo de combustible, potencia y otros datos
+técnicos sobre automéviles. Utiliza la funcién Im
+para ajustar un modelo de regresién lineal multiple
+‘que explique el consumo mpg en funcién de las
+variables cylinders, displacement, horsepower y
+weigh utilizando las primeras 300 observaciones
+(reserva las 92 observaciones restantes como
+muestra test). Contesta razonadamente a las
+siguientes preguntas:
+
+1. 2Qué predictores son estadisticamente
+significativos?
+
+2. Calcula el error cuadrético medio (MSE) para
+la muestra de entrenamiento y la muestra
+test obtenidos con el ajuste lineal.
+
+3. {Cudles son los coeficientes estimados al
+ajustar un modelo de regresién ala muestra
+de entrenamiento con regularizacién Lasso
+usando A = 3? Calcula el error cuadratico
+medio (MSE) para la muestra test.
+
+4, Alajustar un modelo de regresién con
+regularizacién Lasso, gen qué orden se
+hacen cero los coeficientes del modelo
+ajustado al incrementar el valor de la
+penalizacién A?
+
+ 
+
++
+
+Se ha realizado el siguiente script en r:
+
+Bevusces
+21:56
+
+ 
+
+Queremos predecir la edad de una persona a partir
+de la informacién obtenida de un escaner cerebral
+utilizando regresién. En la practica s6lo
+
+disponemos de 10 individuos para cada uno de los
+
+ 
+
+ 
+
+cuales registramos su edad y su actividad cerebral
+medida en 20000 regiones del cerebro. En este
+
+caso s
+
+ 
+
+preferible utilizar un modelo de
+regresi6n lineal multiple en lugar de un modelo de
+regresién Lasso.
+
+Sinuestros datos estan formados por una edad (lo
+‘que queremos predecir) denotada por 'y' y 20.000
+regiones del cerebro (las variables que usamos
+para predecir la edad) denotadas por xi, yendo ide
+0 a 19999, tendremos una gran cantidad de
+dimensiones. Tendremos todas estas variables
+pero muy pocos individuos (muestras), solamente
+10 por lo que no tendremos una gran cantidad de
+pares (edad, regiones del cerebro) lo que puede
+dificultar la regresién. A esto le unimos el
+problema de la colinearidad entre las diferentes x,
+que teniendo 20.000 distintas es muy probable
+que ocurra.
+
+Por estos motivos es preferible usar un modelo
+Lasso, ya que tender a dejar la mayoria de estas
+20.000 x a 0. Es decir, ira descartando las
+variables que no sirvan para explicar el resultado,
+reduciendo asi la dimensionalidad del modelo
+permitiendo quedarnos con una serie de variables
+més manejable.
+
+Bevusces
+

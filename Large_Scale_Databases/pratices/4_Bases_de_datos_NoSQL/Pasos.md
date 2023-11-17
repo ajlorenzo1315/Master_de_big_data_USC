@@ -419,41 +419,4 @@ nohup mongod --configsvr --replSet rsConfServer --port 27017 --bind_ip localhost
 
 nohup mongod --configsvr --replSet rsConfServer --port 27017 --bind_ip localhost --dbpath /home/alumnogreibd/BGDE/servconf --bind_ip localhost > /dev/null &
 
-nohup mongod --configsvr --replSet rsConfServer --port 27017 --dbpath /home/alumnogreibd/BDGE/servconf --bind_ip localhost > /dev/null &
-
-mongo --host localhost --port 27017
-MongoDB shell version v4.4.24
-connecting to: mongodb://localhost:27017/?compressors=disabled&gssapiServiceName=mongodb
-Implicit session: session { "id" : UUID("bce3f7f3-1041-43bd-8e36-ce428804ce12") }
-MongoDB server version: 4.4.24
----
-The server generated these startup warnings when booting: 
-        2023-11-02T19:18:17.363+01:00: Using the XFS filesystem is strongly recommended with the WiredTiger storage engine. See http://dochub.mongodb.org/core/prodnotes-filesystem
-        2023-11-02T19:18:17.672+01:00: Access control is not enabled for the database. Read and write access to data and configuration is unrestricted
-        2023-11-02T19:18:17.672+01:00: Soft rlimits too low
-        2023-11-02T19:18:17.672+01:00:         currentValue: 1024
-        2023-11-02T19:18:17.672+01:00:         recommendedMinimum: 64000
----
-> rs.initiate({
-...   _id: "rsConfServer",
-...   configsvr: true,
-...   members: [{_id: 0, host: "localhost:27017"}]
-... })
-{
-        "ok" : 1,
-        "$gleStats" : {
-                "lastOpTime" : Timestamp(1698949124, 1),
-                "electionId" : ObjectId("000000000000000000000000")
-        },
-        "lastCommittedOpTime" : Timestamp(0, 0),
-        "$clusterTime" : {
-                "clusterTime" : Timestamp(1698949124, 1),
-                "signature" : {
-                        "hash" : BinData(0,"AAAAAAAAAAAAAAAAAAAAAAAAAAA="),
-                        "keyId" : NumberLong(0)
-                }
-        },
-        "operationTime" : Timestamp(1698949124, 1)
-}
-rsConfServer:SECONDARY> 
 

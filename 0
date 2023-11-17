@@ -23,3 +23,23 @@ https://github.com/Fedeparg/TGINE
 
 https://github.com/jesusGS01/TGINE
 https://github.com/jesusGS01/BDGE
+
+
+https://github.com/dsevilla/bdge
+https://github.com/adrymyry/bdge/blob/18-19/sql/sesion2.ipynb
+
+
+https://github.com/selenak666?tab=repositories
+https://github.com/trevorreynen/AI-and-Computer-Vision-Class
+
+
+remote: Resolving deltas: 100% (638/638), completed with 22 local objects.
+remote: error: Trace: 76c6d9a35ccaa5ff76f938d019477bc2b07f823a59e345b52d462c0eb2f605f2
+remote: error: See https://gh.io/lfs for more information.
+remote: error: File Computing_technologies_for_big_data/practices/3_Programacion_MapReduce/cesga/curso111/apat63_99.txt is 117.47 MB; this exceeds GitHub's file size limit of 100.00 MB
+remote: error: File Computing_technologies_for_big_data/practices/3_Programacion_MapReduce/cesga/curso111/cite75_99.txt is 107.12 MB; this exceeds GitHub's file size limit of 100.00 MB
+remote: error: File Computing_technologies_for_big_data/practices/3_Programacion_MapReduce/patentes.tar.gz is 133.43 MB; this exceeds GitHub's file size limit of 100.00 MB
+remote: error: GH001: Large files detected. You may want to try Git Large File Storage - https://git-lfs.github.com.
+To github.com:ajlorenzo1315/Master_de_big_data_USC.git
+ ! [remote rejected] main -> main (pre-receive hook declined)
+error: failed to push some refs to 'github.com:ajlorenzo1315/Master_de_big_data_USC.git'

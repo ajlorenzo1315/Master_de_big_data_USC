@@ -12,6 +12,15 @@ import org.apache.hadoop.mapreduce.lib.input.TextInputFormat;
 import org.apache.hadoop.mapreduce.lib.output.FileOutputFormat;
 import org.apache.hadoop.util.Tool;
 import org.apache.hadoop.util.ToolRunner;
+
+//me
+
+import cursohadoop.simplereducesidejoin.PBCMapper;
+import cursohadoop.simplereducesidejoin.CNBPTaggedMapper;
+
+import cursohadoop.simplereducesidejoin.SRSJReducer;
+import cursohadoop.simplereducesidejoin.TaggedText;
+
 /**
  * Driver para probar un Reduce Side Join simple
  * 
@@ -66,47 +75,60 @@ public class SRSJDriver extends Configured implements Tool {
 
 		/* Obtiene la configuración por defecto */
 		Configuration conf = getConf();
-		
+		conf.set("mapreduce.input.keyvaluelinerecordreader.key.value.separator", ",");
+				
 		// TODO: Completa la creación del job a partir de la configuración actual
-		Job job = ...
-		job.setJobName(...);
-		job.setJarByClass(...);
-
-		/* Paths de entrada y salida */
-		Path entradaCitas = ...;
-		Path entradaInfo = ...;
-		Path salida = ...;
+		Job job = Job.getInstance(conf);
+		job.setJobName("Trabajo encadenado");
 		
+		//específicamente en el contexto de aplicaciones 
+		// Hadoop MapReduce. Este método es importante para 
+		// configurar adecuadamente tu trabajo MapReduce. 
+		/* Fija el jar del trabajo a partir de la clase del objeto actual */
+		//job.setJarByClass(getClass());
+		job.setJarByClass(SRSJDriver.class);
+		/* Paths de entrada y salida */
+		Path entradaCitas  = new Path(args[0]);
+		Path entradaInfo = new Path(args[1]);
+		Path salida = new Path(args[2]);
+
 		// Como tenemos dos entradas diferentes (con dos mappers diferentes)
 		// usamos MultipleInputs, indicando en path de entrada, el formato
 		// de la entrada y el mapper a usar para cada una 
 		// TODO: Completa
-		MultipleInputs.addInputPath(...);
-		MultipleInputs.addInputPath(...);
+		MultipleInputs.addInputPath(job, entradaCitas, TextInputFormat.class, CNBPTaggedMapper.class);
+        MultipleInputs.addInputPath(job, entradaInfo, TextInputFormat.class, PBCMapper.class);
+
 		
 		/* Añadimos el path de salida */
 		// TODO: Completa
-		FileOutputFormat.setOutputPath(...);
-
+		FileOutputFormat.setOutputPath(job, salida);
+		
 		// Especifica el tipo de la clave y el valor de salida de los mappers
 		// La clave intermedia es la patente (nº entero)
 		// Los valores intermedios serán de tipo TaggedText
 		// TODO: Completa
-		job..........;
-		job..........;		
+
+		job.setInputFormatClass(TextInputFormat.class);
+		job.setOutputFormatClass(FileOutputFormat.class);
+
 		
 		// Especifica el tipo de la clave y el valor de salida final
 		// TODO: Completa
-		job............;
-		job............;
-		
+		job.setMapOutputKeyClass(IntWritable.class);
+        job.setMapOutputValueClass(TaggedText.class);
 		// Especifica el número de reducers (revisa las especificaciones de la práctica)
 		// TODO: Completa
-		job...............;
+		job.setNumReduceTasks(1);
 
 		// Especifica el reducer
 		// TODO: Completa
-		job............;
+		job.setOutputKeyClass(IntWritable.class);
+
+        // Asegúrate de que las clases Mapper y Reducer estén correctamente configuradas
+        job.setMapperClass(CNBPTaggedMapper.class); // Ejemplo, ajusta según sea necesario
+        job.setMapperClass(PBCMapper.class);       // Ejemplo, ajusta según sea necesario
+        job.setReducerClass(SRSJReducer.class);
 
 		// Lanza el trabajo y espera a que termine
 		return job.waitForCompletion(true) ? 0 : 1;

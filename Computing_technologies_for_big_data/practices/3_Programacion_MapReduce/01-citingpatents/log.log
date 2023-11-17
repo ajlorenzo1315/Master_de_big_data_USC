@@ -314,3 +314,4 @@ WARNING: YARN_OPTS has been replaced by HADOOP_OPTS. Using value of YARN_OPTS.
 		Bytes Read=112525312
 	File Output Format Counters 
 		Bytes Written=31030602
+

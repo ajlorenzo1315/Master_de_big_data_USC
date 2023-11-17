@@ -53,3 +53,4 @@ table(knniris10,iris$Species)
 
 library(MASS)
 lda.fit=lda(Species~iris$Petal.Length+iris$Petal.Width,data=iris)
+lda.fit
