@@ -1,0 +1,12 @@
+select productora, t.ano, t.mes, s.votos,
+    s.votos / lag(s.votos, 1, NULL) over (partition by productora order by  t.ano, t.mes) as ratio_incremento_satisfaccion,
+    first_value(s.votos) over (partition by productora, t.ano order by s.votos desc) as mejor_valoracion_por_ano,
+    first_value(s.votos) over (partition by productora, t.ano order by s.votos asc) as peor_valoracion_por_ano,
+    rank() over (order by s.votos desc) as ranking_total,
+    rank() over (partition by productora order by s.votos desc) as ranking_productora
+from satisfaccion_usuarios s ,director d , productora p ,tiempo t
+where s.director = d.id and s.productora = p.id and s.tiempo_votacion = t.id
+group by rollup(productora, t.ano, t.mes , s.votos)
+having s.productora is not NULL and t.ano is not NULL and  t.mes is not null  and 
+s.votos is not null 
+order by productora, t.ano, t.mes;

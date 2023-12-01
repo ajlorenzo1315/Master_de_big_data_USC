@@ -1,0 +1,746 @@
+<!DOCTYPE html>
+<html class=" js flexbox flexboxlegacy canvas canvastext webgl no-touch geolocation postmessage no-websqldatabase indexeddb hashchange history draganddrop websockets rgba hsla multiplebgs backgroundsize borderimage borderradius boxshadow textshadow opacity cssanimations csscolumns cssgradients no-cssreflections csstransforms no-csstransforms3d csstransitions fontface no-generatedcontent video audio localstorage sessionstorage webworkers no-applicationcache svg inlinesvg smil svgclippaths"><head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		  <title>Entrega</title>
+  <script language="javascript" type="text/javascript" src="Entrega_files/webcontext.js"></script><script language="javascript" type="text/javascript" src="Entrega_files/client-config-enabler-require-js-cfg.js"></script><script language="javascript" type="text/javascript" src="Entrega_files/cdf-require-js-cfg.js"></script><script language="javascript" type="text/javascript" src="Entrega_files/common-ui-require-js-cfg.js"></script><script language="javascript" type="text/javascript" src="Entrega_files/cde-require-js-cfg.js"></script><script language="javascript" type="text/javascript" src="Entrega_files/require-js-cfg.js"></script><script language="javascript" type="text/javascript" src="Entrega_files/reporting-require-js-cfg.js"></script><script type="text/javascript" src="Entrega_files/require.js"></script><script type="text/javascript" src="Entrega_files/require-cfg.js"></script><script type="text/javascript" src="Entrega_files/require-init.js"></script>
+
+	<script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="cdf/Dashboard.Bootstrap" src="Entrega_files/Dashboard.Bootstrap.js"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="cdf/Logger" src="Entrega_files/Logger.js"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="amd" src="Entrega_files/nonamd.js"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="cdf/lib/moment" src="Entrega_files/moment.js"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="cdf/lib/CCC/cdo" src="Entrega_files/cdo.js"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="cdf/lib/CCC/def" src="Entrega_files/def.js"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="cdf/lib/CCC/protovis-compat" src="Entrega_files/protovis-compat.js"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="cdf/lib/CCC/pvc" src="Entrega_files/pvc.js"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="cdf/dashboard/Utils" src="Entrega_files/Utils.js"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="cdf/components/SelectComponent" src="Entrega_files/SelectComponent.js"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="cdf/components/ccc/CccBarChartComponent" src="Entrega_files/CccBarChartComponent.js"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="text" src="Entrega_files/text.js"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="cdf/lib/Base" src="Entrega_files/Base.js"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="pentaho/environment/main" src="Entrega_files/platformCore.js"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="cdf/lib/shims" src="Entrega_files/shims.js"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="cdf/dashboard/Dashboard.ext" src="Entrega_files/Dashboard.ext.js"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="cdf/dashboard/Dashboard.context.ext" src="Entrega_files/Dashboard.context.ext.js"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="cdf/lib/mustache" src="Entrega_files/mustache.js"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="cdf/lib/cdf.jquery.i18n" src="Entrega_files/cdf.jquery.i18n.js"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="cdf/queries/CdaQuery.ext" src="Entrega_files/CdaQuery.ext.js"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="cdf/components/XactionComponent.ext" src="Entrega_files/XactionComponent.ext.js"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="common-ui/util/require-css/css" src="Entrega_files/css.js"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="cdf/components/UnmanagedComponent" src="Entrega_files/UnmanagedComponent.js"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="cdf/dashboard/Dashboard.notifications.ext" src="Entrega_files/Dashboard.notifications.ext.js"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="cdf/dashboard/Utf8Encoder" src="Entrega_files/Utf8Encoder.js"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="cdf/dashboard/Dashboard.storage.ext" src="Entrega_files/Dashboard.storage.ext.js"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="cdf/dashboard/Dashboard.views.ext" src="Entrega_files/Dashboard.views.ext.js"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="cdf/queries/XmlaQuery.ext" src="Entrega_files/XmlaQuery.ext.js"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="cdf/components/BaseComponent" src="Entrega_files/BaseComponent.js"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="cdf/lib/html5shiv" src="Entrega_files/html5shiv.js"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="cdf/lib/jquery" src="Entrega_files/jquery.js"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="cdf/components/SelectBaseComponent" src="Entrega_files/SelectBaseComponent.js"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="cdf/components/ccc/BaseCccComponent" src="Entrega_files/BaseCccComponent.js"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="cdf/lib/CCC/tipsy" src="Entrega_files/tipsy.js"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="common-ui/util/URLEncoder" src="Entrega_files/URLEncoder.js"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="cdf/components/InputBaseComponent" src="Entrega_files/InputBaseComponent.js"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="cdf/components/ChartComponent" src="Entrega_files/ChartComponent.js"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="cdf/components/ccc/BaseCccComponent.ext" src="Entrega_files/BaseCccComponent.ext.js"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="cdf/lib/modernizr" src="Entrega_files/modernizr-2.8.3.js"></script><link type="text/css" rel="stylesheet" href="Entrega_files/Dashboard.legacy.css"><link type="text/css" rel="stylesheet" href="Entrega_files/Popups.css"><link type="text/css" rel="stylesheet" href="Entrega_files/Dashboard.notifications.css"><link type="text/css" rel="stylesheet" href="Entrega_files/Dashboard.css"><link type="text/css" rel="stylesheet" href="Entrega_files/font-awesome.css"><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="cdf/components/ChartComponent.ext" src="Entrega_files/ChartComponent.ext.js"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="cdf/components/CggComponent.ext" src="Entrega_files/CggComponent.ext.js"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="cdf/lib/base64" src="Entrega_files/base64.js"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="cdf/lib/CCC/protovis" src="Entrega_files/protovis.js"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="cdf/lib/CCC/jquery.tipsy" src="Entrega_files/jquery.tipsy.js"></script><link type="text/css" rel="stylesheet" href="Entrega_files/jquery-impromptu.css"><link type="text/css" rel="stylesheet" href="Entrega_files/tipsy_002.css"><link type="text/css" rel="stylesheet" href="Entrega_files/bootstrap.css"><link type="text/css" rel="stylesheet" href="Entrega_files/chosen.css"><link type="text/css" rel="stylesheet" href="Entrega_files/jquery.multiselect.css"><link type="text/css" rel="stylesheet" href="Entrega_files/select2.css"><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="cdf/lib/sanitizer/lib/html4" src="Entrega_files/html4.js"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="cdf/lib/sanitizer/lib/uri" src="Entrega_files/uri.js"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="cdf/lib/sanitizer" src="Entrega_files/sanitizer.js"></script><link type="text/css" rel="stylesheet" href="Entrega_files/jquery-ui-1.10.4.custom.css"><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="cdf/lib/respond" src="Entrega_files/respond.js"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="@pentaho/config-deploy/pentaho/config/deploy/config" src="Entrega_files/config_002.js"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="pentaho/visual/config" src="Entrega_files/config.js"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="pentaho/visual/color/palettes/nominalPrimary" src="Entrega_files/platformBundle.js"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="pentaho/i18n/serverService" src="Entrega_files/serverService.js"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="json" src="Entrega_files/json.js"></script><link type="text/css" rel="stylesheet" href="Entrega_files/tipsy.css"></head>
+	<body class="" style="">
+		<style>
+			body.fouc-protected {
+			  display: none;
+			}
+		</style>
+		<script type="text/javascript">
+			document.getElementsByTagName("body")[0].className = "fouc-protected";
+		</script>
+		
+  <div class="container"><div id="Header" class="row clearfix "><div class="col-xs-12 last"><div id="54a44da1-7877-627d-a0da-d4c43078de19" class="cdfdd-round " style="background-color: rgb(0, 90, 199); height: 60px; text-align: center; border-radius: 10px;"><h2 style="color:#FFFFFF;">Directores</h2> </div></div></div><div id="spacer" class="row clearfix " style="height:40px;"></div><div id="Body" class="row clearfix "><div class="col-xs-12 last"><div id="Body_Content"><div id="selecter_periodo" class="row clearfix " style="height:10px;"><div class="col-xs-0"><div id="03a3b0eb-07ed-4ac8-ff56-93f5cc6bd922"></div></div><div class="col-xs-1"><div id="periodo"><p style="color:#005ac7;">Período: </p></div></div><div class="col-xs-1"><div id="year_name_1_new"><p style="color:#005ac7;">Año Inicio </p></div></div><div class="col-xs-1"><div id="select_ano_inicio"><select><option value="1996">1996</option><option value="1997">1997</option><option value="1998">1998</option><option value="1999">1999</option><option value="2000">2000</option><option value="2001">2001</option><option value="2002">2002</option><option value="2003">2003</option><option value="2004">2004</option><option value="2005">2005</option><option value="2006" selected="selected">2006</option><option value="2007">2007</option><option value="2008">2008</option><option value="2009">2009</option><option value="2010">2010</option><option value="2011">2011</option><option value="2012">2012</option><option value="2013">2013</option><option value="2014">2014</option><option value="2015">2015</option><option value="2016">2016</option></select></div></div><div class="col-xs-1"><div id="year_name_2_new"><p style="color:#005ac7;">Año Fin </p></div></div><div class="col-xs-5"><div id="select_ano_fin"><select><option value="1996">1996</option><option value="1997">1997</option><option value="1998">1998</option><option value="1999">1999</option><option value="2000">2000</option><option value="2001">2001</option><option value="2002">2002</option><option value="2003">2003</option><option value="2004">2004</option><option value="2005">2005</option><option value="2006">2006</option><option value="2007">2007</option><option value="2008">2008</option><option value="2009">2009</option><option value="2010">2010</option><option value="2011">2011</option><option value="2012">2012</option><option value="2013">2013</option><option value="2014">2014</option><option value="2015">2015</option><option value="2016" selected="selected">2016</option></select></div></div><div class="col-xs-3 last"><div id="f46a55cb-9e31-560f-f07f-f8b692ebfd9a"></div></div></div><div id="spacer_new_new" class="row clearfix " style="height:30px;"></div><div id="selecter_directores" class="row clearfix " style="height:30px;"><div class="col-xs-1"><div id="director_name_1"><p style="color:#005ac7;">Director_1 </p></div></div><div class="col-xs-5"><div id="select_director_1"><select><option value="Andrew Stanton">Andrew Stanton</option><option value="Sam Mendes">Sam Mendes</option><option value="Luc Besson">Luc Besson</option><option value="Gore Verbinski">Gore Verbinski</option><option value="David Silverman">David Silverman</option><option value="David Cronenberg">David Cronenberg</option><option value="Clint Eastwood">Clint Eastwood</option><option value="Tony Kaye">Tony Kaye</option><option value="Steven Spielberg">Steven Spielberg</option><option value="Michael Mann">Michael Mann</option><option value="Michael Bay">Michael Bay</option><option value="Ridley Scott">Ridley Scott</option><option value="Guy Ritchie">Guy Ritchie</option><option value="Tim Burton">Tim Burton</option><option value="Peter Jackson">Peter Jackson</option><option value="Joel Coen">Joel Coen</option><option value="Richard Kelly">Richard Kelly</option><option value="Christopher Nolan">Christopher Nolan</option><option value="Steven Soderbergh">Steven Soderbergh</option><option value="Sydney Pollack">Sydney Pollack</option><option value="Jonathan Frakes">Jonathan Frakes</option><option value="Stuart Baird">Stuart Baird</option><option value="Stephen Gaghan">Stephen Gaghan</option><option value="Stephen Frears">Stephen Frears</option><option value="Jonathan Mostow">Jonathan Mostow</option><option value="Martin Brest">Martin Brest</option><option value="Tom Shadyac">Tom Shadyac</option><option value="Pitof">Pitof</option><option value="David R. Ellis">David R. Ellis</option><option value="Joe Johnston">Joe Johnston</option><option value="Paul Thomas Anderson">Paul Thomas Anderson</option><option value="Stanley Kubrick">Stanley Kubrick</option><option value="David Frankel">David Frankel</option><option value="Spike Lee">Spike Lee</option><option value="Paul W.S. Anderson">Paul W.S. Anderson</option><option value="Joel Schumacher">Joel Schumacher</option><option value="Wes Anderson">Wes Anderson</option><option value="Chris Wedge">Chris Wedge</option><option value="Roland Emmerich">Roland Emmerich</option><option value="Ron Howard">Ron Howard</option><option value="Baz Luhrmann">Baz Luhrmann</option><option value="John Singleton">John Singleton</option><option value="Larry Charles">Larry Charles</option><option value="Frank Darabont">Frank Darabont</option><option value="Wolfgang Petersen">Wolfgang Petersen</option><option value="Richard Curtis">Richard Curtis</option><option value="McG">McG</option><option value="Robert Redford">Robert Redford</option><option value="David Fincher">David Fincher</option><option value="Sam Raimi">Sam Raimi</option><option value="Francis Lawrence">Francis Lawrence</option><option value="Paul Verhoeven">Paul Verhoeven</option><option value="Stephen Sommers">Stephen Sommers</option><option value="Pete Docter">Pete Docter</option><option value="Barry Levinson">Barry Levinson</option><option value="Stephen Daldry">Stephen Daldry</option><option value="James Cameron">James Cameron</option><option value="Barry Sonnenfeld">Barry Sonnenfeld</option><option value="Mel Gibson">Mel Gibson</option><option value="Edward Zwick">Edward Zwick</option><option value="Sharon Maguire">Sharon Maguire</option><option value="Jan de Bont">Jan de Bont</option><option value="Chris Columbus">Chris Columbus</option><option value="Alfonso Cuarón">Alfonso Cuarón</option><option value="Mike Newell">Mike Newell</option><option value="David Yates" selected="selected">David Yates</option><option value="Robert Zemeckis">Robert Zemeckis</option><option value="Jay Roach">Jay Roach</option><option value="Gus Van Sant">Gus Van Sant</option><option value="Edgar Wright">Edgar Wright</option><option value="James McTeigue">James McTeigue</option><option value="John Woo">John Woo</option><option value="Andrew Niccol">Andrew Niccol</option><option value="Cameron Crowe">Cameron Crowe</option><option value="Brad Silberling">Brad Silberling</option><option value="Roger Kumble">Roger Kumble</option><option value="John Moore">John Moore</option><option value="Rob Bowman">Rob Bowman</option><option value="Jean-Jacques Annaud">Jean-Jacques Annaud</option><option value="John Lasseter">John Lasseter</option><option value="Brian Levant">Brian Levant</option><option value="John McTiernan">John McTiernan</option><option value="Dean Parisot">Dean Parisot</option><option value="Richard Donner">Richard Donner</option><option value="Brian De Palma">Brian De Palma</option><option value="J.J. Abrams">J.J. Abrams</option><option value="Josef Rusnak">Josef Rusnak</option><option value="Bill Condon">Bill Condon</option><option value="Anthony Minghella">Anthony Minghella</option><option value="Sylvester Stallone">Sylvester Stallone</option><option value="Robert De Niro">Robert De Niro</option><option value="Mark Steven Johnson">Mark Steven Johnson</option><option value="Stephen J. Anderson">Stephen J. Anderson</option><option value="Zack Snyder">Zack Snyder</option><option value="Kevin Munroe">Kevin Munroe</option><option value="Darren Aronofsky">Darren Aronofsky</option><option value="Gabriele Muccino">Gabriele Muccino</option><option value="Martin Scorsese">Martin Scorsese</option><option value="Robert Rodriguez">Robert Rodriguez</option><option value="Todd Field">Todd Field</option><option value="Bryan Singer">Bryan Singer</option><option value="Guillermo del Toro">Guillermo del Toro</option><option value="Donald Petrie">Donald Petrie</option><option value="Marcus Nispel">Marcus Nispel</option><option value="Tony Scott">Tony Scott</option><option value="Roger Michell">Roger Michell</option><option value="Mike Judge">Mike Judge</option><option value="Len Wiseman">Len Wiseman</option><option value="Nancy Meyers">Nancy Meyers</option><option value="Richard Linklater">Richard Linklater</option><option value="David Koepp">David Koepp</option><option value="Gregory Hoblit">Gregory Hoblit</option><option value="Shawn Levy">Shawn Levy</option><option value="Xavier Gens">Xavier Gens</option><option value="Harold Ramis">Harold Ramis</option><option value="Bronwen Hughes">Bronwen Hughes</option><option value="Martin Campbell">Martin Campbell</option><option value="Taylor Hackford">Taylor Hackford</option><option value="Stephen Hopkins">Stephen Hopkins</option><option value="Simon West">Simon West</option><option value="Steven Zaillian">Steven Zaillian</option><option value="John Madden">John Madden</option><option value="Louis Leterrier">Louis Leterrier</option><option value="Jon Favreau">Jon Favreau</option><option value="Rob Minkoff">Rob Minkoff</option><option value="Rob Cohen">Rob Cohen</option><option value="Lee Tamahori">Lee Tamahori</option><option value="Neil Jordan">Neil Jordan</option><option value="Peter Segal">Peter Segal</option><option value="John Schlesinger">John Schlesinger</option><option value="Oliver Stone">Oliver Stone</option><option value="Rob Marshall">Rob Marshall</option><option value="Terry Gilliam">Terry Gilliam</option><option value="Sofia Coppola">Sofia Coppola</option><option value="Pat O'Connor">Pat O'Connor</option><option value="Ang Lee">Ang Lee</option><option value="Marc Webb">Marc Webb</option><option value="Andrew Davis">Andrew Davis</option><option value="Takashi Shimizu">Takashi Shimizu</option><option value="Tim Story">Tim Story</option><option value="James Gray">James Gray</option><option value="Adam Shankman">Adam Shankman</option><option value="Gary Sinyor">Gary Sinyor</option><option value="Steven Brill">Steven Brill</option><option value="Antoine Fuqua">Antoine Fuqua</option><option value="Alejandro Agresti">Alejandro Agresti</option><option value="Alex Proyas">Alex Proyas</option><option value="Kevin Costner">Kevin Costner</option><option value="Michael Cristofer">Michael Cristofer</option><option value="Jon Turteltaub">Jon Turteltaub</option><option value="Jonathan Lynn">Jonathan Lynn</option><option value="Gavin Hood">Gavin Hood</option><option value="Andrzej Bartkowiak">Andrzej Bartkowiak</option><option value="Rod Lurie">Rod Lurie</option><option value="Brett Ratner">Brett Ratner</option><option value="Brian Helgeland">Brian Helgeland</option><option value="Carl Franklin">Carl Franklin</option><option value="Curtis Hanson">Curtis Hanson</option><option value="Simon Wells">Simon Wells</option><option value="Chris Nahon">Chris Nahon</option><option value="Hugh Johnson">Hugh Johnson</option><option value="Liam Lynch">Liam Lynch</option><option value="Chris Weitz">Chris Weitz</option><option value="Matthew Vaughn">Matthew Vaughn</option><option value="Mike Nichols">Mike Nichols</option><option value="Iain Softley">Iain Softley</option><option value="Mike Binder">Mike Binder</option><option value="Stefen Fangmeier">Stefen Fangmeier</option><option value="Doug Liman">Doug Liman</option><option value="Paul Greengrass">Paul Greengrass</option><option value="James L. Brooks">James L. Brooks</option><option value="John Boorman">John Boorman</option><option value="Anand Tucker">Anand Tucker</option><option value="Bonnie Hunt">Bonnie Hunt</option><option value="Marc Lawrence">Marc Lawrence</option><option value="M. Night Shyamalan">M. Night Shyamalan</option><option value="John Herzfeld">John Herzfeld</option><option value="Alexander Payne">Alexander Payne</option><option value="J.B. Rogers">J.B. Rogers</option><option value="Rob Reiner">Rob Reiner</option><option value="James Mangold">James Mangold</option><option value="Rand Ravich">Rand Ravich</option><option value="Ken Kwapis">Ken Kwapis</option><option value="Betty Thomas">Betty Thomas</option><option value="Bruce A. Evans">Bruce A. Evans</option><option value="Dennis Dugan">Dennis Dugan</option><option value="Jim Gillespie">Jim Gillespie</option><option value="Danny Cannon">Danny Cannon</option><option value="Scott Hicks">Scott Hicks</option><option value="Susanne Bier">Susanne Bier</option><option value="Trey Parker">Trey Parker</option><option value="Ted Demme">Ted Demme</option><option value="Michael Davis">Michael Davis</option><option value="Joe Wright">Joe Wright</option><option value="Peter Berg">Peter Berg</option><option value="Robert Luketic">Robert Luketic</option><option value="Gary Ross">Gary Ross</option><option value="Alan J. Pakula">Alan J. Pakula</option><option value="Andrew Dominik">Andrew Dominik</option><option value="David Slade">David Slade</option><option value="Shekhar Kapur">Shekhar Kapur</option><option value="Kevin Lima">Kevin Lima</option><option value="F. Gary Gray">F. Gary Gray</option><option value="Michael Patrick King">Michael Patrick King</option><option value="Garry Marshall">Garry Marshall</option><option value="Phil Alden Robinson">Phil Alden Robinson</option><option value="Rod Hardy">Rod Hardy</option><option value="Michael Caton-Jones">Michael Caton-Jones</option><option value="Ron Shelton">Ron Shelton</option><option value="George Clooney">George Clooney</option><option value="Gil Junger">Gil Junger</option><option value="Judd Apatow">Judd Apatow</option><option value="Edward Norton">Edward Norton</option><option value="Mathieu Kassovitz">Mathieu Kassovitz</option><option value="Kirsten Sheridan">Kirsten Sheridan</option><option value="Kerry Conran">Kerry Conran</option><option value="Shane Black">Shane Black</option><option value="David Dobkin">David Dobkin</option><option value="Roger Christian">Roger Christian</option><option value="Clark Johnson">Clark Johnson</option><option value="Tom Dey">Tom Dey</option><option value="Ivan Reitman">Ivan Reitman</option><option value="Bob Spiers">Bob Spiers</option><option value="Lawrence Kasdan">Lawrence Kasdan</option><option value="David McNally">David McNally</option><option value="James Foley">James Foley</option><option value="David O. Russell">David O. Russell</option><option value="Griffin Dunne">Griffin Dunne</option><option value="Ronny Yu">Ronny Yu</option><option value="Tim Hill">Tim Hill</option><option value="Jay Chandrasekhar">Jay Chandrasekhar</option><option value="Rodman Flender">Rodman Flender</option><option value="Jake Kasdan">Jake Kasdan</option><option value="Craig Gillespie">Craig Gillespie</option><option value="Matt Reeves">Matt Reeves</option><option value="Peter Hedges">Peter Hedges</option><option value="Thomas Carter">Thomas Carter</option><option value="Steve Carr">Steve Carr</option><option value="Breck Eisner">Breck Eisner</option><option value="Jim Sheridan">Jim Sheridan</option><option value="Ben Stiller">Ben Stiller</option><option value="Garth Jennings">Garth Jennings</option><option value="Pete Travis">Pete Travis</option><option value="Joe Carnahan">Joe Carnahan</option><option value="Marc Forster">Marc Forster</option><option value="Jean-Pierre Jeunet">Jean-Pierre Jeunet</option><option value="E. Elias Merhige">E. Elias Merhige</option><option value="Jared Hess">Jared Hess</option><option value="Karyn Kusama">Karyn Kusama</option><option value="Mark Waters">Mark Waters</option><option value="D.J. Caruso">D.J. Caruso</option><option value="Jesse Dylan">Jesse Dylan</option><option value="Jon M. Chu">Jon M. Chu</option><option value="Greg Mottola">Greg Mottola</option><option value="Nick Cassavetes">Nick Cassavetes</option><option value="Andy Tennant">Andy Tennant</option><option value="Peter Weir">Peter Weir</option><option value="Mimi Leder">Mimi Leder</option><option value="Kathryn Bigelow">Kathryn Bigelow</option><option value="Pierre Morel">Pierre Morel</option><option value="Nigel Cole">Nigel Cole</option><option value="Stephen Norrington">Stephen Norrington</option><option value="Michael McCullers">Michael McCullers</option><option value="Chris Carter">Chris Carter</option><option value="Charles S. Dutton">Charles S. Dutton</option><option value="Tarsem Singh">Tarsem Singh</option><option value="Roger Donaldson">Roger Donaldson</option><option value="Charles Shyer">Charles Shyer</option><option value="Kenneth Johnson">Kenneth Johnson</option><option value="Danny Leiner">Danny Leiner</option><option value="Antony Hoffman">Antony Hoffman</option><option value="Timur Bekmambetov">Timur Bekmambetov</option><option value="Renny Harlin">Renny Harlin</option><option value="Peter Hewitt">Peter Hewitt</option><option value="Sam Weisman">Sam Weisman</option><option value="John Bonito">John Bonito</option><option value="Kimberly Peirce">Kimberly Peirce</option><option value="Walter Salles">Walter Salles</option><option value="Jeff Tremaine">Jeff Tremaine</option><option value="Michael Lembeck">Michael Lembeck</option><option value="Tom Vaughan">Tom Vaughan</option><option value="Frank Marshall">Frank Marshall</option><option value="Kevin Reynolds">Kevin Reynolds</option><option value="Andrew Fleming">Andrew Fleming</option><option value="Jean-Claude Van Damme">Jean-Claude Van Damme</option><option value="John Stockwell">John Stockwell</option><option value="Chuck Russell">Chuck Russell</option><option value="Todd Phillips">Todd Phillips</option><option value="James Wong">James Wong</option><option value="Gil Kenan">Gil Kenan</option><option value="Paul Weitz">Paul Weitz</option><option value="Robert Schwentke">Robert Schwentke</option><option value="Jeremiah S. Chechik">Jeremiah S. Chechik</option><option value="Walter Hill">Walter Hill</option><option value="Frank Coraci">Frank Coraci</option><option value="Jon Amiel">Jon Amiel</option><option value="Jeff Schaffer">Jeff Schaffer</option><option value="Luis Llosa">Luis Llosa</option><option value="Glenn Gordon Caron">Glenn Gordon Caron</option><option value="John Bruno">John Bruno</option><option value="David Nutter">David Nutter</option><option value="Peter Cattaneo">Peter Cattaneo</option><option value="John Fortenberry">John Fortenberry</option><option value="Gilbert Adler">Gilbert Adler</option><option value="Gary Fleder">Gary Fleder</option><option value="Warren Beatty">Warren Beatty</option><option value="Stephen Chow">Stephen Chow</option><option value="Rawson Marshall Thurber">Rawson Marshall Thurber</option><option value="Phillip Noyce">Phillip Noyce</option><option value="Peter Howitt">Peter Howitt</option><option value="Nora Ephron">Nora Ephron</option><option value="Tamra Davis">Tamra Davis</option><option value="Les Mayfield">Les Mayfield</option><option value="Chris Koch">Chris Koch</option><option value="Raja Gosnell">Raja Gosnell</option><option value="Justin Lin">Justin Lin</option><option value="Steve Beck">Steve Beck</option><option value="Andy Fickman">Andy Fickman</option><option value="Dominic Sena">Dominic Sena</option><option value="Niki Caro">Niki Caro</option><option value="Neil LaBute">Neil LaBute</option><option value="Adam McKay">Adam McKay</option><option value="Richard Loncraine">Richard Loncraine</option><option value="Brian Robbins">Brian Robbins</option><option value="Anne Fletcher">Anne Fletcher</option><option value="Phil Joanou">Phil Joanou</option><option value="Peyton Reed">Peyton Reed</option><option value="Costa-Gavras">Costa-Gavras</option><option value="Adam Rifkin">Adam Rifkin</option><option value="Catherine Hardwicke">Catherine Hardwicke</option><option value="Steve Pink">Steve Pink</option><option value="Alexandre Aja">Alexandre Aja</option><option value="Beeban Kidron">Beeban Kidron</option><option value="Brad Bird">Brad Bird</option><option value="Bob Odenkirk">Bob Odenkirk</option><option value="John R. Leonetti">John R. Leonetti</option><option value="Kinka Usher">Kinka Usher</option><option value="Simon Wincer">Simon Wincer</option><option value="Jim Abrahams">Jim Abrahams</option><option value="Nicholas Stoller">Nicholas Stoller</option><option value="Andrew Bergman">Andrew Bergman</option><option value="Frank Oz">Frank Oz</option><option value="Jerry Zucker">Jerry Zucker</option><option value="Steve 'Spaz' Williams">Steve 'Spaz' Williams</option><option value="John A. Davis">John A. Davis</option><option value="Steve Oedekerk">Steve Oedekerk</option><option value="Werner Herzog">Werner Herzog</option><option value="Matthew O'Callaghan">Matthew O'Callaghan</option><option value="Mark Dindal">Mark Dindal</option><option value="Gary Winick">Gary Winick</option><option value="Bille Woodruff">Bille Woodruff</option><option value="John Carpenter">John Carpenter</option><option value="Andrew Douglas">Andrew Douglas</option><option value="Jaume Collet-Serra">Jaume Collet-Serra</option><option value="Ben Garant">Ben Garant</option><option value="Jeff Wadlow">Jeff Wadlow</option><option value="Michael Apted">Michael Apted</option><option value="Terry Zwigoff">Terry Zwigoff</option><option value="Troy Miller">Troy Miller</option><option value="Joshua Michael Stern">Joshua Michael Stern</option><option value="David Gordon Green">David Gordon Green</option><option value="Mike Mitchell">Mike Mitchell</option><option value="Lee Unkrich">Lee Unkrich</option><option value="Kenneth Branagh">Kenneth Branagh</option><option value="Scott Derrickson">Scott Derrickson</option><option value="Peter Medak">Peter Medak</option><option value="Rupert Wainwright">Rupert Wainwright</option><option value="Charles Herman-Wurmfeld">Charles Herman-Wurmfeld</option><option value="Mark A.Z. Dippé">Mark A.Z. Dippé</option><option value="Bryan Spicer">Bryan Spicer</option><option value="Diane Keaton">Diane Keaton</option><option value="Alan Parker">Alan Parker</option><option value="Bruce Beresford">Bruce Beresford</option><option value="Norman Jewison">Norman Jewison</option><option value="Marcus Raboy">Marcus Raboy</option><option value="Stephen T. Kay">Stephen T. Kay</option><option value="William Friedkin">William Friedkin</option><option value="Michael Patrick Jann">Michael Patrick Jann</option><option value="Henry Selick">Henry Selick</option><option value="Nicholas Hytner">Nicholas Hytner</option><option value="Matt Williams">Matt Williams</option><option value="P.J. Hogan">P.J. Hogan</option><option value="Boaz Yakin">Boaz Yakin</option><option value="Gregory Poirier">Gregory Poirier</option><option value="Vondie Curtis-Hall">Vondie Curtis-Hall</option><option value="Joe Dante">Joe Dante</option><option value="Joseph Kahn">Joseph Kahn</option><option value="Ernest R. Dickerson">Ernest R. Dickerson</option><option value="John Lee Hancock">John Lee Hancock</option><option value="Paul Weiland">Paul Weiland</option><option value="Ringo Lam">Ringo Lam</option><option value="Jeb Stuart">Jeb Stuart</option><option value="Harald Zwart">Harald Zwart</option><option value="Audrey Wells">Audrey Wells</option><option value="Jessie Nelson">Jessie Nelson</option><option value="Dennie Gordon">Dennie Gordon</option><option value="Lawrence Guterman">Lawrence Guterman</option><option value="Peter Hyams">Peter Hyams</option><option value="Penny Marshall">Penny Marshall</option><option value="Vadim Perelman">Vadim Perelman</option><option value="John Polson">John Polson</option><option value="Jay Russell">Jay Russell</option><option value="Sara Sugarman">Sara Sugarman</option><option value="Paul McGuigan">Paul McGuigan</option><option value="Mark Rosman">Mark Rosman</option><option value="Mikael Salomon">Mikael Salomon</option><option value="Kirk Jones">Kirk Jones</option><option value="Kevin Bray">Kevin Bray</option><option value="William Malone">William Malone</option><option value="Joel Gallen">Joel Gallen</option><option value="Christian Duguay">Christian Duguay</option><option value="Terrence Malick">Terrence Malick</option><option value="Stephen Kessler">Stephen Kessler</option><option value="Angela Robinson">Angela Robinson</option><option value="Mike Bigelow">Mike Bigelow</option><option value="Harold Becker">Harold Becker</option><option value="Wes Craven">Wes Craven</option><option value="James Isaac">James Isaac</option><option value="John Whitesell">John Whitesell</option><option value="John Landis">John Landis</option><option value="Hugh Wilson">Hugh Wilson</option><option value="Phyllida Lloyd">Phyllida Lloyd</option><option value="Kevin Rodney Sullivan">Kevin Rodney Sullivan</option><option value="Gary David Goldberg">Gary David Goldberg</option><option value="Stephen Herek">Stephen Herek</option><option value="George A. Romero">George A. Romero</option><option value="Ron Underwood">Ron Underwood</option><option value="Geoffrey Sax">Geoffrey Sax</option><option value="James Wan">James Wan</option><option value="Stephen Hillenburg">Stephen Hillenburg</option><option value="Courtney Solomon">Courtney Solomon</option><option value="Barbet Schroeder">Barbet Schroeder</option><option value="Francis Ford Coppola">Francis Ford Coppola</option><option value="Michael Rymer">Michael Rymer</option><option value="Demian Lichtenstein">Demian Lichtenstein</option><option value="Keenen Ivory Wayans">Keenen Ivory Wayans</option><option value="Marco Schnabel">Marco Schnabel</option><option value="Peter Sollett">Peter Sollett</option><option value="Seth Gordon">Seth Gordon</option><option value="Shane Acker">Shane Acker</option><option value="Malcolm D. Lee">Malcolm D. Lee</option><option value="David Twohy">David Twohy</option><option value="Danny Boyle">Danny Boyle</option><option value="Mike Figgis">Mike Figgis</option><option value="Fred Wolf">Fred Wolf</option><option value="Andy Wilson">Andy Wilson</option><option value="Jessy Terrero">Jessy Terrero</option><option value="Ed Harris">Ed Harris</option><option value="Liz Friedlander">Liz Friedlander</option><option value="Reginald Hudlin">Reginald Hudlin</option><option value="Robert C. Cooper">Robert C. Cooper</option><option value="Gavin O'Connor">Gavin O'Connor</option><option value="Tim Fywell">Tim Fywell</option><option value="Agustín Díaz Yanes">Agustín Díaz Yanes</option><option value="Philip Kaufman">Philip Kaufman</option><option value="Susannah Grant">Susannah Grant</option><option value="David S. Goyer">David S. Goyer</option><option value="Christian Robinson">Christian Robinson</option><option value="Nick Moore">Nick Moore</option><option value="Diane English">Diane English</option><option value="Deb Hagan">Deb Hagan</option><option value="Michael Mayer">Michael Mayer</option><option value="Sean McNamara">Sean McNamara</option><option value="Ben Younger">Ben Younger</option><option value="Barry W. Blaustein">Barry W. Blaustein</option><option value="Félix Enríquez Alcalá">Félix Enríquez Alcalá</option><option value="Michele Placido">Michele Placido</option><option value="Stewart Hendler">Stewart Hendler</option><option value="John Schultz">John Schultz</option><option value="Jonathan Demme">Jonathan Demme</option><option value="Steve Trenbirth">Steve Trenbirth</option><option value="Thor Freudenthal">Thor Freudenthal</option><option value="Risa Bramon Garcia">Risa Bramon Garcia</option><option value="David Wain">David Wain</option><option value="Bill Paxton">Bill Paxton</option><option value="Paul Abascal">Paul Abascal</option><option value="Jun Falkenstein">Jun Falkenstein</option><option value="Shusuke Kaneko">Shusuke Kaneko</option><option value="David Raynr">David Raynr</option><option value="Charles Stone III">Charles Stone III</option><option value="Joss Whedon">Joss Whedon</option><option value="Stig Bergqvist">Stig Bergqvist</option><option value="Scott Silver">Scott Silver</option><option value="Spike Jonze">Spike Jonze</option><option value="Tony Gilroy">Tony Gilroy</option><option value="Francine McDougall">Francine McDougall</option><option value="Quentin Tarantino">Quentin Tarantino</option><option value="Kevin Macdonald">Kevin Macdonald</option><option value="Burr Steers">Burr Steers</option><option value="Kevin Allen">Kevin Allen</option><option value="Wayne Wang">Wayne Wang</option><option value="Jonathan Kaplan">Jonathan Kaplan</option><option value="Rob Pritts">Rob Pritts</option><option value="Des McAnuff">Des McAnuff</option><option value="Michael Ritchie">Michael Ritchie</option><option value="Davis Guggenheim">Davis Guggenheim</option><option value="Peter Chelsom">Peter Chelsom</option><option value="Kevin Hooks">Kevin Hooks</option><option value="Jim Fall">Jim Fall</option><option value="Frederik Du Chau">Frederik Du Chau</option><option value="Hoyt Yeatman">Hoyt Yeatman</option><option value="Peter Billingsley">Peter Billingsley</option><option value="Ruben Fleischer">Ruben Fleischer</option><option value="Nikhil Advani">Nikhil Advani</option><option value="Joseph Kosinski">Joseph Kosinski</option><option value="Jimmy Hayward">Jimmy Hayward</option><option value="Charles Martin Smith">Charles Martin Smith</option><option value="Lauren Lazin">Lauren Lazin</option><option value="Robert Towne">Robert Towne</option><option value="Drew Barrymore">Drew Barrymore</option><option value="Olatunde Osunsanmi">Olatunde Osunsanmi</option><option value="Jason Reitman">Jason Reitman</option><option value="Walt Becker">Walt Becker</option><option value="Ben Affleck">Ben Affleck</option><option value="Samuel Bayer">Samuel Bayer</option><option value="John Curran">John Curran</option><option value="Phil Traill">Phil Traill</option><option value="Kevin Smith">Kevin Smith</option><option value="Neil Marshall">Neil Marshall</option><option value="Uli Edel">Uli Edel</option><option value="Brandon Camp">Brandon Camp</option><option value="Vicky Jenson">Vicky Jenson</option><option value="Mike Tollin">Mike Tollin</option><option value="John Sayles">John Sayles</option><option value="Ulu Grosbard">Ulu Grosbard</option><option value="Miguel Sapochnik">Miguel Sapochnik</option><option value="Richard Benjamin">Richard Benjamin</option><option value="Jim Field Smith">Jim Field Smith</option><option value="Ashwani Dhir">Ashwani Dhir</option><option value="David Hogan">David Hogan</option><option value="Robert Butler">Robert Butler</option><option value="Rick Famuyiwa">Rick Famuyiwa</option><option value="Sylvain White">Sylvain White</option><option value="Nimród Antal">Nimród Antal</option><option value="Susanna White">Susanna White</option><option value="Alan Shapiro">Alan Shapiro</option><option value="Steve Miner">Steve Miner</option><option value="Florian Henckel von Donnersmarck">Florian Henckel von Donnersmarck</option><option value="Jorma Taccone">Jorma Taccone</option><option value="Goro Miyazaki">Goro Miyazaki</option><option value="George Nolfi">George Nolfi</option><option value="Tom McGrath">Tom McGrath</option><option value="Nanette Burstein">Nanette Burstein</option><option value="Ryan Murphy">Ryan Murphy</option><option value="Rob Letterman">Rob Letterman</option><option value="Randall Wallace">Randall Wallace</option><option value="Brad Peyton">Brad Peyton</option><option value="Steve Boyum">Steve Boyum</option><option value="Tod Williams">Tod Williams</option><option value="Paul Feig">Paul Feig</option><option value="John Erick Dowdle">John Erick Dowdle</option><option value="Jonathan Liebesman">Jonathan Liebesman</option><option value="Kelly Asbury">Kelly Asbury</option><option value="Richard LaGravenese">Richard LaGravenese</option><option value="Richard Rich">Richard Rich</option><option value="Paul Mazursky">Paul Mazursky</option><option value="Mikael Håfström">Mikael Håfström</option><option value="Alister Grierson">Alister Grierson</option><option value="Jason Winer">Jason Winer</option><option value="Gary Shore">Gary Shore</option><option value="Jennifer Yuh Nelson">Jennifer Yuh Nelson</option><option value="Tate Taylor">Tate Taylor</option><option value="Bernard Rose">Bernard Rose</option><option value="Michael Dowse">Michael Dowse</option><option value="Joe Nussbaum">Joe Nussbaum</option><option value="Neil Burger">Neil Burger</option><option value="Noam Murro">Noam Murro</option><option value="Todd Strauss-Schulson">Todd Strauss-Schulson</option><option value="Steven Quale">Steven Quale</option><option value="Oliver Parker">Oliver Parker</option><option value="Rupert Sanders">Rupert Sanders</option><option value="Daisy von Scherler Mayer">Daisy von Scherler Mayer</option><option value="Thomas Bezucha">Thomas Bezucha</option><option value="Tom Hanks">Tom Hanks</option><option value="Daniel Espinosa">Daniel Espinosa</option><option value="Tommy Wirkola">Tommy Wirkola</option><option value="Bennett Miller">Bennett Miller</option><option value="Matthijs van Heijningen Jr.">Matthijs van Heijningen Jr.</option><option value="Rupert Wyatt">Rupert Wyatt</option><option value="Dan Scanlon">Dan Scanlon</option><option value="James Bobin">James Bobin</option><option value="George Miller">George Miller</option><option value="Kevin Tancharoen">Kevin Tancharoen</option><option value="Duncan Jones">Duncan Jones</option><option value="Sergei Bodrov">Sergei Bodrov</option><option value="Seth MacFarlane">Seth MacFarlane</option><option value="Anthony Hemingway">Anthony Hemingway</option><option value="Christopher McQuarrie">Christopher McQuarrie</option><option value="Alan Taylor">Alan Taylor</option><option value="Genndy Tartakovsky">Genndy Tartakovsky</option><option value="Keanu Reeves">Keanu Reeves</option><option value="Josh Trank">Josh Trank</option><option value="Baltasar Kormákur">Baltasar Kormákur</option><option value="David Soren">David Soren</option><option value="Todd Lincoln ">Todd Lincoln </option><option value="Akiva Schaffer">Akiva Schaffer</option><option value="Peter Ramsey">Peter Ramsey</option><option value="Andrucha Waddington">Andrucha Waddington</option><option value="Mark Tonderai">Mark Tonderai</option><option value="Olivier Megaton">Olivier Megaton</option><option value="Josh Schwartz">Josh Schwartz</option><option value="Tom Hooper">Tom Hooper</option><option value="Dean DeBlois">Dean DeBlois</option><option value="Sean Anders">Sean Anders</option><option value="Eric Brevig">Eric Brevig</option><option value="José Padilha">José Padilha</option><option value="Alex Kurtzman">Alex Kurtzman</option><option value="Robert Stromberg">Robert Stromberg</option><option value="Peter Sohn">Peter Sohn</option><option value="Lasse Hallström">Lasse Hallström</option><option value="James Gunn">James Gunn</option><option value="Don Scardino">Don Scardino</option><option value="Gareth Edwards">Gareth Edwards</option><option value="Andy Muschietti">Andy Muschietti</option><option value="Colin Trevorrow">Colin Trevorrow</option><option value="Scott Waugh">Scott Waugh</option><option value="Akiva Goldsman">Akiva Goldsman</option><option value="Ken Scott">Ken Scott</option><option value="Gregory Plotkin">Gregory Plotkin</option><option value="Hayao Miyazaki">Hayao Miyazaki</option><option value="Klay Hall">Klay Hall</option><option value="Jean-Marc Vallée">Jean-Marc Vallée</option><option value="Giuseppe Tornatore">Giuseppe Tornatore</option><option value="Mike Flanagan">Mike Flanagan</option><option value="James DeMonaco">James DeMonaco</option><option value="Scott Cooper">Scott Cooper</option><option value="Rob Thomas">Rob Thomas</option><option value="Doug Ellin">Doug Ellin</option><option value="Luke Greenfield">Luke Greenfield</option><option value="Alejandro González Iñárritu">Alejandro González Iñárritu</option><option value="Will Gluck">Will Gluck</option><option value="Neill Blomkamp">Neill Blomkamp</option><option value="Wes Ball">Wes Ball</option><option value="Oleg Stepchenko">Oleg Stepchenko</option><option value="Miguel Arteta">Miguel Arteta</option><option value="Roberts Gannaway">Roberts Gannaway</option><option value="Josh Boone">Josh Boone</option><option value="Ben Falcone">Ben Falcone</option><option value="Shana Feste">Shana Feste</option><option value="Angelina Jolie">Angelina Jolie</option><option value="Dean Israelite">Dean Israelite</option><option value="David Ayer">David Ayer</option><option value="Tim Johnson">Tim Johnson</option><option value="Paul Tibbitt">Paul Tibbitt</option><option value="Jorge R. Gutierrez">Jorge R. Gutierrez</option><option value="Michael Hoffman">Michael Hoffman</option><option value="Gina Prince-Bythewood">Gina Prince-Bythewood</option><option value="Stiles White">Stiles White</option><option value="Jeff Nichols">Jeff Nichols</option><option value="Aleksander Bach">Aleksander Bach</option><option value="R.J. Cutler">R.J. Cutler</option><option value="Elizabeth Banks">Elizabeth Banks</option><option value="Etan Cohen">Etan Cohen</option><option value="Greg McLean">Greg McLean</option><option value="Christian Ditter">Christian Ditter</option><option value="Gregory Jacobs">Gregory Jacobs</option><option value="Christopher B. Landon">Christopher B. Landon</option><option value="Morten Tyldum">Morten Tyldum</option><option value="Derek Cianfrance">Derek Cianfrance</option><option value="Michael Dougherty">Michael Dougherty</option><option value="Cedric Nicolas-Troyan">Cedric Nicolas-Troyan</option><option value="Tim Miller">Tim Miller</option><option value="David Lowery">David Lowery</option><option value="Thea Sharrock">Thea Sharrock</option><option value="J Blakeson">J Blakeson</option><option value="Dave Green">Dave Green</option><option value="Zhang Yimou">Zhang Yimou</option><option value="Ryan Coogler">Ryan Coogler</option><option value="Tom McCarthy">Tom McCarthy</option><option value="Jake Szymanski">Jake Szymanski</option><option value="Mira Nair">Mira Nair</option><option value="Dexter Fletcher">Dexter Fletcher</option><option value="Peter Landesman">Peter Landesman</option><option value="Chris Renaud">Chris Renaud</option><option value="Denis Villeneuve">Denis Villeneuve</option><option value="Dan Trachtenberg">Dan Trachtenberg</option><option value="David E. Talbert">David E. Talbert</option><option value="Tom Ford">Tom Ford</option><option value="Peter Atencio">Peter Atencio</option><option value="John Hamburg">John Hamburg</option><option value="Nitesh Tiwari">Nitesh Tiwari</option><option value="Luke Scott">Luke Scott</option><option value="Denzel Washington">Denzel Washington</option></select></div></div><div class="col-xs-1"><div id="director_name_2"><p style="color:#005ac7;">Director_2 </p></div></div><div class="col-xs-5 last"><div id="select_director_2"><select><option value="Andrew Stanton">Andrew Stanton</option><option value="Sam Mendes">Sam Mendes</option><option value="Luc Besson">Luc Besson</option><option value="Gore Verbinski">Gore Verbinski</option><option value="David Silverman">David Silverman</option><option value="David Cronenberg">David Cronenberg</option><option value="Clint Eastwood">Clint Eastwood</option><option value="Tony Kaye">Tony Kaye</option><option value="Steven Spielberg">Steven Spielberg</option><option value="Michael Mann">Michael Mann</option><option value="Michael Bay" selected="selected">Michael Bay</option><option value="Ridley Scott">Ridley Scott</option><option value="Guy Ritchie">Guy Ritchie</option><option value="Tim Burton">Tim Burton</option><option value="Peter Jackson">Peter Jackson</option><option value="Joel Coen">Joel Coen</option><option value="Richard Kelly">Richard Kelly</option><option value="Christopher Nolan">Christopher Nolan</option><option value="Steven Soderbergh">Steven Soderbergh</option><option value="Sydney Pollack">Sydney Pollack</option><option value="Jonathan Frakes">Jonathan Frakes</option><option value="Stuart Baird">Stuart Baird</option><option value="Stephen Gaghan">Stephen Gaghan</option><option value="Stephen Frears">Stephen Frears</option><option value="Jonathan Mostow">Jonathan Mostow</option><option value="Martin Brest">Martin Brest</option><option value="Tom Shadyac">Tom Shadyac</option><option value="Pitof">Pitof</option><option value="David R. Ellis">David R. Ellis</option><option value="Joe Johnston">Joe Johnston</option><option value="Paul Thomas Anderson">Paul Thomas Anderson</option><option value="Stanley Kubrick">Stanley Kubrick</option><option value="David Frankel">David Frankel</option><option value="Spike Lee">Spike Lee</option><option value="Paul W.S. Anderson">Paul W.S. Anderson</option><option value="Joel Schumacher">Joel Schumacher</option><option value="Wes Anderson">Wes Anderson</option><option value="Chris Wedge">Chris Wedge</option><option value="Roland Emmerich">Roland Emmerich</option><option value="Ron Howard">Ron Howard</option><option value="Baz Luhrmann">Baz Luhrmann</option><option value="John Singleton">John Singleton</option><option value="Larry Charles">Larry Charles</option><option value="Frank Darabont">Frank Darabont</option><option value="Wolfgang Petersen">Wolfgang Petersen</option><option value="Richard Curtis">Richard Curtis</option><option value="McG">McG</option><option value="Robert Redford">Robert Redford</option><option value="David Fincher">David Fincher</option><option value="Sam Raimi">Sam Raimi</option><option value="Francis Lawrence">Francis Lawrence</option><option value="Paul Verhoeven">Paul Verhoeven</option><option value="Stephen Sommers">Stephen Sommers</option><option value="Pete Docter">Pete Docter</option><option value="Barry Levinson">Barry Levinson</option><option value="Stephen Daldry">Stephen Daldry</option><option value="James Cameron">James Cameron</option><option value="Barry Sonnenfeld">Barry Sonnenfeld</option><option value="Mel Gibson">Mel Gibson</option><option value="Edward Zwick">Edward Zwick</option><option value="Sharon Maguire">Sharon Maguire</option><option value="Jan de Bont">Jan de Bont</option><option value="Chris Columbus">Chris Columbus</option><option value="Alfonso Cuarón">Alfonso Cuarón</option><option value="Mike Newell">Mike Newell</option><option value="David Yates">David Yates</option><option value="Robert Zemeckis">Robert Zemeckis</option><option value="Jay Roach">Jay Roach</option><option value="Gus Van Sant">Gus Van Sant</option><option value="Edgar Wright">Edgar Wright</option><option value="James McTeigue">James McTeigue</option><option value="John Woo">John Woo</option><option value="Andrew Niccol">Andrew Niccol</option><option value="Cameron Crowe">Cameron Crowe</option><option value="Brad Silberling">Brad Silberling</option><option value="Roger Kumble">Roger Kumble</option><option value="John Moore">John Moore</option><option value="Rob Bowman">Rob Bowman</option><option value="Jean-Jacques Annaud">Jean-Jacques Annaud</option><option value="John Lasseter">John Lasseter</option><option value="Brian Levant">Brian Levant</option><option value="John McTiernan">John McTiernan</option><option value="Dean Parisot">Dean Parisot</option><option value="Richard Donner">Richard Donner</option><option value="Brian De Palma">Brian De Palma</option><option value="J.J. Abrams">J.J. Abrams</option><option value="Josef Rusnak">Josef Rusnak</option><option value="Bill Condon">Bill Condon</option><option value="Anthony Minghella">Anthony Minghella</option><option value="Sylvester Stallone">Sylvester Stallone</option><option value="Robert De Niro">Robert De Niro</option><option value="Mark Steven Johnson">Mark Steven Johnson</option><option value="Stephen J. Anderson">Stephen J. Anderson</option><option value="Zack Snyder">Zack Snyder</option><option value="Kevin Munroe">Kevin Munroe</option><option value="Darren Aronofsky">Darren Aronofsky</option><option value="Gabriele Muccino">Gabriele Muccino</option><option value="Martin Scorsese">Martin Scorsese</option><option value="Robert Rodriguez">Robert Rodriguez</option><option value="Todd Field">Todd Field</option><option value="Bryan Singer">Bryan Singer</option><option value="Guillermo del Toro">Guillermo del Toro</option><option value="Donald Petrie">Donald Petrie</option><option value="Marcus Nispel">Marcus Nispel</option><option value="Tony Scott">Tony Scott</option><option value="Roger Michell">Roger Michell</option><option value="Mike Judge">Mike Judge</option><option value="Len Wiseman">Len Wiseman</option><option value="Nancy Meyers">Nancy Meyers</option><option value="Richard Linklater">Richard Linklater</option><option value="David Koepp">David Koepp</option><option value="Gregory Hoblit">Gregory Hoblit</option><option value="Shawn Levy">Shawn Levy</option><option value="Xavier Gens">Xavier Gens</option><option value="Harold Ramis">Harold Ramis</option><option value="Bronwen Hughes">Bronwen Hughes</option><option value="Martin Campbell">Martin Campbell</option><option value="Taylor Hackford">Taylor Hackford</option><option value="Stephen Hopkins">Stephen Hopkins</option><option value="Simon West">Simon West</option><option value="Steven Zaillian">Steven Zaillian</option><option value="John Madden">John Madden</option><option value="Louis Leterrier">Louis Leterrier</option><option value="Jon Favreau">Jon Favreau</option><option value="Rob Minkoff">Rob Minkoff</option><option value="Rob Cohen">Rob Cohen</option><option value="Lee Tamahori">Lee Tamahori</option><option value="Neil Jordan">Neil Jordan</option><option value="Peter Segal">Peter Segal</option><option value="John Schlesinger">John Schlesinger</option><option value="Oliver Stone">Oliver Stone</option><option value="Rob Marshall">Rob Marshall</option><option value="Terry Gilliam">Terry Gilliam</option><option value="Sofia Coppola">Sofia Coppola</option><option value="Pat O'Connor">Pat O'Connor</option><option value="Ang Lee">Ang Lee</option><option value="Marc Webb">Marc Webb</option><option value="Andrew Davis">Andrew Davis</option><option value="Takashi Shimizu">Takashi Shimizu</option><option value="Tim Story">Tim Story</option><option value="James Gray">James Gray</option><option value="Adam Shankman">Adam Shankman</option><option value="Gary Sinyor">Gary Sinyor</option><option value="Steven Brill">Steven Brill</option><option value="Antoine Fuqua">Antoine Fuqua</option><option value="Alejandro Agresti">Alejandro Agresti</option><option value="Alex Proyas">Alex Proyas</option><option value="Kevin Costner">Kevin Costner</option><option value="Michael Cristofer">Michael Cristofer</option><option value="Jon Turteltaub">Jon Turteltaub</option><option value="Jonathan Lynn">Jonathan Lynn</option><option value="Gavin Hood">Gavin Hood</option><option value="Andrzej Bartkowiak">Andrzej Bartkowiak</option><option value="Rod Lurie">Rod Lurie</option><option value="Brett Ratner">Brett Ratner</option><option value="Brian Helgeland">Brian Helgeland</option><option value="Carl Franklin">Carl Franklin</option><option value="Curtis Hanson">Curtis Hanson</option><option value="Simon Wells">Simon Wells</option><option value="Chris Nahon">Chris Nahon</option><option value="Hugh Johnson">Hugh Johnson</option><option value="Liam Lynch">Liam Lynch</option><option value="Chris Weitz">Chris Weitz</option><option value="Matthew Vaughn">Matthew Vaughn</option><option value="Mike Nichols">Mike Nichols</option><option value="Iain Softley">Iain Softley</option><option value="Mike Binder">Mike Binder</option><option value="Stefen Fangmeier">Stefen Fangmeier</option><option value="Doug Liman">Doug Liman</option><option value="Paul Greengrass">Paul Greengrass</option><option value="James L. Brooks">James L. Brooks</option><option value="John Boorman">John Boorman</option><option value="Anand Tucker">Anand Tucker</option><option value="Bonnie Hunt">Bonnie Hunt</option><option value="Marc Lawrence">Marc Lawrence</option><option value="M. Night Shyamalan">M. Night Shyamalan</option><option value="John Herzfeld">John Herzfeld</option><option value="Alexander Payne">Alexander Payne</option><option value="J.B. Rogers">J.B. Rogers</option><option value="Rob Reiner">Rob Reiner</option><option value="James Mangold">James Mangold</option><option value="Rand Ravich">Rand Ravich</option><option value="Ken Kwapis">Ken Kwapis</option><option value="Betty Thomas">Betty Thomas</option><option value="Bruce A. Evans">Bruce A. Evans</option><option value="Dennis Dugan">Dennis Dugan</option><option value="Jim Gillespie">Jim Gillespie</option><option value="Danny Cannon">Danny Cannon</option><option value="Scott Hicks">Scott Hicks</option><option value="Susanne Bier">Susanne Bier</option><option value="Trey Parker">Trey Parker</option><option value="Ted Demme">Ted Demme</option><option value="Michael Davis">Michael Davis</option><option value="Joe Wright">Joe Wright</option><option value="Peter Berg">Peter Berg</option><option value="Robert Luketic">Robert Luketic</option><option value="Gary Ross">Gary Ross</option><option value="Alan J. Pakula">Alan J. Pakula</option><option value="Andrew Dominik">Andrew Dominik</option><option value="David Slade">David Slade</option><option value="Shekhar Kapur">Shekhar Kapur</option><option value="Kevin Lima">Kevin Lima</option><option value="F. Gary Gray">F. Gary Gray</option><option value="Michael Patrick King">Michael Patrick King</option><option value="Garry Marshall">Garry Marshall</option><option value="Phil Alden Robinson">Phil Alden Robinson</option><option value="Rod Hardy">Rod Hardy</option><option value="Michael Caton-Jones">Michael Caton-Jones</option><option value="Ron Shelton">Ron Shelton</option><option value="George Clooney">George Clooney</option><option value="Gil Junger">Gil Junger</option><option value="Judd Apatow">Judd Apatow</option><option value="Edward Norton">Edward Norton</option><option value="Mathieu Kassovitz">Mathieu Kassovitz</option><option value="Kirsten Sheridan">Kirsten Sheridan</option><option value="Kerry Conran">Kerry Conran</option><option value="Shane Black">Shane Black</option><option value="David Dobkin">David Dobkin</option><option value="Roger Christian">Roger Christian</option><option value="Clark Johnson">Clark Johnson</option><option value="Tom Dey">Tom Dey</option><option value="Ivan Reitman">Ivan Reitman</option><option value="Bob Spiers">Bob Spiers</option><option value="Lawrence Kasdan">Lawrence Kasdan</option><option value="David McNally">David McNally</option><option value="James Foley">James Foley</option><option value="David O. Russell">David O. Russell</option><option value="Griffin Dunne">Griffin Dunne</option><option value="Ronny Yu">Ronny Yu</option><option value="Tim Hill">Tim Hill</option><option value="Jay Chandrasekhar">Jay Chandrasekhar</option><option value="Rodman Flender">Rodman Flender</option><option value="Jake Kasdan">Jake Kasdan</option><option value="Craig Gillespie">Craig Gillespie</option><option value="Matt Reeves">Matt Reeves</option><option value="Peter Hedges">Peter Hedges</option><option value="Thomas Carter">Thomas Carter</option><option value="Steve Carr">Steve Carr</option><option value="Breck Eisner">Breck Eisner</option><option value="Jim Sheridan">Jim Sheridan</option><option value="Ben Stiller">Ben Stiller</option><option value="Garth Jennings">Garth Jennings</option><option value="Pete Travis">Pete Travis</option><option value="Joe Carnahan">Joe Carnahan</option><option value="Marc Forster">Marc Forster</option><option value="Jean-Pierre Jeunet">Jean-Pierre Jeunet</option><option value="E. Elias Merhige">E. Elias Merhige</option><option value="Jared Hess">Jared Hess</option><option value="Karyn Kusama">Karyn Kusama</option><option value="Mark Waters">Mark Waters</option><option value="D.J. Caruso">D.J. Caruso</option><option value="Jesse Dylan">Jesse Dylan</option><option value="Jon M. Chu">Jon M. Chu</option><option value="Greg Mottola">Greg Mottola</option><option value="Nick Cassavetes">Nick Cassavetes</option><option value="Andy Tennant">Andy Tennant</option><option value="Peter Weir">Peter Weir</option><option value="Mimi Leder">Mimi Leder</option><option value="Kathryn Bigelow">Kathryn Bigelow</option><option value="Pierre Morel">Pierre Morel</option><option value="Nigel Cole">Nigel Cole</option><option value="Stephen Norrington">Stephen Norrington</option><option value="Michael McCullers">Michael McCullers</option><option value="Chris Carter">Chris Carter</option><option value="Charles S. Dutton">Charles S. Dutton</option><option value="Tarsem Singh">Tarsem Singh</option><option value="Roger Donaldson">Roger Donaldson</option><option value="Charles Shyer">Charles Shyer</option><option value="Kenneth Johnson">Kenneth Johnson</option><option value="Danny Leiner">Danny Leiner</option><option value="Antony Hoffman">Antony Hoffman</option><option value="Timur Bekmambetov">Timur Bekmambetov</option><option value="Renny Harlin">Renny Harlin</option><option value="Peter Hewitt">Peter Hewitt</option><option value="Sam Weisman">Sam Weisman</option><option value="John Bonito">John Bonito</option><option value="Kimberly Peirce">Kimberly Peirce</option><option value="Walter Salles">Walter Salles</option><option value="Jeff Tremaine">Jeff Tremaine</option><option value="Michael Lembeck">Michael Lembeck</option><option value="Tom Vaughan">Tom Vaughan</option><option value="Frank Marshall">Frank Marshall</option><option value="Kevin Reynolds">Kevin Reynolds</option><option value="Andrew Fleming">Andrew Fleming</option><option value="Jean-Claude Van Damme">Jean-Claude Van Damme</option><option value="John Stockwell">John Stockwell</option><option value="Chuck Russell">Chuck Russell</option><option value="Todd Phillips">Todd Phillips</option><option value="James Wong">James Wong</option><option value="Gil Kenan">Gil Kenan</option><option value="Paul Weitz">Paul Weitz</option><option value="Robert Schwentke">Robert Schwentke</option><option value="Jeremiah S. Chechik">Jeremiah S. Chechik</option><option value="Walter Hill">Walter Hill</option><option value="Frank Coraci">Frank Coraci</option><option value="Jon Amiel">Jon Amiel</option><option value="Jeff Schaffer">Jeff Schaffer</option><option value="Luis Llosa">Luis Llosa</option><option value="Glenn Gordon Caron">Glenn Gordon Caron</option><option value="John Bruno">John Bruno</option><option value="David Nutter">David Nutter</option><option value="Peter Cattaneo">Peter Cattaneo</option><option value="John Fortenberry">John Fortenberry</option><option value="Gilbert Adler">Gilbert Adler</option><option value="Gary Fleder">Gary Fleder</option><option value="Warren Beatty">Warren Beatty</option><option value="Stephen Chow">Stephen Chow</option><option value="Rawson Marshall Thurber">Rawson Marshall Thurber</option><option value="Phillip Noyce">Phillip Noyce</option><option value="Peter Howitt">Peter Howitt</option><option value="Nora Ephron">Nora Ephron</option><option value="Tamra Davis">Tamra Davis</option><option value="Les Mayfield">Les Mayfield</option><option value="Chris Koch">Chris Koch</option><option value="Raja Gosnell">Raja Gosnell</option><option value="Justin Lin">Justin Lin</option><option value="Steve Beck">Steve Beck</option><option value="Andy Fickman">Andy Fickman</option><option value="Dominic Sena">Dominic Sena</option><option value="Niki Caro">Niki Caro</option><option value="Neil LaBute">Neil LaBute</option><option value="Adam McKay">Adam McKay</option><option value="Richard Loncraine">Richard Loncraine</option><option value="Brian Robbins">Brian Robbins</option><option value="Anne Fletcher">Anne Fletcher</option><option value="Phil Joanou">Phil Joanou</option><option value="Peyton Reed">Peyton Reed</option><option value="Costa-Gavras">Costa-Gavras</option><option value="Adam Rifkin">Adam Rifkin</option><option value="Catherine Hardwicke">Catherine Hardwicke</option><option value="Steve Pink">Steve Pink</option><option value="Alexandre Aja">Alexandre Aja</option><option value="Beeban Kidron">Beeban Kidron</option><option value="Brad Bird">Brad Bird</option><option value="Bob Odenkirk">Bob Odenkirk</option><option value="John R. Leonetti">John R. Leonetti</option><option value="Kinka Usher">Kinka Usher</option><option value="Simon Wincer">Simon Wincer</option><option value="Jim Abrahams">Jim Abrahams</option><option value="Nicholas Stoller">Nicholas Stoller</option><option value="Andrew Bergman">Andrew Bergman</option><option value="Frank Oz">Frank Oz</option><option value="Jerry Zucker">Jerry Zucker</option><option value="Steve 'Spaz' Williams">Steve 'Spaz' Williams</option><option value="John A. Davis">John A. Davis</option><option value="Steve Oedekerk">Steve Oedekerk</option><option value="Werner Herzog">Werner Herzog</option><option value="Matthew O'Callaghan">Matthew O'Callaghan</option><option value="Mark Dindal">Mark Dindal</option><option value="Gary Winick">Gary Winick</option><option value="Bille Woodruff">Bille Woodruff</option><option value="John Carpenter">John Carpenter</option><option value="Andrew Douglas">Andrew Douglas</option><option value="Jaume Collet-Serra">Jaume Collet-Serra</option><option value="Ben Garant">Ben Garant</option><option value="Jeff Wadlow">Jeff Wadlow</option><option value="Michael Apted">Michael Apted</option><option value="Terry Zwigoff">Terry Zwigoff</option><option value="Troy Miller">Troy Miller</option><option value="Joshua Michael Stern">Joshua Michael Stern</option><option value="David Gordon Green">David Gordon Green</option><option value="Mike Mitchell">Mike Mitchell</option><option value="Lee Unkrich">Lee Unkrich</option><option value="Kenneth Branagh">Kenneth Branagh</option><option value="Scott Derrickson">Scott Derrickson</option><option value="Peter Medak">Peter Medak</option><option value="Rupert Wainwright">Rupert Wainwright</option><option value="Charles Herman-Wurmfeld">Charles Herman-Wurmfeld</option><option value="Mark A.Z. Dippé">Mark A.Z. Dippé</option><option value="Bryan Spicer">Bryan Spicer</option><option value="Diane Keaton">Diane Keaton</option><option value="Alan Parker">Alan Parker</option><option value="Bruce Beresford">Bruce Beresford</option><option value="Norman Jewison">Norman Jewison</option><option value="Marcus Raboy">Marcus Raboy</option><option value="Stephen T. Kay">Stephen T. Kay</option><option value="William Friedkin">William Friedkin</option><option value="Michael Patrick Jann">Michael Patrick Jann</option><option value="Henry Selick">Henry Selick</option><option value="Nicholas Hytner">Nicholas Hytner</option><option value="Matt Williams">Matt Williams</option><option value="P.J. Hogan">P.J. Hogan</option><option value="Boaz Yakin">Boaz Yakin</option><option value="Gregory Poirier">Gregory Poirier</option><option value="Vondie Curtis-Hall">Vondie Curtis-Hall</option><option value="Joe Dante">Joe Dante</option><option value="Joseph Kahn">Joseph Kahn</option><option value="Ernest R. Dickerson">Ernest R. Dickerson</option><option value="John Lee Hancock">John Lee Hancock</option><option value="Paul Weiland">Paul Weiland</option><option value="Ringo Lam">Ringo Lam</option><option value="Jeb Stuart">Jeb Stuart</option><option value="Harald Zwart">Harald Zwart</option><option value="Audrey Wells">Audrey Wells</option><option value="Jessie Nelson">Jessie Nelson</option><option value="Dennie Gordon">Dennie Gordon</option><option value="Lawrence Guterman">Lawrence Guterman</option><option value="Peter Hyams">Peter Hyams</option><option value="Penny Marshall">Penny Marshall</option><option value="Vadim Perelman">Vadim Perelman</option><option value="John Polson">John Polson</option><option value="Jay Russell">Jay Russell</option><option value="Sara Sugarman">Sara Sugarman</option><option value="Paul McGuigan">Paul McGuigan</option><option value="Mark Rosman">Mark Rosman</option><option value="Mikael Salomon">Mikael Salomon</option><option value="Kirk Jones">Kirk Jones</option><option value="Kevin Bray">Kevin Bray</option><option value="William Malone">William Malone</option><option value="Joel Gallen">Joel Gallen</option><option value="Christian Duguay">Christian Duguay</option><option value="Terrence Malick">Terrence Malick</option><option value="Stephen Kessler">Stephen Kessler</option><option value="Angela Robinson">Angela Robinson</option><option value="Mike Bigelow">Mike Bigelow</option><option value="Harold Becker">Harold Becker</option><option value="Wes Craven">Wes Craven</option><option value="James Isaac">James Isaac</option><option value="John Whitesell">John Whitesell</option><option value="John Landis">John Landis</option><option value="Hugh Wilson">Hugh Wilson</option><option value="Phyllida Lloyd">Phyllida Lloyd</option><option value="Kevin Rodney Sullivan">Kevin Rodney Sullivan</option><option value="Gary David Goldberg">Gary David Goldberg</option><option value="Stephen Herek">Stephen Herek</option><option value="George A. Romero">George A. Romero</option><option value="Ron Underwood">Ron Underwood</option><option value="Geoffrey Sax">Geoffrey Sax</option><option value="James Wan">James Wan</option><option value="Stephen Hillenburg">Stephen Hillenburg</option><option value="Courtney Solomon">Courtney Solomon</option><option value="Barbet Schroeder">Barbet Schroeder</option><option value="Francis Ford Coppola">Francis Ford Coppola</option><option value="Michael Rymer">Michael Rymer</option><option value="Demian Lichtenstein">Demian Lichtenstein</option><option value="Keenen Ivory Wayans">Keenen Ivory Wayans</option><option value="Marco Schnabel">Marco Schnabel</option><option value="Peter Sollett">Peter Sollett</option><option value="Seth Gordon">Seth Gordon</option><option value="Shane Acker">Shane Acker</option><option value="Malcolm D. Lee">Malcolm D. Lee</option><option value="David Twohy">David Twohy</option><option value="Danny Boyle">Danny Boyle</option><option value="Mike Figgis">Mike Figgis</option><option value="Fred Wolf">Fred Wolf</option><option value="Andy Wilson">Andy Wilson</option><option value="Jessy Terrero">Jessy Terrero</option><option value="Ed Harris">Ed Harris</option><option value="Liz Friedlander">Liz Friedlander</option><option value="Reginald Hudlin">Reginald Hudlin</option><option value="Robert C. Cooper">Robert C. Cooper</option><option value="Gavin O'Connor">Gavin O'Connor</option><option value="Tim Fywell">Tim Fywell</option><option value="Agustín Díaz Yanes">Agustín Díaz Yanes</option><option value="Philip Kaufman">Philip Kaufman</option><option value="Susannah Grant">Susannah Grant</option><option value="David S. Goyer">David S. Goyer</option><option value="Christian Robinson">Christian Robinson</option><option value="Nick Moore">Nick Moore</option><option value="Diane English">Diane English</option><option value="Deb Hagan">Deb Hagan</option><option value="Michael Mayer">Michael Mayer</option><option value="Sean McNamara">Sean McNamara</option><option value="Ben Younger">Ben Younger</option><option value="Barry W. Blaustein">Barry W. Blaustein</option><option value="Félix Enríquez Alcalá">Félix Enríquez Alcalá</option><option value="Michele Placido">Michele Placido</option><option value="Stewart Hendler">Stewart Hendler</option><option value="John Schultz">John Schultz</option><option value="Jonathan Demme">Jonathan Demme</option><option value="Steve Trenbirth">Steve Trenbirth</option><option value="Thor Freudenthal">Thor Freudenthal</option><option value="Risa Bramon Garcia">Risa Bramon Garcia</option><option value="David Wain">David Wain</option><option value="Bill Paxton">Bill Paxton</option><option value="Paul Abascal">Paul Abascal</option><option value="Jun Falkenstein">Jun Falkenstein</option><option value="Shusuke Kaneko">Shusuke Kaneko</option><option value="David Raynr">David Raynr</option><option value="Charles Stone III">Charles Stone III</option><option value="Joss Whedon">Joss Whedon</option><option value="Stig Bergqvist">Stig Bergqvist</option><option value="Scott Silver">Scott Silver</option><option value="Spike Jonze">Spike Jonze</option><option value="Tony Gilroy">Tony Gilroy</option><option value="Francine McDougall">Francine McDougall</option><option value="Quentin Tarantino">Quentin Tarantino</option><option value="Kevin Macdonald">Kevin Macdonald</option><option value="Burr Steers">Burr Steers</option><option value="Kevin Allen">Kevin Allen</option><option value="Wayne Wang">Wayne Wang</option><option value="Jonathan Kaplan">Jonathan Kaplan</option><option value="Rob Pritts">Rob Pritts</option><option value="Des McAnuff">Des McAnuff</option><option value="Michael Ritchie">Michael Ritchie</option><option value="Davis Guggenheim">Davis Guggenheim</option><option value="Peter Chelsom">Peter Chelsom</option><option value="Kevin Hooks">Kevin Hooks</option><option value="Jim Fall">Jim Fall</option><option value="Frederik Du Chau">Frederik Du Chau</option><option value="Hoyt Yeatman">Hoyt Yeatman</option><option value="Peter Billingsley">Peter Billingsley</option><option value="Ruben Fleischer">Ruben Fleischer</option><option value="Nikhil Advani">Nikhil Advani</option><option value="Joseph Kosinski">Joseph Kosinski</option><option value="Jimmy Hayward">Jimmy Hayward</option><option value="Charles Martin Smith">Charles Martin Smith</option><option value="Lauren Lazin">Lauren Lazin</option><option value="Robert Towne">Robert Towne</option><option value="Drew Barrymore">Drew Barrymore</option><option value="Olatunde Osunsanmi">Olatunde Osunsanmi</option><option value="Jason Reitman">Jason Reitman</option><option value="Walt Becker">Walt Becker</option><option value="Ben Affleck">Ben Affleck</option><option value="Samuel Bayer">Samuel Bayer</option><option value="John Curran">John Curran</option><option value="Phil Traill">Phil Traill</option><option value="Kevin Smith">Kevin Smith</option><option value="Neil Marshall">Neil Marshall</option><option value="Uli Edel">Uli Edel</option><option value="Brandon Camp">Brandon Camp</option><option value="Vicky Jenson">Vicky Jenson</option><option value="Mike Tollin">Mike Tollin</option><option value="John Sayles">John Sayles</option><option value="Ulu Grosbard">Ulu Grosbard</option><option value="Miguel Sapochnik">Miguel Sapochnik</option><option value="Richard Benjamin">Richard Benjamin</option><option value="Jim Field Smith">Jim Field Smith</option><option value="Ashwani Dhir">Ashwani Dhir</option><option value="David Hogan">David Hogan</option><option value="Robert Butler">Robert Butler</option><option value="Rick Famuyiwa">Rick Famuyiwa</option><option value="Sylvain White">Sylvain White</option><option value="Nimród Antal">Nimród Antal</option><option value="Susanna White">Susanna White</option><option value="Alan Shapiro">Alan Shapiro</option><option value="Steve Miner">Steve Miner</option><option value="Florian Henckel von Donnersmarck">Florian Henckel von Donnersmarck</option><option value="Jorma Taccone">Jorma Taccone</option><option value="Goro Miyazaki">Goro Miyazaki</option><option value="George Nolfi">George Nolfi</option><option value="Tom McGrath">Tom McGrath</option><option value="Nanette Burstein">Nanette Burstein</option><option value="Ryan Murphy">Ryan Murphy</option><option value="Rob Letterman">Rob Letterman</option><option value="Randall Wallace">Randall Wallace</option><option value="Brad Peyton">Brad Peyton</option><option value="Steve Boyum">Steve Boyum</option><option value="Tod Williams">Tod Williams</option><option value="Paul Feig">Paul Feig</option><option value="John Erick Dowdle">John Erick Dowdle</option><option value="Jonathan Liebesman">Jonathan Liebesman</option><option value="Kelly Asbury">Kelly Asbury</option><option value="Richard LaGravenese">Richard LaGravenese</option><option value="Richard Rich">Richard Rich</option><option value="Paul Mazursky">Paul Mazursky</option><option value="Mikael Håfström">Mikael Håfström</option><option value="Alister Grierson">Alister Grierson</option><option value="Jason Winer">Jason Winer</option><option value="Gary Shore">Gary Shore</option><option value="Jennifer Yuh Nelson">Jennifer Yuh Nelson</option><option value="Tate Taylor">Tate Taylor</option><option value="Bernard Rose">Bernard Rose</option><option value="Michael Dowse">Michael Dowse</option><option value="Joe Nussbaum">Joe Nussbaum</option><option value="Neil Burger">Neil Burger</option><option value="Noam Murro">Noam Murro</option><option value="Todd Strauss-Schulson">Todd Strauss-Schulson</option><option value="Steven Quale">Steven Quale</option><option value="Oliver Parker">Oliver Parker</option><option value="Rupert Sanders">Rupert Sanders</option><option value="Daisy von Scherler Mayer">Daisy von Scherler Mayer</option><option value="Thomas Bezucha">Thomas Bezucha</option><option value="Tom Hanks">Tom Hanks</option><option value="Daniel Espinosa">Daniel Espinosa</option><option value="Tommy Wirkola">Tommy Wirkola</option><option value="Bennett Miller">Bennett Miller</option><option value="Matthijs van Heijningen Jr.">Matthijs van Heijningen Jr.</option><option value="Rupert Wyatt">Rupert Wyatt</option><option value="Dan Scanlon">Dan Scanlon</option><option value="James Bobin">James Bobin</option><option value="George Miller">George Miller</option><option value="Kevin Tancharoen">Kevin Tancharoen</option><option value="Duncan Jones">Duncan Jones</option><option value="Sergei Bodrov">Sergei Bodrov</option><option value="Seth MacFarlane">Seth MacFarlane</option><option value="Anthony Hemingway">Anthony Hemingway</option><option value="Christopher McQuarrie">Christopher McQuarrie</option><option value="Alan Taylor">Alan Taylor</option><option value="Genndy Tartakovsky">Genndy Tartakovsky</option><option value="Keanu Reeves">Keanu Reeves</option><option value="Josh Trank">Josh Trank</option><option value="Baltasar Kormákur">Baltasar Kormákur</option><option value="David Soren">David Soren</option><option value="Todd Lincoln ">Todd Lincoln </option><option value="Akiva Schaffer">Akiva Schaffer</option><option value="Peter Ramsey">Peter Ramsey</option><option value="Andrucha Waddington">Andrucha Waddington</option><option value="Mark Tonderai">Mark Tonderai</option><option value="Olivier Megaton">Olivier Megaton</option><option value="Josh Schwartz">Josh Schwartz</option><option value="Tom Hooper">Tom Hooper</option><option value="Dean DeBlois">Dean DeBlois</option><option value="Sean Anders">Sean Anders</option><option value="Eric Brevig">Eric Brevig</option><option value="José Padilha">José Padilha</option><option value="Alex Kurtzman">Alex Kurtzman</option><option value="Robert Stromberg">Robert Stromberg</option><option value="Peter Sohn">Peter Sohn</option><option value="Lasse Hallström">Lasse Hallström</option><option value="James Gunn">James Gunn</option><option value="Don Scardino">Don Scardino</option><option value="Gareth Edwards">Gareth Edwards</option><option value="Andy Muschietti">Andy Muschietti</option><option value="Colin Trevorrow">Colin Trevorrow</option><option value="Scott Waugh">Scott Waugh</option><option value="Akiva Goldsman">Akiva Goldsman</option><option value="Ken Scott">Ken Scott</option><option value="Gregory Plotkin">Gregory Plotkin</option><option value="Hayao Miyazaki">Hayao Miyazaki</option><option value="Klay Hall">Klay Hall</option><option value="Jean-Marc Vallée">Jean-Marc Vallée</option><option value="Giuseppe Tornatore">Giuseppe Tornatore</option><option value="Mike Flanagan">Mike Flanagan</option><option value="James DeMonaco">James DeMonaco</option><option value="Scott Cooper">Scott Cooper</option><option value="Rob Thomas">Rob Thomas</option><option value="Doug Ellin">Doug Ellin</option><option value="Luke Greenfield">Luke Greenfield</option><option value="Alejandro González Iñárritu">Alejandro González Iñárritu</option><option value="Will Gluck">Will Gluck</option><option value="Neill Blomkamp">Neill Blomkamp</option><option value="Wes Ball">Wes Ball</option><option value="Oleg Stepchenko">Oleg Stepchenko</option><option value="Miguel Arteta">Miguel Arteta</option><option value="Roberts Gannaway">Roberts Gannaway</option><option value="Josh Boone">Josh Boone</option><option value="Ben Falcone">Ben Falcone</option><option value="Shana Feste">Shana Feste</option><option value="Angelina Jolie">Angelina Jolie</option><option value="Dean Israelite">Dean Israelite</option><option value="David Ayer">David Ayer</option><option value="Tim Johnson">Tim Johnson</option><option value="Paul Tibbitt">Paul Tibbitt</option><option value="Jorge R. Gutierrez">Jorge R. Gutierrez</option><option value="Michael Hoffman">Michael Hoffman</option><option value="Gina Prince-Bythewood">Gina Prince-Bythewood</option><option value="Stiles White">Stiles White</option><option value="Jeff Nichols">Jeff Nichols</option><option value="Aleksander Bach">Aleksander Bach</option><option value="R.J. Cutler">R.J. Cutler</option><option value="Elizabeth Banks">Elizabeth Banks</option><option value="Etan Cohen">Etan Cohen</option><option value="Greg McLean">Greg McLean</option><option value="Christian Ditter">Christian Ditter</option><option value="Gregory Jacobs">Gregory Jacobs</option><option value="Christopher B. Landon">Christopher B. Landon</option><option value="Morten Tyldum">Morten Tyldum</option><option value="Derek Cianfrance">Derek Cianfrance</option><option value="Michael Dougherty">Michael Dougherty</option><option value="Cedric Nicolas-Troyan">Cedric Nicolas-Troyan</option><option value="Tim Miller">Tim Miller</option><option value="David Lowery">David Lowery</option><option value="Thea Sharrock">Thea Sharrock</option><option value="J Blakeson">J Blakeson</option><option value="Dave Green">Dave Green</option><option value="Zhang Yimou">Zhang Yimou</option><option value="Ryan Coogler">Ryan Coogler</option><option value="Tom McCarthy">Tom McCarthy</option><option value="Jake Szymanski">Jake Szymanski</option><option value="Mira Nair">Mira Nair</option><option value="Dexter Fletcher">Dexter Fletcher</option><option value="Peter Landesman">Peter Landesman</option><option value="Chris Renaud">Chris Renaud</option><option value="Denis Villeneuve">Denis Villeneuve</option><option value="Dan Trachtenberg">Dan Trachtenberg</option><option value="David E. Talbert">David E. Talbert</option><option value="Tom Ford">Tom Ford</option><option value="Peter Atencio">Peter Atencio</option><option value="John Hamburg">John Hamburg</option><option value="Nitesh Tiwari">Nitesh Tiwari</option><option value="Luke Scott">Luke Scott</option><option value="Denzel Washington">Denzel Washington</option></select></div></div></div><div id="Spacer_votos" class="row clearfix " style="height:5px;"><div class="col-xs-6"><div id="votos_1_new_new" class="cdfdd-round " style="background-color: rgb(0, 5, 172); height: 30px; text-align: center; border-radius: 10px;">
+<h4 style="color:#FFFFFF;">Votos</h4> </div></div><div class="col-xs-6 last"><div id="votos_2_new_new" class="cdfdd-round " style="background-color: rgb(0, 5, 172); height: 30px; text-align: center; border-radius: 10px;"><h4 style="color:#FFFFFF;">Votos</h4> </div></div></div><div id="Row_1" class="row clearfix "><div class="col-xs-6"><div id="Panel_1" class="cdfdd-round " style="background-color: rgb(234, 237, 238); height: 300px; border-radius: 10px;"><div id="Panel_1protovis" style="display: inline-block;"><svg font-size="10px" font-family="sans-serif" fill="none" stroke="none" stroke-width="1.5" style="-webkit-touch-callout: none; -webkit-user-select: none; -khtml-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none;" unselectable="on" width="600" height="325"><defs></defs><rect pointer-events="all" width="600" height="325" fill="rgb(127,127,127)" fill-opacity="0.00001"></rect><g><g transform="translate(244.4916648864746,0)"><text pointer-events="none" dy=".35em" transform="translate(55.50833511352539,15)" fill="rgb(0,0,0)" text-anchor="middle" style="font: 10px OpenSansRegular;">Evolución en el período</text></g></g><g><g transform="translate(0,60)"><g transform="translate(0,5.599999999999994)"></g><g transform="translate(0,5.599999999999994)"><line pointer-events="none" x1="75" y1="187.2" x2="525" y2="187.2" stroke="rgb(204,204,204)" stroke-width="1"></line><line pointer-events="none" x1="75" y1="140.4" x2="525" y2="140.4" stroke="rgb(204,204,204)" stroke-width="1"></line><line pointer-events="none" x1="75" y1="93.6" x2="525" y2="93.6" stroke="rgb(204,204,204)" stroke-width="1"></line><line pointer-events="none" x1="75" y1="46.79999999999998" x2="525" y2="46.79999999999998" stroke="rgb(204,204,204)" stroke-width="1"></line><line pointer-events="none" x1="75" y1="-2.842170943040401e-14" x2="525" y2="-2.842170943040401e-14" stroke="rgb(204,204,204)" stroke-width="1"></line></g><g transform="translate(0,5.599999999999994)"><g transform="translate(75,-1.4210854715202004e-14)"><g><g><rect shape-rendering="crispEdges" x="9" y="37.44" width="72" height="149.76000000000002" fill="rgb(0,93,166)"></rect><rect shape-rendering="crispEdges" x="99" y="32.76000000000002" width="72" height="154.44" fill="rgb(0,93,166)"></rect><rect shape-rendering="crispEdges" x="189" y="23.400000000000006" width="72" height="163.8" fill="rgb(0,93,166)"></rect><rect shape-rendering="crispEdges" x="279" y="23.400000000000006" width="72" height="163.8" fill="rgb(0,93,166)"></rect><rect shape-rendering="crispEdges" x="369" y="32.76000000000002" width="72" height="154.44" fill="rgb(0,93,166)"></rect></g></g></g></g><g transform="translate(0,5.599999999999994)"><g transform="translate(75,211.4)"></g></g><g transform="translate(0,5.599999999999994)"><g transform="translate(75,187.20000000000002)"><g transform="translate(45,0)"><line shape-rendering="crispEdges" pointer-events="none" x1="0" y1="0" x2="0" y2="3" stroke="rgb(153,153,153)" stroke-width="1"></line></g><g transform="translate(45,0)"><text pointer-events="all" y="10" dy=".71em" transform="translate(0,3)" fill="rgb(102,102,102)" text-anchor="middle" style="font: 10px OpenSansRegular;">2007</text></g><g transform="translate(135,0)"><line shape-rendering="crispEdges" pointer-events="none" x1="0" y1="0" x2="0" y2="3" stroke="rgb(153,153,153)" stroke-width="1"></line></g><g transform="translate(135,0)"><text pointer-events="all" y="10" dy=".71em" transform="translate(0,3)" fill="rgb(102,102,102)" text-anchor="middle" style="font: 10px OpenSansRegular;">2009</text></g><g transform="translate(225,0)"><line shape-rendering="crispEdges" pointer-events="none" x1="0" y1="0" x2="0" y2="3" stroke="rgb(153,153,153)" stroke-width="1"></line></g><g transform="translate(225,0)"><text pointer-events="all" y="10" dy=".71em" transform="translate(0,3)" fill="rgb(102,102,102)" text-anchor="middle" style="font: 10px OpenSansRegular;">2010</text></g><g transform="translate(315,0)"><line shape-rendering="crispEdges" pointer-events="none" x1="0" y1="0" x2="0" y2="3" stroke="rgb(153,153,153)" stroke-width="1"></line></g><g transform="translate(315,0)"><text pointer-events="all" y="10" dy=".71em" transform="translate(0,3)" fill="rgb(102,102,102)" text-anchor="middle" style="font: 10px OpenSansRegular;">2011</text></g><g transform="translate(405,0)"><line shape-rendering="crispEdges" pointer-events="none" x1="0" y1="0" x2="0" y2="3" stroke="rgb(153,153,153)" stroke-width="1"></line></g><g transform="translate(405,0)"><text pointer-events="all" y="10" dy=".71em" transform="translate(0,3)" fill="rgb(102,102,102)" text-anchor="middle" style="font: 10px OpenSansRegular;">2016</text></g></g><g transform="translate(75,187.20000000000002)"><line shape-rendering="crispEdges" pointer-events="none" x1="0" y1="0" x2="450" y2="0" stroke="rgb(153,153,153)" stroke-width="1" stroke-linecap="square"></line></g></g><g transform="translate(0,5.599999999999994)"><g></g></g><g transform="translate(0,5.599999999999994)"><g transform="translate(18,-1.4210854715202004e-14)"><g><line shape-rendering="crispEdges" pointer-events="none" x1="54" y1="187.20000000000002" x2="57" y2="187.20000000000002" stroke="rgb(153,153,153)" stroke-width="1"></line></g><g><text pointer-events="none" x="-10" dy=".35em" transform="translate(54,187.20000000000002)" fill="rgb(102,102,102)" text-anchor="end" style="font: 10px OpenSansRegular;">0</text></g><g><line shape-rendering="crispEdges" pointer-events="none" x1="54" y1="140.4" x2="57" y2="140.4" stroke="rgb(153,153,153)" stroke-width="1"></line></g><g><text pointer-events="none" x="-10" dy=".35em" transform="translate(54,140.4)" fill="rgb(102,102,102)" text-anchor="end" style="font: 10px OpenSansRegular;">1</text></g><g><line shape-rendering="crispEdges" pointer-events="none" x1="54" y1="93.60000000000001" x2="57" y2="93.60000000000001" stroke="rgb(153,153,153)" stroke-width="1"></line></g><g><text pointer-events="none" x="-10" dy=".35em" transform="translate(54,93.60000000000001)" fill="rgb(102,102,102)" text-anchor="end" style="font: 10px OpenSansRegular;">2</text></g><g><line shape-rendering="crispEdges" pointer-events="none" x1="54" y1="46.80000000000001" x2="57" y2="46.80000000000001" stroke="rgb(153,153,153)" stroke-width="1"></line></g><g><text pointer-events="none" x="-10" dy=".35em" transform="translate(54,46.80000000000001)" fill="rgb(102,102,102)" text-anchor="end" style="font: 10px OpenSansRegular;">3</text></g><g><line shape-rendering="crispEdges" pointer-events="none" x1="54" y1="0" x2="57" y2="0" stroke="rgb(153,153,153)" stroke-width="1"></line></g><g><text pointer-events="none" x="-10" dy=".35em" transform="translate(54,0)" fill="rgb(102,102,102)" text-anchor="end" style="font: 10px OpenSansRegular;">4</text></g></g><g transform="translate(18,-1.4210854715202004e-14)"><line shape-rendering="crispEdges" pointer-events="none" x1="57" y1="0" x2="57" y2="187.20000000000002" stroke="rgb(153,153,153)" stroke-width="1" stroke-linecap="square"></line></g></g></g></g><rect pointer-events="stroke" width="600" height="325" stroke-opacity="0"></rect></svg></div></div></div><div class="col-xs-6 last"><div id="Panel_2" class="cdfdd-round " style="background-color: rgb(234, 237, 238); height: 300px; border-radius: 10px;"><div id="Panel_2protovis" style="display: inline-block; position: relative;"><svg font-size="10px" font-family="sans-serif" fill="none" stroke="none" stroke-width="1.5" style="-webkit-touch-callout: none; -webkit-user-select: none; -khtml-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none;" unselectable="on" width="600" height="325"><defs></defs><rect pointer-events="all" width="600" height="325" fill="rgb(127,127,127)" fill-opacity="0.00001"></rect><g><g transform="translate(244.4916648864746,0)"><text pointer-events="none" dy=".35em" transform="translate(55.50833511352539,15)" fill="rgb(0,0,0)" text-anchor="middle" style="font: 10px OpenSansRegular;">Evolución en el período</text></g></g><g><g transform="translate(0,60)"><g transform="translate(0,5.599999999999994)"></g><g transform="translate(0,5.599999999999994)"><line pointer-events="none" x1="75" y1="187.2" x2="525" y2="187.2" stroke="rgb(204,204,204)" stroke-width="1"></line><line pointer-events="none" x1="75" y1="149.76" x2="525" y2="149.76" stroke="rgb(204,204,204)" stroke-width="1"></line><line pointer-events="none" x1="75" y1="112.32" x2="525" y2="112.32" stroke="rgb(204,204,204)" stroke-width="1"></line><line pointer-events="none" x1="75" y1="74.88" x2="525" y2="74.88" stroke="rgb(204,204,204)" stroke-width="1"></line><line pointer-events="none" x1="75" y1="37.43999999999997" x2="525" y2="37.43999999999997" stroke="rgb(204,204,204)" stroke-width="1"></line><line pointer-events="none" x1="75" y1="-2.842170943040401e-14" x2="525" y2="-2.842170943040401e-14" stroke="rgb(204,204,204)" stroke-width="1"></line></g><g transform="translate(0,5.599999999999994)"><g transform="translate(75,-1.4210854715202004e-14)"><g><g><rect shape-rendering="crispEdges" x="9" y="37.44" width="72" height="149.76000000000002" fill="rgb(0,93,166)"></rect><rect shape-rendering="crispEdges" x="99" y="41.184" width="72" height="146.01600000000002" fill="rgb(0,93,166)"></rect><rect shape-rendering="crispEdges" x="189" y="37.44" width="72" height="149.76000000000002" fill="rgb(0,93,166)"></rect><rect shape-rendering="crispEdges" x="279" y="48.672" width="72" height="138.52800000000002" fill="rgb(0,93,166)"></rect><rect shape-rendering="crispEdges" x="369" y="33.696000000000026" width="72" height="153.504" fill="rgb(0,93,166)"></rect></g></g></g></g><g transform="translate(0,5.599999999999994)"><g transform="translate(75,211.4)"></g></g><g transform="translate(0,5.599999999999994)"><g transform="translate(75,187.20000000000002)"><g transform="translate(45,0)"><line shape-rendering="crispEdges" pointer-events="none" x1="0" y1="0" x2="0" y2="3" stroke="rgb(153,153,153)" stroke-width="1"></line></g><g transform="translate(45,0)"><text pointer-events="all" y="10" dy=".71em" transform="translate(0,3)" fill="rgb(102,102,102)" text-anchor="middle" style="font: 10px OpenSansRegular;">2007</text></g><g transform="translate(135,0)"><line shape-rendering="crispEdges" pointer-events="none" x1="0" y1="0" x2="0" y2="3" stroke="rgb(153,153,153)" stroke-width="1"></line></g><g transform="translate(135,0)"><text pointer-events="all" y="10" dy=".71em" transform="translate(0,3)" fill="rgb(102,102,102)" text-anchor="middle" style="font: 10px OpenSansRegular;">2009</text></g><g transform="translate(225,0)"><line shape-rendering="crispEdges" pointer-events="none" x1="0" y1="0" x2="0" y2="3" stroke="rgb(153,153,153)" stroke-width="1"></line></g><g transform="translate(225,0)"><text pointer-events="all" y="10" dy=".71em" transform="translate(0,3)" fill="rgb(102,102,102)" text-anchor="middle" style="font: 10px OpenSansRegular;">2011</text></g><g transform="translate(315,0)"><line shape-rendering="crispEdges" pointer-events="none" x1="0" y1="0" x2="0" y2="3" stroke="rgb(153,153,153)" stroke-width="1"></line></g><g transform="translate(315,0)"><text pointer-events="all" y="10" dy=".71em" transform="translate(0,3)" fill="rgb(102,102,102)" text-anchor="middle" style="font: 10px OpenSansRegular;">2013</text></g><g transform="translate(405,0)"><line shape-rendering="crispEdges" pointer-events="none" x1="0" y1="0" x2="0" y2="3" stroke="rgb(153,153,153)" stroke-width="1"></line></g><g transform="translate(405,0)"><text pointer-events="all" y="10" dy=".71em" transform="translate(0,3)" fill="rgb(102,102,102)" text-anchor="middle" style="font: 10px OpenSansRegular;">2014</text></g></g><g transform="translate(75,187.20000000000002)"><line shape-rendering="crispEdges" pointer-events="none" x1="0" y1="0" x2="450" y2="0" stroke="rgb(153,153,153)" stroke-width="1" stroke-linecap="square"></line></g></g><g transform="translate(0,5.599999999999994)"><g></g></g><g transform="translate(0,5.599999999999994)"><g transform="translate(18,-1.4210854715202004e-14)"><g><line shape-rendering="crispEdges" pointer-events="none" x1="54" y1="187.20000000000002" x2="57" y2="187.20000000000002" stroke="rgb(153,153,153)" stroke-width="1"></line></g><g><text pointer-events="none" x="-10" dy=".35em" transform="translate(54,187.20000000000002)" fill="rgb(102,102,102)" text-anchor="end" style="font: 10px OpenSansRegular;">0</text></g><g><line shape-rendering="crispEdges" pointer-events="none" x1="54" y1="149.76000000000002" x2="57" y2="149.76000000000002" stroke="rgb(153,153,153)" stroke-width="1"></line></g><g><text pointer-events="none" x="-10" dy=".35em" transform="translate(54,149.76000000000002)" fill="rgb(102,102,102)" text-anchor="end" style="font: 10px OpenSansRegular;">1</text></g><g><line shape-rendering="crispEdges" pointer-events="none" x1="54" y1="112.32000000000001" x2="57" y2="112.32000000000001" stroke="rgb(153,153,153)" stroke-width="1"></line></g><g><text pointer-events="none" x="-10" dy=".35em" transform="translate(54,112.32000000000001)" fill="rgb(102,102,102)" text-anchor="end" style="font: 10px OpenSansRegular;">2</text></g><g><line shape-rendering="crispEdges" pointer-events="none" x1="54" y1="74.88000000000001" x2="57" y2="74.88000000000001" stroke="rgb(153,153,153)" stroke-width="1"></line></g><g><text pointer-events="none" x="-10" dy=".35em" transform="translate(54,74.88000000000001)" fill="rgb(102,102,102)" text-anchor="end" style="font: 10px OpenSansRegular;">3</text></g><g><line shape-rendering="crispEdges" pointer-events="none" x1="54" y1="37.44" x2="57" y2="37.44" stroke="rgb(153,153,153)" stroke-width="1"></line></g><g><text pointer-events="none" x="-10" dy=".35em" transform="translate(54,37.44)" fill="rgb(102,102,102)" text-anchor="end" style="font: 10px OpenSansRegular;">4</text></g><g><line shape-rendering="crispEdges" pointer-events="none" x1="54" y1="0" x2="57" y2="0" stroke="rgb(153,153,153)" stroke-width="1"></line></g><g><text pointer-events="none" x="-10" dy=".35em" transform="translate(54,0)" fill="rgb(102,102,102)" text-anchor="end" style="font: 10px OpenSansRegular;">5</text></g></g><g transform="translate(18,-1.4210854715202004e-14)"><line shape-rendering="crispEdges" pointer-events="none" x1="57" y1="0" x2="57" y2="187.20000000000002" stroke="rgb(153,153,153)" stroke-width="1" stroke-linecap="square"></line></g></g></g></g><rect pointer-events="stroke" width="600" height="325" stroke-opacity="0"></rect></svg><div id="tipsyPvBehavior_1701399392045" class="fakeTipsyTarget" style="padding: 0px; margin: 0px; position: absolute; pointer-events: none; display: block; z-index: -10; border-width: 0px; left: 354px; top: 115px; width: 72px; height: 137px;" original-title="&lt;div class=&quot;ccc-tt&quot;&gt;&lt;table class=&quot;ccc-tt-ds ccc-tt-plot ccc-tt-plot-bar ccc-tt-chartOrient-v&quot; data-ccc-color=&quot;rgb(0,93,166)&quot;&gt;&lt;tBody&gt;&lt;tr class=&quot;ccc-tt-dim ccc-tt-dimValueType-Any ccc-tt-dimDiscrete&quot;&gt;&lt;td class=&quot;ccc-tt-dimLabel&quot;&gt;&lt;span&gt;Series&lt;/span&gt;&lt;/td&gt;&lt;td class=&quot;ccc-tt-dimRoles&quot;&gt;&lt;span class=&quot;ccc-tt-role ccc-tt-role-color&quot;&gt;&lt;span class=&quot;ccc-tt-roleIcon&quot;&gt;&lt;/span&gt;&lt;span class=&quot;ccc-tt-roleLabel&quot;&gt;Color&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;ccc-tt-role ccc-tt-role-series&quot;&gt;&lt;span class=&quot;ccc-tt-roleIcon&quot;&gt;&lt;/span&gt;&lt;span class=&quot;ccc-tt-roleLabel&quot;&gt;Series&lt;/span&gt;&lt;/span&gt;&lt;/td&gt;&lt;td class=&quot;ccc-tt-dimValue&quot;&gt;&lt;span class=&quot;ccc-tt-value&quot;&gt;satisfacion&lt;/span&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr class=&quot;ccc-tt-dim ccc-tt-dimValueType-Any ccc-tt-dimDiscrete&quot;&gt;&lt;td class=&quot;ccc-tt-dimLabel&quot;&gt;&lt;span&gt;Tiempo_emision.ano&lt;/span&gt;&lt;/td&gt;&lt;td class=&quot;ccc-tt-dimRoles&quot;&gt;&lt;span class=&quot;ccc-tt-role ccc-tt-role-category&quot;&gt;&lt;span class=&quot;ccc-tt-roleIcon&quot;&gt;&lt;/span&gt;&lt;span class=&quot;ccc-tt-roleLabel&quot;&gt;Category&lt;/span&gt;&lt;/span&gt;&lt;/td&gt;&lt;td class=&quot;ccc-tt-dimValue&quot;&gt;&lt;span class=&quot;ccc-tt-value&quot;&gt;2013&lt;/span&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr class=&quot;ccc-tt-dim ccc-tt-dimValueType-Number ccc-tt-dimContinuous&quot;&gt;&lt;td class=&quot;ccc-tt-dimLabel&quot;&gt;&lt;span&gt;Value&lt;/span&gt;&lt;/td&gt;&lt;td class=&quot;ccc-tt-dimRoles&quot;&gt;&lt;span class=&quot;ccc-tt-role ccc-tt-role-value&quot;&gt;&lt;span class=&quot;ccc-tt-roleIcon&quot;&gt;&lt;/span&gt;&lt;span class=&quot;ccc-tt-roleLabel&quot;&gt;Value&lt;/span&gt;&lt;/span&gt;&lt;/td&gt;&lt;td class=&quot;ccc-tt-dimValue&quot;&gt;&lt;span class=&quot;ccc-tt-value&quot;&gt;3.7&lt;/span&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tBody&gt;&lt;/table&gt;&lt;/div&gt;"></div></div></div></div></div><div id="Spacer_financiacion" class="row clearfix " style="height:5px;"><div class="col-xs-6"><div id="votos_1_new" class="cdfdd-round " style="background-color: rgb(0, 5, 172); height: 30px; text-align: center; border-radius: 10px;">
+<h4 style="color:#FFFFFF;">Beneficios</h4> </div></div><div class="col-xs-6 last"><div id="votos_2_new" class="cdfdd-round " style="background-color: rgb(0, 5, 172); height: 30px; text-align: center; border-radius: 10px;"><h4 style="color:#FFFFFF;">Beneficios</h4> </div></div></div><div id="Row_2" class="row clearfix "><div class="col-xs-6"><div id="Panel_3" class="cdfdd-round " style="background-color: rgb(234, 237, 238); height: 300px; border-radius: 10px;"><div id="Panel_3protovis" style="display: inline-block;"><svg font-size="10px" font-family="sans-serif" fill="none" stroke="none" stroke-width="1.5" style="-webkit-touch-callout: none; -webkit-user-select: none; -khtml-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none;" unselectable="on" width="600" height="325"><defs></defs><rect pointer-events="all" width="600" height="325" fill="rgb(127,127,127)" fill-opacity="0.00001"></rect><g><g transform="translate(244.4916648864746,0)"><text pointer-events="none" dy=".35em" transform="translate(55.50833511352539,15)" fill="rgb(0,0,0)" text-anchor="middle" style="font: 10px OpenSansRegular;">Evolución en el período</text></g></g><g><g clip-path="url(#15g)"><clipPath id="15g"><rect x="0.75" y="30.75" width="176.80000114440918" height="31.5"></rect></clipPath><g transform="translate(0.75,30.75)"><g transform="translate(0.75,0.75)"><g><g><g><g><g><circle pointer-events="none" cursor="pointer" fill="rgb(0,93,166)" stroke="rgb(0,93,166)" stroke-width="2" cx="4" cy="15" r="3"></circle></g></g></g><g><text pointer-events="all" cursor="pointer" x="3" dy=".35em" transform="translate(8,15)" fill="rgb(102,102,102)" style="font: 10px OpenSansRegular;">coste</text></g></g><g transform="translate(51.10000038146973,0)"><g><g><g><circle pointer-events="none" cursor="pointer" fill="rgb(3,169,244)" stroke="rgb(3,169,244)" stroke-width="2" cx="4" cy="15" r="3"></circle></g></g></g><g><text pointer-events="all" cursor="pointer" x="3" dy=".35em" transform="translate(8,15)" fill="rgb(102,102,102)" style="font: 10px OpenSansRegular;">ingresos</text></g></g><g transform="translate(116.55000114440918,0)"><g><g><g><circle pointer-events="none" cursor="pointer" fill="rgb(255,121,0)" stroke="rgb(255,121,0)" stroke-width="2" cx="4" cy="15" r="3"></circle></g></g></g><g><text pointer-events="all" cursor="pointer" x="3" dy=".35em" transform="translate(8,15)" fill="rgb(102,102,102)" style="font: 10px OpenSansRegular;">beneficios</text></g></g></g></g></g><rect pointer-events="none" x="0.75" y="30.75" width="176.80000114440918" height="31.5" stroke="rgb(192,192,192)" stroke-width="0"></rect></g></g><g><g transform="translate(0,93)"><g transform="translate(0,5.599999999999994)"></g><g transform="translate(0,5.599999999999994)"><line pointer-events="none" x1="75" y1="154.2" x2="525" y2="154.2" stroke="rgb(204,204,204)" stroke-width="1"></line><line pointer-events="none" x1="75" y1="102.8" x2="525" y2="102.8" stroke="rgb(204,204,204)" stroke-width="1"></line><line pointer-events="none" x1="75" y1="51.400000000000006" x2="525" y2="51.400000000000006" stroke="rgb(204,204,204)" stroke-width="1"></line><line pointer-events="none" x1="75" y1="-2.842170943040401e-14" x2="525" y2="-2.842170943040401e-14" stroke="rgb(204,204,204)" stroke-width="1"></line></g><g transform="translate(0,5.599999999999994)"><g transform="translate(75,-1.4210854715202004e-14)"><g><g><rect shape-rendering="crispEdges" x="9" y="138.78000000000003" width="22.080000000000002" height="15.420000000000002" fill="rgb(0,93,166)"></rect><rect shape-rendering="crispEdges" x="99" y="128.5" width="22.080000000000002" height="25.700000000000003" fill="rgb(0,93,166)"></rect><rect shape-rendering="crispEdges" x="189" y="128.5" width="22.080000000000002" height="25.700000000000003" fill="rgb(0,93,166)"></rect><rect shape-rendering="crispEdges" x="279" y="141.35000000000002" width="22.080000000000002" height="12.850000000000001" fill="rgb(0,93,166)"></rect><rect shape-rendering="crispEdges" x="369" y="117.19200000000001" width="22.080000000000002" height="37.008" fill="rgb(0,93,166)"></rect></g><g><rect shape-rendering="crispEdges" x="33.959999999999994" y="57.751730533599996" width="22.080000000000002" height="96.44826946640002" fill="rgb(3,169,244)"></rect><rect shape-rendering="crispEdges" x="123.96" y="58.188994548400004" width="22.080000000000002" height="96.01100545160001" fill="rgb(3,169,244)"></rect><rect shape-rendering="crispEdges" x="213.96" y="56.0973567696" width="22.080000000000002" height="98.10264323040002" fill="rgb(3,169,244)"></rect><rect shape-rendering="crispEdges" x="303.96" y="16.242400000000004" width="22.080000000000002" height="137.9576" fill="rgb(3,169,244)"></rect><rect shape-rendering="crispEdges" x="393.96" y="34.326421599599996" width="22.080000000000002" height="119.87357840040002" fill="rgb(3,169,244)"></rect></g><g><rect shape-rendering="crispEdges" x="58.91999999999999" y="73.1717305336" width="22.080000000000002" height="81.02826946640002" fill="rgb(255,121,0)"></rect><rect shape-rendering="crispEdges" x="148.92" y="83.8889945484" width="22.080000000000002" height="70.31100545160001" fill="rgb(255,121,0)"></rect><rect shape-rendering="crispEdges" x="238.92000000000002" y="81.7973567696" width="22.080000000000002" height="72.40264323040002" fill="rgb(255,121,0)"></rect><rect shape-rendering="crispEdges" x="328.91999999999996" y="29.092399999999998" width="22.080000000000002" height="125.10760000000002" fill="rgb(255,121,0)"></rect><rect shape-rendering="crispEdges" x="418.91999999999996" y="71.33442159960002" width="22.080000000000002" height="82.8655784004" fill="rgb(255,121,0)"></rect></g></g></g></g><g transform="translate(0,5.599999999999994)"><g transform="translate(75,178.4)"></g></g><g transform="translate(0,5.599999999999994)"><g transform="translate(75,154.20000000000002)"><g transform="translate(45,0)"><line shape-rendering="crispEdges" pointer-events="none" x1="0" y1="0" x2="0" y2="3" stroke="rgb(153,153,153)" stroke-width="1"></line></g><g transform="translate(45,0)"><text pointer-events="all" y="10" dy=".71em" transform="translate(0,3)" fill="rgb(102,102,102)" text-anchor="middle" style="font: 10px OpenSansRegular;">2007</text></g><g transform="translate(135,0)"><line shape-rendering="crispEdges" pointer-events="none" x1="0" y1="0" x2="0" y2="3" stroke="rgb(153,153,153)" stroke-width="1"></line></g><g transform="translate(135,0)"><text pointer-events="all" y="10" dy=".71em" transform="translate(0,3)" fill="rgb(102,102,102)" text-anchor="middle" style="font: 10px OpenSansRegular;">2009</text></g><g transform="translate(225,0)"><line shape-rendering="crispEdges" pointer-events="none" x1="0" y1="0" x2="0" y2="3" stroke="rgb(153,153,153)" stroke-width="1"></line></g><g transform="translate(225,0)"><text pointer-events="all" y="10" dy=".71em" transform="translate(0,3)" fill="rgb(102,102,102)" text-anchor="middle" style="font: 10px OpenSansRegular;">2010</text></g><g transform="translate(315,0)"><line shape-rendering="crispEdges" pointer-events="none" x1="0" y1="0" x2="0" y2="3" stroke="rgb(153,153,153)" stroke-width="1"></line></g><g transform="translate(315,0)"><text pointer-events="all" y="10" dy=".71em" transform="translate(0,3)" fill="rgb(102,102,102)" text-anchor="middle" style="font: 10px OpenSansRegular;">2011</text></g><g transform="translate(405,0)"><line shape-rendering="crispEdges" pointer-events="none" x1="0" y1="0" x2="0" y2="3" stroke="rgb(153,153,153)" stroke-width="1"></line></g><g transform="translate(405,0)"><text pointer-events="all" y="10" dy=".71em" transform="translate(0,3)" fill="rgb(102,102,102)" text-anchor="middle" style="font: 10px OpenSansRegular;">2016</text></g></g><g transform="translate(75,154.20000000000002)"><line shape-rendering="crispEdges" pointer-events="none" x1="0" y1="0" x2="450" y2="0" stroke="rgb(153,153,153)" stroke-width="1" stroke-linecap="square"></line></g></g><g transform="translate(0,5.599999999999994)"><g></g></g><g transform="translate(0,5.599999999999994)"><g transform="translate(18,-1.4210854715202004e-14)"><g><line shape-rendering="crispEdges" pointer-events="none" x1="54" y1="154.20000000000002" x2="57" y2="154.20000000000002" stroke="rgb(153,153,153)" stroke-width="1"></line></g><g><text pointer-events="none" x="-10" dy=".35em" transform="translate(54,154.20000000000002)" fill="rgb(102,102,102)" text-anchor="end" style="font: 10px OpenSansRegular;">0 </text></g><g><line shape-rendering="crispEdges" pointer-events="none" x1="54" y1="102.80000000000001" x2="57" y2="102.80000000000001" stroke="rgb(153,153,153)" stroke-width="1"></line></g><g><text pointer-events="none" x="-10" dy=".35em" transform="translate(54,102.80000000000001)" fill="rgb(102,102,102)" text-anchor="end" style="font: 10px OpenSansRegular;">500 M</text></g><g><line shape-rendering="crispEdges" pointer-events="none" x1="54" y1="51.400000000000006" x2="57" y2="51.400000000000006" stroke="rgb(153,153,153)" stroke-width="1"></line></g><g><text pointer-events="none" x="-10" dy=".35em" transform="translate(54,51.400000000000006)" fill="rgb(102,102,102)" text-anchor="end" style="font: 10px OpenSansRegular;">1 G</text></g><g><line shape-rendering="crispEdges" pointer-events="none" x1="54" y1="0" x2="57" y2="0" stroke="rgb(153,153,153)" stroke-width="1"></line></g><g><text pointer-events="none" x="-10" dy=".35em" transform="translate(54,0)" fill="rgb(102,102,102)" text-anchor="end" style="font: 10px OpenSansRegular;">1.5 G</text></g></g><g transform="translate(18,-1.4210854715202004e-14)"><line shape-rendering="crispEdges" pointer-events="none" x1="57" y1="0" x2="57" y2="154.20000000000002" stroke="rgb(153,153,153)" stroke-width="1" stroke-linecap="square"></line></g></g></g></g><rect pointer-events="stroke" width="600" height="325" stroke-opacity="0"></rect></svg></div></div></div><div class="col-xs-6 last"><div id="Panel_4" class="cdfdd-round " style="background-color: rgb(234, 237, 238); height: 300px; border-radius: 10px;"><div id="Panel_4protovis" style="display: inline-block;"><svg font-size="10px" font-family="sans-serif" fill="none" stroke="none" stroke-width="1.5" style="-webkit-touch-callout: none; -webkit-user-select: none; -khtml-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none;" unselectable="on" width="600" height="325"><defs></defs><rect pointer-events="all" width="600" height="325" fill="rgb(127,127,127)" fill-opacity="0.00001"></rect><g><g transform="translate(244.4916648864746,0)"><text pointer-events="none" dy=".35em" transform="translate(55.50833511352539,15)" fill="rgb(0,0,0)" text-anchor="middle" style="font: 10px OpenSansRegular;">Evolución en el período</text></g></g><g><g clip-path="url(#15d)"><clipPath id="15d"><rect x="0.75" y="30.75" width="176.80000114440918" height="31.5"></rect></clipPath><g transform="translate(0.75,30.75)"><g transform="translate(0.75,0.75)"><g><g><g><g><g><circle pointer-events="none" cursor="pointer" fill="rgb(0,93,166)" stroke="rgb(0,93,166)" stroke-width="2" cx="4" cy="15" r="3"></circle></g></g></g><g><text pointer-events="all" cursor="pointer" x="3" dy=".35em" transform="translate(8,15)" fill="rgb(102,102,102)" style="font: 10px OpenSansRegular;">coste</text></g></g><g transform="translate(51.10000038146973,0)"><g><g><g><circle pointer-events="none" cursor="pointer" fill="rgb(3,169,244)" stroke="rgb(3,169,244)" stroke-width="2" cx="4" cy="15" r="3"></circle></g></g></g><g><text pointer-events="all" cursor="pointer" x="3" dy=".35em" transform="translate(8,15)" fill="rgb(102,102,102)" style="font: 10px OpenSansRegular;">ingresos</text></g></g><g transform="translate(116.55000114440918,0)"><g><g><g><circle pointer-events="none" cursor="pointer" fill="rgb(255,121,0)" stroke="rgb(255,121,0)" stroke-width="2" cx="4" cy="15" r="3"></circle></g></g></g><g><text pointer-events="all" cursor="pointer" x="3" dy=".35em" transform="translate(8,15)" fill="rgb(102,102,102)" style="font: 10px OpenSansRegular;">beneficios</text></g></g></g></g></g><rect pointer-events="none" x="0.75" y="30.75" width="176.80000114440918" height="31.5" stroke="rgb(192,192,192)" stroke-width="0"></rect></g></g><g><g transform="translate(0,93)"><g transform="translate(0,5.599999999999994)"></g><g transform="translate(0,5.599999999999994)"><line pointer-events="none" x1="75" y1="154.2" x2="525" y2="154.2" stroke="rgb(204,204,204)" stroke-width="1"></line><line pointer-events="none" x1="75" y1="102.8" x2="525" y2="102.8" stroke="rgb(204,204,204)" stroke-width="1"></line><line pointer-events="none" x1="75" y1="51.400000000000006" x2="525" y2="51.400000000000006" stroke="rgb(204,204,204)" stroke-width="1"></line><line pointer-events="none" x1="75" y1="-2.842170943040401e-14" x2="525" y2="-2.842170943040401e-14" stroke="rgb(204,204,204)" stroke-width="1"></line></g><g transform="translate(0,5.599999999999994)"><g transform="translate(75,-1.4210854715202004e-14)"><g><g><rect shape-rendering="crispEdges" x="7.5" y="138.78000000000003" width="18.400000000000002" height="15.420000000000002" fill="rgb(0,93,166)"></rect><rect shape-rendering="crispEdges" x="82.5" y="138.78000000000003" width="18.400000000000002" height="15.420000000000002" fill="rgb(0,93,166)"></rect><rect shape-rendering="crispEdges" x="157.5" y="134.15400000000002" width="18.400000000000002" height="20.046000000000003" fill="rgb(0,93,166)"></rect><rect shape-rendering="crispEdges" x="232.5" y="151.63000000000002" width="18.400000000000002" height="2.5700000000000003" fill="rgb(0,93,166)"></rect><rect shape-rendering="crispEdges" x="307.5" y="132.61200000000002" width="18.400000000000002" height="21.588000000000005" fill="rgb(0,93,166)"></rect><rect shape-rendering="crispEdges" x="382.5" y="149.06" width="18.400000000000002" height="5.140000000000001" fill="rgb(0,93,166)"></rect></g><g><rect shape-rendering="crispEdges" x="28.3" y="81.24183482160001" width="18.400000000000002" height="72.95816517840001" fill="rgb(3,169,244)"></rect><rect shape-rendering="crispEdges" x="103.3" y="68.22864516720001" width="18.400000000000002" height="85.9713548328" fill="rgb(3,169,244)"></rect><rect shape-rendering="crispEdges" x="178.3" y="38.6788088112" width="18.400000000000002" height="115.52119118880002" fill="rgb(3,169,244)"></rect><rect shape-rendering="crispEdges" x="253.3" y="145.34118008520002" width="18.400000000000002" height="8.858819914800002" fill="rgb(3,169,244)"></rect><rect shape-rendering="crispEdges" x="328.3" y="42.0035561312" width="18.400000000000002" height="112.19644386880002" fill="rgb(3,169,244)"></rect><rect shape-rendering="crispEdges" x="403.3" y="147.064511164" width="18.400000000000002" height="7.135488836" fill="rgb(3,169,244)"></rect></g><g><rect shape-rendering="crispEdges" x="49.1" y="96.66183482160001" width="18.400000000000002" height="57.53816517840001" fill="rgb(255,121,0)"></rect><rect shape-rendering="crispEdges" x="124.1" y="83.64864516720002" width="18.400000000000002" height="70.5513548328" fill="rgb(255,121,0)"></rect><rect shape-rendering="crispEdges" x="199.10000000000002" y="58.724808811200006" width="18.400000000000002" height="95.47519118880001" fill="rgb(255,121,0)"></rect><rect shape-rendering="crispEdges" x="274.1" y="147.91118008520002" width="18.400000000000002" height="6.2888199148" fill="rgb(255,121,0)"></rect><rect shape-rendering="crispEdges" x="349.1" y="63.59155613120001" width="18.400000000000002" height="90.60844386880001" fill="rgb(255,121,0)"></rect><rect shape-rendering="crispEdges" x="424.1" y="152.20451116400002" width="18.400000000000002" height="1.9954888360000003" fill="rgb(255,121,0)"></rect></g></g></g></g><g transform="translate(0,5.599999999999994)"><g transform="translate(75,178.4)"></g></g><g transform="translate(0,5.599999999999994)"><g transform="translate(75,154.20000000000002)"><g transform="translate(37.5,0)"><line shape-rendering="crispEdges" pointer-events="none" x1="0" y1="0" x2="0" y2="3" stroke="rgb(153,153,153)" stroke-width="1"></line></g><g transform="translate(37.5,0)"><text pointer-events="all" y="10" dy=".71em" transform="translate(0,3)" fill="rgb(102,102,102)" text-anchor="middle" style="font: 10px OpenSansRegular;">2007</text></g><g transform="translate(112.5,0)"><line shape-rendering="crispEdges" pointer-events="none" x1="0" y1="0" x2="0" y2="3" stroke="rgb(153,153,153)" stroke-width="1"></line></g><g transform="translate(112.5,0)"><text pointer-events="all" y="10" dy=".71em" transform="translate(0,3)" fill="rgb(102,102,102)" text-anchor="middle" style="font: 10px OpenSansRegular;">2009</text></g><g transform="translate(187.5,0)"><line shape-rendering="crispEdges" pointer-events="none" x1="0" y1="0" x2="0" y2="3" stroke="rgb(153,153,153)" stroke-width="1"></line></g><g transform="translate(187.5,0)"><text pointer-events="all" y="10" dy=".71em" transform="translate(0,3)" fill="rgb(102,102,102)" text-anchor="middle" style="font: 10px OpenSansRegular;">2011</text></g><g transform="translate(262.5,0)"><line shape-rendering="crispEdges" pointer-events="none" x1="0" y1="0" x2="0" y2="3" stroke="rgb(153,153,153)" stroke-width="1"></line></g><g transform="translate(262.5,0)"><text pointer-events="all" y="10" dy=".71em" transform="translate(0,3)" fill="rgb(102,102,102)" text-anchor="middle" style="font: 10px OpenSansRegular;">2013</text></g><g transform="translate(337.5,0)"><line shape-rendering="crispEdges" pointer-events="none" x1="0" y1="0" x2="0" y2="3" stroke="rgb(153,153,153)" stroke-width="1"></line></g><g transform="translate(337.5,0)"><text pointer-events="all" y="10" dy=".71em" transform="translate(0,3)" fill="rgb(102,102,102)" text-anchor="middle" style="font: 10px OpenSansRegular;">2014</text></g><g transform="translate(412.5,0)"><line shape-rendering="crispEdges" pointer-events="none" x1="0" y1="0" x2="0" y2="3" stroke="rgb(153,153,153)" stroke-width="1"></line></g><g transform="translate(412.5,0)"><text pointer-events="all" y="10" dy=".71em" transform="translate(0,3)" fill="rgb(102,102,102)" text-anchor="middle" style="font: 10px OpenSansRegular;">2016</text></g></g><g transform="translate(75,154.20000000000002)"><line shape-rendering="crispEdges" pointer-events="none" x1="0" y1="0" x2="450" y2="0" stroke="rgb(153,153,153)" stroke-width="1" stroke-linecap="square"></line></g></g><g transform="translate(0,5.599999999999994)"><g></g></g><g transform="translate(0,5.599999999999994)"><g transform="translate(18,-1.4210854715202004e-14)"><g><line shape-rendering="crispEdges" pointer-events="none" x1="54" y1="154.20000000000002" x2="57" y2="154.20000000000002" stroke="rgb(153,153,153)" stroke-width="1"></line></g><g><text pointer-events="none" x="-10" dy=".35em" transform="translate(54,154.20000000000002)" fill="rgb(102,102,102)" text-anchor="end" style="font: 10px OpenSansRegular;">0 </text></g><g><line shape-rendering="crispEdges" pointer-events="none" x1="54" y1="102.80000000000001" x2="57" y2="102.80000000000001" stroke="rgb(153,153,153)" stroke-width="1"></line></g><g><text pointer-events="none" x="-10" dy=".35em" transform="translate(54,102.80000000000001)" fill="rgb(102,102,102)" text-anchor="end" style="font: 10px OpenSansRegular;">500 M</text></g><g><line shape-rendering="crispEdges" pointer-events="none" x1="54" y1="51.400000000000006" x2="57" y2="51.400000000000006" stroke="rgb(153,153,153)" stroke-width="1"></line></g><g><text pointer-events="none" x="-10" dy=".35em" transform="translate(54,51.400000000000006)" fill="rgb(102,102,102)" text-anchor="end" style="font: 10px OpenSansRegular;">1 G</text></g><g><line shape-rendering="crispEdges" pointer-events="none" x1="54" y1="0" x2="57" y2="0" stroke="rgb(153,153,153)" stroke-width="1"></line></g><g><text pointer-events="none" x="-10" dy=".35em" transform="translate(54,0)" fill="rgb(102,102,102)" text-anchor="end" style="font: 10px OpenSansRegular;">1.5 G</text></g></g><g transform="translate(18,-1.4210854715202004e-14)"><line shape-rendering="crispEdges" pointer-events="none" x1="57" y1="0" x2="57" y2="154.20000000000002" stroke="rgb(153,153,153)" stroke-width="1" stroke-linecap="square"></line></g></g></g></g><rect pointer-events="stroke" width="600" height="325" stroke-opacity="0"></rect></svg></div></div></div></div></div></div></div><div id="Small_Space" class="row clearfix " style="height:5px;"></div><div id="Footer" class="row clearfix " style="height:50px;"><div class="col-xs-12 last"><div id="Footer_Image" class="cdfdd-round " style="background-color: rgb(234, 237, 238); height: 60px; border-radius: 10px;"><p style="color:#005ac7;">Este
+ dashboard proporciona una visión detallada de la evolución de los 
+beneficios y la satisfacción de cada director durante un período 
+seleccionado. Estas gráficas son valiosas para analizar y seleccionar un
+ director para nuevos proyectos cinematográficos, basándose en las 
+tendencias observadas. Al comprender estas tendencias, se puede prever 
+con mayor exactitud el potencial de éxito y rentabilidad de una 
+película."
+</p> </div></div></div>
+  </div>
+<script language="javascript" type="text/javascript">
+require([
+  'cdf/Dashboard.Bootstrap',
+  'cdf/Logger',
+  'cdf/lib/jquery',
+  'amd!cdf/lib/underscore',
+  'cdf/lib/moment',
+  'cdf/lib/CCC/cdo',
+  'cdf/lib/CCC/def',
+  'cdf/lib/CCC/protovis-compat!',
+  'cdf/lib/CCC/pvc',
+  'cdf/dashboard/Utils',
+  'cdf/components/SelectComponent',
+  'cdf/components/CccBarChartComponent'],
+function(
+  Dashboard,
+  Logger,
+  $,
+  _,
+  moment,
+  cdo,
+  def,
+  pv,
+  pvc,
+  Utils,
+  SelectComponent,
+  CccBarChartComponent) {
+// resources were loaded, removing FOUC protection. (Flash of Unstyled Content) 
+$("body").removeClass("fouc-protected");
+
+var dashboard = new Dashboard({
+context: {"path":"alumnogreibd","solution":"home","serverLocalDate":1701402980454,"queryData":{},"roles":["Administrator","Authenticated"],"sessionTimeout":7200,"sessionAttributes":{},"locale":"en_US","params":{},"serverUTCDate":1701399380454,"user":"alumnogreibd"},
+storage: {}
+});
+
+  dashboard.getWcdfSettings = function() {
+    return {
+      "author": "",
+      "description": "Entrega",
+      "rendererType": "bootstrap",
+      "require": true,
+      "style": "CleanRequire",
+      "title": "Entrega",
+      "widget": false,
+      "widgetName": "",
+      "widgetParameters": []
+};
+  };
+
+  dashboard.addDataSource("anos", {
+    dataAccessId: "anos",
+    pushEnabled: false,
+    path: "/home/alumnogreibd/Entrega_tmp.cda"
+  });
+
+  dashboard.addDataSource("directores_nombre", {
+    dataAccessId: "directores_nombre",
+    pushEnabled: false,
+    path: "/home/alumnogreibd/Entrega_tmp.cda"
+  });
+
+  dashboard.addDataSource("director_vototos_anos_2", {
+    dataAccessId: "director_vototos_anos_2",
+    pushEnabled: false,
+    path: "/home/alumnogreibd/Entrega_tmp.cda"
+  });
+
+  dashboard.addDataSource("director_beneficios_anos_2", {
+    dataAccessId: "director_beneficios_anos_2",
+    pushEnabled: false,
+    path: "/home/alumnogreibd/Entrega_tmp.cda"
+  });
+
+  dashboard.addDataSource("director_beneficios_anos", {
+    dataAccessId: "director_beneficios_anos",
+    pushEnabled: false,
+    path: "/home/alumnogreibd/Entrega_tmp.cda"
+  });
+
+  dashboard.addDataSource("director_votos_anos", {
+    dataAccessId: "director_votos_anos",
+    pushEnabled: false,
+    path: "/home/alumnogreibd/Entrega_tmp.cda"
+  });
+
+  dashboard.addDataSource("director_beneficios", {
+    dataAccessId: "director_beneficios",
+    pushEnabled: false,
+    path: "/home/alumnogreibd/Entrega_tmp.cda"
+  });
+
+dashboard.addParameter("director_1", "David Yates");
+dashboard.setParameterViewMode("director_1", "unused");
+dashboard.addParameter("director_2", "Michael Bay");
+dashboard.setParameterViewMode("director_2", "unused");
+dashboard.addParameter("ano_inicio", "2006");
+dashboard.setParameterViewMode("ano_inicio", "unused");
+dashboard.addParameter("ano_fin", "2016");
+dashboard.setParameterViewMode("ano_fin", "unused");
+var render_selector_2 = new SelectComponent({
+  type: "SelectComponent",
+  name: "render_selector_2",
+  priority: 5,
+  parameter: "director_2",
+  htmlObject: "select_director_2",
+  listeners: [],
+  parameters: [],
+  valuesArray: [],
+  useFirstValue: true,
+  valueAsId: true,
+  executeAtStart: true,
+  extraOptions: [],
+  queryDefinition:  {
+    dataSource: "directores_nombre"
+  }
+});
+var render_selector_1 = new SelectComponent({
+  type: "SelectComponent",
+  name: "render_selector_1",
+  priority: 5,
+  parameter: "director_1",
+  htmlObject: "select_director_1",
+  listeners: [],
+  parameters: [],
+  valuesArray: [],
+  useFirstValue: true,
+  valueAsId: true,
+  executeAtStart: true,
+  extraOptions: [],
+  queryDefinition:  {
+    dataSource: "directores_nombre"
+  }
+});
+var render_selector_ano_inicio = new SelectComponent({
+  type: "SelectComponent",
+  name: "render_selector_ano_inicio",
+  priority: 5,
+  parameter: "ano_inicio",
+  htmlObject: "select_ano_inicio",
+  listeners: [],
+  parameters: [],
+  valuesArray: [],
+  useFirstValue: true,
+  valueAsId: true,
+  executeAtStart: true,
+  extraOptions: [],
+  queryDefinition:  {
+    dataSource: "anos"
+  }
+});
+var render_selector_ano_fin = new SelectComponent({
+  type: "SelectComponent",
+  name: "render_selector_ano_fin",
+  priority: 5,
+  parameter: "ano_fin",
+  htmlObject: "select_ano_fin",
+  listeners: [],
+  parameters: [],
+  valuesArray: [],
+  useFirstValue: true,
+  valueAsId: true,
+  executeAtStart: true,
+  extraOptions: [],
+  queryDefinition:  {
+    dataSource: "anos"
+  }
+});
+var render_beneficios_votos_2 = new CccBarChartComponent({
+  type: "CccBarChartComponent",
+  name: "render_beneficios_votos_2",
+  priority: 5,
+  parameters: [["director_2","director_2"],["ano_inicio","ano_inicio"],["ano_fin","ano_fin"]],
+  executeAtStart: true,
+  htmlObject: "Panel_2",
+  listeners: ["director_2","ano_inicio","ano_fin"],
+  clearsBeforePreExecution: true,
+  renderMode: "total",
+  dataAdditiveMode: false,
+  chartDefinition:  {
+    dataSource: "director_vototos_anos_2",
+    width: 600,
+    height: 325,
+    extensionPoints: [],
+    colors: [],
+    title: "Evolución en el período",
+    animate: true,
+    barOrthoSizeMin: 1.5,
+    barStackedMargin: 0,
+    baseAxisLabelDesiredAngles: [],
+    baseAxisOffset: 0,
+    baseAxisTicks: true,
+    baseAxisTitleMargins: "0",
+    baseAxisTooltipAutoContent: "value",
+    baseAxisTooltipEnabled: true,
+    baseAxisVisible: true,
+    clearSelectionMode: "emptySpaceClick",
+    clickable: false,
+    color2AxisColors: [],
+    color2AxisLegendClickMode: "toggleVisible",
+    color2AxisLegendVisible: true,
+    color2AxisPreserveMap: false,
+    colorPreserveMap: false,
+    compatVersion: 3,
+    crosstabMode: true,
+    ctrlSelectMode: true,
+    dataIgnoreMetadataLabels: false,
+    dataSeparator: "~",
+    groupedLabelSep: " ~ ",
+    hoverable: false,
+    ignoreNulls: true,
+    isMultiValued: false,
+    leafContentOverflow: "auto",
+    legend: false,
+    legendClickMode: "toggleVisible",
+    legendVisible: true,
+    measuresIndexes: [],
+    multiChartColumnsMax: 3,
+    multiChartIndexes: [],
+    multiChartOverflow: "grow",
+    multiChartSingleColFillsHeight: true,
+    multiChartSingleRowFillsHeight: true,
+    nullInterpolationMode: "none",
+    orientation: "vertical",
+    ortho2AxisDomainAlign: "center",
+    ortho2AxisDomainRoundMode: "tick",
+    ortho2AxisDomainScope: "global",
+    ortho2AxisMinorTicks: true,
+    ortho2AxisOffset: 0,
+    ortho2AxisTicks: true,
+    ortho2AxisTickUnitMax: "Infinity",
+    ortho2AxisTickUnitMin: "0",
+    ortho2AxisTitleMargins: "0",
+    ortho2AxisVisible: true,
+    ortho2AxisZeroLine: true,
+    orthoAxisDomainAlign: "center",
+    orthoAxisDomainRoundMode: "tick",
+    orthoAxisDomainScope: "global",
+    orthoAxisOffset: 0,
+    orthoAxisTicks: true,
+    orthoAxisTickUnitMax: "Infinity",
+    orthoAxisTickUnitMin: "0",
+    orthoAxisTitleMargins: "0",
+    orthoAxisVisible: true,
+    orthoAxisZeroLine: true,
+    overflowMarkersVisible: true,
+    plot2: false,
+    plot2AreasFillOpacity: 0.5,
+    plot2AreasVisible: false,
+    plot2ColorAxis: 2,
+    plot2DotsVisible: true,
+    plot2LinesVisible: true,
+    plot2NullInterpolationMode: "none",
+    plot2OrthoAxis: 1,
+    plot2Series: [],
+    plot2SeriesIndexes: -1,
+    plot2Stacked: false,
+    plot2ValuesMask: "{value}",
+    plot2ValuesVisible: false,
+    pointingMode: "near",
+    preserveLayout: false,
+    readers: [],
+    selectable: false,
+    seriesInRows: false,
+    slidingWindow: false,
+    smallContentMargins: "0",
+    smallContentPaddings: "0",
+    smallMargins: "2%",
+    smallPaddings: "0",
+    smallTitleMargins: "0",
+    smallTitlePaddings: "0",
+    smallTitlePosition: "top",
+    stacked: false,
+    timeSeries: false,
+    timeSeriesFormat: "%Y-%m-%d",
+    titleMargins: "0",
+    titlePaddings: "0",
+    tooltipEnabled: true,
+    tooltipFade: true,
+    tooltipFollowMouse: false,
+    tooltipHtml: true,
+    tooltipOpacity: 0.9,
+    trendAreasFillOpacity: 0.5,
+    trendAreasVisible: false,
+    trendColorAxis: 2,
+    trendDotsVisible: false,
+    trendLinesVisible: true,
+    trendOrthoAxis: 1,
+    trendStacked: false,
+    trendValuesAnchor: "right",
+    trendValuesVisible: false,
+    valuesNormalized: false,
+    valuesOverflow: "hide"
+  },
+  lifecycle:  {
+    silent: false
+  }
+});
+var render_beneficios_director_2 = new CccBarChartComponent({
+  type: "CccBarChartComponent",
+  name: "render_beneficios_director_2",
+  priority: 5,
+  parameters: [["director_2","director_2"],["ano_inicio","ano_inicio"],["ano_fin","ano_fin"]],
+  executeAtStart: true,
+  htmlObject: "Panel_4",
+  listeners: ["director_2","ano_inicio","ano_fin"],
+  clearsBeforePreExecution: true,
+  renderMode: "total",
+  dataAdditiveMode: false,
+  chartDefinition:  {
+    dataSource: "director_beneficios_anos_2",
+    width: 600,
+    height: 325,
+    extensionPoints: [],
+    colors: [],
+    title: "Evolución en el período",
+    animate: true,
+    barOrthoSizeMin: 1.5,
+    barStackedMargin: 0,
+    baseAxisLabelDesiredAngles: [],
+    baseAxisOffset: 0,
+    baseAxisTicks: true,
+    baseAxisTitleMargins: "0",
+    baseAxisTooltipAutoContent: "value",
+    baseAxisTooltipEnabled: true,
+    baseAxisVisible: true,
+    clearSelectionMode: "emptySpaceClick",
+    clickable: false,
+    color2AxisColors: [],
+    color2AxisLegendClickMode: "toggleVisible",
+    color2AxisLegendVisible: true,
+    color2AxisPreserveMap: false,
+    colorPreserveMap: false,
+    compatVersion: 10,
+    crosstabMode: true,
+    ctrlSelectMode: true,
+    dataIgnoreMetadataLabels: false,
+    dataSeparator: "~",
+    groupedLabelSep: " ~ ",
+    hoverable: false,
+    ignoreNulls: true,
+    isMultiValued: false,
+    leafContentOverflow: "auto",
+    legend: true,
+    legendClickMode: "toggleVisible",
+    legendVisible: true,
+    measuresIndexes: [],
+    multiChartColumnsMax: 3,
+    multiChartIndexes: [],
+    multiChartOverflow: "grow",
+    multiChartSingleColFillsHeight: true,
+    multiChartSingleRowFillsHeight: true,
+    nullInterpolationMode: "none",
+    orientation: "vertical",
+    ortho2AxisDomainAlign: "center",
+    ortho2AxisDomainRoundMode: "tick",
+    ortho2AxisDomainScope: "global",
+    ortho2AxisMinorTicks: true,
+    ortho2AxisOffset: 0,
+    ortho2AxisTicks: true,
+    ortho2AxisTickUnitMax: "Infinity",
+    ortho2AxisTickUnitMin: "0",
+    ortho2AxisTitleMargins: "0",
+    ortho2AxisVisible: true,
+    ortho2AxisZeroLine: true,
+    orthoAxisDomainAlign: "center",
+    orthoAxisDomainRoundMode: "tick",
+    orthoAxisDomainScope: "global",
+    orthoAxisOffset: 0,
+    orthoAxisTicks: true,
+    orthoAxisTickUnitMax: "Infinity",
+    orthoAxisTickUnitMin: "0",
+    orthoAxisTitleMargins: "0",
+    orthoAxisVisible: true,
+    orthoAxisZeroLine: true,
+    overflowMarkersVisible: true,
+    plot2: false,
+    plot2AreasFillOpacity: 0.5,
+    plot2AreasVisible: false,
+    plot2ColorAxis: 2,
+    plot2DotsVisible: true,
+    plot2LinesVisible: true,
+    plot2NullInterpolationMode: "none",
+    plot2OrthoAxis: 1,
+    plot2Series: [],
+    plot2SeriesIndexes: -1,
+    plot2Stacked: false,
+    plot2ValuesMask: "{value}",
+    plot2ValuesVisible: false,
+    pointingMode: "near",
+    preserveLayout: false,
+    readers: [],
+    selectable: false,
+    seriesInRows: false,
+    slidingWindow: false,
+    smallContentMargins: "0",
+    smallContentPaddings: "0",
+    smallMargins: "2%",
+    smallPaddings: "0",
+    smallTitleMargins: "0",
+    smallTitlePaddings: "0",
+    smallTitlePosition: "top",
+    stacked: false,
+    timeSeries: false,
+    timeSeriesFormat: "%Y-%m-%d",
+    titleMargins: "0",
+    titlePaddings: "0",
+    tooltipEnabled: true,
+    tooltipFade: true,
+    tooltipFollowMouse: false,
+    tooltipHtml: true,
+    tooltipOpacity: 0.9,
+    trendAreasFillOpacity: 0.5,
+    trendAreasVisible: false,
+    trendColorAxis: 2,
+    trendDotsVisible: false,
+    trendLinesVisible: true,
+    trendOrthoAxis: 1,
+    trendStacked: false,
+    trendValuesAnchor: "right",
+    trendValuesVisible: false,
+    valuesNormalized: false,
+    valuesOverflow: "hide"
+  },
+  lifecycle:  {
+    silent: false
+  }
+});
+var render_beneficios_voto = new CccBarChartComponent({
+  type: "CccBarChartComponent",
+  name: "render_beneficios_voto",
+  priority: 5,
+  parameters: [["director_1","director_1"],["ano_inicio","ano_inicio"],["ano_fin","ano_fin"]],
+  executeAtStart: true,
+  htmlObject: "Panel_1",
+  listeners: ["director_1","ano_inicio","ano_fin"],
+  clearsBeforePreExecution: true,
+  renderMode: "total",
+  dataAdditiveMode: false,
+  chartDefinition:  {
+    dataSource: "director_votos_anos",
+    width: 600,
+    height: 325,
+    extensionPoints: [],
+    colors: [],
+    title: "Evolución en el período",
+    animate: true,
+    barOrthoSizeMin: 1.5,
+    barStackedMargin: 0,
+    baseAxisLabelDesiredAngles: [],
+    baseAxisOffset: 0,
+    baseAxisTicks: true,
+    baseAxisTitleMargins: "0",
+    baseAxisTooltipAutoContent: "value",
+    baseAxisTooltipEnabled: true,
+    baseAxisVisible: true,
+    clearSelectionMode: "emptySpaceClick",
+    clickable: false,
+    color2AxisColors: [],
+    color2AxisLegendClickMode: "toggleVisible",
+    color2AxisLegendVisible: true,
+    color2AxisPreserveMap: false,
+    colorPreserveMap: false,
+    compatVersion: 3,
+    crosstabMode: false,
+    ctrlSelectMode: true,
+    dataIgnoreMetadataLabels: false,
+    dataSeparator: "~",
+    groupedLabelSep: " ~ ",
+    hoverable: false,
+    ignoreNulls: true,
+    isMultiValued: false,
+    leafContentOverflow: "auto",
+    legend: false,
+    legendClickMode: "toggleVisible",
+    legendVisible: true,
+    measuresIndexes: [],
+    multiChartColumnsMax: 3,
+    multiChartIndexes: [],
+    multiChartOverflow: "grow",
+    multiChartSingleColFillsHeight: true,
+    multiChartSingleRowFillsHeight: true,
+    nullInterpolationMode: "none",
+    orientation: "vertical",
+    ortho2AxisDomainAlign: "center",
+    ortho2AxisDomainRoundMode: "tick",
+    ortho2AxisDomainScope: "global",
+    ortho2AxisMinorTicks: true,
+    ortho2AxisOffset: 0,
+    ortho2AxisTicks: true,
+    ortho2AxisTickUnitMax: "Infinity",
+    ortho2AxisTickUnitMin: "0",
+    ortho2AxisTitleMargins: "0",
+    ortho2AxisVisible: true,
+    ortho2AxisZeroLine: true,
+    orthoAxisDomainAlign: "center",
+    orthoAxisDomainRoundMode: "tick",
+    orthoAxisDomainScope: "global",
+    orthoAxisOffset: 0,
+    orthoAxisTicks: true,
+    orthoAxisTickUnitMax: "Infinity",
+    orthoAxisTickUnitMin: "0",
+    orthoAxisTitleMargins: "0",
+    orthoAxisVisible: true,
+    orthoAxisZeroLine: true,
+    overflowMarkersVisible: true,
+    plot2: false,
+    plot2AreasFillOpacity: 0.5,
+    plot2AreasVisible: false,
+    plot2ColorAxis: 2,
+    plot2DotsVisible: true,
+    plot2LinesVisible: true,
+    plot2NullInterpolationMode: "none",
+    plot2OrthoAxis: 1,
+    plot2Series: [],
+    plot2SeriesIndexes: -1,
+    plot2Stacked: false,
+    plot2ValuesMask: "{value}",
+    plot2ValuesVisible: false,
+    pointingMode: "near",
+    preserveLayout: false,
+    readers: [],
+    selectable: false,
+    seriesInRows: false,
+    slidingWindow: false,
+    smallContentMargins: "0",
+    smallContentPaddings: "0",
+    smallMargins: "2%",
+    smallPaddings: "0",
+    smallTitleMargins: "0",
+    smallTitlePaddings: "0",
+    smallTitlePosition: "top",
+    stacked: false,
+    timeSeries: false,
+    timeSeriesFormat: "%Y-%m-%d",
+    titleMargins: "0",
+    titlePaddings: "0",
+    tooltipEnabled: true,
+    tooltipFade: true,
+    tooltipFollowMouse: false,
+    tooltipHtml: true,
+    tooltipOpacity: 0.9,
+    trendAreasFillOpacity: 0.5,
+    trendAreasVisible: false,
+    trendColorAxis: 2,
+    trendDotsVisible: false,
+    trendLinesVisible: true,
+    trendOrthoAxis: 1,
+    trendStacked: false,
+    trendValuesAnchor: "right",
+    trendValuesVisible: false,
+    valuesNormalized: false,
+    valuesOverflow: "hide"
+  },
+  lifecycle:  {
+    silent: false
+  }
+});
+var render_beneficios_director = new CccBarChartComponent({
+  type: "CccBarChartComponent",
+  name: "render_beneficios_director",
+  priority: 5,
+  parameters: [["director_1","director_1"],["ano_inicio","ano_inicio"],["ano_fin","ano_fin"]],
+  executeAtStart: true,
+  htmlObject: "Panel_3",
+  listeners: ["director_1","ano_inicio","ano_fin"],
+  clearsBeforePreExecution: true,
+  renderMode: "total",
+  dataAdditiveMode: false,
+  chartDefinition:  {
+    dataSource: "director_beneficios_anos",
+    width: 600,
+    height: 325,
+    extensionPoints: [],
+    colors: [],
+    title: "Evolución en el período",
+    animate: true,
+    barOrthoSizeMin: 1.5,
+    barStackedMargin: 0,
+    baseAxisLabelDesiredAngles: [],
+    baseAxisOffset: 0,
+    baseAxisTicks: true,
+    baseAxisTitleMargins: "0",
+    baseAxisTooltipAutoContent: "value",
+    baseAxisTooltipEnabled: true,
+    baseAxisVisible: true,
+    clearSelectionMode: "emptySpaceClick",
+    clickable: false,
+    color2AxisColors: [],
+    color2AxisLegendClickMode: "toggleVisible",
+    color2AxisLegendVisible: true,
+    color2AxisPreserveMap: false,
+    colorPreserveMap: false,
+    compatVersion: 10,
+    crosstabMode: true,
+    ctrlSelectMode: true,
+    dataIgnoreMetadataLabels: false,
+    dataSeparator: "~",
+    groupedLabelSep: " ~ ",
+    hoverable: false,
+    ignoreNulls: true,
+    isMultiValued: false,
+    leafContentOverflow: "auto",
+    legend: true,
+    legendClickMode: "toggleVisible",
+    legendVisible: true,
+    measuresIndexes: [],
+    multiChartColumnsMax: 3,
+    multiChartIndexes: [],
+    multiChartOverflow: "grow",
+    multiChartSingleColFillsHeight: true,
+    multiChartSingleRowFillsHeight: true,
+    nullInterpolationMode: "none",
+    orientation: "vertical",
+    ortho2AxisDomainAlign: "center",
+    ortho2AxisDomainRoundMode: "tick",
+    ortho2AxisDomainScope: "global",
+    ortho2AxisMinorTicks: true,
+    ortho2AxisOffset: 0,
+    ortho2AxisTicks: true,
+    ortho2AxisTickUnitMax: "Infinity",
+    ortho2AxisTickUnitMin: "0",
+    ortho2AxisTitleMargins: "0",
+    ortho2AxisVisible: true,
+    ortho2AxisZeroLine: true,
+    orthoAxisDomainAlign: "center",
+    orthoAxisDomainRoundMode: "tick",
+    orthoAxisDomainScope: "global",
+    orthoAxisOffset: 0,
+    orthoAxisTicks: true,
+    orthoAxisTickUnitMax: "Infinity",
+    orthoAxisTickUnitMin: "0",
+    orthoAxisTitleMargins: "0",
+    orthoAxisVisible: true,
+    orthoAxisZeroLine: true,
+    overflowMarkersVisible: true,
+    plot2: false,
+    plot2AreasFillOpacity: 0.5,
+    plot2AreasVisible: false,
+    plot2ColorAxis: 2,
+    plot2DotsVisible: true,
+    plot2LinesVisible: true,
+    plot2NullInterpolationMode: "none",
+    plot2OrthoAxis: 1,
+    plot2Series: [],
+    plot2SeriesIndexes: -1,
+    plot2Stacked: false,
+    plot2ValuesMask: "{value}",
+    plot2ValuesVisible: false,
+    pointingMode: "near",
+    preserveLayout: false,
+    readers: [],
+    selectable: false,
+    seriesInRows: false,
+    slidingWindow: false,
+    smallContentMargins: "0",
+    smallContentPaddings: "0",
+    smallMargins: "2%",
+    smallPaddings: "0",
+    smallTitleMargins: "0",
+    smallTitlePaddings: "0",
+    smallTitlePosition: "top",
+    stacked: false,
+    timeSeries: false,
+    timeSeriesFormat: "%Y-%m-%d",
+    titleMargins: "0",
+    titlePaddings: "0",
+    tooltipEnabled: true,
+    tooltipFade: true,
+    tooltipFollowMouse: false,
+    tooltipHtml: true,
+    tooltipOpacity: 0.9,
+    trendAreasFillOpacity: 0.5,
+    trendAreasVisible: false,
+    trendColorAxis: 2,
+    trendDotsVisible: false,
+    trendLinesVisible: true,
+    trendOrthoAxis: 1,
+    trendStacked: false,
+    trendValuesAnchor: "right",
+    trendValuesVisible: false,
+    valuesNormalized: false,
+    valuesOverflow: "hide"
+  },
+  lifecycle:  {
+    silent: false
+  }
+});
+
+dashboard.addComponents([render_selector_2, render_selector_1, render_selector_ano_inicio, render_selector_ano_fin, render_beneficios_votos_2, render_beneficios_director_2, render_beneficios_voto, render_beneficios_director]);
+
+dashboard.init();
+return dashboard;
+});
+</script>
+
+		
+				<script type="text/javascript">
+			require(['cdf/lib/jquery', 'amd!cdf/lib/jquery.corner'], function($) {
+				$(function() {
+					//$(".round").corner();
+					$(".cdfdd-round").corner();
+					$(".cdfdd-bevel").corner("bevel");
+					$(".cdfdd-notch").corner("notch");
+					$(".cdfdd-bite").corner("bite");
+					$(".cdfdd-bevel_top").corner("bevel top");
+					$(".cdfdd-dog_tr").corner("dog tr");
+				});
+			});
+		</script>
+		
+
+	
+
+
+
+<div id="cdfErrorDiv"></div><div id="pvSVGText_1701399381377" style="position: absolute; visibility: hidden; width: 0px; height: 0px; left: 0px; top: 0px; line-height: 1; text-transform: none; letter-spacing: normal; white-space: nowrap;"><svg font-size="10px" font-family="sans-serif"><text style="font: 10px OpenSansRegular;">1.5 G</text></svg></div></body></html>

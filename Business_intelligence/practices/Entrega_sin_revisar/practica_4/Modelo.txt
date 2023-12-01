@@ -1,0 +1,43 @@
+tiempo (
+	id serial,
+	mes int,
+	ano int,
+	mes_texto
+)
+
+productoras (
+	id serial,
+	id_productora int,
+	nombre varchar
+)
+
+directores (
+	id serial ,
+	text_id varchar,
+	nombre varchar
+)
+
+productores (
+	id serial,
+	text_id varchar,
+	nombre varchar
+)
+
+finanzas (
+	tiempo int,
+	director int,
+	productora int,
+	productor int,
+	coste numeric,
+	ingresos numeric
+)
+
+satisfaccion_usuarios (
+	tiempo_votacion int,
+	tiempo_emision int,
+	director int,
+	productora int,
+	productor int,
+	votos int,
+	satisfaccion numeric(2,1)
+)

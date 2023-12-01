@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<ns2:ExportManifest xmlns:ns2="http://www.pentaho.com/schema/">
+    <ExportManifestInformation exportDate="01-12-2023 01:44:12 CET" exportBy="alumnogreibd" rootFolder="/home/alumnogreibd/" manifestVersion="2"/>
+    <ExportManifestEntity path="Cuadro_de_mandos_director_entrega.wcdf">
+        <ExportManifestProperty>
+            <EntityMetaData name="Cuadro_de_mandos_director_entrega.wcdf" createdDate="2023-12-01T01:25:43.569+01:00" isFolder="false" path="Cuadro_de_mandos_director_entrega.wcdf" isHidden="false" isSchedulable="true" locale="en_US" description="Cuadro_de_mandos_director_entrega" title="Cuadro_de_mandos_director_entrega"/>
+        </ExportManifestProperty>
+        <ExportManifestProperty>
+            <EntityExtraMetaData/>
+        </ExportManifestProperty>
+        <ExportManifestProperty>
+            <EntityAcl>
+                <entriesInheriting>true</entriesInheriting>
+                <owner>alumnogreibd</owner>
+                <ownerType>USER</ownerType>
+            </EntityAcl>
+        </ExportManifestProperty>
+    </ExportManifestEntity>
+</ns2:ExportManifest>

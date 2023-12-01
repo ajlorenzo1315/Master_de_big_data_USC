@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CDADescriptor>
+   <DataSources>
+      <Connection id="anos" type="sql.jndi">
+         <Jndi>cine_peliculas</Jndi>
+      </Connection>
+      <Connection id="directores_nombre" type="sql.jndi">
+         <Jndi>cine_peliculas</Jndi>
+      </Connection>
+      <Connection id="director_vototos_anos_2" type="mondrian.jndi">
+         <Catalog>mondrian:/Cine+peliculas_3</Catalog>
+         <Jndi>cine_peliculas</Jndi>
+      </Connection>
+      <Connection id="director_beneficios_anos_2" type="mondrian.jndi">
+         <Catalog>mondrian:/Cine+peliculas_3</Catalog>
+         <Jndi>cine_peliculas</Jndi>
+      </Connection>
+      <Connection id="director_beneficios_anos" type="mondrian.jndi">
+         <Catalog>mondrian:/Cine+peliculas_3</Catalog>
+         <Jndi>cine_peliculas</Jndi>
+      </Connection>
+      <Connection id="director_votos_anos" type="mondrian.jndi">
+         <Catalog>mondrian:/Cine+peliculas_3</Catalog>
+         <Jndi>cine_peliculas</Jndi>
+      </Connection>
+      <Connection id="director_beneficios" type="mondrian.jndi">
+         <Catalog>mondrian:/Cine+peliculas_3</Catalog>
+         <Jndi>cine_peliculas</Jndi>
+      </Connection>
+   </DataSources>
+   <DataAccess access="public" connection="anos" id="anos" type="sql">
+      <Name>anos</Name>
+      <Cache duration="3600" enabled="true"/>
+      <Columns/>
+      <Parameters/>
+      <Query><![CDATA[select  distinct ano
+from tiempo
+order by ano]]></Query>
+   </DataAccess>
+   <DataAccess access="public" connection="directores_nombre" id="directores_nombre"
+               type="sql">
+      <Name>directores_nombre</Name>
+      <Cache duration="3600" enabled="true"/>
+      <Columns/>
+      <Parameters/>
+      <Query><![CDATA[--select  distinct nombre
+select nombre
+from director
+-- es por un error el el cargado de datos que se soluciono luego
+where nombre not like '%,%';]]></Query>
+   </DataAccess>
+   <DataAccess access="public" connection="director_vototos_anos_2"
+               id="director_vototos_anos_2"
+               type="mdx">
+      <Name>director_vototos_anos_2</Name>
+      <BandedMode>compact</BandedMode>
+      <Cache duration="3600" enabled="true"/>
+      <Columns/>
+      <Parameters>
+         <Parameter default="Michael Bay" name="director_2" type="String"/>
+         <Parameter default="1996" name="ano_inicio" type="Integer"/>
+         <Parameter default="2016" name="ano_fin" type="Integer"/>
+      </Parameters>
+      <Query><![CDATA[WITH 
+SET [~FILTER] AS 
+
+    {
+        [director.Jerarquiadirector].[nombre].[${director_2}]
+    }
+
+SET [~ROWS] AS 
+   
+    {
+        [tiempo_emision].[ano].[${ano_inicio}]: [tiempo_emision].[ano].[${ano_fin}]
+    }
+
+SELECT 
+NON EMPTY {[Measures].[satisfacion]} ON COLUMNS, 
+NON EMPTY [~ROWS] ON ROWS 
+FROM [satisfacion] 
+WHERE [~FILTER]]]></Query>
+   </DataAccess>
+   <DataAccess access="public" connection="director_beneficios_anos_2"
+               id="director_beneficios_anos_2"
+               type="mdx">
+      <Name>director_beneficios_anos_2</Name>
+      <BandedMode>compact</BandedMode>
+      <Cache duration="3600" enabled="true"/>
+      <Columns/>
+      <Parameters>
+         <Parameter default="David Yates" name="director_2" type="String"/>
+         <Parameter default="1996" name="ano_inicio" type="Integer"/>
+         <Parameter default="2016" name="ano_fin" type="Integer"/>
+      </Parameters>
+      <Query><![CDATA[WITH
+SET [~FILTER] AS
+    {[director.Jerarquiadirector].[nombre].[${director_2}]}
+SET [~ROWS] AS
+    {[tiempo.ano].[ano].[${ano_inicio}]:[tiempo.ano].[ano].[${ano_fin}]}
+SELECT
+NON EMPTY {[Measures].[coste], [Measures].[ingresos], [Measures].[beneficios]} ON COLUMNS,
+NON EMPTY [~ROWS] ON ROWS
+FROM [finanzas]
+WHERE [~FILTER]]]></Query>
+   </DataAccess>
+   <DataAccess access="public" connection="director_beneficios_anos"
+               id="director_beneficios_anos"
+               type="mdx">
+      <Name>director_beneficios_anos</Name>
+      <BandedMode>compact</BandedMode>
+      <Cache duration="3600" enabled="true"/>
+      <Columns/>
+      <Parameters>
+         <Parameter default="David Yates" name="director_1" type="String"/>
+         <Parameter default="1996" name="ano_inicio" type="Integer"/>
+         <Parameter default="2016" name="ano_fin" type="Integer"/>
+      </Parameters>
+      <Query><![CDATA[WITH
+SET [~FILTER] AS
+    {[director.Jerarquiadirector].[nombre].[${director_1}]}
+SET [~ROWS] AS
+    {[tiempo.ano].[ano].[${ano_inicio}]:[tiempo.ano].[ano].[${ano_fin}]}
+SELECT
+NON EMPTY {[Measures].[coste], [Measures].[ingresos], [Measures].[beneficios]} ON COLUMNS,
+NON EMPTY [~ROWS] ON ROWS
+FROM [finanzas]
+WHERE [~FILTER]]]></Query>
+   </DataAccess>
+   <DataAccess access="public" connection="director_votos_anos" id="director_votos_anos"
+               type="mdx">
+      <Name>director_votos_anos</Name>
+      <BandedMode>compact</BandedMode>
+      <Cache duration="3600" enabled="true"/>
+      <Columns/>
+      <Parameters>
+         <Parameter default="David Yates" name="director_1" type="String"/>
+         <Parameter default="1996" name="ano_inicio" type="Integer"/>
+         <Parameter default="2016" name="ano_fin" type="Integer"/>
+      </Parameters>
+      <Query><![CDATA[WITH 
+SET [~FILTER] AS 
+
+    {
+        [director.Jerarquiadirector].[nombre].[${director_1}]
+    }
+
+SET [~ROWS] AS 
+   
+    {
+        [tiempo_emision].[ano].[${ano_inicio}]: [tiempo_emision].[ano].[${ano_fin}]
+    }
+
+SELECT 
+NON EMPTY {[Measures].[satisfacion]} ON COLUMNS, 
+NON EMPTY [~ROWS] ON ROWS 
+FROM [satisfacion] 
+WHERE [~FILTER]]]></Query>
+   </DataAccess>
+   <DataAccess access="public" connection="director_beneficios" id="director_beneficios"
+               type="mdx">
+      <Name>director_beneficios</Name>
+      <BandedMode>compact</BandedMode>
+      <Cache duration="3600" enabled="true"/>
+      <Columns/>
+      <Parameters>
+         <Parameter default="David Yates" name="director_1" type="String"/>
+      </Parameters>
+      <Query><![CDATA[WITH
+SET [~ROWS] AS
+    {[director.Jerarquiadirector].[nombre].[${director_1}]}
+SELECT
+NON EMPTY {[Measures].[numero votos]} ON COLUMNS,
+NON EMPTY [~ROWS] ON ROWS
+FROM [satisfacion]]]></Query>
+   </DataAccess>
+</CDADescriptor>

@@ -1,0 +1,772 @@
+1,7,Andrew Stanton
+2,39,Sam Mendes
+3,59,Luc Besson
+4,1704,Gore Verbinski
+5,197,David Silverman
+6,224,David Cronenberg
+7,190,Clint Eastwood
+8,814,Tony Kaye
+9,488,Steven Spielberg
+10,638,Michael Mann
+11,865,Michael Bay
+12,578,Ridley Scott
+13,956,Guy Ritchie
+14,510,Tim Burton
+15,108,Peter Jackson
+16,1223,Joel Coen
+17,1577,Richard Kelly
+18,525,Christopher Nolan
+19,1884,Steven Soderbergh
+20,2226,Sydney Pollack
+21,2388,Jonathan Frakes
+22,2523,Stuart Baird
+23,2945,Stephen Gaghan
+24,3224,Stephen Frears
+25,3288-3289,"Chris Weitz, Paul Weitz"
+26,7213,Jonathan Mostow
+27,769,Martin Brest
+28,4499,Tom Shadyac
+29,4586,Pitof
+30,4755,David R. Ellis
+31,4945,Joe Johnston
+32,4762,Paul Thomas Anderson
+33,240,Stanley Kubrick
+34,5065,David Frankel
+35,5281,Spike Lee
+36,4014,Paul W.S. Anderson
+37,5572,Joel Schumacher
+38,5655,Wes Anderson
+39,5713,Chris Wedge
+40,6046,Roland Emmerich
+41,6037-6038,"Colin Strause, Greg Strause"
+42,6159,Ron Howard
+43,6201,Baz Luhrmann
+44,6482,John Singleton
+45,6767,Larry Charles
+46,4027,Frank Darabont
+47,5231,Wolfgang Petersen
+48,7018,Richard Curtis
+49,7313-7314,"Steve Box, Nick Park"
+50,36425,McG
+51,7395-7396,"Bobby Farrelly, Peter Farrelly"
+52,4135,Robert Redford
+53,7467,David Fincher
+54,7623,Sam Raimi
+55,10943,Francis Lawrence
+56,10491,Paul Verhoeven
+57,7775,Stephen Sommers
+58,12890,Pete Docter
+59,8246,Barry Levinson
+60,468,Stephen Daldry
+61,2710,James Cameron
+62,9339-9340,"Lilly Wachowski, Lana Wachowski"
+63,5174,Barry Sonnenfeld
+64,2461,Mel Gibson
+65,9181,Edward Zwick
+66,9158,Sharon Maguire
+67,2209,Jan de Bont
+68,10965,Chris Columbus
+69,11218,Alfonso Cuarón
+70,10723,Mike Newell
+71,11343,David Yates
+72,24,Robert Zemeckis
+73,6737,Jay Roach
+74,5216,Gus Van Sant
+75,11090,Edgar Wright
+76,11266,James McTeigue
+77,11401,John Woo
+78,11447-11448,"Albert Hughes, Allen Hughes"
+79,8685,Andrew Niccol
+80,11649,Cameron Crowe
+81,11887,Brad Silberling
+82,11873,Roger Kumble
+83,12028,John Moore
+84,5524-12058,"Andrew Adamson, Vicky Jenson"
+85,5524-12079-12080,"Andrew Adamson, Kelly Asbury, Conrad Vernon"
+86,12098-12099,"Chris Miller, Raman Hui"
+87,12523,Rob Bowman
+88,2352,Jean-Jacques Annaud
+89,7879,John Lasseter
+90,13581,Brian Levant
+91,1090,John McTiernan
+92,7879-7911,"John Lasseter, Joe Ranft"
+93,15002,Dean Parisot
+94,7187,Richard Donner
+95,18863-18864,"Eric Darnell, Tom McGrath"
+96,1150,Brian De Palma
+97,15344,J.J. Abrams
+98,15361,Josef Rusnak
+99,15557,Bill Condon
+100,2239,Anthony Minghella
+101,16483,Sylvester Stallone
+102,380,Robert De Niro
+103,16837,Mark Steven Johnson
+104,16842,Stephen J. Anderson
+105,15217,Zack Snyder
+106,19499,Kevin Munroe
+107,6431,Darren Aronofsky
+108,20646,Gabriele Muccino
+109,1032,Martin Scorsese
+110,2294,Robert Rodriguez
+111,5010,Todd Field
+112,9032,Bryan Singer
+113,10828,Guillermo del Toro
+114,18281,Donald Petrie
+115,29922,Marcus Nispel
+116,893,Tony Scott
+117,7017,Roger Michell
+118,17403,Mike Judge
+119,3950,Len Wiseman
+120,17698,Nancy Meyers
+121,564,Richard Linklater
+122,508,David Koepp
+123,17812,Gregory Hoblit
+124,17825,Shawn Levy
+125,18184,Xavier Gens
+126,1524,Harold Ramis
+127,18320,Bronwen Hughes
+128,10702,Martin Campbell
+129,18596,Taylor Hackford
+130,2042,Stephen Hopkins
+131,12786,Simon West
+132,2260,Steven Zaillian
+133,18844,John Madden
+134,18865,Louis Leterrier
+135,15277,Jon Favreau
+136,18898,Rob Minkoff
+137,18878,Rob Cohen
+138,7256,Lee Tamahori
+139,17016,Neil Jordan
+140,19271-19272,"Anthony Russo, Joe Russo"
+141,13426,Peter Segal
+142,19304,John Schlesinger
+143,1152,Oliver Stone
+144,17633,Rob Marshall
+145,280,Terry Gilliam
+146,1769,Sofia Coppola
+147,19969,Pat O'Connor
+148,1614,Ang Lee
+149,87742,Marc Webb
+150,20218-20219,"Eric Bress, J. Mackye Gruber"
+151,12989,Andrew Davis
+152,20310,Takashi Shimizu
+153,20400,Tim Story
+154,20561,James Gray
+155,20739,Adam Shankman
+156,20779,Gary Sinyor
+157,32593,Steven Brill
+158,20907,Antoine Fuqua
+159,21031,Alejandro Agresti
+160,21085,Alex Proyas
+161,1269,Kevin Costner
+162,21136,Michael Cristofer
+163,12962,Jon Turteltaub
+164,7087-7930,"Brad Bird, Jan Pinkava"
+165,21217,Jonathan Lynn
+166,13079,Gavin Hood
+167,10765,Andrzej Bartkowiak
+168,21526,Rod Lurie
+169,11091,Brett Ratner
+170,4723,Brian Helgeland
+171,21692-21693,"Hironobu Sakaguchi, Motonori Sakakibara"
+172,21712,Carl Franklin
+173,323,Curtis Hanson
+174,21879,Simon Wells
+175,21931,Chris Nahon
+176,22100,Hugh Johnson
+177,22301,Liam Lynch
+178,3288,Chris Weitz
+179,957,Matthew Vaughn
+180,5342,Mike Nichols
+181,1978,Iain Softley
+182,24173,Mike Binder
+183,25453,Stefen Fangmeier
+184,11694,Doug Liman
+185,25598,Paul Greengrass
+186,3388,James L. Brooks
+187,19665,John Boorman
+188,26481,Anand Tucker
+189,5149,Bonnie Hunt
+190,18323,Marc Lawrence
+191,11614,M. Night Shyamalan
+192,27846,John Herzfeld
+193,13235,Alexander Payne
+194,7409,J.B. Rogers
+195,3026,Rob Reiner
+196,366,James Mangold
+197,29524,Rand Ravich
+198,29009,Ken Kwapis
+199,31024,Betty Thomas
+200,3028,Bruce A. Evans
+201,17494,Dennis Dugan
+202,33254,Jim Gillespie
+203,33279,Danny Cannon
+204,33433,Scott Hicks
+205,1011,Susanne Bier
+206,510-34891,"Tim Burton, Mike Johnson"
+207,34517,Trey Parker
+208,34849,Ted Demme
+209,24949,Michael Davis
+210,36588,Joe Wright
+211,36602,Peter Berg
+212,36797,Robert Luketic
+213,23964,Gary Ross
+214,6349,Alan J. Pakula
+215,37618,Andrew Dominik
+216,27571,David Slade
+217,37630,Shekhar Kapur
+218,15775,Kevin Lima
+219,37932,F. Gary Gray
+220,38023,Michael Patrick King
+221,1201,Garry Marshall
+222,23968,Phil Alden Robinson
+223,29078,Rod Hardy
+224,30365,Michael Caton-Jones
+225,7832-11266,"Oliver Hirschbiegel, James McTeigue"
+226,4037,Ron Shelton
+227,1461,George Clooney
+228,1223-1224,"Joel Coen, Ethan Coen"
+229,40243,Gil Junger
+230,41039,Judd Apatow
+231,819,Edward Norton
+232,2406,Mathieu Kassovitz
+233,41285,Kirsten Sheridan
+234,41378,Kerry Conran
+235,1108,Shane Black
+236,42994,David Dobkin
+237,5058,Roger Christian
+238,44113-44114,"Steve Hickner, Simon J. Smith"
+239,47640,Clark Johnson
+240,46076,Tom Dey
+241,8858,Ivan Reitman
+242,47974,Bob Spiers
+243,8844,Lawrence Kasdan
+244,48980,David McNally
+245,15890,James Foley
+246,17883,David O. Russell
+247,2171,Griffin Dunne
+248,17268,Ronny Yu
+249,49903,Tim Hill
+250,50099-52044,"Shuki Levy, David Winning"
+251,52049,Jay Chandrasekhar
+252,50719,Rodman Flender
+253,51851,Jake Kasdan
+254,50767,Craig Gillespie
+255,32278,Matt Reeves
+256,3290,Peter Hedges
+257,52038,Thomas Carter
+258,52112,Steve Carr
+259,52609,Breck Eisner
+260,7314-53304,"Nick Park, Peter Lord"
+261,53334,Jim Sheridan
+262,7399,Ben Stiller
+263,12881-40345,"Gary Goldman, Don Bluth"
+264,52842,Garth Jennings
+265,43141,Pete Travis
+266,40223,Joe Carnahan
+267,52845-52870,"Karey Kirkpatrick, Tim Johnson"
+268,12995,Marc Forster
+269,2419,Jean-Pierre Jeunet
+270,17279,E. Elias Merhige
+271,53925,Jared Hess
+272,54025,Karyn Kusama
+273,54050,Mark Waters
+274,40256,D.J. Caruso
+275,54584,Jesse Dylan
+276,54507,Jon M. Chu
+277,54733,Greg Mottola
+278,11151,Nick Cassavetes
+279,17167,Andy Tennant
+280,2690,Peter Weir
+281,51984,Mimi Leder
+282,14392,Kathryn Bigelow
+283,35453,Pierre Morel
+284,24248,Nigel Cole
+285,10808,Stephen Norrington
+286,14172,Michael McCullers
+287,12524,Chris Carter
+288,17764,Charles S. Dutton
+289,56512,Tarsem Singh
+290,21370,Roger Donaldson
+291,56106,Charles Shyer
+292,19142,Kenneth Johnson
+293,56591,Danny Leiner
+294,56154,Antony Hoffman
+295,23430,Timur Bekmambetov
+296,16938,Renny Harlin
+297,18863-52870,"Eric Darnell, Tim Johnson"
+298,18357,Peter Hewitt
+299,54967,Sam Weisman
+300,56453,John Bonito
+301,2836,Kimberly Peirce
+302,8574,Walter Salles
+303,56578,Jeff Tremaine
+304,15810-15811,"Ron Clements, John Musker"
+305,15045,Michael Lembeck
+306,12079-56660,"Kelly Asbury, Lorna Cook"
+307,56717,Tom Vaughan
+308,664,Frank Marshall
+309,8300,Kevin Reynolds
+310,41549,Andrew Fleming
+311,15111,Jean-Claude Van Damme
+312,57082,John Stockwell
+313,26713,Chuck Russell
+314,57130,Todd Phillips
+315,57134,James Wong
+316,57193,Gil Kenan
+317,13776-42175,"John Frankenheimer, Richard Stanley"
+318,3289,Paul Weitz
+319,57270,Robert Schwentke
+320,34682,Jeremiah S. Chechik
+321,1723,Walter Hill
+322,57370,Frank Coraci
+323,15148,Jon Amiel
+324,57405,Jeff Schaffer
+325,26648,Luis Llosa
+326,12905-15774,"Ash Brannon, Chris Buck"
+327,58463,Glenn Gordon Caron
+328,58338,John Bruno
+329,33316,David Nutter
+330,57630,Peter Cattaneo
+331,58316,John Fortenberry
+332,10953,Gilbert Adler
+333,5501,Gary Fleder
+334,6449,Warren Beatty
+335,57607,Stephen Chow
+336,57633,Rawson Marshall Thurber
+337,13015,Phillip Noyce
+338,7791,Peter Howitt
+339,9248,Nora Ephron
+340,57691,Tamra Davis
+341,57741-57742,"Mark Osborne, John Stevenson"
+342,56911,Les Mayfield
+343,58059,Chris Koch
+344,1215,Raja Gosnell
+345,58189,Justin Lin
+346,57521,Steve Beck
+347,58375,Andy Fickman
+348,58498,Dominic Sena
+349,15287,Niki Caro
+350,58689,Neil LaBute
+351,55710,Adam McKay
+352,33315,Richard Loncraine
+353,53177,Brian Robbins
+354,35694-35734,"Jason Friedberg, Aaron Seltzer"
+355,29214,Anne Fletcher
+356,18500,Phil Joanou
+357,59026,Peyton Reed
+358,27436,Costa-Gavras
+359,50583,Adam Rifkin
+360,19850,Catherine Hardwicke
+361,3227,Steve Pink
+362,59291,Alexandre Aja
+363,20237,Beeban Kidron
+364,7087,Brad Bird
+365,59410,Bob Odenkirk
+366,26714,John R. Leonetti
+367,59646,Kinka Usher
+368,18254,Simon Wincer
+369,12936,Jim Abrahams
+370,21879-44113-59803,"Simon Wells, Steve Hickner, Brenda Chapman"
+371,52934,Nicholas Stoller
+372,41550,Andrew Bergman
+373,7908,Frank Oz
+374,3415,Jerry Zucker
+375,60207,Steve 'Spaz' Williams
+376,60237,John A. Davis
+377,4489,Steve Oedekerk
+378,6818,Werner Herzog
+379,21905-31033,"Danny Pang, Oxide Pang Chun"
+380,61290,Matthew O'Callaghan
+381,61411,Mark Dindal
+382,17046,Gary Winick
+383,62116,Bille Woodruff
+384,11770,John Carpenter
+385,62721,Andrew Douglas
+386,59521,Jaume Collet-Serra
+387,59413,Ben Garant
+388,55075,Jeff Wadlow
+389,10781,Michael Apted
+390,17447,Terry Zwigoff
+391,58868,Troy Miller
+392,64139,Joshua Michael Stern
+393,64141,David Gordon Green
+394,66193-69797,"Chris Sanders, Dean DeBlois"
+395,64151,Mike Mitchell
+396,8,Lee Unkrich
+397,11181,Kenneth Branagh
+398,55499,Scott Derrickson
+399,21377,Peter Medak
+400,11809,Rupert Wainwright
+401,76247,Charles Herman-Wurmfeld
+402,87130,Mark A.Z. Dippé
+403,42111,Bryan Spicer
+404,1723-62020,"Walter Hill, Jack Sholder"
+405,3092,Diane Keaton
+406,9168,Alan Parker
+407,5696,Bruce Beresford
+408,13563,Norman Jewison
+409,65133,Marcus Raboy
+410,56435,Stephen T. Kay
+411,15175,William Friedkin
+412,59412,Michael Patrick Jann
+413,27005-65629,"Don Michael Paul, Bibo Bergeron"
+414,57646,Henry Selick
+415,62047-62048,"Gary Trousdale, Kirk Wise"
+416,12058-65629-65630,"Vicky Jenson, Bibo Bergeron, Rob Letterman"
+417,55476,Nicholas Hytner
+418,34481,Matt Williams
+419,65855-65856,"Ralph Zondag, Eric Leighton"
+420,3045,P.J. Hogan
+421,52358,Boaz Yakin
+422,50942,Gregory Poirier
+423,66190-66191,"Tony Bancroft, Barry Cook"
+424,6198,Vondie Curtis-Hall
+425,4600,Joe Dante
+426,66823,Joseph Kahn
+427,15521,Ernest R. Dickerson
+428,54040,John Lee Hancock
+429,66548,Paul Weiland
+430,26767,Ringo Lam
+431,7671,Jeb Stuart
+432,21981,Harald Zwart
+433,36805,Audrey Wells
+434,16853,Jessie Nelson
+435,66960,Dennie Gordon
+436,64191,Lawrence Guterman
+437,37710,Peter Hyams
+438,14911,Penny Marshall
+439,78118,Vadim Perelman
+440,15337,John Polson
+441,46297,Jay Russell
+442,58628,Sara Sugarman
+443,2291,Paul McGuigan
+444,68770,Mark Rosman
+445,30149,Mikael Salomon
+446,64045,Kirk Jones
+447,34453,Kevin Bray
+448,57898,William Malone
+449,57604,Joel Gallen
+450,25735,Christian Duguay
+451,30715,Terrence Malick
+452,69353,Stephen Kessler
+453,7312,Angela Robinson
+454,69498,Mike Bigelow
+455,23213,Harold Becker
+456,5140,Wes Craven
+457,69579,James Isaac
+458,61175,John Whitesell
+459,4610,John Landis
+460,33183-58897,"David Bowers, Sam Fell"
+461,28904,Hugh Wilson
+462,71068,Phyllida Lloyd
+463,70777,Kevin Rodney Sullivan
+464,70738,Gary David Goldberg
+465,18356,Stephen Herek
+466,14999,George A. Romero
+467,33485,Ron Underwood
+468,61357,Geoffrey Sax
+469,2127,James Wan
+470,70651,Stephen Hillenburg
+471,61921,Courtney Solomon
+472,23393,Barbet Schroeder
+473,1776,Francis Ford Coppola
+474,28741,Michael Rymer
+475,71418,Demian Lichtenstein
+476,35689,Keenen Ivory Wayans
+477,71527,Marco Schnabel
+478,71548,Peter Sollett
+479,71600,Seth Gordon
+480,8029-71729,"Jimmy Hayward, Steve Martino"
+481,71923,Shane Acker
+482,72024,Malcolm D. Lee
+483,28239,David Twohy
+484,2034,Danny Boyle
+485,6111,Mike Figgis
+486,66563,Fred Wolf
+487,28487,Andy Wilson
+488,73832,Jessy Terrero
+489,228,Ed Harris
+490,60024,Liz Friedlander
+491,68215,Reginald Hudlin
+492,61970-131242,"Ben Gluck, Anthony Bell"
+493,27745,Robert C. Cooper
+494,77003,Gavin O'Connor
+495,68843-68844,"Jon Hurwitz, Hayden Schlossberg"
+496,125544,Tim Fywell
+497,127823,Agustín Díaz Yanes
+498,648,Philip Kaufman
+499,6340,Susannah Grant
+500,70287-80671,"Will Finn, John Sanford"
+501,3893,David S. Goyer
+502,75687,Christian Robinson
+503,3310,Nick Moore
+504,76230,Diane English
+505,77911,Deb Hagan
+506,50460,Michael Mayer
+507,129952,Sean McNamara
+508,24294,Ben Younger
+509,57328,Barry W. Blaustein
+510,77211,Félix Enríquez Alcalá
+511,82221-82222,"Brendan Malloy, Emmett Malloy"
+512,25819,Michele Placido
+513,130837,Stewart Hendler
+514,52870-1205756,"Tim Johnson, Patrick Gilmore"
+515,79656,John Schultz
+516,86439-110873,"Norton Virgien, Igor Kovalyov"
+517,16294,Jonathan Demme
+518,142007,Steve Trenbirth
+519,13614-13615,"Deborah Kaplan, Harry Elfont"
+520,109857,Thor Freudenthal
+521,3191,Risa Bramon Garcia
+522,22214,David Wain
+523,2053,Bill Paxton
+524,12080-65630,"Conrad Vernon, Rob Letterman"
+525,1216735,Paul Abascal
+526,93301,Jun Falkenstein
+527,46366,Shusuke Kaneko
+528,161858,David Raynr
+529,80215,Charles Stone III
+530,12891,Joss Whedon
+531,80540,Stig Bergqvist
+532,324,Scott Silver
+533,5953,Spike Jonze
+534,19242,Tony Gilroy
+535,1027737-1027738,"Robin Budd, Donovan Cook"
+536,84782,Francine McDougall
+537,138,Quentin Tarantino
+538,17350,Kevin Macdonald
+539,58552,Burr Steers
+540,36083,Kevin Allen
+541,39819,Wayne Wang
+542,42171,Jonathan Kaplan
+543,123694,Rob Pritts
+544,588701,Des McAnuff
+545,12964,Michael Ritchie
+546,19012,Davis Guggenheim
+547,36804,Peter Chelsom
+548,40230,Kevin Hooks
+549,19228,Jim Fall
+550,50582,Frederik Du Chau
+551,84851,Hoyt Yeatman
+552,12708,Peter Billingsley
+553,91268,Ruben Fleischer
+554,35735,Nikhil Advani
+555,124747-124748,"Pierre Coffin, Chris Renaud"
+556,86270,Joseph Kosinski
+557,8029,Jimmy Hayward
+558,1270,Charles Martin Smith
+559,1110343,Lauren Lazin
+560,11057,Robert Towne
+561,107446-155267,"Phil Lord, Christopher Miller"
+562,69597,Drew Barrymore
+563,62369,Olatunde Osunsanmi
+564,52443,Jason Reitman
+565,68573,Walt Becker
+566,17835-1551346,"Ricky Gervais, Matthew Robinson"
+567,880,Ben Affleck
+568,20031,Samuel Bayer
+569,96166,John Curran
+570,2294-61847,"Robert Rodriguez, Ethan Maniquis"
+571,78562,Phil Traill
+572,19303,Kevin Smith
+573,57581,Neil Marshall
+574,15868,Uli Edel
+575,62541,Brandon Camp
+576,12058,Vicky Jenson
+577,53178,Mike Tollin
+578,102445,John Sayles
+579,140354,Ulu Grosbard
+580,114404,Miguel Sapochnik
+581,24318,Richard Benjamin
+582,111686,Jim Field Smith
+583,1113751,Ashwani Dhir
+584,70792,David Hogan
+585,101767,Robert Butler
+586,51866,Rick Famuyiwa
+587,31119,Sylvain White
+588,41671,Nimród Antal
+589,113600,Susanna White
+590,129941,Alan Shapiro
+591,58712,Steve Miner
+592,15774-15775,"Chris Buck, Kevin Lima"
+593,8193,Florian Henckel von Donnersmarck
+594,62863,Jorma Taccone
+595,1414,Goro Miyazaki
+596,1921,George Nolfi
+597,18864,Tom McGrath
+598,96439,Nanette Burstein
+599,52779,Ryan Murphy
+600,65630,Rob Letterman
+601,76595-121830,"Byron Howard, Nathan Greno"
+602,2460,Randall Wallace
+603,132876,Brad Peyton
+604,72258,Steve Boyum
+605,20133,Tod Williams
+606,116805,Paul Feig
+607,77147,John Erick Dowdle
+608,66739,Jonathan Liebesman
+609,12079,Kelly Asbury
+610,2163,Richard LaGravenese
+611,107274,Richard Rich
+612,47773,Paul Mazursky
+613,29605,Mikael Håfström
+614,59126,Alister Grierson
+615,141675,Jason Winer
+616,7879-32532,"John Lasseter, Brad Lewis"
+617,1167470,Gary Shore
+618,142312,Jennifer Yuh Nelson
+619,66193-71267,"Chris Sanders, Kirk De Micco"
+620,5690-12824-56146-56147-65531-74297-74298-74299,"James Algar, Don Hahn, Gaëtan Brizzi, Paul Brizzi, Eric Goldberg, Hendel Butoy, Francis Glebas, Pixote Hunt"
+621,55789,Tate Taylor
+622,57851,Bernard Rose
+623,56411-56412,"Glenn Ficarra, John Requa"
+624,71280,Michael Dowse
+625,227438-227439,"Stephen Anderson, Don Hall"
+626,54597,Joe Nussbaum
+627,17329,Neil Burger
+628,78914,Noam Murro
+629,222470,Todd Strauss-Schulson
+630,93214,Steven Quale
+631,56710,Oliver Parker
+632,228134,Rupert Sanders
+633,56714,Daisy von Scherler Mayer
+634,56789,Thomas Bezucha
+635,31,Tom Hanks
+636,125738,Daniel Espinosa
+637,76927,Tommy Wirkola
+638,5345,Bennett Miller
+639,1692687,Matthijs van Heijningen Jr.
+640,77357,Rupert Wyatt
+641,59803-126638-137262,"Brenda Chapman, Mark Andrews, Steve Purcell"
+642,225976,Dan Scanlon
+643,26205,James Bobin
+644,20629,George Miller
+645,101518,Kevin Tancharoen
+646,81850,Duncan Jones
+647,130938,Sergei Bodrov
+648,20192-20193,"Brian Taylor, Mark Neveldine"
+649,52139,Seth MacFarlane
+650,53304-565297,"Peter Lord, Jeff Newitt"
+651,1216147,Anthony Hemingway
+652,142272-142276,"Henry Joost, Ariel Schulman"
+653,8023-124748,"Kyle Balda, Chris Renaud"
+654,90429-293911,"Mike McCoy, Scott Waugh"
+655,9033,Christopher McQuarrie
+656,47005,Alan Taylor
+657,185438,Genndy Tartakovsky
+658,6384,Keanu Reeves
+659,934803,Josh Trank
+660,67813,Baltasar Kormákur
+661,94075,David Soren
+662,66681-1039527,"Matt Bettinelli-Olpin, Tyler Gillett"
+663,587800,Todd Lincoln 
+664,62854,Akiva Schaffer
+665,12080-18863-18864,"Conrad Vernon, Eric Darnell, Tom McGrath"
+666,151007,Peter Ramsey
+667,237884,Andrucha Waddington
+668,86482,Mark Tonderai
+669,75035,Olivier Megaton
+670,168798,Josh Schwartz
+671,70500,Tom Hooper
+672,69797,Dean DeBlois
+673,74619,Sean Anders
+674,2171-7396-9281-11091-15218-32593-52112-141825-938681-938682-1272994-1579630,"Griffin Dunne, Peter Farrelly, Elizabeth Banks, Brett Ratner, James Gunn, Steven Brill, Steve Carr, Rusty Cundieff, James Duffy, Patrik Forsberg, Jonathan van Tulleken, Will Graham"
+675,9622,Eric Brevig
+676,52576,José Padilha
+677,15345,Alex Kurtzman
+678,1027017-1027018,"Dan Cutforth, Jane Lipsitz"
+679,1032536,Robert Stromberg
+680,21198,Peter Sohn
+681,52114-226089,"Jon Lucas, Scott Moore"
+682,19274-54734,"Seth Rogen, Evan Goldberg"
+683,15774-1120694,"Chris Buck, Jennifer Lee"
+684,12095-1046494,"Cody Cameron, Kris Pearn"
+685,5306,Lasse Hallström
+686,15218,James Gunn
+687,93419,Don Scardino
+688,129894,Gareth Edwards
+689,7-7929,"Andrew Stanton, Angus MacLane"
+690,1113116,Andy Muschietti
+691,930707,Colin Trevorrow
+692,293911,Scott Waugh
+693,64151-118489,"Mike Mitchell, Walt Dohrn"
+694,5575,Akiva Goldsman
+695,142312-1262481,"Jennifer Yuh Nelson, Alessandro Carloni"
+696,1375201,Ken Scott
+697,995462,Gregory Plotkin
+698,608,Hayao Miyazaki
+699,111736,Klay Hall
+700,69371,Jean-Marc Vallée
+701,65314,Giuseppe Tornatore
+702,52701-1281387,"Fergal Reilly, Clay Kaytis"
+703,551463,Mike Flanagan
+704,53120,James DeMonaco
+705,65167,Scott Cooper
+706,1224425,Rob Thomas
+707,70238-227439,"Chris Williams, Don Hall"
+708,183036,Doug Ellin
+709,65734,Luke Greenfield
+710,223,Alejandro González Iñárritu
+711,82511,Will Gluck
+712,82194,Neill Blomkamp
+713,1179066,Wes Ball
+714,238220,Oleg Stepchenko
+715,8023-124747,"Kyle Balda, Pierre Coffin"
+716,61069,Miguel Arteta
+717,210053,Roberts Gannaway
+718,1053420,Josh Boone
+719,12080-142587,"Conrad Vernon, Greg Tiernan"
+720,170820,Ben Falcone
+721,129718,Shana Feste
+722,11701,Angelina Jolie
+723,1099862,Dean Israelite
+724,19769,David Ayer
+725,52870,Tim Johnson
+726,217174,Paul Tibbitt
+727,1265056,Jorge R. Gutierrez
+728,52405,Michael Hoffman
+729,71947,Gina Prince-Bythewood
+730,84962,Stiles White
+731,71872,Jeff Nichols
+732,40644-40684,"Chad Stahelski, David Leitch"
+733,1413740,Aleksander Bach
+734,1284493,R.J. Cutler
+735,9281,Elizabeth Banks
+736,52803,Etan Cohen
+737,59998,Greg McLean
+738,63820,Christian Ditter
+739,119665,Gregory Jacobs
+740,76595-165787-1318201,"Byron Howard, Rich Moore, Jared Bush"
+741,18863-44114,"Eric Darnell, Simon J. Smith"
+742,54248,Christopher B. Landon
+743,77965,Morten Tyldum
+744,139098,Derek Cianfrance
+745,11012,Michael Dougherty
+746,1454884,Cedric Nicolas-Troyan
+747,55252,Tim Miller
+748,592493,David Lowery
+749,1096867,Thea Sharrock
+750,52935-1236679,"John Francis Daley, Jonathan M. Goldstein"
+751,1401541-1401542,"Travis Cluff, Chris Lofing"
+752,111588,J Blakeson
+753,1101410,Dave Green
+754,607,Zhang Yimou
+755,1056121,Ryan Coogler
+756,17867,Tom McCarthy
+757,1061773,Jake Szymanski
+758,6495,Mira Nair
+759,974,Dexter Fletcher
+760,1192754,Peter Landesman
+761,124748,Chris Renaud
+762,137427,Denis Villeneuve
+763,8010-52934,"Doug Sweetland, Nicholas Stoller"
+764,568322,Dan Trachtenberg
+765,109692,David E. Talbert
+766,120615,Tom Ford
+767,136153,Peter Atencio
+768,17871,John Hamburg
+769,1042010,Nitesh Tiwari
+770,190090,Luke Scott
+771,60922-60923,"Josh Gordon, Will Speck"
+772,5292,Denzel Washington
