@@ -46,6 +46,3 @@ screen
 ctr+a d
 
 screen -r
-
-
-module load anaconda3
