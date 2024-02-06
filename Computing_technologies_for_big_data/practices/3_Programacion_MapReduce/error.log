@@ -68,3 +68,5 @@ Error: java.io.IOException: wrong value class: class org.apache.hadoop.io.Text i
 	at org.apache.hadoop.security.UserGroupInformation.doAs(UserGroupInformation.java:1731)
 	at org.apache.hadoop.mapred.YarnChild.main(YarnChild.java:168)
 
+
+

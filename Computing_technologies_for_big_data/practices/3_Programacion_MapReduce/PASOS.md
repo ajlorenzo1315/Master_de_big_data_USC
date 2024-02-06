@@ -80,8 +80,8 @@ cd  02-citationnumberbypatent_chained
 module load maven
 
 # Eliminar el directorio local "out01" si existe y el directorio "out01" en HDFS
-rm -rf dir_salida_en_HDFS
-hdfs dfs -rm -r -f dir_salida_en_HDFS
+rm -rf out2
+hdfs dfs -rm -r -f out2
 
 
 # Empaquetar el proyecto Java con Maven
@@ -89,9 +89,13 @@ mvn package
 
 export HADOOP_CLASSPATH="./src/resources/citingpatents-0.0.1-SNAPSHOT.jar"
 
-yarn jar target/citationnumberbypatent_chained-0.0.1-SNAPSHOT.jar -libjars $HADOOP_CLASSPATH  patentes/cite75_99.txt dir_salida_en_HDFS
+yarn jar target/citationnumberbypatent_chained-0.0.1-SNAPSHOT.jar -libjars $HADOOP_CLASSPATH  patentes/cite75_99.txt out2
 
-hdfs dfs -get dir_salida_en_HDFS
+hdfs dfs -get out2
+
+hdfs dfs -text out2/part-r-00000
+
+hdfs dfs -getmerge out2 out2/all
 ```
 
 
@@ -110,10 +114,28 @@ hdfs dfs -rm -r -f out3
 # Empaquetar el proyecto Java con Maven
 mvn package
 
-yarn jar target/simplereducesidejoin-0.0.1-SNAPSHOT.jar -Dmapred.job.queue.name=urgent patentes/cite75_99.txt patentes/apat63_99.txt out03
+#yarn jar target/simplereducesidejoin-0.0.1-SNAPSHOT.jar -Dmapred.job.queue.name=urgent patentes/cite75_99.txt patentes/apat63_99.txt out3
+
+yarn jar target/simplereducesidejoin-0.0.1-SNAPSHOT.jar -Dmapred.job.queue.name=urgent out2_1/part-r-00000 patentes/apat63_99.txt out3
+
+
+yarn jar target/simplereducesidejoin-0.0.1-SNAPSHOT.jar -Dmapred.job.queue.name=urgent out2/all patentes/apat63_99.txt out3
 
 hdfs dfs -get out3
 
+# opcional
+module load maven
+
+# Empaquetar el proyecto Java con Maven
+mvn package
+
+chmod 644 /home/usc/cursos/curso111/patentes/country_codes.txt
+
+yarn jar target/simplereducesidejoin-0.0.1-SNAPSHOT.jar -Dmapred.job.queue.name=urgent -files /home/usc/cursos/curso111/patentes/country_codes.txt out2_1/part-r-00000 patentes/apat63_99.txt out4
+
+
+yarn jar target/simplereducesidejoin-0.0.1-SNAPSHOT.jar -Dmapred.job.queue.name=urgent -files  /home/usc/cursos/curso111/patentes/country_codes.txt out2_1/part-r-00000 patentes/apat63_99.txt out4
+hdfs dfs -get out4_5
 
 ```
 
