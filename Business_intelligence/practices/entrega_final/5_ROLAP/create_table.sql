@@ -31,15 +31,21 @@ CREATE TABLE staging_population (
 year INTEGER, population BIGINT );
 
 
-COPY staging_population("Country Name", "Country Code", year, population) FROM
-'/tmp/population.csv' DELIMITER ',' CSV HEADER;
+-- ejercio 2
 
-
-
-CREATE TABLE Fact_Labor_force()
+CREATE TABLE Fact_labor_force(
 country_id INT REFERENCES
 Dim_Country(country_id),
 time_id INT REFERENCES
 Dim_Time(time_id),
-population BIGINT,
+labor_force BIGINT,
 PRIMARY KEY (country_id, time_id) );
+
+-- the fact table (this staging table contains the labor_force but could also be used 
+-- as input to country dimension earlier)
+CREATE TABLE staging_labor_force (
+"Country Name" TEXT,
+"Country Code" TEXT,
+year INTEGER, labor_force BIGINT );
+
+

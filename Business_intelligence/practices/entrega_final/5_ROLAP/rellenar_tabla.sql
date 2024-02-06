@@ -115,6 +115,13 @@ WHERE NOT EXISTS (
 
 -- ejercio 3
 
+CREATE TEMPORARY TABLE temp_region(
+    country_code VARCHAR(255),
+    Region VARCHAR(255),
+    country_name VARCHAR(255)
+);
+
+
 COPY temp_region(country_code, Region, country_name)
 FROM '/home/alumnogreibd/IN/practicas/practica_5/paises_continentes.csv'
 DELIMITER ',' CSV HEADER;
