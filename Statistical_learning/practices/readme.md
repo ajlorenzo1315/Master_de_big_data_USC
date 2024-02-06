@@ -1,0 +1,1 @@
+docker run -it --rm -v /home/alourido/Desktop/Master_de_big_data_USC/Statistical_learning:/home/jovyan -p 8888:8888 jupyter/scipy-notebook:6d42503c684f start-notebook.sh --NotebookApp.token=''

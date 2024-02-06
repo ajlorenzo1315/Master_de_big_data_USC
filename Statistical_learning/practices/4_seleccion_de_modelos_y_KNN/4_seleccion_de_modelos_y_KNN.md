@@ -384,7 +384,7 @@ del hiper-parámetro.
 
     | param_n_neighbors | mean_test_score | std_test_score | destandardized_mean_test_score | destandardized_std_test_score | rank_test_score |
     |:-----------------:|:---------------:|:--------------:|:------------------------------:|:-----------------------------:|:---------------:|
-    | 2                 | -0.068327       | 0.006294       | 6.105909                       | 0.562449                      | 1               |
+    | 2                 | -0.068327       | 0.006294       | 6.105909                       | 0.688360                      | 1               |
 
 
 - Odenador cesga:
